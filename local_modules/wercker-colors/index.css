@@ -1,0 +1,32 @@
+/**
+ * Colors.
+ */
+
+$color-white: hsl(0, 0%, 100%);
+
+$color-grey_lightest: hsl(0, 0%, 98%);
+$color-grey_lighter: hsl(0, 0%, 91%);
+$color-grey_light: hsl(150, 1%, 71%);
+$color-grey_base: hsl(140, 1%, 37%);
+$color-grey_dark: hsl(140, 1%, 39%);
+$color-grey_darker: hsl(219, 16%, 17%);
+$color-grey_darkest: hsl(0, 0%, 0%);
+
+$color-green_light: hsl(96, 58%, 44%);
+$color-green_base: hsl(96, 58%, 44%);
+
+$color-blue_base: hsl(201, 55%, 47%);
+$color-blue_dark: hsl(217, 19%, 32%);
+
+$color-turquoise_light: hsl(168, 46%, 95%);
+$color-turquoise_base: hsl(168, 46%, 47%);
+$color-turquoise_dark: hsl(168, 46%, 37%);
+
+$color-red_light: hsl(10, 85%, 98%);
+$color-red_base: hsl(10, 85%, 56%);
+$color-red_dark: hsl(10, 85%, 46%);
+
+$color-orange_base: hsl(34, 85%, 56%);
+
+$color-yellow_base: hsl(45, 100%, 51%);
+$color-yellow_dark: hsl(45, 100%, 41%);

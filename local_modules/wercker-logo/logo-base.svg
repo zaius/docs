@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="64px" height="80px" viewBox="0 0 64 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+  <!-- Generator: Sketch Beta 3.1 (8657) - http://www.bohemiancoding.com/sketch -->
+  <title>notifier_app_v0.7_beta 2</title>
+  <desc>Created with Sketch Beta.</desc>
+  <defs></defs>
+  <g id="Notifications" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+    <g id="Notifier" sketch:type="MSLayerGroup" transform="translate(-143.000000, -198.000000)">
+      <g id="Content-background" fill="#FFFFFF" sketch:type="MSShapeGroup">
+          <rect id="Window-Background" x="0" y="0" width="350" height="700" rx="10"></rect>
+      </g>
+      <g id="Signin" transform="translate(64.000000, 198.000000)" fill="#40AF98" sketch:type="MSShapeGroup">
+        <g id="wercker_logo_shield_white" transform="translate(79.000000, 0.000000)">
+          <path d="M31.9161962,-0.042228739 L0,17.532434 L0,41.2975953 L5.9109434,41.2975953 L5.9109434,20.7115543 L31.9161962,6.27260997 L57.9253132,20.7115543 L57.9253132,46.8180645 C57.9253132,50.8051613 56.3989736,54.0340176 53.7636226,57.3743109 C47.2974491,65.5854545 35.5980075,71.7379472 31.9207849,73.4479765 C28.2529811,71.7283284 17.5009811,66.2733138 10.6399396,58.5222287 L44.9188226,58.5222287 C47.4022642,56.1944868 48.1806491,55.4993548 50.24,52.7817009 L0.821373585,52.7817009 C5.62668679,68.7781818 31.910883,79.7653959 31.910883,79.7653959 C31.910883,79.7653959 58.2296151,68.8748387 63.0122264,52.7817009 C63.5379925,51.0012903 63.8348075,48.7364223 63.8348075,46.8180645 L63.8348075,17.532434 L31.9161962,-0.042228739" id="Fill-1"></path>
+          <path d="M16.6044981,26.4365982 L47.245283,26.4365982 L47.245283,31.3973021 L16.6044981,31.3973021 L16.6044981,26.4365982 Z" id="Fill-4"></path>
+          <path d="M14.0435321,35.1181232 L49.791034,35.1181232 L49.791034,40.0785924 L14.0435321,40.0785924 L14.0435321,35.1181232 Z" id="Fill-5"></path>
+          <path d="M14.0435321,43.7996481 L49.791034,43.7996481 L49.791034,48.7605865 L14.0435321,48.7605865 L14.0435321,43.7996481 Z" id="Fill-6"></path>
+          <path d="M24.895517,17.7553079 L38.9390491,17.7553079 L38.9390491,22.7160117 L24.895517,22.7160117 L24.895517,17.7553079 Z" id="Fill-7"></path>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

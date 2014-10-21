@@ -1,0 +1,56 @@
+/**
+ * Font line-height scale.
+ */
+
+$lineHeight_tightest: 10px;
+$lineHeight_tighter: 12px;
+$lineHeight_tight: 15px;
+$lineHeight_base: 22px;
+$lineHeight_loose: 30px;
+$lineHeight_looser: 40px;
+
+/**
+ * Font sizes scale.
+ */
+
+$fontSize_micro: 8px;
+$fontSize_smallest: 10px;
+$fontSize_smaller: 13px;
+$fontSize_small: 14px;
+$fontSize_base: 15px;
+$fontSize_medium: 16px;
+$fontSize_large: 18px;
+$fontSize_larger: 22px;
+$fontSize_largest: 32px;
+$fontSize_jumbo: 40px;
+
+/**
+ * Font weight.
+ */
+
+$fontWeight_light: light;
+$fontWeight_base: medium;
+$fontWeight_bold: bold;
+
+/**
+ * Typography settings.
+ */
+
+html, body, p, a {
+  font-family: "Helvetica", Helvetica, Arial, sans-serif;
+  color: $color-grey_base;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: $color-grey_darker;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $color-grey_lightest;
+}
+
+h1 {
+  color: $color-blue_dark;
+}
