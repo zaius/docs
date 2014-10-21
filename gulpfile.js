@@ -51,9 +51,9 @@ var moduleEntryPoint = [
   path.join(__dirname, 'index.js')
 ];
 
-var articles = [
-  'articles/**/*.md',
-  'articles/*.md'
+var docs = [
+  'docs/**/*.md',
+  'docs/*.md'
 ];
 
 var styleFiles = [
@@ -94,10 +94,10 @@ gulp.task('modules', function() {
 });
 
 /**
- * Compile articles.
+ * Compile docs.
  */
 
-gulp.task('articles', function() {
+gulp.task('docs', function() {
 
   // https://github.com/CMClay/metalsmith-lunr
   var metalPipe = gulpsmith()
@@ -119,7 +119,7 @@ gulp.task('articles', function() {
   }
 
   gulp
-    .src(articles)
+    .src(docs)
     .pipe(frontMatter()).on('data', parseFile)
     .pipe(metalPipe)
     .pipe(gulp.dest('./build'));
@@ -146,7 +146,7 @@ gulp.task('lint', function() {
 gulp.task('watch', function() {
   gulp.watch(['/build/**']).on('change', livereload.changed);
   gulp.watch(jsFiles, ['lint', 'modules']);
-  gulp.watch(articles, ['articles']);
+  gulp.watch(docs, ['docs']);
   gulp.watch(styleFiles, ['styles']);
   livereload.listen();
 });
@@ -156,7 +156,7 @@ gulp.task('watch', function() {
  */
 
 gulp.task('build', [
-  'articles',
+  'docs',
   'modules',
   'styles'
 ]);
