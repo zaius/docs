@@ -17,15 +17,8 @@ clean:
 
 open:
 	open http://localhost:$(PORT)
-	cd build/
 	NODE_ENV=development node_modules/.bin/httpster \
 		-d build/ \
 		-p $(PORT)
-
-test:
-	@NODE_ENV=test ./node_modules/.bin/mocha \
-		--require should \
-		$(TESTS) \
-		--bail
 
 .PHONY: test build
