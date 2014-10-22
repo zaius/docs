@@ -62,7 +62,7 @@ function render() {
           default:
             return dom.ul({},
               dom.li({className: 'sidebar-li', key: key},
-                dom.a({href: '/' + key + '/' + val[0] + '.html'}, key)
+                dom.a({href: '/' + key + '/' + slugify(val[0]) + '.html'}, key)
               ),
               val.map(function(valTwo) {
                 return dom.li({className: 'sidebar-li_sub', key: key + valTwo},

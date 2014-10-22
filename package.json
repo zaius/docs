@@ -18,6 +18,7 @@
     "slugificate": "^0.2.1"
   },
   "devDependencies": {
+    "@local/highlight": "file:local_modules/highlight",
     "@local/search": "file:local_modules/search",
     "@local/sidebar": "file:local_modules/sidebar",
     "@local/template": "file:local_modules/template",

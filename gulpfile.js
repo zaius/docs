@@ -97,6 +97,7 @@ gulp.task('docs', function() {
 
   // https://github.com/CMClay/metalsmith-lunr
   var metalPipe = gulpsmith()
+    .use(highlight())
     .use(markdown({
       smartypants: true,
       gfm: true
@@ -106,10 +107,9 @@ gulp.task('docs', function() {
       directory: 'node_modules/@local/template'
     }))
     .use(lunr())
-    .use(highlight());
 
   function parseFile(file) {
-    assign(file, file.frontMatter);
+    assign(file, {template: 'index.html'});
     delete file.frontMatter;
   }
 

@@ -1,9 +1,6 @@
----
-lunr: true
-template: index.html
-title: wercker docs
----
+# wercker docs
 
 Welcome to wercker documentation.
 
-[docker/setup](docker/setup.html)
+Click here to see something nicer:
+- [docker/setup](docker/setup.html)

@@ -1,8 +1,3 @@
----
-lunr: true
-template: index.html
-title: steps / getting started
-tags: a few tags for indexing
----
+# steps / getting started
 
 You get started by getting started.
