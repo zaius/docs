@@ -14,7 +14,7 @@ body {
 .section-doc_outer {
   position: relative;
   left: 260px;
-  width: calc(100vw - 260px);
+  width: calc(100% - 260px);
 }
 
 .section-doc_inner {
@@ -37,18 +37,14 @@ body {
 .section-doc_inner > pre {
   left: 260px;
   padding: 20px 0 20px 0;
-  width: calc(100vw - 260px);
+  width: calc(100vw - 275px);
   background-color: #1d1f21;
-  font-family: 'Source Code Pro', monospace;
-  font-size: $fontSize_smallest;
-  line-height: 25px;
 }
 
 .section-doc_inner > pre > code {
   display: block;
   width: 600px;
   margin: auto;
-  padding: 0;
   overflow-x: auto;
 }
 

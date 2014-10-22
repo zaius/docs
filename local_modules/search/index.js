@@ -13,6 +13,9 @@ var dom = react.DOM;
 
 module.exports = react.createClass({
   displayName: 'sidebar',
+  props: {
+    setState: react.PropTypes.func.required
+  },
   render: render
 });
 
@@ -26,8 +29,23 @@ function render() {
       dom.input({
         type: 'text',
         placeholder: 'search',
-        className: 'search-input'
+        className: 'search-input',
+        onChange: handleChange.bind(this)
       })
     )
   );
+}
+
+/**
+ * Handle change.
+ *
+ * @param {Event} e
+ * @api private
+ */
+
+function handleChange(e) {
+  var setParentState = this.props.setState;
+  // get query
+  // add values
+  setParentState({});
 }

@@ -54,3 +54,9 @@ h1 {
   line-height: $lineHeight_looser;
   color: $color-blue_dark;
 }
+
+pre {
+  font-family: 'Source Code Pro', monospace;
+  font-size: $fontSize_smallest;
+  line-height: 22px;
+}
