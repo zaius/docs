@@ -40,6 +40,7 @@ html, body, p, a {
   font-family: "Helvetica", Helvetica, Arial, sans-serif;
   color: $color-grey_base;
   font-weight: normal;
+  line-height: $lineHeight_base;
 }
 
 a {
@@ -52,5 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+  font-size: $fontSize_jumbo;
+  line-height: $lineHeight_looser;
   color: $color-blue_dark;
 }
