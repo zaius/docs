@@ -20,5 +20,7 @@ module.exports = react.createClass({
  */
 
 function render() {
-  return dom.aside();
+  return dom.aside({className: 'section-sidebar'},
+    search()
+  );
 }

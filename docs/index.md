@@ -1,7 +1,7 @@
 ---
 lunr: true
 template: index.html
-title: Welcome
+title: docs
 ---
 
 Welcome to wercker-devcenter.

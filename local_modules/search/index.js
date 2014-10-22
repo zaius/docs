@@ -21,5 +21,5 @@ module.exports = react.createClass({
  */
 
 function render() {
-  return dom.section();
+  return dom.section({className: 'section-search'}, 'search');
 }

@@ -1,0 +1,26 @@
+html {
+  margin-top: -1px;
+}
+
+body {
+  display: inline-flex;
+  width: 100%;
+}
+
+.section-doc_outer {
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 100%;
+}
+
+.section-doc_inner {
+  margin: auto;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar {
+  flex-shrink: 0;
+  width: 200px;
+}

@@ -145,8 +145,8 @@ gulp.task('lint', function() {
 
 gulp.task('watch', function() {
   gulp.watch(['/build/**']).on('change', livereload.changed);
-  gulp.watch(jsFiles, ['lint', 'modules']);
-  gulp.watch(docs, ['docs']);
+  gulp.watch(jsFiles, [/*'lint',*/ 'modules']);
+  gulp.watch([docs, 'local_modules/template/*'], ['docs']);
   gulp.watch(styleFiles, ['styles']);
   livereload.listen();
 });
@@ -167,6 +167,6 @@ gulp.task('build', [
 
 gulp.task('default', [
   'build',
-  'lint',
+  //'lint',
   'watch'
 ]);

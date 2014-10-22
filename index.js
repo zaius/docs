@@ -12,4 +12,4 @@ var dom = react.DOM;
  * Create stuff
  */
 
-react.renderComponent(sidebar(), document.querySelector('sidebar'));
+react.renderComponent(sidebar(), document.querySelector('.sidebar'));
