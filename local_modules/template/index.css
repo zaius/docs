@@ -18,14 +18,15 @@ body {
 }
 
 .section-doc_inner {
-  margin-top: 30px;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
+  font-size: $fontSize_base;
 }
 
 .section-doc_inner > * {
   margin: auto;
-  padding: 20px 0 20px 0;
+  margin-top: 30px;
   width: 600px;
 }
 
@@ -35,9 +36,12 @@ body {
 
 .section-doc_inner > pre {
   left: 260px;
+  padding: 20px 0 20px 0;
   width: calc(100vw - 260px);
   background-color: #1d1f21;
   font-family: 'Source Code Pro', monospace;
+  font-size: $fontSize_smallest;
+  line-height: 25px;
 }
 
 .section-doc_inner > pre > code {
@@ -45,6 +49,7 @@ body {
   width: 600px;
   margin: auto;
   padding: 0;
+  overflow-x: auto;
 }
 
 /**

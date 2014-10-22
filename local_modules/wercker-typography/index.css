@@ -14,7 +14,8 @@ $lineHeight_looser: 40px;
  */
 
 $fontSize_micro: 8px;
-$fontSize_smallest: 10px;
+/*adjusted smallest 10px -> 12px*/
+$fontSize_smallest: 12px;
 $fontSize_smaller: 13px;
 $fontSize_small: 14px;
 $fontSize_base: 15px;

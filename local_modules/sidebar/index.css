@@ -1,5 +1,5 @@
 .section-sidebar {
-  padding: 20px 20px 0 20px;
+  padding: 30px 20px 0 20px;
   color: $color-white;
 }
 
@@ -24,13 +24,13 @@
 
 .sidebar-li,
 .sidebar-li > a {
-  margin-top: 18px;
+  margin-top: 20px;
   font-family: 'Source Code Pro', monospace;
   font-size: $fontSize-base;
   color: $color-white;
 }
 
-.sidebar-li_sub > a{
+.sidebar-li_sub > a {
   font-size: $fontSize-base;
   font-family: 'Source Code Pro', monospace;
   color: $color-grey_light;
