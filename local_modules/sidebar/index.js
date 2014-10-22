@@ -16,6 +16,7 @@ var dom = react.DOM;
 
 module.exports = react.createClass({
   displayName: 'sidebar',
+  getDefaultProps: getDefaultProps,
   getInitialState: getInitialState,
   render: render
 });
@@ -23,13 +24,19 @@ module.exports = react.createClass({
 // we manage the state of the object here. source out into search,
 // return the result and pass it into the display function.
 
+function getDefaultProps() {
+  return {
+    data: db
+  }
+}
+
 /**
  * Get initial state.
  */
 
 function getInitialState() {
   return {
-    list: db
+    data: db
   }
 }
 
@@ -46,10 +53,10 @@ function render() {
       ' / ',
       dom.span(null, 'docs')
     ),
-    search(),
+    search({data: this.props.data, setState: this.setState.bind(this)}),
     dom.section({className: 'sidebar-list'},
-      Object.keys(state.list).map(function(key) {
-        var val = state.list[key];
+      Object.keys(state.data).map(function(key) {
+        var val = state.data[key];
 
         switch (typeof val) {
           case 'string':
@@ -60,8 +67,8 @@ function render() {
             )
 
           default:
-            return dom.ul({},
-              dom.li({className: 'sidebar-li', key: key},
+            return dom.ul({key: key},
+              dom.li({className: 'sidebar-li'},
                 dom.a({href: '/' + key + '/' + slugify(val[0]) + '.html'}, key)
               ),
               val.map(function(valTwo) {

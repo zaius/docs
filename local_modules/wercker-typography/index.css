@@ -14,8 +14,7 @@ $lineHeight_looser: 40px;
  */
 
 $fontSize_micro: 8px;
-/*adjusted smallest 10px -> 12px*/
-$fontSize_smallest: 12px;
+$fontSize_smallest: 10px;
 $fontSize_smaller: 13px;
 $fontSize_small: 14px;
 $fontSize_base: 15px;
@@ -38,9 +37,10 @@ $fontWeight_bold: bold;
  */
 
 html, body, p, a {
-  font-family: "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   color: $color-grey_base;
   font-weight: normal;
+  font-size: $fontSize_medium;
   line-height: $lineHeight_base;
 }
 
@@ -53,10 +53,11 @@ h1 {
   font-size: $fontSize_jumbo;
   line-height: $lineHeight_looser;
   color: $color-blue_dark;
+  font-weight: bold;
 }
 
 pre {
   font-family: 'Source Code Pro', monospace;
-  font-size: $fontSize_smallest;
+  font-size: $fontSize_smaller;
   line-height: 22px;
 }

@@ -5,6 +5,9 @@
 var search = require('@local/search');
 var react = require('react');
 var lunr = require('lunr');
+
+var textFilter = require('./algorithm');
+
 var dom = react.DOM;
 
 /**
@@ -12,9 +15,10 @@ var dom = react.DOM;
  */
 
 module.exports = react.createClass({
-  displayName: 'sidebar',
+  displayName: 'search',
   props: {
-    setState: react.PropTypes.func.required
+    setState: react.PropTypes.func.required,
+    data: react.PropTypes.array.required
   },
   render: render
 });
@@ -45,7 +49,30 @@ function render() {
 
 function handleChange(e) {
   var setParentState = this.props.setState;
+  var parentData = this.props.data;
+
   // get query
   // add values
-  setParentState({});
+  setParentState({
+    data: filter.call(this, parentData, e.target.value)
+  });
+}
+
+/**
+ * Filter.
+ */
+
+function filter(data, query) {
+  // do filter stuff.
+  var keys = Object.keys(data);
+  var res = keys.filter(textFilter({query: query}));
+
+  var nw = {};
+  res.forEach(function(val) {
+    nw[val] = data[val];
+  });
+
+  console.log(nw);
+
+  return nw
 }
