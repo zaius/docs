@@ -38,9 +38,9 @@ module.exports = gulp;
  */
 
 var jsFiles = [
-  '*.js',
-  'local_modules/**/*.js',
-  '!local_modules/**/node_modules/*.js'
+  '*.js*',
+  'local_modules/**/*.js*',
+  '!local_modules/**/node_modules/*.js*'
 ];
 
 var moduleEntryPoint = [

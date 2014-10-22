@@ -1,17 +1,35 @@
 .section-sidebar {
   padding: 20px 20px 0 20px;
-  height: 100vh;
-  width: calc(100% - 2 * 20px);
-  background-color: $color-grey_dark;
-  color: $color-white;
-}
-
-.sidebar-title > a {
   color: $color-white;
 }
 
 .sidebar-title {
   text-align: center;
+}
+
+.sidebar-title > span,
+.sidebar-title > a {
   font-size: $fontSize_larger;
   font-family: monospace;
+  color: $color-white;
+}
+
+.sidebar-list {
+  margin-top: 20px;
+}
+
+/**
+ * Sidebar text styles.
+ */
+
+.sidebar-li,
+.sidebar-li > a {
+  margin-top: 16px;
+  font-size: $fontSize-large;
+  color: $color-white;
+}
+
+.sidebar-li_sub > a{
+  font-size: $fontSize-large;
+  color: $color-grey_light;
 }

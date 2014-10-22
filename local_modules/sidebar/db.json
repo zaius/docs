@@ -1,8 +1,10 @@
-[
-  "index",
-  {
-    "docker": [
-      "setup"
-    ]
-  }
-]
+{
+  "index": "index",
+  "docker": [
+    "setup"
+  ],
+  "steps": [
+    "getting started",
+    "environment variables"
+  ]
+}

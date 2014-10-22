@@ -3,6 +3,7 @@
  */
 
 var search = require('@local/search');
+var slugify = require('slugificate');
 var react = require('react');
 
 var db = require('./db.json');
@@ -37,15 +38,40 @@ function getInitialState() {
  */
 
 function render() {
+  var state = this.state;
+
   return dom.aside({className: 'section-sidebar'},
     dom.h2({className: 'sidebar-title'},
       dom.a({href: 'http://wercker.com'} , 'wercker'),
       ' / ',
-      dom.a({href: 'http://devcenter.wercker.com/'} , 'docs')
+      dom.span(null, 'docs')
     ),
     search(),
-    this.state.list.map(function(key) {
-      return key;
-    })
+    dom.section({className: 'sidebar-list'},
+      Object.keys(state.list).map(function(key) {
+        var val = state.list[key];
+
+        switch (typeof val) {
+          case 'string':
+            return dom.a({
+              className: 'sidebar-li',
+              key: val,
+              href: '/' + (val == 'index' ? '' : val)}, val
+            )
+
+          default:
+            return dom.ul({},
+              dom.li({className: 'sidebar-li', key: key},
+                dom.a({href: '/' + key + '/' + val[0] + '.html'}, key)
+              ),
+              val.map(function(valTwo) {
+                return dom.li({className: 'sidebar-li_sub', key: key + valTwo},
+                  dom.a({href: '/' + key + '/' + slugify(valTwo) + '.html'}, valTwo)
+                )
+              })
+            )
+        }
+      })
+    )
   );
 }
