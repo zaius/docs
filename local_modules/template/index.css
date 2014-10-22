@@ -59,7 +59,7 @@ body {
  * Images.
  */
 
-.section-doc_inner > p > img {
+.section-doc_inner > p img {
   max-width: 100%;
 }
 
