@@ -21,5 +21,13 @@ module.exports = react.createClass({
  */
 
 function render() {
-  return dom.section({className: 'section-search'}, 'search');
+  return dom.section({className: 'section-search'},
+    dom.form(null,
+      dom.input({
+        type: 'text',
+        placeholder: 'search',
+        className: 'search-input'
+      })
+    )
+  );
 }

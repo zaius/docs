@@ -48,10 +48,6 @@ a {
   color: $color-grey_darker;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: $color-grey_lightest;
-}
-
 h1 {
   font-size: $fontSize_jumbo;
   line-height: $lineHeight_looser;

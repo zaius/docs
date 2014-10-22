@@ -1,0 +1,8 @@
+.search-input {
+  margin-top: 20px;
+  padding: 10px;
+  border: hidden;
+  width: calc(100% - 2 * 10px);
+  font-size: $fontSize-base;
+  height: 18px;
+}

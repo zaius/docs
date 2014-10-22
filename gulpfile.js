@@ -12,13 +12,12 @@ var markdown = require('metalsmith-markdown');
 var source = require('vinyl-source-stream');
 var livereload = require('gulp-livereload');
 var spawn = require('child_process').spawn;
-// var lunr = require('metalsmith-lunr');
 var browserify = require('browserify');
 var metalsmith = require('metalsmith');
 var flatten = require('gulp-flatten');
 var envify = require('envify/custom');
-var lunr = require('metalsmith-lunr');
 var assign = require('object-assign');
+var lunr = require('metalsmith-lunr');
 var gulpsmith = require('gulpsmith');
 var concat = require('gulp-concat');
 var mocha = require('gulp-mocha');
@@ -111,6 +110,7 @@ gulp.task('docs', function() {
       engine: 'mustache',
       directory: 'node_modules/@local/template'
     }))
+    .use(lunr())
     .use(highlight());
 
   function parseFile(file) {

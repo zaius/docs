@@ -4,8 +4,7 @@ body {
 }
 
 .section-doc_outer {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 20px 20px 0 20px;
   width: 100%;
 }
 
@@ -16,7 +15,11 @@ body {
   flex-direction: column;
 }
 
+.section-doc_inner:first-child h1 {
+  margin-bottom: 20px;
+}
+
 .sidebar {
   flex-shrink: 0;
-  width: 200px;
+  width: 260px;
 }

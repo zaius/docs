@@ -1,13 +1,11 @@
 ---
 lunr: true
 template: index.html
-title: Docker setup
+title: docker / setup
 tags: a few tags for indexing
 ---
 
-Docker is dope...
-
-Hell yaww.
+Docker is pretty cool.
 
 ```js
 var foo = require('bar');
