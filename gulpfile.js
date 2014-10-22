@@ -32,9 +32,6 @@ var path = require('path');
 
 module.exports = gulp;
 
-var baseUrl = process.env.NODE_ENV == 'development'
-  ? 'http://localhost:' + process.env.PORT + '/'
-  : 'https://docs.wercker.com/';
 
 /**
  * Paths.
@@ -105,8 +102,6 @@ gulp.task('docs', function() {
       gfm: true
     }))
     .use(templates({
-      buildPath: '\"' + baseUrl + 'build.js' + '\"',
-      stylePath: '\"' + baseUrl + 'build.css' + '\"',
       engine: 'mustache',
       directory: 'node_modules/@local/template'
     }))

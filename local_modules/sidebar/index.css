@@ -3,7 +3,11 @@
   height: 100vh;
   width: calc(100% - 2 * 20px);
   background-color: $color-grey_dark;
-  color: white;
+  color: $color-white;
+}
+
+.sidebar-title > a {
+  color: $color-white;
 }
 
 .sidebar-title {

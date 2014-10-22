@@ -15,6 +15,7 @@ var dom = react.DOM;
 
 module.exports = react.createClass({
   displayName: 'sidebar',
+  getInitialState: getInitialState,
   render: render
 });
 
@@ -22,12 +23,29 @@ module.exports = react.createClass({
 // return the result and pass it into the display function.
 
 /**
+ * Get initial state.
+ */
+
+function getInitialState() {
+  return {
+    list: db
+  }
+}
+
+/**
  * Render.
  */
 
 function render() {
   return dom.aside({className: 'section-sidebar'},
-    dom.h2({className: 'sidebar-title'}, 'wercker / docs'),
-    search()
+    dom.h2({className: 'sidebar-title'},
+      dom.a({href: 'http://wercker.com'} , 'wercker'),
+      ' / ',
+      dom.a({href: 'http://devcenter.wercker.com/'} , 'docs')
+    ),
+    search(),
+    this.state.list.map(function(key) {
+      return key;
+    })
   );
 }
