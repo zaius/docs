@@ -1,0 +1,229 @@
+---
+sidebar_current: "languages-ruby"
+---
+
+# Getting Started with a Sinatra API
+
+You can find the code for this tutorial on [Github](https://github.com/wercker/getting-started-ruby)
+
+### Table of Contents
+* Prerequisites
+* Add project to wercker
+* Write the API
+* Create a Rack Configuration
+* Declare your gem dependencies using Bundlder
+* Create a spec folder and add a Spec Helper
+* Create a spec
+* Create a Rakefile
+* Create a wercker.yml file
+* Initiate your Git repository and push your changes to Github
+* Deploying to Heroku
+
+## Prerequisites
+* Basic knowledge on Ruby, Sinatra and have Ruby 1.9.3 installed alongside Rubygems, Bundler and Sinatra.
+* A wercker account and a GitHub repository for the code you will write
+
+## Add project to wercker
+Add your GitHub project to wercker
+
+
+## Write the API
+Create a Sinatra application with the following code:
+
+**main.rb**
+
+``` ruby
+require 'sinatra'
+require 'json'
+
+get '/' do
+      content_type :json
+        return {:cities=> ["Amsterdam", "San Francisco", "Berlin",
+                           "New York", "Tokyo", "London"]}.to_json
+end
+```
+
+## Create a Rack Configuration
+
+**config.ru**
+
+``` ruby
+require './main'
+run Sinatra::Application
+```
+
+## Declare your gem dependencies using Bundler
+
+A basic `Gemfile` for this application would be:
+
+**Gemfile**
+
+``` ruby
+source 'http://rubygems.org'
+gem 'sinatra'
+gem 'unicorn'
+gem 'json'
+gem 'rake'
+gem 'rack-test'
+
+group :test do
+  gem 'rspec'
+end
+```
+
+Next, run `bundle install` to set up your local bundle.
+
+## Create a spec folder and add a Spec Helper
+
+**spec/spec_helper.rb**
+
+``` ruby
+  require File.join(File.dirname(__FILE__), '..', 'main.rb')
+
+  require 'sinatra'
+  require 'rack/test'
+
+  set :environment, :test
+  set :run, false
+  set :raise_errors, true
+  set :logging, false
+
+  def app
+    Sinatra::Application
+  end
+
+  RSpec.configure do |config|
+    config.include Rack::Test::Methods
+  end
+```
+
+## Create your spec
+
+**spec/main_spec.rb**
+
+``` ruby
+require 'spec_helper'
+
+describe "City API" do
+  it "should respond to GET" do
+    get '/'
+    last_response.should be_ok
+  end
+end
+```
+
+## Create a Rakefile
+
+Finally we need to create a Rakefile to run the rspec test:
+
+**Rakefile**
+
+``` ruby
+    require 'rspec/core'
+    require 'rspec/core/rake_task'
+
+    task :default => :spec
+
+    desc "Run our Spec"
+    RSpec::Core::RakeTask.new(:spec)
+```
+
+## Create a wercker.yml file
+
+For wercker to know how to run our tests we create a `wercker.yml` file
+in our repository:
+
+**wercker.yml**
+
+``` yaml
+    box: wercker/ruby
+    build:
+        steps:
+            - bundle-install
+            - script:
+                name: rake
+                code: bundle exec rake
+```
+
+Don't forget to add this to your Git repository.
+
+## Initiate your Git repository and push your changes to Github
+
+```
+  $ git init
+  $ git commit -m 'init'
+  $ git push origin master
+```
+
+## Deploying to Heroku
+
+If you have a Heroku account you can now create an application and
+deploy it through wercker. If not, sign up at
+[http://heroku.com](http://heroku.com).
+
+```
+ $ heroku create
+```
+
+Now add the wercker add-on through the Heroku CLI:
+
+```
+ $ heroku addons:add wercker
+```
+
+The wercker add-on page can be invoked through the resources page on the
+Heroku dashboard or via the Heroku CLI:
+
+```
+ $ heroku addons:open wercker
+```
+
+You can now add your project to wercker via the [wercker command line
+interface](http://devcenter.wercker.com/articles/cli):
+
+```
+ $ wercker create
+```
+
+This will trigger a build. If all is well you can now deploy to Heroku,
+again via the CLI:
+
+```
+ $ wercker deploy
+```
+Happy coding!
+
+
+-------
+
+<div class="authorCredits">
+    <span class="profile-picture">
+        <img src="https://secure.gravatar.com/avatar/d4b19718f9748779d7cf18c6303dc17f?d=identicon&s=192" alt="Micha Hernandez van Leuffen"/>
+    </span>
+    <ul class="authorCredits">
+
+        <!-- author info -->
+        <li class="authorCredits__name">
+            <h4>Micha Hernandez van Leuffen</h4>
+            <em>
+                Micha is cofounder and CEO at wercker.
+            </em>
+        </li>
+
+        <!-- info -->
+        <li>
+            <a href="http://beta.wercker.com" target="_blank">
+                <i class="icon-company"></i> <em>wercker</em>
+            </a>
+            <a href="http://twitter.com/mies" target="_blank">
+                <i class="icon-twitter"></i>
+                <em> mies</em>
+            </a>
+        </li>
+
+    </ul>
+</div>
+
+-------
+##### last modified on: June 21, 2013
+-------

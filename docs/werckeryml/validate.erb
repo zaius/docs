@@ -1,0 +1,478 @@
+---
+sidebar_current: "werckeryml"
+---
+
+  <script type="text/javascript" src="/assets/validate-yaml/wercker-schema.js" ></script>
+  <script type="text/javascript" src="/assets/validate-yaml/js/jquery-2.0.2.min.js" ></script>
+  <script type="text/javascript" src="/assets/validate-yaml/js/underscore-min.js" ></script>
+  <script type="text/javascript" src="/assets/validate-yaml/js/async.js" ></script>
+  <script type="text/javascript" src="/assets/validate-yaml/js/JSV/uri/uri.js" ></script>
+  <script type="text/javascript" src="/assets/validate-yaml/js/JSV/uri/schemes/urn.js" ></script>
+  <script type="text/javascript" src="/assets/validate-yaml/js/JSV/jsv.js" ></script>
+  <script type="text/javascript" src="/assets/validate-yaml/js/JSV/json-schema-draft-03.js" ></script>
+  <script type="text/javascript" src="/assets/validate-yaml/js/js-yaml.js" ></script>
+  <script type="text/javascript" src="/javascripts/lib/jquery-linedtextarea.js"></script>
+  <link href="/stylesheets/jquery-linedtextarea.css" type="text/css" rel="stylesheet" />
+
+ <script>
+
+  function makePipelineBox (box) {
+
+    var result =  "<div class='summary__box'>" +
+                  "<h3><a href='https://app.wercker.com/#applications/" +
+                  box.application +
+                  "/tab/details' target='_blank'>" +
+                  box.name +
+                  "</a></h3> - @" + box.version + " - "+
+                  "<span class='profile-picture'><a href='https://app.wercker.com/#" +
+                  box.applicationOwner.username +
+                  "' target='_blank'><img src='https://secure.gravatar.com/avatar/" +
+                  box.applicationOwner.gravatar +
+                  "?d=identicon&s=50' alt='" +
+                  box.applicationOwner.username +
+                  "'/></a></span><a href='https://app.wercker.com/#" +
+                  box.applicationOwner.username +
+                  "' target='_blank'>" + box.applicationOwner.username +
+                  "</a></div>" ;
+
+    $("#pipelineBox").html(result);
+  }
+
+  function makePipelineServices (services) {
+    // console.log(makePipelineServices);
+    var result = "";
+      if(!!services && services.length > 0){
+        _.each(services, function (service) {
+          result +=
+          "<div class='summary__box'>" +
+          "<h3><a href='https://app.wercker.com/#applications/" +
+          service.application +
+          "/tab/details' target='_blank'>" +
+          service.name +
+        "</a></h3> - @" + service.version + " - "+
+          "<span class='profile-picture'><a href='https://app.wercker.com/#" +
+          service.applicationOwner.username +
+          "' target='_blank'><img src='https://secure.gravatar.com/avatar/" +
+          service.applicationOwner.gravatar +
+          "?d=identicon&s=50' alt='" +
+          service.applicationOwner.username +
+          "'/></a></span><a href='https://app.wercker.com/#" +
+          service.applicationOwner.username +
+          "' target='_blank'>" + service.applicationOwner.username +
+          "</a></div>" ;
+        });
+      };
+
+    $("#pipelineServices").html(result);
+  }
+
+  function makePipelineSteps (steps, target) {
+    var result = "";
+      _.each(steps, function (step) {
+        if (step.application ) {
+          result +=
+           "<div class='summary__box'>" +
+            "<h3><a href='https://app.wercker.com/#applications/" +
+            step.application +
+            "/tab/details' target='_blank'>" +
+            step.name +
+            "</a></h3> - @" + step.version + " - " +
+            "<span class='profile-picture'><a href='https://app.wercker.com/#" +
+            step.applicationOwner.username +
+            "' target='_blank'><img src='https://secure.gravatar.com/avatar/" +
+            step.applicationOwner.gravatar +
+            "?d=identicon&s=50' alt='" +
+            step.applicationOwner.username +
+            "'/></a></span><a href='https://app.wercker.com/#" +
+            step.applicationOwner.username +
+            "' target='_blank'>" + step.applicationOwner.username +
+            "</a></div>" ;
+        } else {
+          result +=
+           "<div class='summary__box'>" +
+            "<h3>" +
+            step.name +
+            "</h3></div>" ;
+        }
+      });
+
+    $(target).html(result);
+  }
+
+  function showError (message) {
+    $("#errors").html("");
+    $(".validate__pipeline").addClass("force-hidden", false);
+    $("#validate__error").toggleClass("force-hidden", false);
+    $("#errors").html(message);
+  }
+
+  function hasMixedIdentation (yaml) {
+    var lines = yaml.split('\n')
+    var startPattern = new RegExp("^[ \t]+")
+    hasSpaces = false;
+    hasTabs = false;
+
+
+    for (var i = 0; i < lines.length; i++) {
+      var startCharsResult = startPattern.exec(lines[i])
+      if(startCharsResult){
+        var startChars = startCharsResult[0]
+        if(!hasSpaces && startChars.indexOf(" ") !== -1 ){
+          hasSpaces = true;
+        }
+        if(!hasTabs && startChars.indexOf("\t") !== -1 ){
+          hasTabs = true;
+        }
+
+        if( hasTabs && hasSpaces){
+          return true;
+        }
+      }
+    };
+
+    return false;
+  }
+
+  var cachedBoxes = {};
+  function getBox (fullname, callback) {
+    if(cachedBoxes[fullname]){
+      return callback(null, cachedBoxes[fullname]);
+    }
+    var boxName = fullname;
+    var boxVersion = "*"
+    if(boxName.split("@").length > 1){
+      boxName = fullname.split("@")[0]
+      boxVersion = fullname.split("@")[1]
+    }
+
+    $.getJSON("http://app.wercker.com/api/v2/boxes/" + boxName + "/" + boxVersion + "?callback=?",function  (data) {
+      if(data){
+        cachedBoxes[fullname] = data;
+      }
+      callback(null, data);
+    }).fail(function  (error) {
+      if(error.status === 404){
+        callback(null, null);
+      }
+      else{
+        callback(error)
+      }
+    });
+  }
+
+  var cachedSteps = {};
+  function getStep (fullname, callback) {
+    if(!_.isString(fullname)){
+      try{
+        fullname = Object.keys(fullname)[0];
+      }
+      catch(e){
+        console.log(e);
+        callback(e)
+      }
+    }
+    if(cachedSteps[fullname]){
+      return callback(null, cachedSteps[fullname]);
+    }
+
+    var stepName = fullname;
+    var stepVersion = "*"
+    if(stepName.split("@").length > 1){
+      stepName = fullname.split("@")[0]
+      stepVersion = fullname.split("@")[1]
+    }
+    if(stepName.indexOf("/") === -1){
+      stepName = "wercker/" + stepName;
+    }
+
+    $.getJSON("http://app.wercker.com/api/v2/steps/" + stepName + "/" + stepVersion + "?callback=?",function  (data) {
+      if(data){
+        cachedSteps[fullname] = data;
+      }
+      callback(null, data);
+    }).fail(function  (error) {
+      if(error.status === 404){
+        callback(null, null);
+      }
+      else{
+        callback(error)
+      }
+    });
+  }
+
+  function validateBox (box, callback) {
+    getBox(box, function  (error, boxData) {
+      if(error){
+        return showError(JSON.stringify(error))
+      }
+      if(!boxData){
+        return showError("Box <code>" + box + "</code> does not exist in de the registry.")
+      }
+      return callback(null, boxData)
+    });
+
+  }
+
+  function validateServices (services, callback) {
+    var result = [];
+    if (!services || services.length === 0) {
+      return callback(null,result)
+    }
+
+    async.eachSeries(services, function (service, eachNext) {
+      getBox(service, function (error, boxData) {
+      if(error){
+        return callback(JSON.stringify(error))
+      }
+      if(!boxData){
+        return callback("Service <code>" + service + "</code> does not exist in de the registry.")
+      }
+      result.push(boxData);
+      return eachNext()
+
+      });
+
+    }, function (error) {
+        return callback(error,result)
+    });
+
+  }
+
+  $(function () {
+
+    $(".validate__area").linedtextarea(
+      // {selectedLine: 1}
+    );
+
+    $("#fix-tabs-button").on("click", function () {
+      var yaml = $("#wercker-yml-input").val()
+      yaml = yaml.replace(/\t/g,"  ")
+      $("#wercker-yml-input").val(yaml)
+    });
+
+    $("#check-button").on("click", function () {
+
+      $("#validate__error").addClass("force-hidden", false);
+      $("#validate__fixtabs").addClass("force-hidden");
+
+      $("#pipelineBox").html("<div class='summary__box summary__box__empty text-center'><h5>no box defined</h5></div>");
+      $("#pipelineServices").html("<div class='summary__box summary__box__empty text-center'><h5>no service(s) defined</h5></div>");
+      $("#pipelineBuildSteps").html("<div class='summary__box summary__box__empty text-center'><h5>no steps defined</h5></div>");
+      $("#pipelineAfterBuildSteps").html("<div class='summary__box summary__box__empty text-center'><h5>no steps defined</h5></div>");
+      $("#pipelineDeploySteps").html("<div class='summary__box summary__box__empty text-center'><h5>no steps defined</h5></div>");
+      $("#pipelineAfterDeploySteps").html("<div class='summary__box summary__box__empty text-center'><h5>no steps defined</h5></div>");
+
+      $(".validate__pipeline").removeClass("force-hidden", false);
+
+      var yaml = $("#wercker-yml-input").val();
+      if(hasMixedIdentation(yaml)){
+        return $("#validate__fixtabs").removeClass("force-hidden");
+      }
+
+      var doc = {};
+
+      try{
+        doc = jsyaml.load(yaml);
+      } catch(error){
+        return showError(error.message.replace("\n","</br>"));
+      }
+
+      var environmentId = "json-schema-draft-03";
+      var environment = JSV.createEnvironment(environmentId);
+      var report = environment.validate(doc, schema);
+
+      // console.log(doc);
+
+      if(report.errors.length !== 0) {
+        var errorMessage = "";
+        _.each(report.errors, function (error) {
+          // console.log(error)
+          var elementName = error.schemaUri.replace("http://jsonschema.net", "").replace("#", "")
+          if(elementName === ""){
+            elementName = "root";
+          }
+          errorMessage += error.message + ": " + elementName + "\n";
+        });
+        errorMessage = errorMessage.replace("\n","</br>");
+        return showError(errorMessage);
+      }
+
+
+      /// validate box
+      validateBox(doc.box, function  (error, boxData) {
+        if(error){
+          // return error on box
+          return showError(error)
+        } else {
+          // console.log("makeSummaryBox");
+          if(doc.box) { makePipelineBox(boxData); }
+        }
+      });
+
+      /// validate services
+      validateServices(doc.services, function (error, servicesData) {
+        if(error){
+          // return error on services
+          return showError(error)
+        } else {
+          if(doc.services) { makePipelineServices(servicesData); }
+        }
+      });
+
+      if(doc && doc.build && doc.build["steps"]){ validateSteps(doc.build["steps"], "#pipelineBuildSteps"); }
+      if(doc && doc.build && doc.build["after-steps"]){ validateSteps(doc.build["after-steps"], "#pipelineAfterBuildSteps"); }
+      if(doc && doc.deploy && doc.deploy["steps"]){ validateSteps(doc.deploy["steps"], "#pipelineDeploySteps"); }
+      if(doc && doc.deploy && doc.deploy["after-steps"]){ validateSteps(doc.deploy["after-steps"], "#pipelineAfterDeploySteps"); }
+
+
+      function validateSteps(steps, target) {
+        console.log(steps);
+        $(target).html("");
+        var stepsArray = []
+        async.eachSeries(steps, function (step, eachNext) {
+          if(step.script){
+            stepsArray.push({name : step.script.name})
+            return eachNext()
+          }
+
+          if(!_.isString(step)){
+            try{
+              step = Object.keys(step)[0];
+            }
+            catch(e){
+              return eachNext(e);
+            }
+          }
+
+          getStep(step, function  (error, stepData) {
+            if(error){
+              return eachNext(error);
+            }
+            if(!stepData){
+              console.log(step);
+              return showError("Step <code>" + step + "</code> does not exist in the registry.");
+            }
+            stepsArray.push(stepData);
+            eachNext()
+          })
+        }, function (error) {
+            makePipelineSteps(stepsArray, target);
+        });
+      }
+
+
+
+    });
+  });
+
+</script>
+
+<div class="validate">
+
+  <h1>Validate wercker.yml</h1>
+  <p>Here you can validate your <a href="http://devcenter.wercker.com/articles/werckeryml/">wercker.yml file</a> and get a visual overview of the boxes and steps which are used.</p>
+
+  <div class="row">
+    <div class="small-12 large-12 columns validate__yml">
+      <textarea class="validate__area" rows="30" cols="60" id="wercker-yml-input" name="wercker-yml-input" >
+box: wercker/default
+build:
+  steps:
+    - jshint
+    - script:
+        name: echo
+        code: echo 1
+      </textarea>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-12 large-12 columns text-center validate__button">
+      <a class="button large" id="check-button">Check my wercker.yml</a>
+    </div>
+  </div>
+
+  <div class="force-hidden" id="validate__fixtabs">
+    Your YAML contains tabs and spaces as identation. <button class="button medium radius text-center" id="fix-tabs-button">Replace tabs with 2 spaces.</button>
+  </div>
+
+  <div class="force-hidden" id="validate__error">
+    <div class="panel text-center">
+      <h4>Oops</h4>
+      <p class="validate__feedback" id="errors"></p>
+    </div>
+  </div>
+
+
+  <div class="validate__pipeline force-hidden">
+    <h3>Your wercker pipeline</h3>
+    <div class="row">
+      <div class="small-12 large-12 columns">
+        <span class="summary__header">Box <a class="right" href="">Browse all boxes &raquo;</a></span>
+        <div class="validate__feedback" id="pipelineBox"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 large-12 columns">
+        <span class="summary__header">Service(s) <a class="right" href="">Browse all services &raquo;</a></span>
+        <div class="validate__feedback" id="pipelineServices"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="small-12 large-12 columns validate__pipeline__build">
+        <span class='summary__header'>Build steps <a class="right" href="">Browse all steps &raquo;</a></span>
+        <div class="validate__feedback" id="pipelineBuildSteps">
+        </div>
+        <span class='summary__header'>Build after-steps</span>
+        <div class="validate__feedback" id="pipelineAfterBuildSteps">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="small-12 large-12 columns validate__pipeline__deploy">
+        <span class='summary__header'>Deploy steps <a class="right" href="">Browse all steps &raquo;</a></span>
+        <div class="validate__feedback" id="pipelineDeploySteps">
+        </div>
+        <span class='summary__header'>Deploy after-steps</span>
+        <div class="validate__feedback" id="pipelineAfterDeploySteps">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<hr/>
+<div class="authorCredits">
+    <span class="profile-picture">
+        <img src="https://secure.gravatar.com/avatar/e1c82876f21cdafafd2b01a1e625f587?d=identicon&amp;s=192" alt="Lindsey Bateman"/>
+    </span>
+    <ul class="authorCredits">
+
+        <!-- author info -->
+        <li class="authorCredits__name">
+            <h4>Lindsey Bateman</h4>
+            <em>
+                Lindsey is a product designer at wercker where he creates beautiful things.
+            </em>
+        </li>
+
+        <!-- info -->
+        <li>
+            <a href="http://beta.wercker.com" target="_blank">
+                <i class="icon-company"></i> <em>wercker</em>
+            </a>
+            <a href="http://twitter.com/lindseybateman" target="_blank">
+                <i class="icon-twitter"></i>
+                <em> lindseybateman</em>
+            </a>
+        </li>
+
+    </ul>
+</div>
+<hr/>
+<h5>Oct 29, 2013</h5>
+<hr/>
+

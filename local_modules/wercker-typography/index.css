@@ -56,6 +56,18 @@ h1 {
   font-weight: bold;
 }
 
+h2 {
+  font-size: $fontSize_largest;
+  line-height: $lineHeight_looser;
+  color: $color-grey_dark;
+}
+
+h3 {
+  font-size: $fontSize_larger;
+  line-height: $lineHeight_looser;
+  color: $color-grey_base;
+}
+
 pre {
   font-family: 'Source Code Pro', monospace;
   font-size: $fontSize_smaller;

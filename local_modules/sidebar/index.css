@@ -16,6 +16,9 @@
 
 .sidebar-list {
   margin-top: 20px;
+  height: calc(100vh - 170px);
+  overflow: auto;
+  padding-bottom: 20px;
 }
 
 /**
