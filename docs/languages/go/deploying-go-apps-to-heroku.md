@@ -155,37 +155,3 @@ When your build passed successfully you can deploy it to Heroku by executing the
 Whenever you push new commits to your remote git repository wercker will start a new build. You can go to your application page at [app.wercker.com](https://app.wercker.com) to see the status of these builds or use the `wercker status` command from the CLI as demonstrated in this article. The `wercker deploy` command lets you deploy green builds to Heroku.
 
 You can also enable auto deploymet for specific brances in the settings tab of your application at [app.wercker.com](https://app.wercker.com). With this feature all green builds from an specific branch get deployed to heroku.
-
--------
-
-<div class="authorCredits">
-    <span class="profile-picture">
-        <img src="https://secure.gravatar.com/avatar/5864d682bb0da7bedf31601e4e3172e7?d=identicon&s=192" alt="Pieter Joost van de Sande"/>
-    </span>
-    <ul class="authorCredits">
-
-        <!-- author info -->
-        <li class="authorCredits__name">
-            <h4>Pieter Joost van de Sande</h4>
-            <em>
-                Pieter Joost is an engineer and community manager at wercker
-            </em>
-        </li>
-
-        <!-- info -->
-        <li>
-            <a href="http://beta.wercker.com" target="_blank">
-                <i class="icon-company"></i> <em>wercker</em>
-            </a>
-            <a href="http://twitter.com/pjvds" target="_blank">
-                <i class="icon-twitter"></i>
-                <em> mies</em>
-            </a>
-        </li>
-
-    </ul>
-</div>
-
--------
-##### last modified on: July 10, 2013
--------

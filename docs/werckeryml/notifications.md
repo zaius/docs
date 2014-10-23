@@ -214,37 +214,3 @@ View the available options below:
 And now you have IRC notifications on your builds and deploys, as can be seen below:
 
 ![image](http://f.cl.ly/items/2e3y2M2E1r2Q0g3M1u44/Screen%20Shot%202013-08-13%20at%206.49.38%20PM.png)
-
----
-
-<div class="authorCredits">
-    <span class="profile-picture">
-        <img src="https://secure.gravatar.com/avatar/d4b19718f9748779d7cf18c6303dc17f?d=identicon&s=192" alt="Micha Hernandez van Leuffen"/>
-    </span>
-    <ul class="authorCredits">
-
-        <!-- author info -->
-        <li class="authorCredits__name">
-            <h4>Micha Hernandez van Leuffen</h4>
-            <em>
-                Micha is cofounder and CEO at wercker.
-            </em>
-        </li>
-
-        <!-- info -->
-        <li>
-            <a href="http://beta.wercker.com" target="_blank">
-                <i class="icon-company"></i> <em>wercker</em>
-            </a>
-            <a href="http://twitter.com/mies" target="_blank">
-                <i class="icon-twitter"></i>
-                <em> mies</em>
-            </a>
-        </li>
-
-    </ul>
-</div>
-
--------
-##### last modified on: September 7, 2013
--------

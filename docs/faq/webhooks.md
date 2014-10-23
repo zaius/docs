@@ -47,37 +47,3 @@ You can use the fix Webhook button to recreate the Webhook. Make sure that your 
 ### I'm a collaborator on a GitHub repository, how do I get admin permissions ###
 
 Unfortunately it's not possible to get admin permissions for a collaborator on a GitHub repository.
-
--------
-
-<div class="authorCredits">
-    <span class="profile-picture">
-        <img src="https://secure.gravatar.com/avatar/dff7a3e4eadab56aa69a24569cb61e98?d=identicon&amp;s=192" alt="Benno van den Berg"/>
-    </span>
-    <ul class="authorCredits">
-
-        <!-- author info -->
-        <li class="authorCredits__name">
-            <h4>Benno van den Berg</h4>
-            <em>
-                Benno is engineer at wercker.
-            </em>
-        </li>
-
-        <!-- info -->
-        <li>
-            <a href="http://beta.wercker.com" target="_blank">
-                <i class="icon-company"></i> <em>wercker</em>
-            </a>
-            <a href="https://twitter.com/hatchan_kitsune" target="_blank">
-                <i class="icon-twitter"></i>
-                <em>hatchan_kitsune</em>
-            </a>
-        </li>
-
-    </ul>
-</div>
-
--------
-##### June 29, 2013
--------

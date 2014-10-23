@@ -46,38 +46,3 @@ Predefined buildsteps such as pip-install in the wercker.yml above. This command
 Custom build steps, which are basically bash scripts defined via the 'script' clause, requiring a 'name' and 'code' section. In the example file above we created a custom build step called 'echo python information' that echos the python and pip versions back to us.
 
 See the [wercker.yml section](/articles/werckeryml) for more information.
-
-
--------
-
-<div class="authorCredits">
-    <span class="profile-picture">
-        <img src="https://secure.gravatar.com/avatar/7d9ef3d3f6911e6e4f9c51f6d99c48f8?d=identicon&s=192" alt="Jacco Flenter"/>
-    </span>
-    <ul class="authorCredits">
-
-        <!-- author info -->
-        <li class="authorCredits__name">
-            <h4>Jacco Flenter</h4>
-            <em>
-                Jacco is an interaction engineer at wercker.
-            </em>
-        </li>
-
-        <!-- info -->
-        <li>
-            <a href="http://beta.wercker.com" target="_blank">
-                <i class="icon-company"></i> <em>wercker</em>
-            </a>
-            <a href="http://twitter.com/jflenter" target="_blank">
-                <i class="icon-twitter"></i>
-                <em> flenter</em>
-            </a>
-        </li>
-
-    </ul>
-</div>
-
--------
-##### last modified: Sept 7, 2013
--------

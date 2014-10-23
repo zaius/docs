@@ -324,37 +324,3 @@ If you go to the **deploys** tab you can see your deploy in action:
 If we visit the root of our application on Heroku we can see it in action:
 
 ![image](http://f.cl.ly/items/2u0D3m062M40032z0r1Y/Screen%20Shot%202013-06-20%20at%201.55.05%20PM.png)
-
--------
-
-<div class="authorCredits">
-    <span class="profile-picture">
-        <img src="https://secure.gravatar.com/avatar/d4b19718f9748779d7cf18c6303dc17f?d=identicon&s=192" alt="Micha Hernandez van Leuffen"/>
-    </span>
-    <ul class="authorCredits">
-
-        <!-- author info -->
-        <li class="authorCredits__name">
-            <h4>Micha Hernandez van Leuffen</h4>
-            <em>
-                Micha is cofounder and CEO at wercker.
-            </em>
-        </li>
-
-        <!-- info -->
-        <li>
-            <a href="http://beta.wercker.com" target="_blank">
-                <i class="icon-company"></i> <em>wercker</em>
-            </a>
-            <a href="http://twitter.com/mies" target="_blank">
-                <i class="icon-twitter"></i>
-                <em> mies</em>
-            </a>
-        </li>
-
-    </ul>
-</div>
-
--------
-##### June 20, 2013
--------

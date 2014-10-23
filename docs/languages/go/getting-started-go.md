@@ -136,37 +136,3 @@ This will trigger a build on wercker which should pass.
 ![image](http://f.cl.ly/items/0j0L0Q0n143Q0q3n430R/Screen%20Shot%202013-07-10%20at%202.34.35%20PM.png)
 
 Congrats, you've now built your golang application on wercker!
-
--------
-
-<div class="authorCredits">
-    <span class="profile-picture">
-        <img src="https://secure.gravatar.com/avatar/d4b19718f9748779d7cf18c6303dc17f?d=identicon&s=192" alt="Micha Hernandez van Leuffen"/>
-    </span>
-    <ul class="authorCredits">
-
-        <!-- author info -->
-        <li class="authorCredits__name">
-            <h4>Micha Hernandez van Leuffen</h4>
-            <em>
-                Micha is cofounder and CEO at wercker.
-            </em>
-        </li>
-
-        <!-- info -->
-        <li>
-            <a href="http://beta.wercker.com" target="_blank">
-                <i class="icon-company"></i> <em>wercker</em>
-            </a>
-            <a href="http://twitter.com/mies" target="_blank">
-                <i class="icon-twitter"></i>
-                <em> mies</em>
-            </a>
-        </li>
-
-    </ul>
-</div>
-
--------
-##### last modified on: July 10th, 2013
--------
