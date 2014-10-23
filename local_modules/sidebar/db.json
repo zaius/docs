@@ -16,6 +16,26 @@
     "web",
     "wercker bot"
   ],
+  "werckeryml": [
+    "index",
+    "notifications"
+  ],
+  "language guides": [
+    "android",
+    "go",
+    "nodejs",
+    "php",
+    "python",
+    "ruby"
+  ],
+  "directory": [
+    "index"
+  ],
+  "boxes": [
+    "bash",
+    "chef",
+    "puppet"
+  ],
   "best practices": [
     "index",
     "pull requests"
