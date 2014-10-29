@@ -1,18 +1,11 @@
-# wercker-dev
+# wercker-docs
 
-Wercker devcenter built with [gulp][gulp] and [metalsmith][metalsmith].
+Wercker docs built with [gulp][gulp] and [metalsmith][metalsmith].
 
 ## Installation
+With [node][node] and [npm@2][npm] installed:
 ```sh
 git clone https://github.com/wercker/dev
-```
-
-Install node:
-```sh
-brew install nvm
-nvm install 0.10
-nvm alias default 0.10
-npm install -g npm@2
 ```
 
 ## Building
@@ -31,3 +24,5 @@ make watch
 
 [gulp]: http://gulpjs.com
 [metalsmith]: http://www.metalsmith.io/
+[node]: http://nodejs.com
+[npm]: http://npmjs.com
