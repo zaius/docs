@@ -51,28 +51,7 @@ function handleChange(e) {
   var setParentState = this.props.setState;
   var parentData = this.props.data;
 
-  // get query
-  // add values
   setParentState({
-    data: filter.call(this, parentData, e.target.value)
+    data: textFilter.call(this, parentData, e.target.value)
   });
-}
-
-/**
- * Filter.
- */
-
-function filter(data, query) {
-  // do filter stuff.
-  var keys = Object.keys(data);
-  var res = keys.filter(textFilter({query: query}));
-
-  var nw = {};
-  res.forEach(function(val) {
-    nw[val] = data[val];
-  });
-
-  console.log(nw);
-
-  return nw
 }
