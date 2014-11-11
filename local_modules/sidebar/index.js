@@ -47,12 +47,7 @@ function getInitialState() {
 function render() {
   var state = this.state;
 
-  return dom.aside({className: 'section-sidebar'},
-    dom.h2({className: 'sidebar-title'},
-      dom.a({href: 'http://wercker.com'} , 'wercker'),
-      ' / ',
-      dom.span(null, 'docs')
-    ),
+  return dom.section({className: 'section-sidebar'},
     search({data: this.props.data, setState: this.setState.bind(this)}),
     dom.section({className: 'sidebar-list'},
       Object.keys(state.data).map(function(key) {

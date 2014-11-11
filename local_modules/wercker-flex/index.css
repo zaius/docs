@@ -1,0 +1,13 @@
+/**
+ * Flex.
+ */
+
+.flex_outer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.flex_inner {
+  width: 960px;
+}

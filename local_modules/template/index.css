@@ -3,35 +3,50 @@
  */
 
 body {
-  display: inline-flex;
   width: 100%;
+}
+
+/**
+ * Navigation
+ */
+
+.navigation_outer {
+
+}
+
+.navigation_inner {
+
+}
+
+/**
+ * Header
+ */
+
+.header {
+  height: 300px;
 }
 
 /**
  * Docs
  */
 
-.section-doc_outer {
-  position: relative;
-  left: 260px;
-  width: calc(100% - 260px);
-}
-
-.section-doc_inner {
-  margin-bottom: 30px;
+.flex_docs {
   display: flex;
-  flex-direction: column;
-  font-size: $fontSize_base;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.section-doc_inner > * {
-  margin: auto;
-  margin-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 640px;
-  text-align: justify;
+.sidebar {
+  flex: 1;
+  order: 1;
 }
+
+.docs {
+  flex: 3;
+  order: 2;
+}
+
+
 
 /**
  * Code
@@ -80,13 +95,9 @@ body {
 }
 
 /**
- * Sidebar.
+ * Footer.
  */
 
-.sidebar {
-  flex-shrink: 0;
-  position: fixed;
-  height: 100vh;
-  width: 260px;
-  background-color: $color-grey_dark;
+.footer {
+
 }

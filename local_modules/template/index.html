@@ -12,12 +12,33 @@
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <aside class='sidebar'></aside>
-    <section class='section-doc_outer'>
-      <div class='section-doc_inner'>
-        {{{contents}}}
+
+    <section class="flex_outer navigation_outer">
+      <ul class="flex_inner navigation_inner">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </section>
+
+    <section class="flex_outer">
+        <header class="flex_inner header">Header image</header>
+    </section>
+
+    <section class='flex_outer'>
+      <div class='flex_inner'>
+        <div class="flex_docs">
+          <aside class='sidebar'></aside>
+          <aside class='docs'>{{{contents}}}</aside>
+        </div>
       </div>
     </section>
+
+    <section class="flex_outer">
+      <footer class="flex_inner">Footer</footer>
+    </section>
+
     <script src='/build.js'></script>
   </body>
 </html>
