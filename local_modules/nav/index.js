@@ -21,58 +21,123 @@ module.exports = react.createClass({
 
 /**
  * Render.
+ *
+ * There are two versions available. One has with extra `<li>`
+ * elements and one without. Choose one.
  */
 
 function render() {
   var state = this.state;
 
-  var logoProps = {
-    className: 'logo_base',
-    dangerouslySetInnerHTML: {
-      __html: logoBase
-    }
-  };
-  //
-  // return sticky({stickyClassName: 'nav_floating'},
-  //   dom.div({className: 'flex_outer nav'},
-  //     dom.div({className: 'flex_inner'},
-  //       dom.ul({className: 'navBar'},
-  //         dom.li({},
-  //           dom.span(logoNavBar)
-  //         ),
-  //         dom.li(null ,
-  //           dom.a({className: 'navBar_item', href: '/index.html'}, 'Dev Center')
-  //         ),
-  //         dom.li(null,
-  //           dom.a({className: 'navBar_item', href: '/learn/index.html'}, 'Learn')
-  //         ),
-  //         dom.li(null,
-  //           dom.a({className: 'navBar_item active', href: '/docs/index.html'}, 'Docs')
-  //         ),
-  //         dom.li(null,
-  //           dom.a({className: 'navBar_item', href: '/faq/index.html'}, 'Faq')
-  //         ),
-  //         dom.li(null,
-  //           dom.a({className: 'navBar-button navBar-button_signIn', href: '#'}, 'Sign in')
-  //         ),
-  //         dom.li(null,
-  //           dom.a({className: 'navBar-button navBar-button_register', href: '#', onClick: changeLocation}, 'Register for free')
-  //         )
-  //       )
-  //     )
-  //   )
-  // );
-  //
   return sticky({stickyClassName: 'nav_floating'},
     dom.div({className: 'flex_outer nav'},
       dom.div({className: 'flex_inner navBar'},
-        dom.span(logoProps),
-        dom.a({className: 'navBar_item', href: '/index.html'}, 'Dev Center'),
-        dom.a({className: 'navBar_item', href: '/learn/index.html'}, 'Learn'),
-        dom.a({className: 'navBar_item active', href: '/docs/index.html'}, 'Docs'),
-        dom.a({className: 'navBar_item', href: '/faq/index.html'}, 'Faq'),
-        dom.a({className: 'navBar-button navBar-button_signIn', href: '#'}, 'Sign in'),
-        dom.a({className: 'navBar-button navBar-button_register', href: '#', onClick: changeLocation}, 'Register for free')
+        dom.span({
+          className: 'logo_base',
+          dangerouslySetInnerHTML: {
+            __html: logoBase
+          }
+        }),
+        dom.a({
+          className: 'navBar_item',
+          href: '/',
+          onClick: changeLocation.bind(this, '/index.html'),
+          children: 'Dev Center'
+        }),
+        dom.a({
+          className: 'navBar_item',
+          href: '/learn',
+          onClick: changeLocation.bind(this, '/learn/index.html'),
+          children: 'Learn'
+        }),
+        dom.a({
+          className: 'navBar_item active',
+          href: '/docs',
+          onClick: changeLocation.bind(this, '/docs/best-practices/index.html'),
+          children: 'Docs'
+        }),
+        dom.a({
+          className: 'navBar_item',
+          href: '/faq',
+          onClick: changeLocation.bind(this, '/faq.index.html'),
+          children: 'Faq'
+        }),
+        dom.a({
+          className: 'navBar-button navBar-button_signIn',
+          href: '#',
+          onClick: changeLocation.bind(this, 'app.wercker.com'),
+          children: 'Sign in'
+        }),
+        dom.a({
+          className: 'navBar-button navBar-button_register',
+          href: '#',
+          onClick: changeLocation.bind(this, 'app.wercker.com/users/new'),
+          children: 'Register for free'
+        })
+      )
+    )
+  );
+
+  return sticky({stickyClassName: 'nav_floating'},
+    dom.div({className: 'flex_outer nav'},
+      dom.div({className: 'flex_inner'},
+        dom.ul({className: 'navBar'},
+          dom.li(null,
+            dom.span({
+              className: 'logo_base',
+              dangerouslySetInnerHTML: {
+                __html: logoBase
+              }
+            })
+          ),
+          dom.li(null,
+            dom.a({
+              className: 'navBar_item',
+              href: '/',
+              onClick: changeLocation.bind(this, '/index.html'),
+              children: 'Dev Center'
+            })
+          ),
+          dom.li(null,
+            dom.a({
+              className: 'navBar_item',
+              href: '/learn',
+              onClick: changeLocation.bind(this, '/learn/index.html'),
+              children: 'Learn'
+            })
+          ),
+          dom.li(null,
+            dom.a({
+              className: 'navBar_item active',
+              href: '/docs',
+              onClick: changeLocation.bind(this, '/docs/best-practices/index.html'),
+              children: 'Docs'
+            })
+          ),
+          dom.li(null,
+            dom.a({
+              className: 'navBar_item',
+              href: '/faq',
+              onClick: changeLocation.bind(this, '/faq.index.html'),
+              children: 'Faq'
+            })
+          ),
+          dom.li(null,
+            dom.a({
+              className: 'navBar-button navBar-button_signIn',
+              href: '#',
+              onClick: changeLocation.bind(this, 'app.wercker.com'),
+              children: 'Sign in'
+            })
+          ),
+          dom.li(null,
+            dom.a({
+              className: 'navBar-button navBar-button_register',
+              href: '#',
+              onClick: changeLocation.bind(this, 'app.wercker.com/users/new'),
+              children: 'Register for free'
+            })
+          )
       )
     )
   );
@@ -81,13 +146,13 @@ function render() {
 /**
  * Change location.
  *
- * @param {String} uri
+ * @param {String} href
  * @param {Event} e
  */
 
-function changeLocation(e) {
+function changeLocation(href, e) {
   e.preventDefault();
   e.stopPropagation();
 
-  var nw = null;
+  window.location = href;
 }
