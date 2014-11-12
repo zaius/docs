@@ -4,7 +4,6 @@
 
 var search = require('@local/search');
 var react = require('react');
-var lunr = require('lunr');
 
 var textFilter = require('./algorithm');
 
