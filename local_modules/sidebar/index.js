@@ -58,17 +58,17 @@ function render() {
             return dom.a({
               className: 'sidebar-li',
               key: val,
-              href: '/' + (val == 'index' ? '' : slugify(val))}, val
+              href: '/docs/' + (val == 'index' ? '' : slugify(val))}, val
             )
 
           default:
             return dom.ul({key: key},
               dom.li({className: 'sidebar-li'},
-                dom.a({href: '/' + slugify(key) + '/' + slugify(val[0]) + '.html'}, key)
+                dom.a({href: '/docs/' + slugify(key) + '/' + slugify(val[0]) + '.html'}, key)
               ),
               val.map(function(valTwo) {
                 return dom.li({className: 'sidebar-li_sub', key: key + valTwo},
-                  dom.a({href: '/' + slugify(key) + '/' + slugify(valTwo) + '.html'}, valTwo)
+                  dom.a({href: '/docs/' + slugify(key) + '/' + slugify(valTwo) + '.html'}, valTwo)
                 )
               })
             )
