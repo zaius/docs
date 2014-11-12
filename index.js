@@ -13,5 +13,5 @@ var dom = react.DOM;
  * Create stuff
  */
 
-react.renderComponent(nav(), document.querySelector('.nav'));
+react.renderComponent(nav(), document.querySelector('.sticky'));
 react.renderComponent(sidebar(), document.querySelector('.sidebar'));

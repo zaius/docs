@@ -51,16 +51,13 @@
   opacity: .7;
 }
 
-.footer_register .button {
+.button_register {
   display: inline-block;
   margin-top: 20px;
   padding: 6px 14px;
   border-radius: 2px;
   letter-spacing: 1px;
   font-size: $fontSize_small;
-}
-
-.footer_register .button_register {
   background-color: $color-turquoise_base;
   border-color: $color-turquoise_base;
   color: $color-white;
