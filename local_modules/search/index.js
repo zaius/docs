@@ -35,7 +35,8 @@ function render() {
         placeholder: 'search',
         className: 'search-input',
         onChange: handleChange.bind(this)
-      })
+      }),
+      dom.img( {src:'/images/icon-magnifier.svg', alt:'search'} )
     )
   );
 }

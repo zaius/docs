@@ -1,9 +1,24 @@
+/**
+ * Search.
+ */
+
+.section-search {
+  overflow: hidden;
+  position: relative;
+  padding-left: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid $color-blue_dark;
+}
+
 .search-input {
-  margin-top: 20px;
-  padding: 10px;
   border: hidden;
-  height: 18px;
-  width: calc(100% - 2 * 10px);
+  color: $color-blue_dark;
   font-size: $fontSize-base;
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.section-search img {
+  position: absolute;
+  left: 0;
+  top: 8px;
 }

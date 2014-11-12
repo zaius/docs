@@ -1,0 +1,83 @@
+/**
+ * Navigation.
+ */
+
+.nav {
+  background-color: $color-grey_light;
+}
+
+.nav.floating {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background-color: $color-blue_dark;
+}
+
+.navBar {
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.nav.floating .navBar {
+  margin: 0;
+}
+
+.navBar li {
+  display: inline;
+}
+
+.navBar .navBar_item {
+  font-weight: $fontWeight_base;
+  color: $color-blue_dark;
+  vertical-align: top;
+  margin-right: 15px;
+  line-height: 35px;
+  opacity: .8;
+}
+
+.nav.floating .navBar .navBar_item {
+  font-weight: $fontWeight_base;
+  color: $color-white;
+  vertical-align: top;
+  margin-right: 15px;
+  line-height: 35px;
+  opacity: .8;
+}
+
+.navBar .navBar_item:hover {
+  opacity: 1;
+}
+
+.navBar .navBar_item.active {
+  font-weight: $fontWeight_bold;
+  opacity: 1;
+}
+
+.navBar .button {
+  float: right;
+  margin-left: 15px;
+  border-radius: 2px;
+  padding: 6px 14px;
+  letter-spacing: 1px;
+  border: 1px solid $color-grey_base;
+  font-size: $fontSize_small;
+  color: $color-grey_dark;
+}
+
+.navBar .button_register {
+  background-color: $color-blue_dark;
+  border-color: $color-blue_dark;
+  color: $color-white;
+}
+
+.navBar .button_signIn {
+  background-color: transparent;
+}
+
+.navBar .logo_base {
+  margin-right: 15px;
+}
+
+.nav.floating .navBar .logo_base svg  {
+  fill: red;
+}

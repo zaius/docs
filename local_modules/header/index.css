@@ -1,0 +1,16 @@
+/**
+ * Header
+ */
+
+.header {
+  height: 200px;
+  background-color: $color-grey_light;
+}
+
+.header_text {
+  margin-top: 80px;
+  padding-left: 10px;
+  font-weight: $fontWeight_bold;
+  font-size: $fontSize_jumbo;
+  color: $color-white;
+}

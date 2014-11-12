@@ -1,0 +1,96 @@
+/**
+ * Docs.
+ */
+
+.docs {
+  flex: 3;
+  order: 2;
+  padding: 40px;
+}
+
+/**
+ * Code
+ */
+
+.docs code {
+  margin: 0 3px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-family: "Consolas", "Liberation Mono", Courier, monospace;
+  background-color: $color-grey_lightest;
+  border: 1px solid $color-grey_lighter;
+  font-weight: $fontWeight_base;
+  font-size: $fontSize_small;
+  color: $color-blue_dark;
+}
+
+.docs > pre {
+  border: 1px solid $color-grey_lighter;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.docs > pre > code {
+  line-height: $lineHeight_loose;
+  background-color: transparent;
+  white-space: inherit;
+  border: none;
+}
+
+/**
+ * ul ol.
+ */
+
+.docs > ul, .docs > ol {
+  margin-top: 5px;
+  margin-left: 10px;
+  line-height: $lineHeight_loose;
+  color: $color-grey_base;
+  list-style: none;
+}
+
+.docs > ul li:before, .docs > ol li:before {
+  content: "• ";
+  color: $color-blue_light;
+}
+
+/**
+ * Images.
+ */
+
+.docs p > img {
+  max-width: 100%;
+  margin-top: 20px;
+  border: 1px solid $color-grey_lighter;
+}
+
+
+/**
+ * Line breaks.
+ */
+
+.docs > hr {
+  display: none;
+}
+
+
+/**
+ * Blockquote.
+*/
+
+blockquote {
+  margin-top: 20px;
+  padding-left: 40px;
+  border-left: 1px solid $color-blue_dark;
+}
+
+blockquote  p {
+  font-size: $fontSize_small;
+  color: $color-grey_base;
+  font-weight: $fontWeight_light;
+  line-height: $lineHeight_loose;
+  font-style: italic;
+}

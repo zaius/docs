@@ -60,6 +60,13 @@ var styleFiles = [
   'local_modules/**/*.css'
 ];
 
+var imageFiles = [
+  'local_modules/**/*.jpg',
+  'local_modules/**/*.png',
+  'local_modules/**/*.gif',
+  'local_modules/**/*.svg'
+];
+
 /**
  * Compile CSS
  */
@@ -121,6 +128,17 @@ gulp.task('docs', function() {
 });
 
 /**
+ * Copy assets
+ */
+
+gulp.task('assets', function() {
+  gulp
+    .src(imageFiles)
+    .pipe(flatten())
+    .pipe(gulp.dest(path.join(__dirname, '/build/images')));
+});
+
+/**
  * Lint files
  */
 
@@ -153,7 +171,8 @@ gulp.task('watch', function() {
 gulp.task('build', [
   'docs',
   'modules',
-  'styles'
+  'styles',
+  'assets'
 ]);
 
 /**

@@ -8,7 +8,11 @@ By leveraging wercker for your continuous delivery process you gain several bene
 
 ## In the Cloud
 
-We want you to focus on your code and the application that you are building and not on tedious install processes. Wercker is hosted in the cloud, so there is no need to download any software or buy your own hardware. In fact it takes under a minute to set up your project and use wercker.
+We want you to focus on your code and the application that you are building and not on tedious install processes.
+
+> Wercker integrates with your favorite developer platforms out there such as GitHub and Bitbucket for your version control.
+
+Wercker is hosted in the cloud, so there is no need to download any software or buy your own hardware. In fact it takes under a minute to set up your project and use wercker.
 
 ## Integrated
 
