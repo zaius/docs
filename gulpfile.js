@@ -51,8 +51,17 @@ var docs = {
     'lib/docs/**/*.md',
     'lib/docs/*.md'
   ],
+  faq: [
+    'lib/faq/**/*.md',
+    'lib/faq/*.md'
+  ],
   index: [
+    'lib/index/**/*.md',
     'lib/index/*.md'
+  ],
+  learn: [
+    'lib/learn/**/*.md',
+    'lib/learn/*.md'
   ]
 };
 

@@ -59,7 +59,7 @@ function render() {
         dom.a({
           className: 'navBar_item',
           href: '/faq',
-          onClick: changeLocation.bind(this, '/faq.index.html'),
+          onClick: changeLocation.bind(this, '/faq/index.html'),
           children: 'Faq'
         }),
         dom.a({
@@ -118,7 +118,7 @@ function render() {
             dom.a({
               className: 'navBar_item',
               href: '/faq',
-              onClick: changeLocation.bind(this, '/faq.index.html'),
+              onClick: changeLocation.bind(this, '/faq/index.html'),
               children: 'Faq'
             })
           ),
@@ -138,6 +138,7 @@ function render() {
               children: 'Register for free'
             })
           )
+        )
       )
     )
   );
