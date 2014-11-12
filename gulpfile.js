@@ -48,11 +48,11 @@ var moduleEntryPoint = [
 
 var docs = {
   docs: [
-    'docs/**/*.md',
-    'docs/*.md'
+    'lib/docs/**/*.md',
+    'lib/docs/*.md'
   ],
   index: [
-    'index/*.md'
+    'lib/index/*.md'
   ]
 };
 
@@ -144,9 +144,9 @@ gulp.task('watch', function() {
   // determine which folders to watch for doc changes.
   var watchDocs = [];
   Object.keys(docs).forEach(function(key) {
-    watchDocs.push(key + '/*.md');
-    watchDocs.push(key + '/**/*.md');
-    watchDocs.push(key + '/index.html');
+    watchDocs.push('lib/' + key + '/*.md');
+    watchDocs.push('lib/' + key + '/**/*.md');
+    watchDocs.push('lib/' + key + '/index.html');
   });
 
   gulp.watch(['/build/**']).on('change', livereload.changed);
@@ -198,7 +198,7 @@ function buildTemplate(tn) {
     }))
     .use(templates({
       engine: 'mustache',
-      directory: tn
+      directory: 'lib/' + tn
     }));
 
   function parseFile(file) {
