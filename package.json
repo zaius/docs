@@ -23,6 +23,7 @@
     "@local/header": "file:local_modules/header",
     "@local/highlight": "file:local_modules/highlight",
     "@local/nav": "file:local_modules/nav",
+    "@local/react-icon": "file:local_modules/react-icon",
     "@local/search": "file:local_modules/search",
     "@local/sidebar": "file:local_modules/sidebar",
     "@local/template": "file:local_modules/template",
