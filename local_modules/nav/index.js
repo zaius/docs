@@ -48,10 +48,10 @@ function render() {
         dom.a({className: 'navBar_item', href: '#'}, 'Faq')
       ),
       dom.li({},
-        dom.a({className: 'button button_signIn', href: '#'}, 'Sign in')
+        dom.a({className: 'navBar-button navBar-button_signIn', href: '#'}, 'Sign in')
       ),
       dom.li({},
-        dom.a({className: 'button button_register', href: '#'}, 'Register for free')
+        dom.a({className: 'navBar-button navBar-button_register', href: '#'}, 'Register for free')
       )
     )
   );

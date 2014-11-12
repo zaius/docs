@@ -6,7 +6,7 @@
   background-color: $color-grey_light;
 }
 
-.nav.floating {
+.nav_floating {
   position: fixed;
   top: 0;
   width: 100vw;
@@ -14,29 +14,32 @@
 }
 
 .navBar {
-  margin-top: 20px;
-  padding: 0 20px;
+  padding: 20px 20px 0 20px;
 }
 
-.nav.floating .navBar {
-  margin: 0;
+.nav_floating .navBar {
+  padding: 5px 20px;
 }
 
 .navBar li {
   display: inline;
 }
 
-.navBar .navBar_item {
+.navBar_item {
   font-weight: $fontWeight_base;
   color: $color-blue_dark;
   vertical-align: top;
   margin-right: 15px;
-  line-height: 35px;
+  line-height: $lineHeight_looser;
   opacity: .8;
 }
 
-.nav.floating .navBar .navBar_item {
-  font-weight: $fontWeight_base;
+.navBar_item:hover {
+  opacity: 1;
+}
+
+.nav_floating .navBar_item {
+  font-weight: $fontWeight_light;
   color: $color-white;
   vertical-align: top;
   margin-right: 15px;
@@ -44,40 +47,48 @@
   opacity: .8;
 }
 
-.navBar .navBar_item:hover {
+.nav_floating .navBar_item:hover {
   opacity: 1;
 }
 
-.navBar .navBar_item.active {
+.navBar_item.active {
   font-weight: $fontWeight_bold;
   opacity: 1;
 }
 
-.navBar .button {
+.nav_floating .navBar_item.active {
+  font-weight: $fontWeight_base;
+  opacity: 1;
+}
+
+.navBar-button {
   float: right;
   margin-left: 15px;
   border-radius: 2px;
-  padding: 6px 14px;
+  padding: 5px 12px;
   letter-spacing: 1px;
   border: 1px solid $color-grey_base;
   font-size: $fontSize_small;
   color: $color-grey_dark;
 }
 
-.navBar .button_register {
+.navBar-button_register {
   background-color: $color-blue_dark;
   border-color: $color-blue_dark;
   color: $color-white;
 }
 
-.navBar .button_signIn {
+.navBar-button_signIn {
   background-color: transparent;
 }
 
-.navBar .logo_base {
+.nav_floating .navBar-button {
+  background-color: transparent;
+  color: $color-white;
+  border-color: $color-blue_lighter;
+}
+
+.logo_base {
   margin-right: 15px;
 }
 
-.nav.floating .navBar .logo_base svg  {
-  fill: red;
-}
