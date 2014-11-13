@@ -17,12 +17,12 @@ var metalsmith = require('metalsmith');
 var flatten = require('gulp-flatten');
 var envify = require('envify/custom');
 var assign = require('object-assign');
-var lunr = require('metalsmith-lunr');
 var gulpsmith = require('gulpsmith');
 var concat = require('gulp-concat');
 var mocha = require('gulp-mocha');
 var sass = require('gulp-sass');
 var myth = require('gulp-myth');
+var assert = require('assert');
 var gulp = require('gulp');
 var path = require('path');
 
@@ -31,7 +31,6 @@ var path = require('path');
  */
 
 module.exports = gulp;
-
 
 /**
  * Paths.
@@ -47,10 +46,24 @@ var moduleEntryPoint = [
   path.join(__dirname, 'index.js')
 ];
 
-var docs = [
-  'docs/**/*.md',
-  'docs/*.md'
-];
+var docs = {
+  docs: [
+    'lib/docs/**/*.md',
+    'lib/docs/*.md'
+  ],
+  faq: [
+    'lib/faq/**/*.md',
+    'lib/faq/*.md'
+  ],
+  index: [
+    'lib/index/**/*.md',
+    'lib/index/*.md'
+  ],
+  learn: [
+    'lib/learn/**/*.md',
+    'lib/learn/*.md'
+  ]
+};
 
 var styleFiles = [
   'node_modules/css-wipe/index.css',
@@ -101,30 +114,9 @@ gulp.task('modules', function() {
  */
 
 gulp.task('docs', function() {
-
-  // https://github.com/CMClay/metalsmith-lunr
-  var metalPipe = gulpsmith()
-    .use(highlight())
-    .use(markdown({
-      smartypants: true,
-      gfm: true
-    }))
-    .use(templates({
-      engine: 'mustache',
-      directory: 'node_modules/@local/template'
-    }))
-    .use(lunr())
-
-  function parseFile(file) {
-    assign(file, {template: 'index.html'});
-    delete file.frontMatter;
-  }
-
-  gulp
-    .src(docs)
-    .pipe(frontMatter()).on('data', parseFile)
-    .pipe(metalPipe)
-    .pipe(gulp.dest('./build'));
+  Object.keys(docs).forEach(function(key) {
+    buildTemplate(key);
+  });
 });
 
 /**
@@ -157,9 +149,18 @@ gulp.task('lint', function() {
  */
 
 gulp.task('watch', function() {
+
+  // determine which folders to watch for doc changes.
+  var watchDocs = [];
+  Object.keys(docs).forEach(function(key) {
+    watchDocs.push('lib/' + key + '/*.md');
+    watchDocs.push('lib/' + key + '/**/*.md');
+    watchDocs.push('lib/' + key + '/index.html');
+  });
+
   gulp.watch(['/build/**']).on('change', livereload.changed);
-  gulp.watch(jsFiles, [/*'lint',*/ 'modules']);
-  gulp.watch([docs, 'local_modules/template/*'], ['docs']);
+  gulp.watch(jsFiles, ['modules']);
+  gulp.watch([watchDocs], ['docs']);
   gulp.watch(styleFiles, ['styles']);
   livereload.listen();
 });
@@ -181,6 +182,42 @@ gulp.task('build', [
 
 gulp.task('default', [
   'build',
-  //'lint',
   'watch'
 ]);
+
+
+/**
+ * Build a template.
+ * TODO: move to module.
+ *
+ * @param {String} tn
+ * @api private
+ */
+
+function buildTemplate(tn) {
+  assert('string' == typeof tn, 'TemplateName should be a string');
+
+  var outDir = 'index' == tn ? '' : tn;
+
+  var metalPipe = gulpsmith()
+    .use(highlight())
+    .use(markdown({
+      smartypants: true,
+      gfm: true
+    }))
+    .use(templates({
+      engine: 'mustache',
+      directory: 'lib/' + tn
+    }));
+
+  function parseFile(file) {
+    assign(file, {template: 'index.html'});
+    delete file.frontMatter;
+  }
+
+  gulp
+    .src(docs[tn])
+    .pipe(frontMatter()).on('data', parseFile)
+    .pipe(metalPipe)
+    .pipe(gulp.dest('./build/' + outDir));
+}
