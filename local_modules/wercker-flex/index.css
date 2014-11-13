@@ -2,12 +2,12 @@
  * Flex.
  */
 
-.flex_outer {
+.flex-outer {
   display: flex;
-  flex-direction: row;
   justify-content: center;
+  align-content: space-around;
 }
 
-.flex_inner {
+.flex-inner {
   width: 960px;
 }

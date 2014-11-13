@@ -1,13 +1,18 @@
 /**
- * Header
+ * Header.
  */
 
 .header {
+  overflow: hidden;
+  height: 280px;
   background-color: $color-grey_light;
 }
 
 .header_text {
-  margin: 80px 0;
+  position: fixed;
+  z-index: 0;
+  margin: 40px 0;
+  line-height: 120px;
   padding-left: 10px;
   font-weight: $fontWeight_bold;
   font-size: $fontSize_jumbo;

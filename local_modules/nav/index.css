@@ -2,127 +2,99 @@
  * Navigation.
  */
 
-.nav_floating {
+.sticky {
+}
+
+.navbar-floating {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 99;
   width: 100vw;
 }
 
-.nav {
+.navbar-container {
   background-color: $color-grey_light;
 }
 
-.nav_floating .nav {
-  background-color: rgba($color-blue_dark, .95);
-  animation: myfirst $duration_fast $easing-bounce_smooth;
+.navbar-floating .navbar-container {
+  background-color: $color-blue_dark;
+  transition: background-color $duration_fast $easing_smooth;
 }
 
-.navBar {
-  padding: 20px 20px 0 20px;
+.navbar {
+  margin-top: 10px;
+  padding: 0 20px;
 }
 
-.nav_floating .navBar {
-  margin-top: 4px;
-  padding: 5px 20px;
+.navbar-floating .navbar {
+  margin-top: 10px;
+  padding: 0px 20px 5px 20px;
 }
 
-.navBar li {
+.navbar li {
   display: inline;
 }
 
-.navBar_item {
-  font-weight: $fontWeight_base;
+.navbar-item {
+  font-weight: $fontWeight_light;
   color: $color-blue_dark;
   vertical-align: top;
   margin-right: 15px;
   line-height: $lineHeight_looser;
   opacity: .8;
-
-  transition: color $duration_fastest $easing_smooth
 }
 
-.navBar_item:hover {
+.navbar-item:hover {
   opacity: 1;
 }
 
-.nav_floating .navBar_item {
-  font-weight: $fontWeight_light;
+.navbar-floating .navbar-item {
   color: $color-white;
-  vertical-align: top;
-  margin-right: 15px;
-  line-height: 35px;
-  opacity: .8;
 }
 
-.nav_floating .navBar_item:hover {
-  opacity: 1;
-}
-
-.navBar_item.active {
+.navbar-item_active {
   font-weight: $fontWeight_bold;
   opacity: 1;
 }
 
-.nav_floating .navBar_item.active {
-  font-weight: $fontWeight_base;
-  opacity: 1;
-}
-
-.navBar-button {
+.navbar-button {
   float: right;
   margin-left: 15px;
   border-radius: 2px;
   padding: 4px 12px;
   letter-spacing: 1px;
-  border: 1px solid $color-grey_base;
   font-size: $fontSize_small;
   color: $color-grey_dark;
+  border: 1px solid $color-grey_base;
+  transition: all $duration_fast $easing_smooth;
 }
 
-.navBar-button_register {
+.navbar-button_register {
   background-color: $color-blue_dark;
   border-color: $color-blue_dark;
-  color: $color-white;
-}
-
-.navBar-button_signIn {
-  background-color: transparent;
-}
-
-.nav_floating .navBar-button {
-  border-color: $color-blue_lighter;
-  background-color: transparent;
-  color: $color-white;
-}
-
-.nav_floating .navBar-button_register {
-  color: $color-turquoise_base;
   font-weight: $fontWeight_base;
+  color: $color-white;
+}
+
+.navbar-button_signIn {
+  background-color: transparent;
+}
+
+.navbar-floating .navbar-button {
+  background-color: transparent;
+  color: $color-white;
+}
+
+.navbar-floating .navbar-button_register {
+  color: $color-turquoise_base;
   border-color: $color-turquoise_base;
 }
+
 .logo_base {
   margin-right: 15px;
 }
 
-.nav_floating .svg-logo-base {
+.navbar-floating .svg-logo-base {
   fill: $color-white;
-}
-
-/**
- * Animation.
- */
-
-
-@keyframes myfirst {
-    from {
-      background-color: $color-grey_light;
-      transform:translate(0px, -60px);
-    }
-    to {
-      background-color: rgba($color-blue_dark, .95);
-      transform:translate(0px, 0px);
-    }
 }
