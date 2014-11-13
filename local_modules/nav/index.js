@@ -60,6 +60,11 @@ function render() {
           )
         )
       )
+    ),
+    dom.div({className: 'flex_outer header'},
+      dom.div({className: 'flex_inner'},
+        dom.div({className: 'header_text'}, 'DOCS')
+      )
     )
   );
 }
