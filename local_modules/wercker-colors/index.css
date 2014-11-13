@@ -5,7 +5,7 @@
 $color-white: hsl(0, 0%, 100%);
 
 $color-grey_lightest: hsl(0, 0%, 98%);
-$color-grey_lighter: hsl(0, 0%, 91%);
+$color-grey_lighter: F5F7F8;
 $color-grey_light: #E6E6E6;
 $color-grey_base: #9D9D9D;
 $color-grey_dark: hsl(140, 1%, 39%);

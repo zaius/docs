@@ -1,0 +1,62 @@
+/**
+ * Learn.
+ */
+
+.learn {
+
+}
+
+.learn h1 {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.learnblocks {
+  align-content: space-around;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  background-color: $color-grey_lighter;
+}
+
+.learnblocks-item {
+  flex: 1 12.5%;
+  margin: 20px;
+}
+
+@media screen and (max-width: 64em) {
+  .learnblocks-item {
+    flex: 1 25%;
+  }
+}
+
+.learnblocks-item-icon {
+  height: 114px;
+}
+
+.learnblocks-item-title {
+  margin-top: 10px;
+  text-align: center;
+  font-size: $fontSize_base;
+  color: $color-blue_dark;
+}
+
+.learnblocks-item_basics .learnblocks-item-icon {
+  background-color: #F748C4;
+}
+.learnblocks-item_yml .learnblocks-item-icon{
+  background-color: #3DBDEE;
+}
+.learnblocks-item_boxes .learnblocks-item-icon{
+  background-color: #6DBE44;
+}
+.learnblocks-item_steps .learnblocks-item-icon{
+  background-color: #FF3362;
+}
+.learnblocks-item_build .learnblocks-item-icon{
+  background-color: #FFDE00;
+}
+.learnblocks-item_deploy .learnblocks-item-icon{
+  background-color: #FF801A;
+}

@@ -4,6 +4,7 @@
 
 .footer {
   margin-top: 40px;
+  z-index: 2;
   background-color: $color-blue_dark;
 }
 

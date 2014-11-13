@@ -3,13 +3,14 @@
  */
 
 .header {
-  overflow: hidden;
-  height: 280px;
+  position: relative;
+  /*overflow: hidden;*/
+  /*height: 200px;*/
   background-color: $color-grey_light;
 }
 
 .header_text {
-  position: fixed;
+  /*position: fixed;*/
   z-index: 0;
   margin: 40px 0;
   line-height: 120px;
