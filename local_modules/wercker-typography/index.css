@@ -15,11 +15,11 @@ $lineHeight_looser: 36px;
 
 $fontSize_micro: 8px;
 $fontSize_smallest: 10px;
-$fontSize_smaller: 12px;
+$fontSize_smaller: 13px;
 $fontSize_small: 14px;
 $fontSize_base: 15px;
 $fontSize_medium: 17px;
-$fontSize_large: 18px;
+$fontSize_large: 19px;
 $fontSize_larger: 21px;
 $fontSize_largest: 32px;
 $fontSize_jumbo: 140px;
@@ -52,7 +52,7 @@ a {
 }
 
 a:hover {
-  color: $color-blue_dark;
+  color: $color-blue_darker;
 }
 
 p {
@@ -74,7 +74,7 @@ h1 {
   line-height: $lineHeight_looser;
   font-weight: $fontWeight_base;
   font-size: $fontSize_largest;
-  color: $color-blue_dark;
+  color: $color-blue_darker;
   letter-spacing: 1px;
 }
 
@@ -90,7 +90,7 @@ h2 {
   line-height: $lineHeight_looser;
   font-weight: $fontWeight_light;
   font-size: $fontSize_larger;
-  color: $color-grey_dark;
+  color: $color-grey_darker;
   margin-top: 30px;
 }
 
@@ -101,6 +101,14 @@ h3 {
   text-transform: uppercase;
   color: $color-blue_light;
   margin-top: 20px;
+}
+
+h4 {
+  line-height: $lineHeight_looser;
+  font-weight: $fontWeight_base;
+  font-size: $fontSize_small;
+  color: $color-blue_light;
+  margin-top: 10px;
 }
 
 pre {

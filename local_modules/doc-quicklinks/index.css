@@ -1,0 +1,36 @@
+/**
+ * Doc quicklinks.
+ */
+
+.doc-quicklinks {
+  align-content: space-around;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.doc-quicklinks-item {
+  flex: 1 12.5%;
+  margin: 10px;
+  padding: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .doc-quicklinks-item {
+    flex: 1 25%;
+  }
+}
+
+.doc-quicklinks-item ul {
+  line-height: $lineHeight_looser;
+  font-size: $fontSize-base;
+  color: $color-grey_base;
+  list-style: none;
+}
+
+.doc-quicklinks-item ul li:before {
+  content: "• ";
+  color: $color-blue_light;
+}

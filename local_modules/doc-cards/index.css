@@ -1,0 +1,75 @@
+/**
+ * Doc cards.
+ */
+
+.doc-cards {
+  align-content: space-around;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.doc-cards-item {
+  flex: 1 12.5%;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid $color-blue_lighter;
+}
+
+
+@media screen and (max-width: 768px) {
+  .doc-cards-item {
+    flex: 1 25%;
+  }
+}
+
+.doc-cards-item .doc-cards-item_title {
+  border-bottom: 2px solid $color-blue_light;
+}
+
+.doc-cards-item_1 .doc-cards-item_title {
+  border-color: $color-skyblue_base;
+}
+
+.doc-cards-item_2 .doc-cards-item_title {
+  border-color: $color-green_base;
+}
+
+.doc-cards-item_3 .doc-cards-item_title {
+  border-color: $color-fuchsia_base;
+}
+
+.doc-cards-item_4 .doc-cards-item_title {
+  border-color: $color-red_base;
+}
+
+.doc-cards-item .doc-cards-item_title  {
+  display: block;
+  padding-bottom: 10px;
+  font-size: $fontSize-large;
+  color: $color-blue_darker;
+}
+
+.doc-cards-item span {
+  float: right;
+}
+
+.doc-cards-item p {
+  line-height: $lineHeight_base;
+  font-size: $fontSize-smaller;
+  color: $color-grey_base;
+}
+
+.doc-cards-item ul {
+  margin-top: 10px;
+  line-height: $lineHeight_looser;
+  font-size: $fontSize-medium;
+  color: $color-grey_base;
+  list-style: none;
+}
+
+.doc-cards-item ul li:before {
+  content: "• ";
+  color: $color-blue_light;
+}

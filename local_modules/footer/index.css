@@ -5,7 +5,7 @@
 .footer {
   margin-top: 40px;
   z-index: 2;
-  background-color: $color-blue_dark;
+  background-color: $color-blue_darker;
 }
 
 .footer_container {
@@ -21,9 +21,21 @@
 
 .footer_social {
   flex: 1;
-  background-color: $color-blue_light;
+  background-color: $color-blue_dark;
   color: $color-white;
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .footer_container {
+    flex-direction: column;
+  }
+  .footer_register, .footer_register p  {
+    text-align: center;
+  }
+  .footer_social {
+    margin-top: 40px;
+  }
 }
 
 .footer_social span {
@@ -36,12 +48,12 @@
 }
 
 .footer_social img {
-  padding: 10px;
-  transition: transform $duration_fastest $easing-bounce_smooth
+  margin: auto;
+  padding: 10px 15px;
 }
 
 .footer_social img:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .footer_register p {

@@ -20,7 +20,7 @@
 }
 
 .navbar-floating .navbar-container {
-  background-color: $color-blue_dark;
+  background-color: $color-blue_darker;
   transition: background-color $duration_fast $easing_smooth;
 }
 
@@ -40,7 +40,7 @@
 
 .navbar-item {
   font-weight: $fontWeight_light;
-  color: $color-blue_dark;
+  color: $color-blue_darker;
   vertical-align: top;
   margin-right: 15px;
   line-height: $lineHeight_looser;
@@ -65,6 +65,7 @@
   margin-left: 15px;
   border-radius: 2px;
   padding: 4px 12px;
+  font-weight: $fontWeight_base;
   letter-spacing: 1px;
   font-size: $fontSize_small;
   color: $color-grey_dark;
@@ -73,14 +74,21 @@
 }
 
 .navbar-button_register {
-  background-color: $color-blue_dark;
-  border-color: $color-blue_dark;
-  font-weight: $fontWeight_base;
+  background-color: $color-blue_darker;
+  border-color: $color-blue_darker;
+  color: $color-blue_lighter;
+}
+
+.navbar-button_register:hover {
   color: $color-white;
 }
 
 .navbar-button_signIn {
   background-color: transparent;
+}
+
+.navbar-button_signIn:hover {
+  background-color: $color-grey_lighter;
 }
 
 .navbar-floating .navbar-button {

@@ -21,7 +21,7 @@
   text-transform: capitalize;
   font-weight: $fontWeight_base;
   font-family: 'Open Sans', sans-serif;
-  color: $color-blue_dark;
+  color: $color-blue_darker;
 }
 
 .sidebar-li_sub > a {

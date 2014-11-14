@@ -23,11 +23,11 @@
   border: 1px solid $color-grey_lighter;
   font-weight: $fontWeight_base;
   font-size: $fontSize_small;
-  color: $color-blue_dark;
+  color: $color-blue_darker;
 }
 
 .docs > pre {
-  border: 1px solid $color-grey_lighter;
+  border: 1px solid $color-grey_light;
   margin-top: 30px;
   margin-bottom: 30px;
   padding: 20px;
@@ -62,8 +62,8 @@
  * Images.
  */
 
-.docs p > img {
-  max-width: 100%;
+.docs p > img, .docs a > img {
+  width: 100%;
   margin-top: 20px;
   border: 1px solid $color-grey_lighter;
 }
@@ -85,7 +85,7 @@
 blockquote {
   margin-top: 30px;
   padding-left: 40px;
-  border-left: 1px solid $color-blue_dark;
+  border-left: 1px solid $color-blue_darker;
 }
 
 blockquote > p {

@@ -19,6 +19,8 @@
   },
   "devDependencies": {
     "@local/docs": "file:local_modules/docs",
+    "@local/doc-cards": "file:local_modules/doc-cards",
+    "@local/doc-quicklinks": "file:local_modules/doc-quicklinks",
     "@local/footer": "file:local_modules/footer",
     "@local/header": "file:local_modules/header",
     "@local/highlight": "file:local_modules/highlight",
