@@ -3,7 +3,7 @@
  */
 
 .learn {
-
+  background-color: $color-grey_lighter;
 }
 
 .learn h1 {
@@ -17,7 +17,6 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 40px;
-  background-color: $color-grey_lighter;
 }
 
 .learnblocks-item {

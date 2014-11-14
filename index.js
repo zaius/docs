@@ -13,8 +13,5 @@ var dom = react.DOM;
  * Create stuff
  */
 
-var navSelector = document.querySelector('.sticky');
-if (navSelector) react.renderComponent(nav(), navSelector);
-
-var sidebarSelector = document.querySelector('.sidebar');
-if (sidebarSelector) react.renderComponent(sidebar(), sidebarSelector);
+react.renderComponent(nav(), document.querySelector('.sticky'));
+react.renderComponent(sidebar(), document.querySelector('.sidebar'));
