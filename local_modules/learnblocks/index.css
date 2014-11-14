@@ -2,6 +2,19 @@
  * Learn.
  */
 
+.learnblocks-sticky {
+  min-height: 270px;
+}
+
+.learnblocks-floating {
+  position: fixed;
+  z-index: 88;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+}
+
 .learn {
   background-color: $color-grey_lighter;
 }
@@ -11,12 +24,21 @@
   text-align: center;
 }
 
+.learn .learnblocks {
+  padding-top: 40px;
+}
+
 .learnblocks {
   align-content: space-around;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
   margin-top: 40px;
+  padding-top: 0;
+}
+
+.learnblocks-floating .learnblocks {
+  padding-top: 40px;
 }
 
 .learnblocks-item {

@@ -24,7 +24,7 @@
     "@local/footer": "file:local_modules/footer",
     "@local/header": "file:local_modules/header",
     "@local/highlight": "file:local_modules/highlight",
-    "@local/learn": "file:local_modules/learn",
+    "@local/learnblocks": "file:local_modules/learnblocks",
     "@local/nav": "file:local_modules/nav",
     "@local/react-icon": "file:local_modules/react-icon",
     "@local/search": "file:local_modules/search",

@@ -21,9 +21,6 @@ module.exports = react.createClass({
 
 /**
  * Render.
- *
- * There are two versions available. One has with extra `<li>`
- * elements and one without. Choose one.
  */
 
 function render() {

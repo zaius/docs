@@ -79,6 +79,7 @@
 .footer_links {
   display: flex;
   justify-content: center;
+  padding-bottom: 20px;
 }
 
 .footer_links ul {
