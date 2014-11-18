@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="101px" height="114px" viewBox="0 0 101 114" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1.1 (8761) - http://www.bohemiancoding.com/sketch -->
+    <title>Imported Layers</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-258.000000, -43.000000)">
+            <g id="wercker.yml" sketch:type="MSLayerGroup" transform="translate(288.500000, 78.000000)">
+                <path d="M2,0 L2,45 L4,45 L4,8.84878793 L4,0 L2,0 Z" id="Rectangle-25" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M19,0 L19,45 L21,45 L21,8.84878793 L21,0 L19,0 Z" id="Rectangle-26" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M35,0 L35,45 L37,45 L37,8.84878793 L37,0 L35,0 Z" id="Rectangle-27" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M6.5,20.5 C6.5,22.43302 4.93384254,24 3.00082256,24 C1.06780259,24 -0.5,22.43302 -0.5,20.5 C-0.5,18.56698 1.06780259,17 3.00082256,17 C4.93384254,17 6.5,18.56698 6.5,20.5 L6.5,20.5 Z" id="Stroke-3" stroke="#FFFFFF" stroke-width="2" fill="#3DBDEE" sketch:type="MSShapeGroup"></path>
+                <path d="M23.5,29.5 C23.5,31.43302 21.9338425,33 20.0008226,33 C18.0678026,33 16.5,31.43302 16.5,29.5 C16.5,27.56698 18.0678026,26 20.0008226,26 C21.9338425,26 23.5,27.56698 23.5,29.5 L23.5,29.5 Z" id="Stroke-5" stroke="#FFFFFF" stroke-width="2" fill="#3DBDEE" sketch:type="MSShapeGroup"></path>
+                <path d="M39.5,17 C39.5,18.93302 37.9338425,20.5 36.0008226,20.5 C34.0678026,20.5 32.5,18.93302 32.5,17 C32.5,15.06698 34.0678026,13.5 36.0008226,13.5 C37.9338425,13.5 39.5,15.06698 39.5,17 L39.5,17 Z" id="Stroke-7" stroke="#FFFFFF" stroke-width="2" fill="#3DBDEE" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

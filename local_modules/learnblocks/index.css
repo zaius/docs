@@ -24,7 +24,7 @@
   text-align: center;
 }
 
-.learn .learnblocks {
+.learnblocks-sticky .learn .learnblocks {
   padding-top: 40px;
 }
 
@@ -54,6 +54,7 @@
 
 .learnblocks-item-icon {
   height: 114px;
+  text-align: center;
 }
 
 .learnblocks-item-title {
