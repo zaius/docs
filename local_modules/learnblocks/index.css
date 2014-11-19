@@ -20,12 +20,13 @@
 }
 
 .learn h1 {
+  display: none;
   margin-top: 40px;
   text-align: center;
 }
 
-.learnblocks-sticky .learn .learnblocks {
-  padding-top: 40px;
+.learn-home h1 {
+  display: block;
 }
 
 .learnblocks {
@@ -33,12 +34,12 @@
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 40px;
+  margin-top: 10px;
   padding-top: 0;
 }
 
-.learnblocks-floating .learnblocks {
-  padding-top: 40px;
+.learn-home .learnblocks {
+  margin-top: 30px;
 }
 
 .learnblocks-item {
@@ -53,8 +54,23 @@
 }
 
 .learnblocks-item-icon {
+  display: block;
   height: 114px;
   text-align: center;
+  box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,.2);
+  transition: box-shadow $duration_fastest $easing-bounce_hard;
+}
+
+.learnblocks-item-icon:hover {
+  box-shadow: inset 0px 0px 0px 10px rgba(255,255,255,.2);
+}
+
+.learnblocks-item-icon img {
+  transition: transform $duration_fastest $easing-bounce_hard;
+}
+
+.learnblocks-item-icon:hover img {
+  transform: scale(.9);
 }
 
 .learnblocks-item-title {
