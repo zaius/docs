@@ -8,37 +8,37 @@
   background-color: $color-blue_darker;
 }
 
-.footer_container {
+.footer-container {
   padding: 60px 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.footer_register {
+.footer-register {
   flex: 5;
 }
 
-.footer_social {
-  flex: 1;
-  background-color: $color-blue_dark;
+.footer-social {
+  flex: 4;
   color: $color-white;
   text-align: center;
 }
 
 @media screen and (max-width: 768px) {
-  .footer_container {
+  .footer-container {
     flex-direction: column;
   }
-  .footer_register, .footer_register p  {
+  .footer-register,
+  .footer-register p  {
     text-align: center;
   }
-  .footer_social {
+  .footer-social {
     margin-top: 40px;
   }
 }
 
-.footer_social span {
+.footer-social span {
   display: block;
   margin-top: 5px;
   font-size: $fontSize_small;
@@ -47,16 +47,16 @@
   font-style: italic;
 }
 
-.footer_social img {
+.footer-social img {
   margin: auto;
   padding: 10px 15px;
 }
 
-.footer_social img:hover {
+.footer-social img:hover {
   transform: scale(1.1);
 }
 
-.footer_register p {
+.footer-register p {
   margin-top: 0;
   font-family: 'Open Sans', sans-serif;
   font-size: $fontSize_base;
@@ -64,29 +64,42 @@
   opacity: .7;
 }
 
-.button_register {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 6px 14px;
+/**
+ * Navbar-button.
+ */
+
+.button-register {
+  float: left;
+  margin-top: 10px;
+  padding: 4px 12px;
   border-radius: 2px;
+  border: 1px solid $color-turquoise_base;
   letter-spacing: 1px;
-  font-size: $fontSize_small;
-  background-color: $color-turquoise_base;
+  color: $color-white;
+  font-weight: $fontWeight_base;
   border-color: $color-turquoise_base;
+  background-color: $color-turquoise_base;
+  transition: all $duration_fast $easing_smooth;
+}
+
+.button-register:hover {
+  border: 1px solid $color-turquoise_dark;
+  background-color: $color-turquoise_dark;
+  border-color: $color-turquoise_dark;
   color: $color-white;
 }
 
-.footer_links {
+.footer-links {
   display: flex;
   justify-content: center;
   padding-bottom: 20px;
 }
 
-.footer_links ul {
+.footer-links ul {
   text-align: center;
 }
 
-.footer_links ul li {
+.footer-links li {
   display: inline;
   margin-right: 10px;
   padding-left: 10px;
@@ -96,15 +109,16 @@
   color: $color-blue_lighter;
 }
 
-.footer_links ul li:first-child {
+.footer-links li:first-child {
   border: none;
 }
 
-.footer_links ul li a {
+.footer-links a {
   font-size: $fontSize_smaller;
   text-transform: uppercase;
   color: $color-blue_lighter;
 }
-.footer_links ul li a:hover {
+
+.footer-links a:hover {
   color: $color-white;
 }

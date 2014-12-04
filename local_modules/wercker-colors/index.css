@@ -2,25 +2,25 @@
  * Colors.
  */
 
-$color-white: hsl(0, 0%, 100%);
+$color-white: #FFFFFF;
 
-$color-grey_lightest: hsl(0, 0%, 98%);
-$color-grey_lighter: #F5F7F8;
+$color-grey_lightest: #FAFAFA;
+$color-grey_lighter: #F5f7f8;
 $color-grey_light: #E6E6E6;
 $color-grey_base: #9D9D9D;
-$color-grey_dark: hsl(140, 1%, 39%);
-$color-grey_darker: hsl(219, 16%, 17%);
-$color-grey_darkest: hsl(0, 0%, 0%);
+$color-grey_dark: #626463;
+$color-grey_darker: #242932;
+$color-grey_darkest: #000000;
 
 $color-blue_lighter: #C6C9CE;
 $color-blue_light: #60718C;
 $color-blue_base: #2194CE;
 $color-blue_dark: #4B5769;
-$color-blue_darker: #424E61;
+$color-blue_darker: #4C5D79;
 
-$color-turquoise_light: hsl(168, 46%, 95%);
-$color-turquoise_base: hsl(168, 46%, 47%);
-$color-turquoise_dark: hsl(168, 46%, 37%);
+$color-turquoise_light: #ECF8F6;
+$color-turquoise_base: #41AF99;
+$color-turquoise_dark: #338A78;
 
 $color-green_base: #6DBE44;
 $color-red_base: #FF3362;
@@ -28,4 +28,3 @@ $color-orange_base: #FF801A;
 $color-yellow_base: #FFDB06;
 $color-fuchsia_base: #F748C4;
 $color-skyblue_base: #3DBDEE;
-

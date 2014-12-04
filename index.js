@@ -14,7 +14,7 @@ var dom = react.DOM;
  * Create stuff
  */
 
-var learnblocksSelector = document.querySelector('.learn');
+var learnblocksSelector = document.querySelector('.learn-blocks');
 if (learnblocksSelector) react.renderComponent(learnblocks(), learnblocksSelector);
 
 var navSelector = document.querySelector('.nav-sticky');

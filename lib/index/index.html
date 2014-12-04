@@ -8,8 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="/build.css"></link>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300italic,300,600,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Merriweather:400italic,400,300,700" rel="stylesheet" type="text/css">
+    <link
+      href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300italic,300,600,700"
+      rel="stylesheet"
+      type="text/css">
+    <link
+      href="http://fonts.googleapis.com/css?family=Merriweather:400italic,400,300,700"
+      rel="stylesheet"
+      type="text/css">
   </head>
   <body>
 
@@ -17,26 +23,31 @@
 
     <section class="flex-outer header">
       <header class="flex-inner">
-        <div class="header_text">DEV<br/>CENTER</div>
+        <div class="header-text">DEV<br/>CENTER</div>
       </header>
     </section>
 
-    <section class="flex-outer learn learn-home"></section>
+    <section class="flex-outer learn">
+      <div class="flex-inner">
+        <h1>Get to know wercker</h1>
+        <div class="learn-blocks"></div>
+      </div>
+    </section>
 
     <section class="flex-outer search">
       <div class="flex-inner">
         <h1>Dive in to our in-depth docs</h1>
-        <div class="search-home">
+<!--         <div class="search-home">
           <label><img src="/images/icon-magnifier.svg" alt="search"></label>
           <input class="search-home_input" type="text" name="search" placeholder="Show me docs about ..."/>
-        </div>
+        </div> -->
       </div>
     </section>
 
     <section class="flex-outer">
       <div class="flex-inner">
         <div class="doc-cards">
-          <div class="doc-cards-item doc-cards-item_1">
+          <div class="doc-cards-item doc-cards-item_skyblue">
             <span>&raquo;</span>
             <a class="doc-cards-item_title" href="">Languages</a>
             <p>Quick guides on how to get started with a language</p>
@@ -48,7 +59,7 @@
               <li><a href="#">PHP</a></li>
             </ul>
           </div>
-          <div class="doc-cards-item doc-cards-item_2">
+          <div class="doc-cards-item doc-cards-item_green">
             <span>&raquo;</span>
             <a class="doc-cards-item_title" href="">Services</a>
             <p>Quick guides on how to get started with a language</p>
@@ -60,7 +71,7 @@
               <li><a href="#">Redis</a></li>
             </ul>
           </div>
-          <div class="doc-cards-item doc-cards-item_3">
+          <div class="doc-cards-item doc-cards-item_fuchsia">
             <span>&raquo;</span>
             <a class="doc-cards-item_title" href="">Steps</a>
             <p>Quick guides on how to get started with a language</p>
@@ -72,9 +83,9 @@
               <li><a href="#">Deployment</a></li>
             </ul>
           </div>
-          <div class="doc-cards-item doc-cards-item_4">
+          <div class="doc-cards-item doc-cards-item_red">
             <span>&raquo;</span>
-            <a class="doc-cards-item_title" href="">Deploymemt</a>
+            <a class="doc-cards-item_title" href="">Deployment</a>
             <p>Quick guides on how to get started with a language</p>
             <ul>
               <li><a href="#">Heroku</a></li>
@@ -133,23 +144,29 @@
 
     <section class="flex-outer footer">
       <footer class="flex-inner">
-        <div class="footer_container">
-          <div class="footer_register">
+        <div class="footer-container">
+          <div class="footer-register">
             <img class="logo_base" src="/images/logo-wercker.svg">
             <p>Test and deploy your applications with ease. Together.</p>
-            <a class="button button_register" href="#">Register for free</a>
+            <a class="button-register" href="#">Register for free</a>
           </div>
-          <div class="footer_social">
+          <div class="footer-social">
             <span>Follow us on</span>
-            <div>
-              <a href="https://twitter.com/wercker"><img class="logo_base" src="/images/icon-twitter.svg"></a>
-              <a href="https://plus.google.com/+Wercker/posts"><img class="logo_base" src="/images/icon-googleplus.svg"></a>
-              <a href="https://www.facebook.com/Wercker"><img class="logo_base" src="/images/icon-facebook.svg"></a>
-              <a href="http://blog.wercker.com"><img class="logo_base" src="/images/icon-rss.svg"></a>
-            </div>
+              <a href="https://twitter.com/wercker">
+                <img class="logo_base" src="/images/icon-twitter.svg">
+              </a>
+              <a href="https://plus.google.com/+Wercker/posts">
+                <img class="logo_base" src="/images/icon-googleplus.svg">
+              </a>
+              <a href="https://www.facebook.com/Wercker">
+                <img class="logo_base" src="/images/icon-facebook.svg">
+              </a>
+              <a href="http://blog.wercker.com">
+                <img class="logo_base" src="/images/icon-rss.svg">
+              </a>
           </div>
         </div>
-        <div class="footer_links">
+        <div class="footer-links">
           <ul>
             <li>COPYRIGHT ©2014 WERCKER</li>
             <li><a href="mailto:pleasemailus@wercker.com">contact &amp; support</a></li>

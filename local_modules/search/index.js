@@ -35,7 +35,7 @@ function render() {
         className: 'search-input',
         onChange: handleChange.bind(this)
       }),
-      dom.img( {src:'/images/icon-magnifier.svg', alt:'search'} )
+      dom.img({src:'/images/icon-magnifier.svg', alt:'search'})
     )
   );
 }

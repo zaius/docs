@@ -9,5 +9,6 @@ var fs = require('fs');
  */
 
 module.exports = {
-  base: fs.readFileSync(__dirname + '/logo-base.svg', 'utf8')
+  base: fs.readFileSync(__dirname + '/logo-base.svg', 'utf8'),
+  full: fs.readFileSync(__dirname + '/logo-full.svg', 'utf8')
 };

@@ -8,7 +8,7 @@ var react = require('react');
 var sticky = require('react-sticky')
 
 var dom = react.DOM;
-var logoBase = logo.base;
+var logoFull = logo.full;
 
 /**
  * Create class.
@@ -31,19 +31,13 @@ function render() {
       dom.div({className: 'flex-inner'},
         dom.ul({className: 'navbar'},
           dom.li(null,
-            dom.span({
-              className: 'logo_base',
-              dangerouslySetInnerHTML: {
-                __html: logoBase
-              }
-            })
-          ),
-          dom.li(null,
             dom.a({
-              className: 'navbar-item',
+              className: 'logo-full',
               href: '/',
               onClick: changeLocation.bind(this, '/index.html'),
-              children: 'Dev Center'
+              dangerouslySetInnerHTML: {
+                __html: logoFull
+              }
             })
           ),
           dom.li(null,

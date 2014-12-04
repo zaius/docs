@@ -10,10 +10,22 @@
 }
 
 /**
+ * Apply style for p following H1.
+ */
+
+h1 + p {
+  line-height: $lineHeight_looser;
+  font-weight: $fontWeight_base;
+  font-size: $fontSize_medium;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/**
  * Code
  */
 
-.docs code {
+.docs > p > code {
   margin: 0 3px;
   padding: 4px 6px;
   border-radius: 4px;
@@ -27,17 +39,19 @@
 }
 
 .docs > pre {
+  background-color: $color-blue_darker;
   border: 1px solid $color-grey_light;
   margin-top: 30px;
   margin-bottom: 30px;
   padding: 20px;
-  overflow: hidden;
+  overflow-x: auto;
 }
 
 .docs > pre > code {
-  line-height: $lineHeight_loose;
+  line-height: $lineHeight_base;
   background-color: transparent;
-  white-space: inherit;
+  overflow-wrap: normal;
+  white-space: pre;
   border: none;
 }
 
@@ -45,7 +59,8 @@
  * ul ol.
  */
 
-.docs > ul, .docs > ol {
+.docs > ul,
+.docs > ol {
   margin-top: 5px;
   margin-left: 10px;
   line-height: $lineHeight_loose;
@@ -53,7 +68,8 @@
   list-style: none;
 }
 
-.docs > ul li:before, .docs > ol li:before {
+.docs > ul li:before,
+.docs > ol li:before {
   content: "• ";
   color: $color-blue_light;
 }
@@ -62,7 +78,8 @@
  * Images.
  */
 
-.docs p > img, .docs a > img {
+.docs p > img,
+.docs a > img {
   width: 100%;
   margin-top: 20px;
   border: 1px solid $color-grey_lighter;

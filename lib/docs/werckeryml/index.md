@@ -32,7 +32,7 @@ In this section we go through the details of setting up your build and deploy pi
 
 If you're eager to grasp the `wercker.yml` format, below an example file that includes all elements which are discussed below.
 
-``` yaml
+```yaml
 box: wercker/ruby
 services:
     - mies/rethinkdb

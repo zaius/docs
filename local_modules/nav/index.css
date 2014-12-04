@@ -39,6 +39,7 @@
 }
 
 .navbar-item {
+  font-size: $fontSize_medium;
   font-weight: $fontWeight_light;
   color: $color-blue_darker;
   vertical-align: top;
@@ -60,6 +61,10 @@
   opacity: 1;
 }
 
+/**
+ * Navbar-button.
+ */
+
 .navbar-button {
   float: right;
   margin-left: 15px;
@@ -68,43 +73,42 @@
   font-weight: $fontWeight_base;
   letter-spacing: 1px;
   font-size: $fontSize_small;
-  color: $color-grey_dark;
-  border: 1px solid $color-grey_base;
   transition: all $duration_fast $easing_smooth;
 }
 
 .navbar-button_register {
-  background-color: $color-blue_darker;
-  border-color: $color-blue_darker;
-  color: $color-blue_lighter;
+  border: 1px solid $color-turquoise_base;
+  background-color: $color-turquoise_base;
+  border-color: $color-turquoise_base;
+  color: $color-white;
 }
 
 .navbar-button_register:hover {
+  border: 1px solid $color-turquoise_dark;
+  background-color: $color-turquoise_dark;
+  border-color: $color-turquoise_dark;
   color: $color-white;
 }
 
 .navbar-button_signIn {
-  background-color: transparent;
+  border: 1px solid $color-grey_base;
+  color: $color-grey_dark;
 }
 
-.navbar-button_signIn:hover {
-  background-color: $color-grey_lighter;
-}
-
-.navbar-floating .navbar-button {
-  background-color: transparent;
+.navbar-floating .navbar-button_signIn {
+  border: 1px solid $color-white;
+  color: $color-grey_dark;
   color: $color-white;
 }
 
-.navbar-floating .navbar-button_register {
-  color: $color-turquoise_base;
-  border-color: $color-turquoise_base;
+.logo-full {
+  margin-right: 25px;
 }
 
-.logo_base {
-  margin-right: 15px;
+.logo-full-group path {
+  fill: $color-blue_darker;
 }
 
-.navbar-floating .svg-logo-base {
+.navbar-floating .logo-full-group path {
   fill: $color-white;
 }

@@ -22,7 +22,7 @@ $fontSize_medium: 17px;
 $fontSize_large: 19px;
 $fontSize_larger: 21px;
 $fontSize_largest: 32px;
-$fontSize_jumbo: 140px;
+$fontSize_jumbo: 122px;
 
 /**
  * Font weight.
@@ -37,7 +37,7 @@ $fontWeight_bold: bold;
  * Typography settings.
  */
 
-html, body, p, a {
+html, body, a {
   font-family: 'Open Sans', sans-serif;
   font-weight: $fontWeight_light;
   line-height: $lineHeight_loose;
@@ -76,14 +76,6 @@ h1 {
   font-size: $fontSize_largest;
   color: $color-blue_darker;
   letter-spacing: 1px;
-}
-
-h1 + p {
-  line-height: $lineHeight_looser;
-  font-weight: $fontWeight_base;
-  font-size: $fontSize_medium;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 h2 {

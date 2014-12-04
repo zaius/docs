@@ -30,7 +30,7 @@
   list-style: none;
 }
 
-.doc-quicklinks-item ul li:before {
+.doc-quicklinks-item li:before {
   content: "• ";
   color: $color-blue_light;
 }
