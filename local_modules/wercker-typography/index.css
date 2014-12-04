@@ -6,8 +6,8 @@ $lineHeight_tightest: 10px;
 $lineHeight_tighter: 12px;
 $lineHeight_tight: 15px;
 $lineHeight_base: 22px;
-$lineHeight_loose: 30px;
-$lineHeight_looser: 40px;
+$lineHeight_loose: 28px;
+$lineHeight_looser: 36px;
 
 /**
  * Font sizes scale.
@@ -18,54 +18,89 @@ $fontSize_smallest: 10px;
 $fontSize_smaller: 13px;
 $fontSize_small: 14px;
 $fontSize_base: 15px;
-$fontSize_medium: 16px;
-$fontSize_large: 18px;
-$fontSize_larger: 22px;
+$fontSize_medium: 17px;
+$fontSize_large: 19px;
+$fontSize_larger: 21px;
 $fontSize_largest: 32px;
-$fontSize_jumbo: 40px;
+$fontSize_jumbo: 122px;
 
 /**
  * Font weight.
  */
 
-$fontWeight_light: light;
-$fontWeight_base: medium;
+$fontWeight_light: lighter;
+$fontWeight_base: normal;
+$fontWeight_semibold: 600;
 $fontWeight_bold: bold;
 
 /**
  * Typography settings.
  */
 
-html, body, p, a {
-  font-family: 'Source Sans Pro', sans-serif;
-  color: $color-grey_base;
-  font-weight: normal;
-  font-size: $fontSize_medium;
-  line-height: $lineHeight_base;
+html, body, a {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: $fontWeight_light;
+  line-height: $lineHeight_loose;
+  font-size: $fontSize_base;
+  color: $color-blue_light;
 }
 
 a {
   text-decoration: none;
-  color: $color-grey_darker;
+  color: $color-blue_base;
+  font-weight: $fontWeight_light;
+}
+
+a:hover {
+  color: $color-blue_darker;
+}
+
+p {
+  font-family: 'Merriweather', serif;
+  font-weight: $fontWeight_light;
+  font-lineheight: $lineHeight_looser;
+  font-size: $fontSize_small;
+  text-justify: inter-word;
+  color: $color-blue_light;
+  text-align: justify;
+  margin-top: 15px;
+}
+
+p > a {
+  font-weight: $fontWeight_semibold;
 }
 
 h1 {
-  font-size: $fontSize_jumbo;
   line-height: $lineHeight_looser;
-  color: $color-blue_dark;
-  font-weight: bold;
+  font-weight: $fontWeight_base;
+  font-size: $fontSize_largest;
+  color: $color-blue_darker;
+  letter-spacing: 1px;
 }
 
 h2 {
-  font-size: $fontSize_largest;
   line-height: $lineHeight_looser;
-  color: $color-grey_dark;
+  font-weight: $fontWeight_light;
+  font-size: $fontSize_larger;
+  color: $color-grey_darker;
+  margin-top: 30px;
 }
 
 h3 {
-  font-size: $fontSize_larger;
   line-height: $lineHeight_looser;
-  color: $color-grey_base;
+  font-weight: $fontWeight_semibold;
+  font-size: $fontSize_small;
+  text-transform: uppercase;
+  color: $color-blue_light;
+  margin-top: 20px;
+}
+
+h4 {
+  line-height: $lineHeight_looser;
+  font-weight: $fontWeight_base;
+  font-size: $fontSize_small;
+  color: $color-blue_light;
+  margin-top: 10px;
 }
 
 pre {

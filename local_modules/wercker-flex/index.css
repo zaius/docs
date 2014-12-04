@@ -1,0 +1,13 @@
+/**
+ * Flex.
+ */
+
+.flex-outer {
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+}
+
+.flex-inner {
+  width: 960px;
+}

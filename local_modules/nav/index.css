@@ -1,0 +1,114 @@
+/**
+ * Navigation.
+ */
+
+.nav-sticky {
+  min-height: 50px;
+}
+
+.navbar-floating {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+}
+
+.navbar-container {
+  background-color: $color-grey_light;
+}
+
+.navbar-floating .navbar-container {
+  background-color: $color-blue_darker;
+  transition: background-color $duration_fast $easing_smooth;
+}
+
+.navbar {
+  margin-top: 10px;
+  padding: 0 20px;
+}
+
+.navbar-floating .navbar {
+  margin-top: 10px;
+  padding: 0px 20px 5px 20px;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar-item {
+  font-size: $fontSize_medium;
+  font-weight: $fontWeight_light;
+  color: $color-blue_darker;
+  vertical-align: top;
+  margin-right: 15px;
+  line-height: $lineHeight_looser;
+  opacity: .8;
+}
+
+.navbar-item:hover {
+  opacity: 1;
+}
+
+.navbar-floating .navbar-item {
+  color: $color-white;
+}
+
+.navbar-item_active {
+  font-weight: $fontWeight_bold;
+  opacity: 1;
+}
+
+/**
+ * Navbar-button.
+ */
+
+.navbar-button {
+  float: right;
+  margin-left: 15px;
+  border-radius: 2px;
+  padding: 4px 12px;
+  font-weight: $fontWeight_base;
+  letter-spacing: 1px;
+  font-size: $fontSize_small;
+  transition: all $duration_fast $easing_smooth;
+}
+
+.navbar-button_register {
+  border: 1px solid $color-turquoise_base;
+  background-color: $color-turquoise_base;
+  border-color: $color-turquoise_base;
+  color: $color-white;
+}
+
+.navbar-button_register:hover {
+  border: 1px solid $color-turquoise_dark;
+  background-color: $color-turquoise_dark;
+  border-color: $color-turquoise_dark;
+  color: $color-white;
+}
+
+.navbar-button_signIn {
+  border: 1px solid $color-grey_base;
+  color: $color-grey_dark;
+}
+
+.navbar-floating .navbar-button_signIn {
+  border: 1px solid $color-white;
+  color: $color-grey_dark;
+  color: $color-white;
+}
+
+.logo-full {
+  margin-right: 25px;
+}
+
+.logo-full-group path {
+  fill: $color-blue_darker;
+}
+
+.navbar-floating .logo-full-group path {
+  fill: $color-white;
+}

@@ -4,7 +4,6 @@
 
 var search = require('@local/search');
 var react = require('react');
-var lunr = require('lunr');
 
 var textFilter = require('./algorithm');
 
@@ -35,7 +34,8 @@ function render() {
         placeholder: 'search',
         className: 'search-input',
         onChange: handleChange.bind(this)
-      })
+      }),
+      dom.img({src:'/images/icon-magnifier.svg', alt:'search'})
     )
   );
 }

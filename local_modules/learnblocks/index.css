@@ -1,0 +1,78 @@
+/**
+ * Learn.
+ */
+
+.learn {
+  background-color: $color-grey_lightest;
+}
+
+.learn h1 {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.learnblocks {
+  align-content: space-around;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  padding-top: 0;
+}
+
+.learnblocks-item {
+  flex: 1 12.5%;
+  margin: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .learnblocks-item {
+    flex: 1 25%;
+  }
+}
+
+.learnblocks-item-icon {
+  display: block;
+  height: 114px;
+  text-align: center;
+  box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,.2);
+  transition: box-shadow $duration_fastest $easing-bounce_hard;
+}
+
+.learnblocks-item-icon:hover {
+  box-shadow: inset 0px 0px 0px 10px rgba(255,255,255,.2);
+}
+
+.learnblocks-item-icon img {
+  transition: transform $duration_fastest $easing-bounce_hard;
+}
+
+.learnblocks-item-icon:hover img {
+  transform: scale(.9);
+}
+
+.learnblocks-item-title {
+  margin-top: 10px;
+  text-align: center;
+  font-size: $fontSize_base;
+  color: $color-blue_darker;
+}
+
+.learnblocks-item_basics .learnblocks-item-icon {
+  background-color: $color-fuchsia_base;
+}
+.learnblocks-item_yml .learnblocks-item-icon{
+  background-color: $color-skyblue_base;
+}
+.learnblocks-item_boxes .learnblocks-item-icon{
+  background-color: $color-green_base;
+}
+.learnblocks-item_steps .learnblocks-item-icon{
+  background-color: $color-red_base;
+}
+.learnblocks-item_build .learnblocks-item-icon{
+  background-color: $color-yellow_base;
+}
+.learnblocks-item_deploy .learnblocks-item-icon{
+  background-color: $color-orange_base;
+}

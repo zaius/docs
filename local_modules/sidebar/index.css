@@ -1,40 +1,34 @@
-.section-sidebar {
-  padding: 30px 20px 0 20px;
-  color: $color-white;
-}
-
-.sidebar-title {
-  text-align: center;
-}
-
-.sidebar-title > span,
-.sidebar-title > a {
-  font-size: $fontSize_larger;
-  font-family: 'Source Code Pro', monospace;
-  color: $color-white;
-}
-
-.sidebar-list {
-  margin-top: 20px;
-  height: calc(100vh - 170px);
-  overflow: auto;
-  padding-bottom: 20px;
-}
-
 /**
- * Sidebar text styles.
+ * Sidebar.
  */
+
+.sidebar {
+  flex: 1;
+  order: 1;
+  z-index: 2;
+}
+
+.section-sidebar {
+  padding: 40px 20px 20px 20px;
+  border-right: 1px solid $color-grey_light;
+  line-height: $lineHeight_loose;
+}
 
 .sidebar-li,
 .sidebar-li > a {
   margin-top: 20px;
-  font-family: 'Source Code Pro', monospace;
-  font-size: $fontSize-base;
-  color: $color-white;
+  font-size: $fontSize_base;
+  text-transform: capitalize;
+  font-weight: $fontWeight_base;
+  font-family: 'Open Sans', sans-serif;
+  color: $color-blue_darker;
 }
 
 .sidebar-li_sub > a {
-  font-size: $fontSize-base;
-  font-family: 'Source Code Pro', monospace;
-  color: $color-grey_light;
+  margin-left: 5px;
+  text-transform: capitalize;
+  font-size: $fontSize_smaller;
+  font-weight: $fontWeight_light;
+  font-family: 'Merriweather', serif;
+  color: $color-blue_base;
 }

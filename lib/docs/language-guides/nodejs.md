@@ -13,24 +13,25 @@ Below are several guides on getting started with Node.js and wercker.
 
 Wercker supports [node.js](http://nodejs.org). The default [wercker.yml](/articles/werckeryml) file for node.js is the following:
 
-    box: wercker/nodejs
-    # Build definition
-    build:
-      # The steps that will be executed on build
-      steps:
-        # A step that executes `npm install` command
-        - npm-install
-        # A step that executes `npm test` command
-        - npm-test
+```yaml
+  box: wercker/nodejs
+  # Build definition
+  build:
+    # The steps that will be executed on build
+    steps:
+      # A step that executes `npm install` command
+      - npm-install
+      # A step that executes `npm test` command
+      - npm-test
 
-        # A custom script step, name value is used in the UI
-        # and the code value contains the command that get executed
-        - script:
-            name: echo nodejs information
-            code: |
-              echo "node version $(node -v) running"
-              echo "npm version $(npm -v) running"
-
+      # A custom script step, name value is used in the UI
+      # and the code value contains the command that get executed
+      - script:
+          name: echo nodejs information
+          code: |
+            echo "node version $(node -v) running"
+            echo "npm version $(npm -v) running"
+```
 
 At the top you see the 'box' definition that states we want the 'wercker/nodejs' box. This box includes node.js version 0.8.24. If you want to run any other version of node.js feel free to fork this [box definition](https://github.com/wercker/box-nodejs).
 

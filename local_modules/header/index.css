@@ -1,0 +1,19 @@
+/**
+ * Header.
+ */
+
+.header {
+  position: relative;
+  background-color: $color-grey_light;
+}
+
+.header-text {
+  z-index: 0;
+  margin: 40px 0;
+  padding-left: 10px;
+  line-height: 100px;
+  letter-spacing: -5px;
+  font-weight: $fontWeight_bold;
+  font-size: $fontSize_jumbo;
+  color: $color-blue_darker;
+}

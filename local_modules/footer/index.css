@@ -1,0 +1,124 @@
+/**
+ * Footer.
+ */
+
+.footer {
+  margin-top: 40px;
+  z-index: 2;
+  background-color: $color-blue_darker;
+}
+
+.footer-container {
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footer-register {
+  flex: 5;
+}
+
+.footer-social {
+  flex: 4;
+  color: $color-white;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+  .footer-register,
+  .footer-register p  {
+    text-align: center;
+  }
+  .footer-social {
+    margin-top: 40px;
+  }
+}
+
+.footer-social span {
+  display: block;
+  margin-top: 5px;
+  font-size: $fontSize_small;
+  font-weight: $fontWeight_light;
+  color: $color-blue_lighter;
+  font-style: italic;
+}
+
+.footer-social img {
+  margin: auto;
+  padding: 10px 15px;
+}
+
+.footer-social img:hover {
+  transform: scale(1.1);
+}
+
+.footer-register p {
+  margin-top: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: $fontSize_base;
+  color: $color-blue_lighter;
+  opacity: .7;
+}
+
+/**
+ * Navbar-button.
+ */
+
+.button-register {
+  float: left;
+  margin-top: 10px;
+  padding: 4px 12px;
+  border-radius: 2px;
+  border: 1px solid $color-turquoise_base;
+  letter-spacing: 1px;
+  color: $color-white;
+  font-weight: $fontWeight_base;
+  border-color: $color-turquoise_base;
+  background-color: $color-turquoise_base;
+  transition: all $duration_fast $easing_smooth;
+}
+
+.button-register:hover {
+  border: 1px solid $color-turquoise_dark;
+  background-color: $color-turquoise_dark;
+  border-color: $color-turquoise_dark;
+  color: $color-white;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.footer-links ul {
+  text-align: center;
+}
+
+.footer-links li {
+  display: inline;
+  margin-right: 10px;
+  padding-left: 10px;
+  border-left: 1px solid $color-blue_light;
+  font-size: $fontSize_smaller;
+  text-transform: uppercase;
+  color: $color-blue_lighter;
+}
+
+.footer-links li:first-child {
+  border: none;
+}
+
+.footer-links a {
+  font-size: $fontSize_smaller;
+  text-transform: uppercase;
+  color: $color-blue_lighter;
+}
+
+.footer-links a:hover {
+  color: $color-white;
+}
