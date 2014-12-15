@@ -37,21 +37,21 @@ function render() {
         className: 'learnblocks-item-icon',
         href: '/learn/index.html'
       }, dom.img( {src:'/images/icon-yml.svg', alt:'wercker.yml'})),
-      dom.div({className: 'learnblocks-item-title'}, 'Wercker.yml')
+      dom.div({className: 'learnblocks-item-title'}, 'wercker.yml')
     ),
     dom.div({className: 'learnblocks-item learnblocks-item_boxes'},
       dom.a({
         className: 'learnblocks-item-icon',
         href: '/learn/index.html'
-      }, dom.img( {src:'/images/icon-boxes.svg', alt:'Boxes'})),
-      dom.div({className: 'learnblocks-item-title'}, 'Boxes')
+      }, dom.img( {src:'/images/icon-boxes.svg', alt:'Containers'})),
+      dom.div({className: 'learnblocks-item-title'}, 'Containers')
     ),
     dom.div({className: 'learnblocks-item learnblocks-item_steps'},
       dom.a({
         className: 'learnblocks-item-icon',
         href: '/learn/index.html'
-      }, dom.img( {src:'/images/icon-steps.svg', alt:'Steps'})),
-      dom.div({className: 'learnblocks-item-title'}, 'Steps')
+      }, dom.img( {src:'/images/icon-steps.svg', alt:'Pipelines'})),
+      dom.div({className: 'learnblocks-item-title'}, 'Pipelines')
     ),
     dom.div({className: 'learnblocks-item learnblocks-item_build'},
       dom.a({
