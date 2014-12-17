@@ -29,43 +29,57 @@ function render() {
       dom.a({
         className: 'learnblocks-item-icon',
         href: '/learn/index.html'
-      }, dom.img( {src:'/images/icon-basics.svg', alt:'Basics'})),
-      dom.div({className: 'learnblocks-item-title'}, 'Basics')
+      }, dom.img( {src:'/images/icon-basics.svg', alt:'Basics'}),
+        dom.div({className: 'learnblocks-item-title'}, 'Basics')
+      )
     ),
     dom.div({className: 'learnblocks-item learnblocks-item_yml'},
       dom.a({
         className: 'learnblocks-item-icon',
         href: '/learn/index.html'
-      }, dom.img( {src:'/images/icon-yml.svg', alt:'wercker.yml'})),
-      dom.div({className: 'learnblocks-item-title'}, 'wercker.yml')
+      }, dom.img( {src:'/images/icon-yml.svg', alt:'wercker.yml'}),
+        dom.div({className: 'learnblocks-item-title'}, 'wercker.yml')
+      )
     ),
     dom.div({className: 'learnblocks-item learnblocks-item_boxes'},
       dom.a({
         className: 'learnblocks-item-icon',
         href: '/learn/index.html'
-      }, dom.img( {src:'/images/icon-boxes.svg', alt:'Containers'})),
-      dom.div({className: 'learnblocks-item-title'}, 'Containers')
+      }, dom.img( {src:'/images/icon-boxes.svg', alt:'Containers'}),
+        dom.div({className: 'learnblocks-item-title'}, 'Containers')
+      )
+    ),
+    dom.div({className: 'learnblocks-item learnblocks-item_pipelines'},
+      dom.a({
+        className: 'learnblocks-item-icon',
+        href: '/learn/index.html'
+      }, dom.img( {src:'/images/icon-pipeline.svg', alt:'Pipelines'}),
+        dom.div({className: 'learnblocks-item-title'}, 'Pipelines')
+      )
     ),
     dom.div({className: 'learnblocks-item learnblocks-item_steps'},
       dom.a({
         className: 'learnblocks-item-icon',
         href: '/learn/index.html'
-      }, dom.img( {src:'/images/icon-steps.svg', alt:'Pipelines'})),
-      dom.div({className: 'learnblocks-item-title'}, 'Pipelines')
+      }, dom.img( {src:'/images/icon-steps.svg', alt:'Steps'}),
+         dom.div({className: 'learnblocks-item-title'}, 'Steps')
+      )
     ),
     dom.div({className: 'learnblocks-item learnblocks-item_build'},
       dom.a({
         className: 'learnblocks-item-icon',
         href: '/learn/index.html'
-      }, dom.img( {src:'/images/icon-build.svg', alt:'Build'})),
-      dom.div({className: 'learnblocks-item-title'}, 'Build')
+      }, dom.img( {src:'/images/icon-build.svg', alt:'Build'}),
+        dom.div({className: 'learnblocks-item-title'}, 'Build')
+      )
     ),
     dom.div({className: 'learnblocks-item learnblocks-item_deploy'},
       dom.a({
         className: 'learnblocks-item-icon',
         href: '/learn/index.html'
-      }, dom.img( {src:'/images/icon-deploy.svg', alt:'Deploy'})),
-      dom.div({className: 'learnblocks-item-title'}, 'Deploy')
+      }, dom.img( {src:'/images/icon-deploy.svg', alt:'Deploy'}),
+        dom.div({className: 'learnblocks-item-title'}, 'Deploy')
+      )
     )
   );
 }
