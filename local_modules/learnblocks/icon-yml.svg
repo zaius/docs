@@ -5,15 +5,14 @@
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-258.000000, -43.000000)">
-            <g id="wercker.yml" sketch:type="MSLayerGroup" transform="translate(285.500000, 78.000000)">
-                <path d="M0,0 L45.1625853,0 L45.1625853,45.1625853 L0,45.1625853 L0,0 Z" id="Path-2" stroke="#FFFFFF" stroke-width="2" sketch:type="MSShapeGroup"></path>
-                <path d="M7,5 L7,40 L9,40 L9,11.8823906 L9,5 L7,5 Z" id="Rectangle-25" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
-                <path d="M22,5 L22,40 L24,40 L24,11.8823906 L24,5 L22,5 Z" id="Rectangle-26" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
-                <path d="M36,5 L36,40 L38,40 L38,11.8823906 L38,5 L36,5 Z" id="Rectangle-27" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
-                <path d="M11.5,20.5 C11.5,22.43302 9.93384254,24 8.00082256,24 C6.06780259,24 4.5,22.43302 4.5,20.5 C4.5,18.56698 6.06780259,17 8.00082256,17 C9.93384254,17 11.5,18.56698 11.5,20.5 L11.5,20.5 Z" id="Stroke-3" stroke="#FFFFFF" stroke-width="2" fill="#3DBDEE" sketch:type="MSShapeGroup"></path>
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-198.000000, -43.000000)">
+            <g id="wercker.yml" sketch:type="MSLayerGroup" transform="translate(225.500000, 78.000000)">
+                <path d="M5,2 L5,43 L7,43 L7,10.062229 L7,2 L5,2 Z" id="Rectangle-25" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M22,2 L22,43 L24,43 L24,10.062229 L24,2 L22,2 Z" id="Rectangle-26" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M38,2 L38,43 L40,43 L40,10.062229 L40,2 L38,2 Z" id="Rectangle-27" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M9.5,20.5 C9.5,22.43302 7.93384254,24 6.00082256,24 C4.06780259,24 2.5,22.43302 2.5,20.5 C2.5,18.56698 4.06780259,17 6.00082256,17 C7.93384254,17 9.5,18.56698 9.5,20.5 L9.5,20.5 Z" id="Stroke-3" stroke="#FFFFFF" stroke-width="2" fill="#3DBDEE" sketch:type="MSShapeGroup"></path>
                 <path d="M26.5,29.5 C26.5,31.43302 24.9338425,33 23.0008226,33 C21.0678026,33 19.5,31.43302 19.5,29.5 C19.5,27.56698 21.0678026,26 23.0008226,26 C24.9338425,26 26.5,27.56698 26.5,29.5 L26.5,29.5 Z" id="Stroke-5" stroke="#FFFFFF" stroke-width="2" fill="#3DBDEE" sketch:type="MSShapeGroup"></path>
-                <path d="M40.5,17 C40.5,18.93302 38.9338425,20.5 37.0008226,20.5 C35.0678026,20.5 33.5,18.93302 33.5,17 C33.5,15.06698 35.0678026,13.5 37.0008226,13.5 C38.9338425,13.5 40.5,15.06698 40.5,17 L40.5,17 Z" id="Stroke-7" stroke="#FFFFFF" stroke-width="2" fill="#3DBDEE" sketch:type="MSShapeGroup"></path>
+                <path d="M42.5,15 C42.5,16.93302 40.9338425,18.5 39.0008226,18.5 C37.0678026,18.5 35.5,16.93302 35.5,15 C35.5,13.06698 37.0678026,11.5 39.0008226,11.5 C40.9338425,11.5 42.5,13.06698 42.5,15 L42.5,15 Z" id="Stroke-7" stroke="#FFFFFF" stroke-width="2" fill="#3DBDEE" sketch:type="MSShapeGroup"></path>
             </g>
         </g>
     </g>
