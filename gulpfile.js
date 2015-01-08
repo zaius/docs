@@ -4,7 +4,6 @@
  * Module dependencies
  */
 
-var mustache = require('metalsmith-templates').mustache;
 var templates = require('metalsmith-templates');
 var frontMatter = require('gulp-front-matter');
 var highlight = require('metalsmith-metallic');
@@ -13,13 +12,11 @@ var source = require('vinyl-source-stream');
 var livereload = require('gulp-livereload');
 var spawn = require('child_process').spawn;
 var browserify = require('browserify');
-var metalsmith = require('metalsmith');
 var flatten = require('gulp-flatten');
 var envify = require('envify/custom');
 var assign = require('object-assign');
 var gulpsmith = require('gulpsmith');
 var concat = require('gulp-concat');
-var mocha = require('gulp-mocha');
 var sass = require('gulp-sass');
 var myth = require('gulp-myth');
 var assert = require('assert');
