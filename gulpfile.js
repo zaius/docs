@@ -1,38 +1,30 @@
 /*eslint no-console: 0 camelcase: 0*/
 
-/**
- * Module dependencies
- */
-
-var templates = require('metalsmith-templates');
+var templates   = require('metalsmith-templates');
+var highlight   = require('metalsmith-metallic');
+var markdown    = require('metalsmith-markdown');
+var source      = require('vinyl-source-stream');
+var spawn       = require('child_process').spawn;
+var dtj         = require('directory-to-json');
 var frontMatter = require('gulp-front-matter');
-var highlight = require('metalsmith-metallic');
-var markdown = require('metalsmith-markdown');
-var source = require('vinyl-source-stream');
-var livereload = require('gulp-livereload');
-var spawn = require('child_process').spawn;
-var browserify = require('browserify');
-var flatten = require('gulp-flatten');
-var envify = require('envify/custom');
-var assign = require('object-assign');
-var gulpsmith = require('gulpsmith');
-var concat = require('gulp-concat');
-var sass = require('gulp-sass');
-var myth = require('gulp-myth');
-var assert = require('assert');
-var gulp = require('gulp');
-var path = require('path');
-
-/**
- * Exports
- */
+var livereload  = require('gulp-livereload');
+var envify      = require('envify/custom');
+var assign      = require('object-assign');
+var flatten     = require('gulp-flatten');
+var concat      = require('gulp-concat');
+var browserify  = require('browserify');
+var gulpsmith   = require('gulpsmith');
+var sass        = require('gulp-sass');
+var myth        = require('gulp-myth');
+var assert      = require('assert');
+var gulp        = require('gulp');
+var path        = require('path');
 
 module.exports = gulp;
 
 /**
  * Paths.
  */
-
 var jsFiles = [
   '*.js*',
   'local_modules/**/*.js*',
@@ -80,7 +72,6 @@ var imageFiles = [
 /**
  * Compile CSS
  */
-
 gulp.task('styles', function() {
   gulp
     .src(styleFiles)
@@ -93,23 +84,28 @@ gulp.task('styles', function() {
 /**
  * Compile JS
  */
-
 gulp.task('modules', function() {
   var env = process.env.NODE_ENV || 'development';
   var debug = (env !== 'production');
 
-  browserify(moduleEntryPoint, {debug: debug})
-    .transform('brfs')
-    .transform(envify({NODE_ENV: env}))
-    .bundle()
-    .pipe(source('build.js'))
-    .pipe(gulp.dest(path.join(__dirname, '/build/')));
+  dtj(path.resolve('./lib'), './build/db.json', function(err) {
+    if (err) return console.log(err);
+    bundle()
+  });
+
+  function bundle() {
+    browserify(moduleEntryPoint, {debug: debug})
+      .transform('brfs')
+      .transform(envify({NODE_ENV: env}))
+      .bundle()
+      .pipe(source('build.js'))
+      .pipe(gulp.dest(path.join(__dirname, '/build/')));
+  }
 });
 
 /**
  * Compile docs.
  */
-
 gulp.task('docs', function() {
   Object.keys(docs).forEach(function(key) {
     buildTemplate(key);
@@ -119,7 +115,6 @@ gulp.task('docs', function() {
 /**
  * Copy assets
  */
-
 gulp.task('assets', function() {
   gulp
     .src(imageFiles)
@@ -130,7 +125,6 @@ gulp.task('assets', function() {
 /**
  * Lint files
  */
-
 gulp.task('lint', function() {
   var childProcess = Object.create(process);
   childProcess.env.NODE_ENV = 'test';
@@ -144,7 +138,6 @@ gulp.task('lint', function() {
 /**
  * Watch for file changes
  */
-
 gulp.task('watch', function() {
 
   // determine which folders to watch for doc changes.
@@ -165,7 +158,6 @@ gulp.task('watch', function() {
 /**
  * build
  */
-
 gulp.task('build', [
   'docs',
   'modules',
@@ -176,12 +168,10 @@ gulp.task('build', [
 /**
  * Default
  */
-
 gulp.task('default', [
   'build',
   'watch'
 ]);
-
 
 /**
  * Build a template.
@@ -190,7 +180,6 @@ gulp.task('default', [
  * @param {String} tn
  * @api private
  */
-
 function buildTemplate(tn) {
   assert('string' == typeof tn, 'TemplateName should be a string');
 

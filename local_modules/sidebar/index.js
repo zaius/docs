@@ -1,51 +1,50 @@
-/**
- * Module dependencies.
- */
 
-var search = require('@local/search');
+var search  = require('@local/search');
+var window  = require('global/window');
 var slugify = require('slugificate');
-var react = require('react');
+var react   = require('react');
 
-var db = require('./db.json');
+var db = require('../../../build/db.json');
+var ss = require('./simple-sidebar');
 
 var dom = react.DOM;
 
-/**
- * Create class.
- */
+module.exports = createClass;
 
-module.exports = react.createClass({
-  displayName: 'sidebar',
-  getDefaultProps: getDefaultProps,
-  getInitialState: getInitialState,
-  render: render
-});
+function createClass() {
+  return react.createClass({
+    displayName: 'sidebar',
+    getDefaultProps: getDefaultProps,
+    getInitialState: getInitialState,
+    render: render
+  });
+}
 
 // we manage the state of the object here. source out into search,
 // return the result and pass it into the display function.
-
 function getDefaultProps() {
   return {
-    data: db
+    data: db[stripUrl()]
   }
 }
 
 /**
  * Get initial state.
  */
-
 function getInitialState() {
   return {
-    data: db
+    data: db[stripUrl()]
   }
 }
 
 /**
  * Render.
  */
-
 function render() {
   var state = this.state;
+  var basePath = stripUrl();
+
+  if ('learn' == basePath) return ss(state, this.props)
 
   return dom.section({className: 'section-sidebar'},
     search({data: this.props.data, setState: this.setState.bind(this)}),
@@ -58,17 +57,21 @@ function render() {
             return dom.a({
               className: 'sidebar-li',
               key: val,
-              href: '/docs/' + (val == 'index' ? '' : slugify(val))}, val
+              href: basePath + (val == 'index' ? '' : slugify(val.split('.')[0]))}, val
             )
 
           default:
             return dom.ul({key: key},
               dom.li({className: 'sidebar-li'},
-                dom.a({href: '/docs/' + slugify(key) + '/' + slugify(val[0]) + '.html'}, key)
+                dom.a({
+                  href: createHref(basePath, key, val[0])
+                }, key.split('.')[0])
               ),
               val.map(function(valTwo) {
                 return dom.li({className: 'sidebar-li_sub', key: key + valTwo},
-                  dom.a({href: '/docs/' + slugify(key) + '/' + slugify(valTwo) + '.html'}, valTwo)
+                  dom.a({
+                    href: createHref(basePath, key, valTwo)
+                  }, valTwo.split('.')[0])
                 )
               })
             )
@@ -76,4 +79,26 @@ function render() {
       })
     )
   );
+}
+
+/**
+ * Create the link used for the menu.
+ * @param {String} base
+ * @param {String[]} val
+ */
+function createHref(base, key, val) {
+  return '/'
+    + base
+    + '/'
+    + slugify(val.split('.')[0])
+    + '.html';
+}
+
+/**
+ * Get the current url and only get the
+ * base path.
+ */
+function stripUrl() {
+  var pathName = window.location.pathname.match(/\/\w+\//)[0];
+  return pathName.split('/')[1];
 }
