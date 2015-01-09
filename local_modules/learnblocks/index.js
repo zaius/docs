@@ -1,17 +1,23 @@
-/**
- * Module dependencies.
- */
 
-var slugify = require('slugificate');
-var react = require('react');
-var sticky = require('react-sticky');
+const window  = require('global/window');
+const slugify = require('slugificate');
+const react   = require('react');
 
-var dom = react.DOM;
+const dom = react.DOM;
+
+const blocks = [
+  'basics',
+  'wercker.yml',
+  'containers',
+  'pipelines',
+  'steps',
+  'build',
+  'deploy'
+];
 
 /**
  * Create class.
  */
-
 module.exports = react.createClass({
   displayName: 'learnblocks',
   render: render
@@ -20,66 +26,32 @@ module.exports = react.createClass({
 /**
  * Render.
  */
-
 function render() {
-  var state = this.state;
-
   return dom.div({className: 'learnblocks'},
-    dom.div({className: 'learnblocks-item learnblocks-item_basics'},
-      dom.a({
-        className: 'learnblocks-item-icon',
-        href: '/learn/index.html'
-      }, dom.img( {src:'/images/icon-basics.svg', alt:'Basics'}),
-        dom.div({className: 'learnblocks-item-title'}, 'Basics')
-      )
-    ),
-    dom.div({className: 'learnblocks-item learnblocks-item_yml'},
-      dom.a({
-        className: 'learnblocks-item-icon',
-        href: '/learn/index.html'
-      }, dom.img( {src:'/images/icon-yml.svg', alt:'wercker.yml'}),
-        dom.div({className: 'learnblocks-item-title'}, 'wercker.yml')
-      )
-    ),
-    dom.div({className: 'learnblocks-item learnblocks-item_boxes'},
-      dom.a({
-        className: 'learnblocks-item-icon',
-        href: '/learn/index.html'
-      }, dom.img( {src:'/images/icon-boxes.svg', alt:'Containers'}),
-        dom.div({className: 'learnblocks-item-title'}, 'Containers')
-      )
-    ),
-    dom.div({className: 'learnblocks-item learnblocks-item_pipelines'},
-      dom.a({
-        className: 'learnblocks-item-icon',
-        href: '/learn/index.html'
-      }, dom.img( {src:'/images/icon-pipeline.svg', alt:'Pipelines'}),
-        dom.div({className: 'learnblocks-item-title'}, 'Pipelines')
-      )
-    ),
-    dom.div({className: 'learnblocks-item learnblocks-item_steps'},
-      dom.a({
-        className: 'learnblocks-item-icon',
-        href: '/learn/index.html'
-      }, dom.img( {src:'/images/icon-steps.svg', alt:'Steps'}),
-         dom.div({className: 'learnblocks-item-title'}, 'Steps')
-      )
-    ),
-    dom.div({className: 'learnblocks-item learnblocks-item_build'},
-      dom.a({
-        className: 'learnblocks-item-icon',
-        href: '/learn/index.html'
-      }, dom.img( {src:'/images/icon-build.svg', alt:'Build'}),
-        dom.div({className: 'learnblocks-item-title'}, 'Build')
-      )
-    ),
-    dom.div({className: 'learnblocks-item learnblocks-item_deploy'},
-      dom.a({
-        className: 'learnblocks-item-icon',
-        href: '/learn/index.html'
-      }, dom.img( {src:'/images/icon-deploy.svg', alt:'Deploy'}),
-        dom.div({className: 'learnblocks-item-title'}, 'Deploy')
-      )
-    )
+    blocks.map(function(block) {
+      return dom.div({className: createClassName(block), key: block},
+        dom.a({
+          className: 'learnblocks-item-icon',
+          href: '/learn/' + slugify(block) + '/index.html'
+        }, dom.img({src: '/images/icon-' + block + '.svg', alt: block}),
+          dom.div({className: 'learnblocks-item-title'}, block)
+        )
+      );
+    })
   );
+}
+
+/**
+ * Create className.
+ *
+ * @param {String} block
+ */
+function createClassName(block) {
+  const head = window.location.pathname.split('/')[2];
+  const active = (head == slugify(block));
+
+  return 'learnblocks-item '
+   + 'learnblocks-item_'
+   + block.replace(/(\.)/gm, '_')
+   + (active ? ' active' : '')
 }

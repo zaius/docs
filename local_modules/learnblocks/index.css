@@ -60,10 +60,10 @@
 .learnblocks-item_basics .learnblocks-item-icon {
   background-color: $color-fuchsia_base;
 }
-.learnblocks-item_yml .learnblocks-item-icon{
+.learnblocks-item_wercker_yml .learnblocks-item-icon{
   background-color: $color-skyblue_base;
 }
-.learnblocks-item_boxes .learnblocks-item-icon{
+.learnblocks-item_containers .learnblocks-item-icon{
   background-color: $color-green_base;
 }
 .learnblocks-item_pipelines .learnblocks-item-icon{
