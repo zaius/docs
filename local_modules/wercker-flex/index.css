@@ -6,8 +6,21 @@
   display: flex;
   justify-content: center;
   align-content: space-around;
+  align-items: center;
 }
 
 .flex-inner {
-  width: 960px;
+  width: 1024px;
+}
+
+@media screen and (max-width: 960px) {
+  .flex-inner {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .flex-inner {
+    padding: 0 15px;
+  }
 }

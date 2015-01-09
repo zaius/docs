@@ -12,20 +12,18 @@ $color-grey_dark: #626463;
 $color-grey_darker: #242932;
 $color-grey_darkest: #000000;
 
-$color-blue_lighter: #C6C9CE;
 $color-blue_light: #60718C;
-$color-blue_base: #2194CE;
-$color-blue_dark: #4B5769;
-$color-blue_darker: #4C5D79;
-
-$color-turquoise_light: #ECF8F6;
-$color-turquoise_base: #41AF99;
-$color-turquoise_dark: #338A78;
+$color-blue_base: #4C5D79;
 
 $color-green_base: #6DBE44;
-$color-red_base: #FF3362;
+$color-red_base: #FF4772;
 $color-purple_base: #AE40EA;
 $color-orange_base: #FF801A;
 $color-yellow_base: #FFDB06;
 $color-fuchsia_base: #F748C4;
 $color-skyblue_base: #3DBDEE;
+$color-skyblue_dark: #2194CE;
+
+$color-twitter_base: #00A9F1;
+$color-facebook_base: #3A579A;
+$color-googleplus_base: #D74022;

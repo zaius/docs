@@ -3,95 +3,76 @@
  */
 
 .footer {
-  margin-top: 40px;
-  z-index: 2;
-  background-color: $color-blue_darker;
+  background-color: $color-blue_base;
 }
 
-.footer-container {
-  padding: 60px 20px;
+.footer-content {
   display: flex;
-  flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.footer-register {
-  flex: 5;
+.footer-logo {
+  flex: 1 50%;
+  margin-top: 60px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $color-blue_light;
+}
+
+.footer-logo-payoff {
+  margin: 3px 0 0 0;
+  color: $color-grey_light;
+}
+
+.footer-signup {
+  flex: 1 50%;
+  margin-top: 60px;
+  padding-bottom: 20px;
+  line-height: 60px;
+  border-bottom: 1px solid $color-blue_light;
+  text-align: right;
 }
 
 .footer-social {
-  flex: 4;
+  flex: 1 100%;
+  margin-top: 30px;
   color: $color-white;
-  text-align: center;
-}
-
-@media screen and (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-  }
-  .footer-register,
-  .footer-register p  {
-    text-align: center;
-  }
-  .footer-social {
-    margin-top: 40px;
-  }
 }
 
 .footer-social span {
-  display: block;
-  margin-top: 5px;
-  font-size: $fontSize_small;
-  font-weight: $fontWeight_light;
-  color: $color-blue_lighter;
-  font-style: italic;
-}
-
-.footer-social img {
-  margin: auto;
-  padding: 10px 15px;
-}
-
-.footer-social img:hover {
-  transform: scale(1.1);
-}
-
-.footer-register p {
-  margin-top: 0;
-  font-family: 'Open Sans', sans-serif;
+  color: $color-grey_light;
   font-size: $fontSize_base;
-  color: $color-blue_lighter;
-  opacity: .7;
+  font-weight: $fontWeight_light;
 }
 
-/**
- * Navbar-button.
- */
-
-.button-register {
-  float: left;
-  margin-top: 10px;
-  padding: 4px 12px;
-  border-radius: 2px;
-  border: 1px solid $color-turquoise_base;
-  letter-spacing: 1px;
-  color: $color-white;
-  font-weight: $fontWeight_base;
-  border-color: $color-turquoise_base;
-  background-color: $color-turquoise_base;
-  transition: all $duration_fast $easing_smooth;
+.footer-social-icon {
+  text-decoration: none;
+  margin-left: 10px;
+  opacity: .75;
 }
 
-.button-register:hover {
-  border: 1px solid $color-turquoise_dark;
-  background-color: $color-turquoise_dark;
-  border-color: $color-turquoise_dark;
+.footer-social-icon:hover {
+  opacity: 1;
+}
+
+.footer-newsletter {
+  display: inline;
+  float: right;
+  color: $color-grey_light;
+  font-size: $fontSize_base;
+  font-weight: $fontWeight_light;
+  text-decoration: underline;
+}
+
+.footer-newsletter:hover {
   color: $color-white;
 }
 
 .footer-links {
   display: flex;
   justify-content: center;
+  margin-top: 60px;
   padding-bottom: 20px;
 }
 
@@ -102,11 +83,9 @@
 .footer-links li {
   display: inline;
   margin-right: 10px;
-  padding-left: 10px;
-  border-left: 1px solid $color-blue_light;
   font-size: $fontSize_smaller;
-  text-transform: uppercase;
-  color: $color-blue_lighter;
+  color: $color-grey_light;
+  font-weight: $fontWeight_light;
 }
 
 .footer-links li:first-child {
@@ -115,10 +94,67 @@
 
 .footer-links a {
   font-size: $fontSize_smaller;
-  text-transform: uppercase;
-  color: $color-blue_lighter;
+  color: $color-grey_light;
+  text-decoration: none;
 }
 
 .footer-links a:hover {
   color: $color-white;
+}
+
+/**
+ * Footer button.
+ */
+
+.button-footer_signup {
+  padding: 12px 15px;
+  border-radius: 2px;
+  background-color: $color-green_base;
+  color: $color-grey_lighter;
+  font-weight: $fontWeight_base;
+  font-size: $fontSize_base;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all $duration_fastest $easing_smooth;
+}
+
+.button-footer_signup:hover {
+  color: $color-white;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-logo {
+    flex: 1 100%;
+    margin-top: 60px;
+    padding-bottom: 20px;
+    border-bottom: none;
+    text-align: center;
+  }
+
+  .footer-signup {
+    flex: 100%;
+    margin-top: 0px;
+    padding-bottom: 20px;
+    line-height: 60px;
+    border-bottom: none;
+    text-align: center;
+  }
+
+  .footer-social {
+    padding-top: 30px;
+    text-align: center;
+    border-top: 1px solid $color-blue_light;
+    border-bottom: 1px solid $color-blue_light;
+    line-height: $lineHeight_looser;
+  }
+
+  .footer-newsletter {
+    display: block;
+    padding-bottom: 40px;
+    float: none;
+  }
+
+  .footer-links {
+    margin-top: 20px
+  }
 }

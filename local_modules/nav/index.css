@@ -3,7 +3,8 @@
  */
 
 .nav-sticky {
-  min-height: 50px;
+  min-height: 60px;
+  background-color: $color-grey_lighter;
 }
 
 .navbar-floating {
@@ -16,22 +17,18 @@
 }
 
 .navbar-container {
-  background-color: $color-grey_light;
+  background-color: $color-grey_lighter;
 }
 
 .navbar-floating .navbar-container {
-  background-color: $color-blue_darker;
+  background-color: $color-blue_base;
   transition: background-color $duration_fast $easing_smooth;
+  padding-bottom: 12px;
 }
 
 .navbar {
-  margin-top: 10px;
-  padding: 0 20px;
-}
-
-.navbar-floating .navbar {
-  margin-top: 10px;
-  padding: 0px 20px 5px 20px;
+  margin-top: 14px;
+  padding-bottom: 12px;
 }
 
 .navbar li {
@@ -39,17 +36,22 @@
 }
 
 .navbar-item {
-  font-size: $fontSize_medium;
-  font-weight: $fontWeight_light;
-  color: $color-blue_darker;
-  vertical-align: top;
   margin-right: 15px;
-  line-height: $lineHeight_looser;
-  opacity: .8;
+  margin-top: 6px;
+  color: $color-blue_light;
+  font-size: $fontSize_base;
+  font-weight: $fontWeight_light;
+  line-height: $lineHeight_base;
+  text-decoration: none;
+  float: left;
 }
 
 .navbar-item:hover {
-  opacity: 1;
+  color: $color-blue_base;
+}
+
+.navbar-item_right {
+  float: right;
 }
 
 .navbar-floating .navbar-item {
@@ -61,54 +63,58 @@
   opacity: 1;
 }
 
-/**
- * Navbar-button.
- */
-
-.navbar-button {
-  float: right;
-  margin-left: 15px;
-  border-radius: 2px;
-  padding: 4px 12px;
-  font-weight: $fontWeight_base;
-  letter-spacing: 1px;
-  font-size: $fontSize_small;
-  transition: all $duration_fast $easing_smooth;
-}
-
-.navbar-button_register {
-  border: 1px solid $color-turquoise_base;
-  background-color: $color-turquoise_base;
-  border-color: $color-turquoise_base;
-  color: $color-white;
-}
-
-.navbar-button_register:hover {
-  border: 1px solid $color-turquoise_dark;
-  background-color: $color-turquoise_dark;
-  border-color: $color-turquoise_dark;
-  color: $color-white;
-}
-
-.navbar-button_signIn {
-  border: 1px solid $color-grey_base;
-  color: $color-grey_dark;
-}
-
-.navbar-floating .navbar-button_signIn {
-  border: 1px solid $color-white;
-  color: $color-grey_dark;
-  color: $color-white;
-}
-
-.logo-full {
+.navbar-logo {
+  display: block;
+  float: left;
   margin-right: 25px;
+  margin-top: 14px;
+}
+
+.navbar-signup {
+  margin-top: 13px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-logo {
+    display: block;
+    width: 50%;
+    float: none;
+    margin-right: 25px;
+    margin-top: 14px;
+  }
+
+  .navbar-signup {
+    position: absolute;
+    margin-top: 0;
+    top: 15px;
+    right: 20px;
+  }
 }
 
 .logo-full-group path {
-  fill: $color-blue_darker;
+  fill: $color-blue_base;
 }
 
 .navbar-floating .logo-full-group path {
   fill: $color-white;
+}
+
+/**
+ * Navbar button.
+ */
+
+.button-nav_signup {
+  float: right;
+  border-radius: 2px;
+  padding: 10px 14px;
+  background-color: $color-green_base;
+  color: $color-grey_lighter;
+  font-size: $fontSize_small;
+  font-weight: $fontWeight_base;
+  text-decoration: none;
+  transition: all $duration_fastest $easing_smooth;
+}
+
+.button-nav_signup:hover {
+  color: $color-white;
 }

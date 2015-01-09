@@ -13,7 +13,7 @@
 .doc-quicklinks-item {
   flex: 1 12.5%;
   margin: 10px;
-  padding: 20px;
+  padding: 20px 0;
 }
 
 
@@ -24,13 +24,14 @@
 }
 
 .doc-quicklinks-item ul {
-  line-height: $lineHeight_looser;
+  line-height: $lineHeight_loose;
   font-size: $fontSize-base;
   color: $color-grey_base;
   list-style: none;
+  margin-bottom: 60px;
 }
 
 .doc-quicklinks-item li:before {
-  content: "• ";
+  content: " ";
   color: $color-blue_light;
 }
