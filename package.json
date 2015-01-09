@@ -13,6 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "css-wipe": "^1.0.1",
+    "global": "^4.3.0",
     "react": "^0.11.2",
     "react-sticky": "^1.0.4",
     "slugificate": "^0.2.1"
