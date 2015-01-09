@@ -4,10 +4,11 @@
 
 $lineHeight_tightest: 10px;
 $lineHeight_tighter: 12px;
-$lineHeight_tight: 15px;
+$lineHeight_tight: 16px;
 $lineHeight_base: 22px;
-$lineHeight_loose: 28px;
-$lineHeight_looser: 36px;
+$lineHeight_loose: 30px;
+$lineHeight_looser: 46px;
+$lineHeight_loosest: 68px;
 
 /**
  * Font sizes scale.
@@ -17,12 +18,12 @@ $fontSize_micro: 8px;
 $fontSize_smallest: 10px;
 $fontSize_smaller: 13px;
 $fontSize_small: 14px;
-$fontSize_base: 15px;
-$fontSize_medium: 17px;
-$fontSize_large: 19px;
-$fontSize_larger: 21px;
-$fontSize_largest: 32px;
-$fontSize_jumbo: 122px;
+$fontSize_base: 16px;
+$fontSize_medium: 18px;
+$fontSize_large: 22px;
+$fontSize_larger: 34px;
+$fontSize_largest: 52px;
+$fontSize_jumbo: 140px;
 
 /**
  * Font weight.
@@ -37,74 +38,106 @@ $fontWeight_bold: bold;
  * Typography settings.
  */
 
-html, body, a {
+html,
+body,
+a {
   font-family: 'Open Sans', sans-serif;
-  font-weight: $fontWeight_light;
-  line-height: $lineHeight_loose;
-  font-size: $fontSize_base;
-  color: $color-blue_light;
 }
 
 a {
-  text-decoration: none;
-  color: $color-blue_base;
+  color: $color-skyblue_base;
+  font-size: $fontSize_small;
   font-weight: $fontWeight_light;
+  line-height: $lineHeight_tight;
 }
 
 a:hover {
-  color: $color-blue_darker;
+  color: $color-skyblue_dark;
 }
 
 p {
-  font-family: 'Merriweather', serif;
-  font-weight: $fontWeight_light;
-  font-lineheight: $lineHeight_looser;
-  font-size: $fontSize_small;
-  text-justify: inter-word;
+  font-family: 'Open Sans', sans-serif;
   color: $color-blue_light;
-  text-align: justify;
-  margin-top: 15px;
+  font-size: $fontSize_small;
+  font-weight: $fontWeight_light;
+  line-height: $lineHeight_loose;
 }
 
-p > a {
-  font-weight: $fontWeight_semibold;
+article p {
+  font-family: 'Merriweather', serif;
+  margin-top: 15px;
+  text-justify: inter-word;
+  text-align: justify;
+}
+
+em {
+  font-size: $fontSize_small;
+  font-weight: $fontWeight_light;
+  color: $color-grey_base;
 }
 
 h1 {
-  line-height: $lineHeight_looser;
-  font-weight: $fontWeight_base;
+  line-height: $lineHeight_loosest;
+  font-weight: $fontWeight_light;
   font-size: $fontSize_largest;
-  color: $color-blue_darker;
-  letter-spacing: 1px;
+  color: $color-blue_base;
+}
+
+h1 + p {
+  line-height: $lineHeight_loose;
+  font-weight: $fontWeight_base;
+  font-size: $fontSize_medium;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 h2 {
   line-height: $lineHeight_looser;
   font-weight: $fontWeight_light;
   font-size: $fontSize_larger;
-  color: $color-grey_darker;
+  color: $color-blue_base;
   margin-top: 30px;
 }
 
 h3 {
-  line-height: $lineHeight_looser;
-  font-weight: $fontWeight_semibold;
-  font-size: $fontSize_small;
-  text-transform: uppercase;
+  line-height: $lineHeight_loose;
+  font-weight: $fontWeight_base;
+  font-size: $fontSize_large;
+  color: $color-blue_light;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+h4 {
+  line-height: $lineHeight_base;
+  font-weight: $fontWeight_light;
+  font-size: $fontSize_medium;
   color: $color-blue_light;
   margin-top: 20px;
 }
 
-h4 {
-  line-height: $lineHeight_looser;
+
+h5 {
+  line-height: $lineHeight_base;
   font-weight: $fontWeight_base;
-  font-size: $fontSize_small;
+  font-size: $fontSize_base;
   color: $color-blue_light;
   margin-top: 10px;
 }
 
-pre {
+pre,
+code {
   font-family: 'Source Code Pro', monospace;
-  font-size: $fontSize_smaller;
+  font-size: $fontSize_small;
   line-height: 22px;
+}
+
+ul li,
+ol li {
+  line-height: $lineHeight_base;
+  font-weight: $fontWeight_light;
+  font-size: $fontSize_small;
+  color: $color-blue_light;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }

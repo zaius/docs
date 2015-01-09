@@ -3,10 +3,10 @@
  */
 
 .learn {
-  background-color: $color-grey_lightest;
+  background-color: $color-grey_light;
 }
 
-.learn h1 {
+.learn h2 {
   margin-top: 40px;
   text-align: center;
 }
@@ -35,9 +35,10 @@
 
 .learnblocks-item-icon {
   display: block;
-  height: 140px;
-  padding-top: 10px;
+  height: 150px;
+  padding-top: 20px;
   text-align: center;
+  text-decoration: none;
   box-shadow: inset 0px -35px 0px 0px rgba(0,0,0,.06);
 }
 
@@ -51,8 +52,9 @@
 }
 
 .learnblocks-item-title {
-  margin-top: 3px;
+  margin-top: 23px;
   text-align: center;
+  text-transform: capitalize;
   font-size: $fontSize_base;
   color: $color-white;
 }

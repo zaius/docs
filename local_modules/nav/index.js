@@ -29,15 +29,31 @@ function render() {
   return sticky({stickyClassName: 'navbar-floating'},
     dom.div({className: 'flex-outer navbar-container'},
       dom.div({className: 'flex-inner'},
+        dom.div({className: 'navbar-logo'},
+          dom.a({
+            className: 'logo-full',
+            href: '/',
+            onClick: changeLocation.bind(this, '/index.html'),
+            dangerouslySetInnerHTML: {
+              __html: logoFull
+            }
+          })
+        ),
+        dom.div({className: 'navbar-signup'},
+          dom.a({
+            className: 'button-nav_signup',
+            href: 'https://app.wercker.com/users/new/',
+            onClick: changeLocation.bind(this, 'app.wercker.com/users/new'),
+            children: 'Sign up'
+          })
+        ),
         dom.ul({className: 'navbar'},
           dom.li(null,
             dom.a({
-              className: 'logo-full',
-              href: '/',
-              onClick: changeLocation.bind(this, '/index.html'),
-              dangerouslySetInnerHTML: {
-                __html: logoFull
-              }
+              className: 'navbar-item',
+              href: 'http://www.wercker.com/about',
+              onClick: changeLocation.bind(this, '/learn/index.html'),
+              children: 'About'
             })
           ),
           dom.li(null,
@@ -59,25 +75,17 @@ function render() {
           dom.li(null,
             dom.a({
               className: 'navbar-item',
-              href: '/faq',
-              onClick: changeLocation.bind(this, '/faq/index.html'),
-              children: 'Faq'
+              href: 'http://blog.wercker.com',
+              onClick: changeLocation.bind(this, '/learn/index.html'),
+              children: 'Blog'
             })
           ),
           dom.li(null,
             dom.a({
-              className: 'navbar-button navbar-button_signIn',
-              href: '#',
+              className: 'navbar-item navbar-item_right',
+              href: 'https://app.wercker.com/sessions/new',
               onClick: changeLocation.bind(this, 'app.wercker.com'),
-              children: 'Sign in'
-            })
-          ),
-          dom.li(null,
-            dom.a({
-              className: 'navbar-button navbar-button_register',
-              href: '#',
-              onClick: changeLocation.bind(this, 'app.wercker.com/users/new'),
-              children: 'Register for free'
+              children: 'Log in'
             })
           )
         )
