@@ -43,7 +43,7 @@ function render() {
           dom.a({
             className: 'button-nav_signup',
             href: 'https://app.wercker.com/users/new/',
-            onClick: changeLocation.bind(this, 'app.wercker.com/users/new'),
+            onClick: changeLocation.bind(this, 'https://app.wercker.com/users/new/'),
             children: 'Sign up'
           })
         ),
@@ -52,7 +52,7 @@ function render() {
             dom.a({
               className: 'navbar-item',
               href: 'http://www.wercker.com/about',
-              onClick: changeLocation.bind(this, '/learn/index.html'),
+              onClick: changeLocation.bind(this, 'http://www.wercker.com/about'),
               children: 'About'
             })
           ),
@@ -84,7 +84,7 @@ function render() {
             dom.a({
               className: 'navbar-item navbar-item_right',
               href: 'https://app.wercker.com/sessions/new',
-              onClick: changeLocation.bind(this, 'app.wercker.com'),
+              onClick: changeLocation.bind(this, 'https://app.wercker.com/sessions/new'),
               children: 'Log in'
             })
           )
