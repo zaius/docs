@@ -87,8 +87,11 @@ gulp.task('styles', function() {
 gulp.task('modules', function() {
   var env = process.env.NODE_ENV || 'development';
   var debug = (env !== 'production');
-
-  dtj(path.resolve('./lib'), './build/db.json', function(err) {
+  var opts = {
+    path: path.resolve('./lib'),
+    noDot: true
+  }
+  dtj(opts, './build/db.json', function(err) {
     if (err) return console.log(err);
     bundle()
   });
@@ -132,7 +135,7 @@ gulp.task('lint', function() {
     path.join(__dirname, './node_modules/.bin/eslint'),
     '.'
   ];
-  spawn(process.argv[0], args, {stdio: [0,1,2], env: childProcess.env});
+  spawn(process.argv[0], args, {stdio: [0, 1, 2], env: childProcess.env});
 });
 
 /**
