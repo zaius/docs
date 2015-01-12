@@ -35,7 +35,10 @@ function render() {
           href: '/learn/' + slugify(block) + '/index.html'
         }, dom.img({src: '/images/icon-' + block + '.svg', alt: block}),
           dom.div({className: 'learnblocks-item-title'}, block)
-        )
+        ),
+        dom.div({
+          className: 'learnblocks-item_active'
+        })
       );
     })
   );
