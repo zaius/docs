@@ -8,11 +8,13 @@ var dom = react.DOM;
 module.exports = simpleSidebar
 
 function simpleSidebar(props, state) {
-  var lesson = state.data[getLesson()];
-  return dom.section({className: 'section-sidebar'},
+  var lesson = getLesson();
+  var lessonData = state.data[lesson];
+
+  return dom.section({className: 'section-sidebar section-sidebar_' + lesson},
     dom.section({className: 'sidebar-list'},
       dom.ul(null,
-        lesson.map(function(val) {
+        lessonData.map(function(val) {
           return dom.li({className: 'sidebar-li_sub', key: val},
             dom.a({
               href: createHref(stripUrl(), val)

@@ -33,6 +33,14 @@
   }
 }
 
+.learnblocks-item:first-child {
+  margin-left: 0;
+}
+
+.learnblocks-item:last-child {
+  margin-right: 0;
+}
+
 .learnblocks-item-icon {
   display: block;
   height: 150px;

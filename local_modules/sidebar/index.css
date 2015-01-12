@@ -9,7 +9,8 @@
 }
 
 .section-sidebar {
-  padding: 40px 20px 20px 20px;
+  margin-top: 40px;
+  padding: 20px 20px 20px 20px;
   border-right: 1px solid $color-grey_light;
   line-height: $lineHeight_loose;
 }
@@ -22,6 +23,7 @@
   font-weight: $fontWeight_base;
   font-family: 'Open Sans', sans-serif;
   color: $color-blue_base;
+  text-decoration: none;
 }
 
 .sidebar-li_sub > a {
@@ -30,5 +32,40 @@
   font-size: $fontSize_smaller;
   font-weight: $fontWeight_light;
   font-family: 'Merriweather', serif;
-  color: $color-blue_base;
+  color: $color-skyblue_base;
+}
+
+.section-sidebar_basics {
+  border-left: 2px solid $color-fuchsia_base;
+  border-right: none;
+}
+
+.section-sidebar_wercker-yml {
+  border-left: 2px solid $color-skyblue_base;
+  border-right: none;
+}
+
+.section-sidebar_containers {
+  border-left: 2px solid $color-green_base;
+  border-right: none;
+}
+
+.section-sidebar_pipelines {
+  border-left: 2px solid $color-red_base;
+  border-right: none;
+}
+
+.section-sidebar_steps {
+  border-left: 2px solid $color-purple_base;
+  border-right: none;
+}
+
+.section-sidebar_build {
+  border-left: 2px solid $color-yellow_base;
+  border-right: none;
+}
+
+.section-sidebar_deploy {
+  border-left: 2px solid $color-orange_base;
+  border-right: none;
 }
