@@ -17,10 +17,18 @@
   border: 1px solid $color-grey_light;
 }
 
+.doc-cards-item:first-child {
+  margin-left: 0;
+}
+
+.doc-cards-item:last-child {
+  margin-right: 0;
+}
 
 @media screen and (max-width: 768px) {
   .doc-cards-item {
-    flex: 1 25%;
+    flex: 1 100%;
+    margin: 10px 0;
   }
 }
 

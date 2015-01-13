@@ -19,7 +19,7 @@
 
 @media screen and (max-width: 768px) {
   .doc-quicklinks-item {
-    flex: 1 25%;
+    flex: 1 40%;
   }
 }
 

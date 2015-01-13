@@ -76,7 +76,7 @@ function render() {
             dom.a({
               className: 'navbar-item',
               href: 'http://blog.wercker.com',
-              onClick: changeLocation.bind(this, '/learn/index.html'),
+              onClick: changeLocation.bind(this, 'http://blog.wercker.com'),
               children: 'Blog'
             })
           ),
