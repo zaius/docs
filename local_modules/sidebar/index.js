@@ -43,7 +43,6 @@ function getInitialState() {
 function render() {
   var state = this.state;
   var basePath = stripUrl();
-
   if ('learn' == basePath) return ss(state, this.props)
 
   return dom.section({className: 'section-sidebar'},
@@ -54,11 +53,12 @@ function render() {
 
         switch (typeof val) {
           case 'string':
-            return dom.a({
-              className: 'sidebar-li',
-              key: val,
-              href: basePath + (val == 'index' ? '' : slugify(val.split('.')[0]))}, val
-            )
+            var href = basePath
+            href += val == 'index'
+              ? ''
+              : slugify(val.split('.')[0]);
+
+            return dom.a({className: 'sidebar-li', key: val, href: href}, val)
 
           default:
             return dom.ul({key: key},
@@ -89,6 +89,8 @@ function render() {
 function createHref(base, key, val) {
   return '/'
     + base
+    + '/'
+    + key
     + '/'
     + slugify(val.split('.')[0])
     + '.html';
