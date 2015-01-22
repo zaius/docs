@@ -17,7 +17,7 @@ function simpleSidebar(props, state) {
         lessonData.map(function(val) {
           return dom.li({className: 'sidebar-li_sub', key: val},
             dom.a({
-              href: createHref(stripUrl(), val)
+              href: createHref(stripUrl(), lesson, val)
             }, val.split('.')[0])
           )
         })
@@ -46,12 +46,14 @@ function getLesson() {
 /**
  * Create the link used for the menu.
  * @param {String} base
- * @param {String} key
+ * @param {String} lesson
  * @param {String[]} val
  */
-function createHref(base, val) {
+function createHref(base, lesson, val) {
   return '/'
     + base
+    + '/'
+    + lesson
     + '/'
     + slugify(val.split('.')[0])
     + '.html';
