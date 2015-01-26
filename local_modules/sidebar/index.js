@@ -49,17 +49,17 @@ function render() {
     search({data: this.props.data, setState: this.setState.bind(this)}),
     dom.section({className: 'sidebar-list'},
       Object.keys(state.data).map(function(key) {
-        var val = state.data[key];
 
+        // the value we're getting from the data. Can be either an
+        // object containing children, or is a single string value.
+        var val = state.data[key];
         switch (typeof val) {
           case 'string':
-            var href = basePath
-            href += val == 'index'
-              ? ''
-              : slugify(val.split('.')[0]);
-
+            var origin = window.location.origin
+            var href = origin + '/' + basePath + '/' + val + '/index.html';
             return dom.a({className: 'sidebar-li', key: val, href: href}, val)
 
+          case 'object':
           default:
             return dom.ul({key: key},
               dom.li({className: 'sidebar-li'},
