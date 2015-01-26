@@ -20,18 +20,18 @@
   width: 100vw;
   background-color: $color-blue_base;
 
-  -webkit-animation: moveDown $duration_base $easing_smooth;
-  animation: moveDown $duration_base $easing_smooth;
+  -webkit-animation: moveDown $duration_slow ease-out;
+  animation: moveDown $duration_slow ease-out;
 }
 
 @-webkit-keyframes moveDown {
-  from {-webkit-transform: translateY(-70px); }
-  to {-webkit-transform: translateY(0px); }
+  from {opacity: 0; }
+  to {opacity: 1; }
 }
 
 @keyframes moveDown {
-  from {transform: translateY(-70px); }
-  to {transform: translateY(0px); }
+  from {opacity: 0; }
+  to {opacity: 1; }
 }
 
 

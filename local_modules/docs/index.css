@@ -1,8 +1,12 @@
 /**
- * Docs.
+ * Docs-articles.
  */
 
-.docs {
+.flex-outer.docs {
+  align-items: flex-start;
+}
+
+.docs-articles {
   flex: 3;
   order: 2;
   padding: 40px;
@@ -25,7 +29,7 @@ h1 + p {
  * Code
  */
 
-.docs > p > code {
+.docs-articles > p > code {
   margin: 0 3px;
   padding: 4px 6px;
   border-radius: 4px;
@@ -38,7 +42,7 @@ h1 + p {
   color: $color-blue_base;
 }
 
-.docs > pre {
+.docs-articles > pre {
   background-color: $color-blue_base;
   border: 1px solid $color-grey_light;
   margin-top: 30px;
@@ -47,7 +51,7 @@ h1 + p {
   overflow-x: auto;
 }
 
-.docs > pre > code {
+.docs-articles > pre > code {
   line-height: $lineHeight_base;
   background-color: transparent;
   overflow-wrap: normal;
@@ -59,8 +63,8 @@ h1 + p {
  * ul ol.
  */
 
-.docs > ul,
-.docs > ol {
+.docs-articles > ul,
+.docs-articles > ol {
   margin-top: 5px;
   margin-left: 10px;
   line-height: $lineHeight_loose;
@@ -68,8 +72,8 @@ h1 + p {
   list-style: none;
 }
 
-.docs > ul li:before,
-.docs > ol li:before {
+.docs-articles > ul li:before,
+.docs-articles > ol li:before {
   content: "• ";
   color: $color-blue_light;
 }
@@ -78,8 +82,8 @@ h1 + p {
  * Images.
  */
 
-.docs p > img,
-.docs a > img {
+.docs-articles p > img,
+.docs-articles a > img {
   width: 100%;
   margin-top: 20px;
   border: 1px solid $color-grey_lighter;
@@ -90,7 +94,7 @@ h1 + p {
  * Line breaks.
  */
 
-.docs > hr {
+.docs-articles > hr {
   display: none;
 }
 
