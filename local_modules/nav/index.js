@@ -9,6 +9,7 @@ var sticky = require('react-sticky')
 
 var dom = react.DOM;
 var logoFull = logo.full;
+var logoBase = logo.base;
 
 /**
  * Create class.
@@ -37,6 +38,14 @@ function render() {
             dangerouslySetInnerHTML: {
               __html: logoFull
             }
+          }),
+          dom.a({
+            className: 'logo-small',
+            href: '/',
+            onClick: changeLocation.bind(this, '/index.html'),
+            dangerouslySetInnerHTML: {
+              __html: logoBase
+            }
           })
         ),
         dom.div({className: 'navbar-signup'},
@@ -48,14 +57,6 @@ function render() {
           })
         ),
         dom.ul({className: 'navbar'},
-          dom.li(null,
-            dom.a({
-              className: 'navbar-item',
-              href: 'http://www.wercker.com/about',
-              onClick: changeLocation.bind(this, 'http://www.wercker.com/about'),
-              children: 'About'
-            })
-          ),
           dom.li(null,
             dom.a({
               className: 'navbar-item',

@@ -58,6 +58,7 @@ var styleFiles = [
   'node_modules/css-wipe/index.css',
   'node_modules/@local/wercker-animations/index.css',
   'node_modules/@local/wercker-colors/index.css',
+  'node_modules/@local/wercker-fonts/index.css',
   'node_modules/@local/wercker-typography/index.css',
   'local_modules/**/*.css'
 ];
@@ -67,6 +68,13 @@ var imageFiles = [
   'local_modules/**/*.png',
   'local_modules/**/*.gif',
   'local_modules/**/*.svg'
+];
+
+var fontFiles = [
+  'local_modules/**/*.eot',
+  'local_modules/**/*.ttf',
+  'local_modules/**/*.woff',
+  'local_modules/**/*.woff2'
 ];
 
 /**
@@ -126,6 +134,16 @@ gulp.task('assets', function() {
 });
 
 /**
+ * Copy fonts
+ */
+gulp.task('fonts', function() {
+  gulp
+    .src(fontFiles)
+    .pipe(flatten())
+    .pipe(gulp.dest(path.join(__dirname, '/build/fonts')));
+});
+
+/**
  * Lint files
  */
 gulp.task('lint', function() {
@@ -165,7 +183,8 @@ gulp.task('build', [
   'docs',
   'modules',
   'styles',
-  'assets'
+  'assets',
+  'fonts'
 ]);
 
 /**

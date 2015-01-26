@@ -7,8 +7,8 @@ $lineHeight_tighter: 12px;
 $lineHeight_tight: 16px;
 $lineHeight_base: 22px;
 $lineHeight_loose: 30px;
-$lineHeight_looser: 46px;
-$lineHeight_loosest: 68px;
+$lineHeight_looser: 44px;
+$lineHeight_loosest: 64px;
 
 /**
  * Font sizes scale.
@@ -21,8 +21,8 @@ $fontSize_small: 14px;
 $fontSize_base: 16px;
 $fontSize_medium: 18px;
 $fontSize_large: 22px;
-$fontSize_larger: 34px;
-$fontSize_largest: 52px;
+$fontSize_larger: 36px;
+$fontSize_largest: 56px;
 $fontSize_jumbo: 140px;
 
 /**
@@ -37,6 +37,27 @@ $fontWeight_bold: bold;
 /**
  * Typography settings.
  */
+
+.DINNextLTPro-Bold {
+  font-family: DINNextLTPro-Bold;
+  font-weight: normal;
+  font-style: normal;
+}
+.DINNextLTPro-Regular {
+  font-family: DINNextLTPro-Regular;
+  font-weight: normal;
+  font-style: normal;
+}
+.DINNextLTPro-Medium {
+  font-family: DINNextLTPro-Medium;
+  font-weight: normal;
+  font-style: normal;
+}
+.DINNextLTPro-Light {
+  font-family: DINNextLTPro-Light;
+  font-weight: normal;
+  font-style: normal;
+}
 
 html,
 body,
@@ -77,10 +98,11 @@ em {
 }
 
 h1 {
+  font-family: DINNextLTPro-Light;
   line-height: $lineHeight_loosest;
-  font-weight: $fontWeight_light;
   font-size: $fontSize_largest;
   color: $color-blue_base;
+  letter-spacing: -2px;
 }
 
 h1 + p {
@@ -92,11 +114,13 @@ h1 + p {
 }
 
 h2 {
+  font-family: DINNextLTPro-Light;
   line-height: $lineHeight_looser;
-  font-weight: $fontWeight_light;
   font-size: $fontSize_larger;
   color: $color-blue_base;
+  letter-spacing: -1px;
   margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 h3 {
@@ -140,4 +164,17 @@ ol li {
   color: $color-blue_light;
   margin-top: 15px;
   margin-bottom: 5px;
+}
+
+
+@media screen and (max-width: 768px) {
+  h1 {
+    line-height: $lineHeight_looser;
+    font-size: $fontSize_larger;
+  }
+
+  h4 {
+    line-height: $lineHeight_base;
+    font-size: $fontSize_small;
+  }
 }
