@@ -2,8 +2,8 @@
 * introduction
 * how it works
 * signing up
-* toolchain
-* adding an app
+* the wercker cli
+* using the web interface
 
 # wercker.yml
 * what is it?
@@ -19,16 +19,21 @@
 * build artifacts
 
 # Pipelines
-* available env vars
 * how it works
+* available env vars
 * using env vars
+* packaging
 
 # Steps
 * types (registry steps, script, after-steps)
+* using steps
+* notifications
 * creating steps
 * step registry
 
 # Build
+* introduction (status, abort, queued, where running/types?)
+* local builds
 * pulling builds
 * introspecting builds
 
