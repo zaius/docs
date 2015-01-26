@@ -84,7 +84,7 @@ p {
   line-height: $lineHeight_loose;
 }
 
-article p {
+article p, .docs-articles p {
   font-family: 'Merriweather', serif;
   margin-top: 15px;
   text-justify: inter-word;
@@ -95,6 +95,7 @@ em {
   font-size: $fontSize_small;
   font-weight: $fontWeight_light;
   color: $color-grey_base;
+  font-style: italic;
 }
 
 h1 {
@@ -105,13 +106,6 @@ h1 {
   letter-spacing: -2px;
 }
 
-h1 + p {
-  line-height: $lineHeight_loose;
-  font-weight: $fontWeight_base;
-  font-size: $fontSize_medium;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
 
 h2 {
   font-family: DINNextLTPro-Light;
@@ -123,13 +117,22 @@ h2 {
   margin-bottom: 20px;
 }
 
+h2 + p {
+  line-height: $lineHeight_loose;
+  font-weight: $fontWeight_base;
+  font-size: $fontSize_medium;
+  color: $color-blue_light;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
 h3 {
   line-height: $lineHeight_loose;
   font-weight: $fontWeight_base;
   font-size: $fontSize_large;
   color: $color-blue_light;
-  margin-top: 20px;
-  margin-bottom: 0;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 h4 {
@@ -137,7 +140,7 @@ h4 {
   font-weight: $fontWeight_light;
   font-size: $fontSize_medium;
   color: $color-blue_light;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 
@@ -146,7 +149,7 @@ h5 {
   font-weight: $fontWeight_base;
   font-size: $fontSize_base;
   color: $color-blue_light;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 pre,
@@ -158,6 +161,7 @@ code {
 
 ul li,
 ol li {
+  font-family: 'Merriweather', serif;
   line-height: $lineHeight_base;
   font-weight: $fontWeight_light;
   font-size: $fontSize_small;
@@ -166,7 +170,11 @@ ol li {
   margin-bottom: 5px;
 }
 
+strong {
+  font-weight: $fontWeight_bold;
+}
 
+/*
 @media screen and (max-width: 768px) {
   h1 {
     line-height: $lineHeight_looser;
@@ -177,4 +185,4 @@ ol li {
     line-height: $lineHeight_base;
     font-size: $fontSize_small;
   }
-}
+}*/

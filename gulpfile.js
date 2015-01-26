@@ -67,7 +67,11 @@ var imageFiles = [
   'local_modules/**/*.jpg',
   'local_modules/**/*.png',
   'local_modules/**/*.gif',
-  'local_modules/**/*.svg'
+  'local_modules/**/*.svg',
+  'lib/**/*.jpg',
+  'lib/**/*.png',
+  'lib/**/*.gif',
+  'lib/**/*.svg'
 ];
 
 var fontFiles = [
