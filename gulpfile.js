@@ -68,6 +68,7 @@ var imageFiles = [
   'local_modules/**/*.png',
   'local_modules/**/*.gif',
   'local_modules/**/*.svg',
+  'local_modules/**/*.ico',
   'lib/**/*.jpg',
   'lib/**/*.png',
   'lib/**/*.gif',
