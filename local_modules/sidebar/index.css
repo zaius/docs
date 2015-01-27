@@ -17,13 +17,18 @@
 
 .sidebar-li,
 .sidebar-li > a {
-  margin-top: 20px;
+  margin-top: 25px;
   font-size: $fontSize_base;
   text-transform: capitalize;
   font-weight: $fontWeight_base;
   font-family: 'Open Sans', sans-serif;
   color: $color-blue_base;
   text-decoration: none;
+}
+
+.sidebar-list ul li,
+.sidebar-list ol li {
+  margin: 15px 0;
 }
 
 .sidebar-li_sub > a {
@@ -36,43 +41,50 @@
 }
 
 .section-sidebar_basics {
+  margin-top: 35px;
+  padding: 2px 0 2px 20px;
   border-left: 2px solid $color-fuchsia_base;
   border-right: none;
-  padding: 20px 0 20px 20px;
 }
 
 .section-sidebar_wercker-yml {
+  margin-top: 35px;
+  padding: 2px 0 2px 20px;
   border-left: 2px solid $color-skyblue_base;
   border-right: none;
-  padding: 20px 0 20px 20px;
 }
 
 .section-sidebar_containers {
+  margin-top: 35px;
+  padding: 2px 0 2px 20px;
   border-left: 2px solid $color-green_base;
   border-right: none;
-  padding: 20px 0 20px 20px;
 }
 
 .section-sidebar_pipelines {
+  margin-top: 35px;
+  padding: 2px 0 2px 20px;
   border-left: 2px solid $color-red_base;
   border-right: none;
-  padding: 20px 0 20px 20px;
 }
 
 .section-sidebar_steps {
+  margin-top: 35px;
+  padding: 2px 0 2px 20px;
   border-left: 2px solid $color-purple_base;
   border-right: none;
-  padding: 20px 0 20px 20px;
 }
 
 .section-sidebar_build {
+  margin-top: 35px;
+  padding: 2px 0 2px 20px;
   border-left: 2px solid $color-yellow_base;
   border-right: none;
-  padding: 20px 0 20px 20px;
 }
 
 .section-sidebar_deploy {
+  margin-top: 35px;
+  padding: 2px 0 2px 20px;
   border-left: 2px solid $color-orange_base;
   border-right: none;
-  padding: 20px 0 20px 20px;
 }

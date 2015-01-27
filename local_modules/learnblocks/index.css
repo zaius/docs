@@ -3,8 +3,9 @@
  */
 
 .learn {
-  background-color: $color-grey_light;
+  overflow: hidden;
   padding: 30px 0;
+  background-color: $color-grey_light;
 }
 
 .learn h2 {
@@ -25,6 +26,23 @@
   margin: 10px;
   padding-bottom: 0;
   text-align: center;
+  transition: transform $duration_fastest $easing-bounce_smooth;
+}
+
+.learnblocks-item.active {
+  transform: translateY(-7px);
+}
+
+.learnblocks-item.active .learnblocks-item-icon {
+  box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0);
+}
+
+.learnblocks-item:hover {
+  transform: translateY(-5px);
+}
+
+.learnblocks-item.active:hover {
+  transform: translateY(-7px);
 }
 
 .learnblocks-item:first-child {
@@ -51,8 +69,10 @@
 
 .learnblocks-item.active .learnblocks-item_active {
   display: block;
+  opacity: 0;
   animation: fade-in;
-  animation-duration: $duration_fast;
+  animation-duration: $duration_slowest;
+  animation-delay: $duration_fast;
   animation-fill-mode: forwards;
   animation-timing-function: $easing_smooth;
 }
@@ -68,31 +88,23 @@
   transform: rotate(45deg);
 }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .learnblocks-item-icon {
   display: block;
+  opacity: 0;
   height: 150px;
   padding-top: 20px;
   text-align: center;
   text-decoration: none;
   box-shadow: inset 0px -35px 0px 0px rgba(0,0,0,.06);
+
+  animation: move-in;
+  animation-duration: $duration_slowest;
+  animation-fill-mode: forwards;
+  animation-timing-function: $easing_smooth;
 }
 
 .learnblocks-item-icon img {
   width: 86px;
-  transition: transform $duration_fastest $easing-bounce_hard;
-}
-
-.learnblocks-item-icon:hover img {
-  transform: scale(1.1);
 }
 
 .learnblocks-item-title {
@@ -107,19 +119,44 @@
 }
 .learnblocks-item_wercker_yml .learnblocks-item-icon{
   background-color: $color-skyblue_base;
+  animation-delay: .04s;
 }
 .learnblocks-item_containers .learnblocks-item-icon{
   background-color: $color-green_base;
+  animation-delay: .1s;
 }
 .learnblocks-item_pipelines .learnblocks-item-icon{
   background-color: $color-red_base;
+  animation-delay: .14s;
 }
 .learnblocks-item_steps .learnblocks-item-icon{
   background-color: $color-purple_base;
+  animation-delay: .18s;
 }
 .learnblocks-item_build .learnblocks-item-icon{
   background-color: $color-yellow_base;
+  animation-delay: .21s;
 }
 .learnblocks-item_deploy .learnblocks-item-icon{
   background-color: $color-orange_base;
+  animation-delay: .27s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes move-in {
+  0% { transform: translateY(-90px);opacity: 0; }
+  10% { transform: translateY(30px); }
+  50% { transform: translateY(-10px); }
+  70% { transform: translateY(6px); }
+  80% { transform: translateY(3px); }
+  90% { transform: translateY(1px); }
+  100% { transform: translateY(0px); opacity: 1;}
 }
