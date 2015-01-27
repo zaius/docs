@@ -5,6 +5,7 @@
 .header {
   position: relative;
   height: 30vh;
+  max-height: 250px;
   background-color: $color-grey_lighter;
 }
 

@@ -38,34 +38,41 @@
 .section-sidebar_basics {
   border-left: 2px solid $color-fuchsia_base;
   border-right: none;
+  padding: 20px 0 20px 20px;
 }
 
 .section-sidebar_wercker-yml {
   border-left: 2px solid $color-skyblue_base;
   border-right: none;
+  padding: 20px 0 20px 20px;
 }
 
 .section-sidebar_containers {
   border-left: 2px solid $color-green_base;
   border-right: none;
+  padding: 20px 0 20px 20px;
 }
 
 .section-sidebar_pipelines {
   border-left: 2px solid $color-red_base;
   border-right: none;
+  padding: 20px 0 20px 20px;
 }
 
 .section-sidebar_steps {
   border-left: 2px solid $color-purple_base;
   border-right: none;
+  padding: 20px 0 20px 20px;
 }
 
 .section-sidebar_build {
   border-left: 2px solid $color-yellow_base;
   border-right: none;
+  padding: 20px 0 20px 20px;
 }
 
 .section-sidebar_deploy {
   border-left: 2px solid $color-orange_base;
   border-right: none;
+  padding: 20px 0 20px 20px;
 }

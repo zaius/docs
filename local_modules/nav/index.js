@@ -61,7 +61,7 @@ function render() {
             dom.a({
               className: 'navbar-item',
               href: '/learn',
-              onClick: changeLocation.bind(this, '/learn/basics/index.html'),
+              onClick: changeLocation.bind(this, '/learn/basics/01_introduction.html'),
               children: 'Learn'
             })
           ),
