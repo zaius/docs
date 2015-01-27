@@ -6,7 +6,7 @@
 * using the web interface
 
 # wercker.yml
-* what is it?
+* introduction
 * syntax
 * sections (box, services, build, deploy)
 * environment variables
@@ -19,12 +19,13 @@
 * build artifacts
 
 # Pipelines
-* how it works
+* introduction
 * available env vars
 * using env vars
 * packaging
 
 # Steps
+* introduction
 * types (registry steps, script, after-steps)
 * using steps
 * notifications
@@ -38,5 +39,6 @@
 * introspecting builds
 
 # Deploy
+* introduction
 * targets
 * auto deployment
