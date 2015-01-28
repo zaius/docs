@@ -35,10 +35,6 @@
   transition: transform $duration_fastest $easing-bounce_smooth;
 }
 
-.learnblocks-item.active {
-  transform: translateY(-7px);
-}
-
 .learnblocks-item.active .learnblocks-item-icon {
   box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0);
 }

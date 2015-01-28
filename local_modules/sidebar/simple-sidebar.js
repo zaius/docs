@@ -15,7 +15,7 @@ function simpleSidebar(props, state) {
     dom.section({className: 'sidebar-list'},
       dom.ul(null,
         lessonData.map(function(val) {
-          return dom.li({className: 'sidebar-li_sub', key: val},
+          return dom.li({className: 'sidebar-li_sub' + activeClass(val), key: val},
             dom.a({
               href: createHref(stripUrl(), lesson, val)
             }, stripFileName(val))
@@ -24,6 +24,17 @@ function simpleSidebar(props, state) {
       )
     )
   )
+}
+
+/**
+ * Sets active className.
+ *
+ * @param {String} val
+ */
+function activeClass(val) {
+  const head = window.location.pathname.split('/')[3].split('.')[0];
+  const active = (head == slugify(val.split('.')[0]));
+  return (active ? ' active' : '');
 }
 
 /**

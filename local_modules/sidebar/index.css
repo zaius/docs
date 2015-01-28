@@ -40,6 +40,17 @@
   color: $color-skyblue_base;
 }
 
+.sidebar-li_sub.active > a {
+  text-decoration: none;
+  pointer-events: none;
+  color: $color-skyblue_dark;
+  font-weight: $fontWeight-semibold;
+}
+
+.sidebar-li_sub.active > a:before {
+  content: "\203A ";
+}
+
 .section-learn {
   margin-top: 35px;
   padding: 2px 0 2px 20px;
