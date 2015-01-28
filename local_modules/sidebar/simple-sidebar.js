@@ -11,7 +11,7 @@ function simpleSidebar(props, state) {
   var lesson = getLesson();
   var lessonData = state.data[lesson];
 
-  return dom.section({className: 'section-sidebar section-sidebar_' + lesson},
+  return dom.section({className: 'section-sidebar section-learn section-sidebar_' + lesson},
     dom.section({className: 'sidebar-list'},
       dom.ul(null,
         lessonData.map(function(val) {
