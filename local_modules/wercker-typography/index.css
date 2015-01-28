@@ -5,8 +5,8 @@
 $lineHeight_tightest: 10px;
 $lineHeight_tighter: 12px;
 $lineHeight_tight: 16px;
-$lineHeight_base: 22px;
-$lineHeight_loose: 30px;
+$lineHeight_base: 26px;
+$lineHeight_loose: 32px;
 $lineHeight_looser: 44px;
 $lineHeight_loosest: 64px;
 
@@ -81,7 +81,7 @@ p {
   color: $color-blue_light;
   font-size: $fontSize_small;
   font-weight: $fontWeight_light;
-  line-height: $lineHeight_loose;
+  line-height: $lineHeight_base;
 }
 
 article p, .docs-articles p {

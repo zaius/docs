@@ -145,3 +145,116 @@ blockquote  p {
   line-height: $lineHeight_loose;
   font-style: italic;
 }
+
+/**
+ * Article footer
+ */
+
+.docs-articles p:last-child  {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid $color-grey_light;
+}
+
+.docs-articles p a[title~="next"] {
+  float: right;
+  font-weight: $fontWeight_semibold;
+  font-size: $fontSize_base;
+}
+
+.docs-articles p a[title~="previous"] {
+  float: left;
+  font-weight: $fontWeight_semibold;
+  font-size: $fontSize_base;
+}
+
+.docs-articles p a[title~="nav"] {
+  border-radius: 2px;
+  padding: 10px 14px;
+  color: $color-grey_lighter;
+  font-size: $fontSize_small;
+  font-weight: $fontWeight_base;
+  text-decoration: none;
+  transition: all $duration_fastest $easing_smooth;
+}
+
+.docs-articles p a[title~="basics"] {
+  box-shadow: inset 0 0 0 2px $color-fuchsia_base;
+  background-color: $color-fuchsia_base;
+}
+
+.docs-articles p a[title~="basics"]:hover {
+  color: $color-fuchsia_base;
+  background-color: transparent;
+}
+
+.docs-articles p a[title~="yml"] {
+  box-shadow: inset 0 0 0 2px $color-skyblue_base;
+  background-color: $color-skyblue_base;
+}
+
+.docs-articles p a[title~="yml"]:hover {
+  color: $color-skyblue_base;
+  background-color: transparent;
+}
+
+.docs-articles p a[title~="containers"] {
+  box-shadow: inset 0 0 0 2px $color-green_base;
+  background-color: $color-green_base;
+}
+
+.docs-articles p a[title~="containers"]:hover {
+  color: $color-green_base;
+  background-color: transparent;
+}
+
+.docs-articles p a[title~="pipelines"] {
+  box-shadow: inset 0 0 0 2px $color-red_base;
+  background-color: $color-red_base;
+}
+
+.docs-articles p a[title~="pipelines"]:hover {
+  color: $color-red_base;
+  background-color: transparent;
+}
+
+.docs-articles p a[title~="steps"] {
+  box-shadow: inset 0 0 0 2px $color-purple_base;
+  background-color: $color-purple_base;
+}
+
+.docs-articles p a[title~="steps"]:hover {
+  color: $color-purple_base;
+  background-color: transparent;
+}
+
+.docs-articles p a[title~="build"] {
+  color: $color-white;
+  box-shadow: inset 0 0 0 2px $color-yellow_base;
+  background-color: $color-yellow_base;
+}
+
+.docs-articles p a[title~="build"]:hover {
+  color: $color-yellow_base;
+  background-color: transparent;
+}
+
+.docs-articles p a[title~="deploy"] {
+  box-shadow: inset 0 0 0 2px $color-orange_base;
+  background-color: $color-orange_base;
+}
+
+.docs-articles p a[title~="deploy"]:hover {
+  color: $color-orange_base;
+  background-color: transparent;
+}
+
+.docs-articles p a[title~="docs"] {
+  box-shadow: inset 0 0 0 2px $color-blue_light;
+  background-color: $color-blue_light;
+}
+
+.docs-articles p a[title~="docs"]:hover {
+  color: $color-blue_light;
+  background-color: transparent;
+}
