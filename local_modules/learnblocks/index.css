@@ -154,7 +154,7 @@
 }
 
 @keyframes move-in {
-  0% { transform: translateY(-90px);opacity: 0; }
+  0% { transform: translateY(0px);opacity: 0; }
   10% { transform: translateY(30px); }
   50% { transform: translateY(-10px); }
   70% { transform: translateY(6px); }
