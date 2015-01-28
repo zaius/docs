@@ -115,11 +115,13 @@
   font-size: $fontSize_base;
   text-decoration: none;
   letter-spacing: 1px;
+  box-shadow: inset 0 0 0 2px $color-green_base;
   transition: all $duration_fastest $easing_smooth;
 }
 
 .button-footer_signup:hover {
-  color: $color-white;
+  color: $color-green_base;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 768px) {
