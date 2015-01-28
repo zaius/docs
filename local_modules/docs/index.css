@@ -148,6 +148,23 @@ blockquote  p {
 }
 
 /**
+ * Important note.
+*/
+
+hr + blockquote {
+  border: none;
+  padding: 0;
+}
+
+hr + blockquote > p{
+  margin: 0;
+  padding: 10px;
+  border: 1px solid $color-grey_lighter;
+  background-color: $color-grey_lightest;
+  border-radius: 4px;
+}
+
+/**
  * Article footer
  */
 
