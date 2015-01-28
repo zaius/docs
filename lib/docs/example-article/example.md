@@ -8,7 +8,7 @@ The paragraph folowing the h2 is for giving a short summary of what the article
 is about. It looks different then the following paragraphs.
 And if you must put a `code snippit` in the introduction.
 
-### Table of content
+### Table of contents
 
 * do not put `code snipppits` in headers
 * do not link from here to a section
