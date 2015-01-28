@@ -13,9 +13,9 @@ since there are reasons why the environment variables step does not show all
 environment variables available during the pipeline run.
 
 ```yaml
-    - script:
-        code: |
-            export
+- script:
+    code: |
+        export
 ```
 
 First of all, there are variables which are __global__. They are available

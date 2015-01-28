@@ -4,7 +4,7 @@
 
 $lineHeight_tightest: 10px;
 $lineHeight_tighter: 12px;
-$lineHeight_tight: 16px;
+$lineHeight_tight: 18px;
 $lineHeight_base: 26px;
 $lineHeight_loose: 32px;
 $lineHeight_looser: 44px;
@@ -162,7 +162,7 @@ code {
 ul li,
 ol li {
   font-family: 'Merriweather', serif;
-  line-height: $lineHeight_base;
+  line-height: $lineHeight_tight;
   font-weight: $fontWeight_light;
   font-size: $fontSize_small;
   color: $color-blue_light;

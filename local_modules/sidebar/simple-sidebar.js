@@ -18,12 +18,20 @@ function simpleSidebar(props, state) {
           return dom.li({className: 'sidebar-li_sub', key: val},
             dom.a({
               href: createHref(stripUrl(), lesson, val)
-            }, val.split('.')[0])
+            }, stripFileName(val))
           )
         })
       )
     )
   )
+}
+
+/**
+ * Cleans up the file name
+ */
+function stripFileName(val) {
+  var name = val.replace(/([-])/g, ' ');
+  return name.split('.')[0].split('_')[1];
 }
 
 /**
