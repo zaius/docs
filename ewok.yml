@@ -13,8 +13,9 @@ build:
             name: install npm@2
             code: | 
               sudo npm i -g npm
+              sudo npm install
     
-      - npm-install
+      $- npm-install
         
       - script:
             name: npm postinstall
