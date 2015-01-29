@@ -1,3 +1,4 @@
+source-dir: src
 box: nodesource/node:trusty
 # Build definition
 build:
@@ -14,9 +15,8 @@ build:
             code: | 
               npm cache clean
               sudo npm i -g npm
-              sudo npm install
     
-              #- npm-install
+      - npm-install
         
       - script:
             name: npm postinstall
