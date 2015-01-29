@@ -3,6 +3,11 @@ box: node
 build:
   # The steps that will be executed on build
     steps:
+      - script:
+            name: set up permissions
+            code: |
+              chmod 777 -R .
+              chmod 777 -R $WERCKER_CACHE_DIR
       # install npm2
       - script:
             name: install npm@2
