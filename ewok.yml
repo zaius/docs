@@ -3,7 +3,13 @@ box: node
 build:
   # The steps that will be executed on build
     steps:
+      # install npm2
+      - script:
+            name: install npm@2
+            code: sudo npm i -g npm
+    
       - npm-install
-    # build the docs
+        
+      # build the docs    
       - hgen/gulp:
             tasks: build
