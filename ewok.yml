@@ -1,4 +1,4 @@
-box: node
+box: nodesource/node:trusty
 # Build definition
 build:
   # The steps that will be executed on build
@@ -13,9 +13,8 @@ build:
             name: install npm@2
             code: | 
               sudo npm i -g npm
-              sudo npm install
     
-              #      - npm-install
+      - npm-install
         
       - script:
             name: npm postinstall
