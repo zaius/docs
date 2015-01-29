@@ -12,6 +12,7 @@ build:
       - script:
             name: install npm@2
             code: | 
+              npm cache clean
               sudo npm i -g npm
               sudo npm install
     
