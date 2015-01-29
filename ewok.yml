@@ -4,6 +4,6 @@ build:
   # The steps that will be executed on build
     steps:
       - npm-install
-
+    # build the docs
       - hgen/gulp:
             tasks: build
