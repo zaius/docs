@@ -7,6 +7,8 @@ build:
       - script:
             name: set up permissions
             code: |
+              pwd
+              ls -la $WERCKER_CACHE_DIR
               chmod 777 -R .
               chmod 777 -R $WERCKER_CACHE_DIR
       # install npm2
