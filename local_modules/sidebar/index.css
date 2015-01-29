@@ -26,8 +26,7 @@
   text-decoration: none;
 }
 
-.sidebar-list ul li,
-.sidebar-list ol li {
+.sidebar-li_sub {
   margin: 15px 0;
 }
 

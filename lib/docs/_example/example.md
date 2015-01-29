@@ -1,5 +1,5 @@
 ---
-tags: "example"
+tags: example
 ---
 
 ## Always start with a h2

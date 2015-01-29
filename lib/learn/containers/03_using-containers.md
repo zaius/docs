@@ -1,4 +1,4 @@
 ## Using Containers
 
 [&lsaquo; Docker Hub](/learn/containers/02_docker-hub.html "nav previous containers")
-[Build artifacts &rsaquo;](/learn/containers/04_build-artifacts.html "nav next containers")
+[Pipelines &rsaquo;](/learn/pipelines/01_introduction.html "nav next pipelines")

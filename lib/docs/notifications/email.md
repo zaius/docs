@@ -1,0 +1,5 @@
+---
+tags: example
+---
+
+## Email notifications

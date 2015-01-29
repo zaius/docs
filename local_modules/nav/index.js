@@ -69,7 +69,7 @@ function render() {
             dom.a({
               className: 'navbar-item',
               href: '/docs',
-              onClick: changeLocation.bind(this, '/docs/best-practices/index.html'),
+              onClick: changeLocation.bind(this, '/docs/index.html'),
               children: 'Docs'
             })
           ),

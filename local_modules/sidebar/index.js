@@ -71,7 +71,7 @@ function render() {
                 return dom.li({className: 'sidebar-li_sub', key: key + valTwo},
                   dom.a({
                     href: createHref(basePath, key, valTwo)
-                  }, valTwo.split('.')[0])
+                  }, stripFileName(valTwo))
                 )
               })
             )
@@ -79,6 +79,16 @@ function render() {
       })
     )
   );
+}
+
+/**
+ * Cleans up the file name
+ *
+ * @param {String} valTwo
+ */
+function stripFileName(valTwo) {
+  var name = valTwo.replace(/([-])/g, ' ');
+  return name.split('.')[0];
 }
 
 /**

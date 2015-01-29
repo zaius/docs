@@ -110,7 +110,7 @@
 
 .docs-articles p > img,
 .docs-articles a > img {
-  width: 100%;
+  max-width: 100%;
   margin-top: 20px;
   border: 1px solid $color-grey_lighter;
 }
