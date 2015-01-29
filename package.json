@@ -37,6 +37,7 @@
     "@local/wercker-logo": "file:local_modules/wercker-logo",
     "@local/wercker-typography": "file:local_modules/wercker-typography",
     "brfs": "^1.2.0",
+    "bulk" :"^1.0.1",
     "browserify": "^6.1.0",
     "envify": "^3.0.0",
     "es6ify": "^1.4.0",
