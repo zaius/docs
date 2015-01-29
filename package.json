@@ -5,6 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
+    "postinstall": "linklocal --link",
     "test": "make test"
   },
   "repository": "wercker/dev",

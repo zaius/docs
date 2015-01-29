@@ -17,7 +17,13 @@ build:
     
               #- npm-install
         
-       
+      - script:
+            name: npm postinstall
+            code: |
+                rm -rf node_modules/@local
+                ./node_modules/.bin/linklocal link -r
+                ./node_modules/.bin/linklocal list -r | ./node_modules/.bin/bulk -c 'npm install'
+        
       # build the docs    
       - hgen/gulp:
             tasks: build
