@@ -9,7 +9,7 @@ containers, ranging from language stacks to databases.
 In order to use these containers you have to specify them in your
 [wercker.yml](/learn/wercker-yml/01_introduction.html). You at least
 need to specify  the main language stack you want to use via the `box`
-section. 
+section.
 
 >Currently only public repositories on the Hub are supported.
 
@@ -35,7 +35,7 @@ Without specifying a tag you will get the latest build of the container
 on the Hub, which in this case contains python version 3.
 
 ```yaml
-# using python version 
+# using python version 3
 box: python
 ```
 

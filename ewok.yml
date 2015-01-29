@@ -3,8 +3,7 @@ box: node
 build:
   # The steps that will be executed on build
     steps:
+      - npm-install
+
       - hgen/gulp:
             tasks: build
-    after-steps:
-      - wantedly/pretty-slack-notify:
-            webhook_url: $SLACK_WEBHOOK_URL
