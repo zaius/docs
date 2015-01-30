@@ -38,7 +38,7 @@ deploy:
     - install-packages:
         packages: wget libmagic1 python-dateutil python-magic s3cmd
     - s3sync:
-        source-dir: "."
+        source_dir: build/
         delete-removed: false
         bucket-url: $AWS_BUCKET_URL
         key-id: $AWS_ACCESS_KEY_ID
