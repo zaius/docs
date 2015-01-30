@@ -21,9 +21,6 @@ build:
       - script:
             name: npm postinstall
             code: |
-                ls -la
-                ls -la node_modules
-                ls -la node_modules/.bin
                 rm -rf node_modules/@local
                 ./node_modules/.bin/linklocal link -r
                 ./node_modules/.bin/linklocal list -r | ./node_modules/.bin/bulk -c 'npm install'
