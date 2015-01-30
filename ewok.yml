@@ -1,11 +1,34 @@
-box: node
+box: nodesource/node:trusty
 # Build definition
 build:
   # The steps that will be executed on build
-  steps:
-    # A custom script step, name value is used in the UI
-    # and the code value contains the command that get executed
-    - script:
-        name: build the docs
-        code: |
-          make build
+    steps:
+      - script:
+            name: set up permissions
+            code: |
+              export NODE_ENV=development
+              chmod 777 -R .
+              chmod 777 -R $WERCKER_CACHE_DIR
+      # install npm2
+      - script:
+            name: install npm@2
+            code: |
+              npm cache clean
+              sudo npm i -g npm
+
+      - npm-install
+
+    #- script:
+    #      name: npm install
+    #       code: sudo npm install
+
+      - script:
+            name: npm postinstall
+            code: |
+                rm -rf node_modules/@local
+                ./node_modules/.bin/linklocal link -r
+                ./node_modules/.bin/linklocal list -r | ./node_modules/.bin/bulk -c 'npm install'
+
+      # build the docs
+      - hgen/gulp:
+            tasks: build
