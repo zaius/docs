@@ -12,23 +12,23 @@ build:
       # install npm2
       - script:
             name: install npm@2
-            code: | 
+            code: |
               npm cache clean
               sudo npm i -g npm
-    
+
       - npm-install
-        
+
     #- script:
     #      name: npm install
     #       code: sudo npm install
-        
+
       - script:
             name: npm postinstall
             code: |
                 rm -rf node_modules/@local
                 ./node_modules/.bin/linklocal link -r
                 ./node_modules/.bin/linklocal list -r | ./node_modules/.bin/bulk -c 'npm install'
-        
-      # gulp build the docs    
+
+      # gulp build the docs
       - hgen/gulp:
             tasks: build
