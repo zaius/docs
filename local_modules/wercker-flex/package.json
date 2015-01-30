@@ -1,4 +1,5 @@
 {
   "name": "@local/wercker-flex",
+  "repository": "@local",
   "version": "1.0.0"
 }

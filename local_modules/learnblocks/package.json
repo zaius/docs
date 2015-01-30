@@ -1,4 +1,5 @@
 {
   "name": "@local/learnblocks",
+  "repository": "@local",
   "version": "1.0.0"
 }
