@@ -1,7 +1,7 @@
 ## Introduction to steps
 
-Steps make up the wercker pipeline and can either be
-executed in the build or deploy phase within the pipeline.
+Steps make up the wercker pipeline and can either be executed in the build or
+deploy phase within the pipeline.
 
 Examples of a **build step** are compilation of your code, running your
 unit tests or performing

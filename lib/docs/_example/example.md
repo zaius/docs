@@ -1,12 +1,12 @@
 ---
-tags: "example"
+tags: example
 ---
 
 ## Always start with a h2
 
 The paragraph folowing the h2 is for giving a short summary of what the article
 is about. It looks different then the following paragraphs.
-And if you must put a `code snippit` in the introduction.
+And if you must put a `code snippit` in the introduction or a [link with title](http://www.wercker.com  "Wercker's Homepage").
 
 ### Table of contents
 

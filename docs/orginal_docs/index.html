@@ -23,10 +23,59 @@
 
     <section class="nav-sticky"></section>
 
-    <section class="flex_outer header">
-      <header class="flex_inner">
-        <div class="header-text">FAQ</div>
+    <section class="flex-outer header">
+      <header class="flex-inner">
+        <h1 class="header-text">Docs</h1>
       </header>
+    </section>
+
+    <section class="flex-outer">
+      <div class="flex-inner">
+        <div class="flex-outer docs">
+          <aside class="sidebar"></aside>
+          <aside class="docs-articles">{{{contents}}}</aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="flex-outer">
+      <div class="flex-inner">
+        <div class="doc-quicklinks">
+          <div class="doc-quicklinks-item">
+            <h4>Faq</h4>
+            <ul>
+              <li><a href="#">Change my username</a></li>
+              <li><a href="#">Opensource</a></li>
+              <li><a href="#">Downgrade account</a></li>
+              <li><a href="#">Moving from another CI</a></li>
+            </ul>
+          </div>
+          <div class="doc-quicklinks-item">
+            <h4>Downloads</h4>
+            <ul>
+              <li><a href="#">Wercker for the desktop</a></li>
+              <li><a href="#">Command Line Interface</a></li>
+            </ul>
+          </div>
+          <div class="doc-quicklinks-item">
+            <h4>Common tasks</h4>
+            <ul>
+              <li><a href="#">Adding an SSH key</a></li>
+              <li><a href="#">Creating deploy targets</a></li>
+              <li><a href="#">Pull requests</a></li>
+              <li><a href="#">Creating an organization</a></li>
+            </ul>
+          </div>
+          <div class="doc-quicklinks-item">
+            <h4>Best practices</h4>
+            <ul>
+              <li><a href="#">Environment variables</a></li>
+              <li><a href="#">Building locally</a></li>
+              <li><a href="#">Creating steps</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="flex-outer footer">

@@ -1,4 +1,5 @@
 {
   "name": "@local/nav",
+  "repository": "@local",
   "version": "1.0.0"
 }

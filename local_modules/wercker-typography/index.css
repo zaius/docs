@@ -126,6 +126,13 @@ h2 + p {
   margin-bottom: 30px;
 }
 
+h2 + p > a {
+  font-family: 'Merriweather', serif;
+  line-height: $lineHeight_loose;
+  font-weight: $fontWeight_base;
+  font-size: $fontSize_medium;
+}
+
 h3 {
   line-height: $lineHeight_loose;
   font-weight: $fontWeight_base;

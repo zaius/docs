@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "postinstall": "linklocal --link",
+    "postinstall": "linklocal link -r && linklocal list -r | bulk -c 'npm install'",
     "test": "make test"
   },
   "repository": "wercker/dev",
@@ -20,7 +20,6 @@
     "slugificate": "^0.2.1"
   },
   "devDependencies": {
-    "@local/docs": "file:local_modules/docs",
     "@local/doc-cards": "file:local_modules/doc-cards",
     "@local/doc-quicklinks": "file:local_modules/doc-quicklinks",
     "@local/footer": "file:local_modules/footer",
@@ -37,6 +36,7 @@
     "@local/wercker-logo": "file:local_modules/wercker-logo",
     "@local/wercker-typography": "file:local_modules/wercker-typography",
     "brfs": "^1.2.0",
+    "bulk" :"^2.0.0-alpha-0",
     "browserify": "^6.1.0",
     "envify": "^3.0.0",
     "es6ify": "^1.4.0",
@@ -52,7 +52,7 @@
     "gulpsmith": "^0.5.2",
     "httpster": "^0.6.0",
     "istanbul": "^0.3.2",
-    "linklocal": "^2.0.1",
+    "linklocal": "^2.3.1",
     "metalsmith": "^1.0.1",
     "metalsmith-lunr": "0.0.4",
     "metalsmith-markdown": "^0.2.1",

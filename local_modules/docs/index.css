@@ -110,7 +110,7 @@
 
 .docs-articles p > img,
 .docs-articles a > img {
-  width: 100%;
+  max-width: 100%;
   margin-top: 20px;
   border: 1px solid $color-grey_lighter;
 }
@@ -148,10 +148,27 @@ blockquote  p {
 }
 
 /**
+ * Important note.
+*/
+
+hr + blockquote {
+  border: none;
+  padding: 0;
+}
+
+hr + blockquote > p{
+  margin: 0;
+  padding: 10px;
+  border: 1px solid $color-grey_lighter;
+  background-color: $color-grey_lightest;
+  border-radius: 4px;
+}
+
+/**
  * Article footer
  */
 
-.docs-articles p:last-child  {
+.docs-articles > p:last-child  {
   margin-top: 30px;
   padding-top: 20px;
   border-top: 1px solid $color-grey_light;
@@ -231,12 +248,12 @@ blockquote  p {
 
 .docs-articles p a[title~="build"] {
   color: $color-white;
-  box-shadow: inset 0 0 0 2px $color-yellow_base;
-  background-color: $color-yellow_base;
+  box-shadow: inset 0 0 0 2px $color-yellow_dark;
+  background-color: $color-yellow_dark;
 }
 
 .docs-articles p a[title~="build"]:hover {
-  color: $color-yellow_base;
+  color: $color-yellow_dark;
   background-color: transparent;
 }
 

@@ -35,10 +35,6 @@
   transition: transform $duration_fastest $easing-bounce_smooth;
 }
 
-.learnblocks-item.active {
-  transform: translateY(-7px);
-}
-
 .learnblocks-item.active .learnblocks-item-icon {
   box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0);
 }
@@ -158,7 +154,7 @@
 }
 
 @keyframes move-in {
-  0% { transform: translateY(-90px);opacity: 0; }
+  0% { transform: translateY(0px);opacity: 0; }
   10% { transform: translateY(30px); }
   50% { transform: translateY(-10px); }
   70% { transform: translateY(6px); }
