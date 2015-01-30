@@ -2,4 +2,4 @@
 tags: example
 ---
 
-## Afster steps
+## After steps
