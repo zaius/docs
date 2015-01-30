@@ -33,6 +33,13 @@ build:
       - hgen/gulp:
             tasks: build
 
+    after-steps:
+        - kobim/slack-post:
+            url: $SLACK_URL
+            channel: general 
+            username: megatron
+
+
 deploy:
     steps:
     - install-packages:
@@ -43,4 +50,10 @@ deploy:
         bucket-url: $AWS_BUCKET_URL
         key-id: $AWS_ACCESS_KEY_ID
         key-secret: $AWS_SECRET_ACCESS_KEY
+
+    after-steps:
+        - kobim/slack-post:
+            url: $SLACK_URL
+            channel: general
+            username: megatron
 
