@@ -39,6 +39,8 @@ function activeClass(val) {
 
 /**
  * Cleans up the file name
+ *
+ * @param {String} val
  */
 function stripFileName(val) {
   var name = val.replace(/([-])/g, ' ');
