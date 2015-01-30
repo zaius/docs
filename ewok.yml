@@ -16,11 +16,10 @@ build:
               npm cache clean
               sudo npm i -g npm
 
-      - npm-install
-
-    #- script:
-    #      name: npm install
-    #       code: sudo npm install
+      # npm-install
+      - script:
+            name: npm install
+            code: sudo npm install
 
       - script:
             name: npm postinstall
