@@ -17,7 +17,9 @@ Once a pipeline completes it either has a *passed* or *failed* status.
 
 The workflow that wercker offers is roughly depicted below.
 
-![image](foo)
+![image](/images/how-it-works.png)
+
+Once these steps have been completed your `build` has either passed or failed. If all went well you are ready to deploy your application to platforms such as Heroku, Amazon Web Services or other deploy target. Similar to the build phase, the deployment part of the wercker [pipeline](/articles/introduction/pipeline.html) consists of [deploy steps](/articles/introduction/deploys.html).
 
 Continuously repeating these steps allows you and your team to work in
 smallincrements which are easier to debug and thus you are also
