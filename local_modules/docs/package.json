@@ -1,5 +1,6 @@
 {
   "name": "@local/docs",
   "version": "1.0.0",
-  "repository": "@local"
+  "repository": "@local",
+  "main": "index.css"
 }
