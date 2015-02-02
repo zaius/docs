@@ -1,26 +1,47 @@
 ## Using the web interface
 
-The wercker web interface lets you add and manage your apps.
-Create deploy workflows, add team members and see an over overview of your pipeline runs
+The wercker web interface lets you add and manage your applications
+It also allows you to create deploy workflows, add team members and see
+an overview of both your build and deploy pipeline runs.
 
 ### Features
 
-Nam augue ipsum, gravida a sapien sit amet, consequat mattis nulla. Mauris a tellus non libero luctus egestas quis in purus. Ut non mi et est faucibus mattis vel id nisl.
+The *feed* tells you what is going on with the applications that you're a
+part of. Which build failed, who of your team is deploying what to which
+environment and who has been added to which project. It is a timeline of
+your applications' activity.
+
 
 ![image](/images/feed-add-app.png)
 
-Suspendisse volutpat eu ex eget consectetur. In imperdiet diam eu magna consequat imperdiet. Integer quis odio nunc. Suspendisse tincidunt metus quis sem tristique consectetur. Sed vel vulputate purus.
+The add application wizard allows toy to add either repositories from
+GitHub or Bitbucket. If these repositories are private, the wizard gives
+your various option for enabling wercker to access these repositories.
+
+The application page shows a live view of your
+[builds](/learn/build/01_introduction.html) and
+[deploys](/learn/deploy/01_introduction.html). Within the *settings tab*
+you can control various aspects of your application; invite team
+members, set up deploy targets and create [environment variables](/learn/wercker-yml/04_environment-variables.html) for
+your [pipelines](/learn/pipelines/01_introduction.html)
 
 ![image](/images/app-stats.png)
 
-Phasellus eu congue nunc, ut vestibulum justo. Nam augue orci, condimentum ac suscipit id, laoreet laoreet libero. Fusce hendrerit elit augue, vel ultrices quam volutpat sit amet.
+Each application also contains a statistics section that shows a
+graphical overview of the distribution of sucessful versus failed builds
+and deploys, and who are the top builders within your team.
+
+A specific build page for an application shows the steps that were
+executed for that *pipeline run*, and of course if this build has passed or
+failed.
 
 ![image](/images/build-deploy.png)
 
-Phasellus eu congue nunc, ut vestibulum justo. Nam augue orci, condimentum ac suscipit id, laoreet laoreet libero. Fusce hendrerit elit augue, vel ultrices quam volutpat sit amet.
+The deploy page has a similar overview for deploy pipelines that are
+run for specific deploy targets.
 
 - - -
-> Want to learn more? Read more about using te web interface
+> Want to learn more? Read more about using the web interface
 > [docs](/docs/cli/commands.html)
 
 [&lsaquo; The wercker CLI](/learn/basics/04_the-wercker-cli.html "nav previous basics")
