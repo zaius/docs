@@ -26,4 +26,4 @@ smallincrements which are easier to debug and thus you are also
 delivering value to your own customers at a rapid pace.
 
 [&lsaquo; Introduction](/learn/basics/01_introduction.html "nav previous basics")
-[Signing up &rsaquo;](/learn/basics/03_signing-up.html "nav next basics")
+[The wercker CLI &rsaquo;](/learn/basics/03_the-wercker-cli.html "nav next basics")
