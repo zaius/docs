@@ -4,6 +4,8 @@ Wercker currently supports containers obtained from the [Docker
 Hub](https://hub.docker.com), a marketplace for various Docker
 containers, ranging from language stacks to databases.
 
+![image](/images/dockerhub.png)
+
 ### Getting containers from the Hub
 
 In order to use these containers you have to specify them in your
