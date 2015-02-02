@@ -11,7 +11,7 @@ lib-cov
 # tmp folders
 pids/
 logs/
-build/
+/build
 results/
 coverage/
 
