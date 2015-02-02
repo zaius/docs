@@ -25,4 +25,4 @@ passwords and other configuration information that might be needed
 during the lifetime and execution of a pipeline.
 
 [&lsaquo; Introduction to pipelines ](/learn/pipelines/01_introduction.html "nav previous pipelines")
-[Available env vars &rsaquo;](/learn/pipelines/03_available-env-vars.html "nav next pipelines")
+[Using env vars &rsaquo;](/learn/pipelines/03_using-env-vars.html "nav next pipelines")

@@ -1,3 +1,6 @@
+---
+tags: environmentvariables
+---
 ## Available environment variables
 
 There are a number of environment variables defined during a build (as well as

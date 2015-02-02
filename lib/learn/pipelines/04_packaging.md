@@ -31,5 +31,5 @@ The static html files will be copied into the `$WERCKER_OUTPUT_DIR` folder
 readying them for the deployment pipeline.
 
 
-[&lsaquo; Using env vars](/learn/pipelines/04_using-env-vars.html "nav previous pipelines")
+[&lsaquo; Using env vars](/learn/pipelines/03_using-env-vars.html "nav previous pipelines")
 [Steps &rsaquo;](/learn/steps/01_introduction.html "nav next steps")

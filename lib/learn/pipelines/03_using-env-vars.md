@@ -30,5 +30,5 @@ expose the public part of the pair via the interface. During a pipeline run,
 the key pair is exposed via two environment variables ending with: \_PRIVATE
 and \_PUBLIC.
 
-[&lsaquo; Available env vars](/learn/pipelines/03_available-env-vars.html "nav previous pipelines")
-[Packaging &rsaquo;](/learn/pipelines/05_packaging.html "nav next pipelines")
+[How it works &rsaquo;](/learn/pipelines/02_how-it-works.html "nav previous pipelines")
+[Packaging &rsaquo;](/learn/pipelines/04_packaging.html "nav next pipelines")
