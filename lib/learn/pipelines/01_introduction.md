@@ -10,6 +10,8 @@ Currently wercker support two types of pipelines; a **build** and a
 
 ![image](/images/pipelines.png)
 
+> A pipeline consists of steps and can either fail or pass
+
 In the following paragraphs we will describe the elements that make up the wercker pipeline.
 
 [How it works &rsaquo;](/learn/pipelines/02_how-it-works.html "nav next pipelines")

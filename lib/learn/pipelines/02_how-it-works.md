@@ -8,7 +8,12 @@ Build pipeline have an end result called an *artifact* which is the
 result of your pipeline. Wercker stores this artifact on its
 infrastructure such that it can be used in deploy pipelines.
 
-When a build pipeline starts it uses the [box]()
+When a build pipeline starts it uses the *box* section in your
+[wercker.yml](/learn/wercker-yml/01_introduction.html) file as a base container and pulls it in from the
+[Docker Hub](/learn/containers/02_docker-hub.html). Any [service](http://localhost:1337/learn/wercker-yml/03_sections.html)
+container that was specified as well will be spun up as a separate
+container and available during the build pipeline. Communication with
+service containers is done through [environment variables](/learn/containers/03_using-containers.html).
 
 ![image](/images/pipeline-build.png)
 

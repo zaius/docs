@@ -3,7 +3,7 @@
 There are a number of environment variables defined during a build (as well as
 during a deploy). They contain a variety of information, such as links to the
 current application, build or deploy as well as the branch name and the location
-of your app's unique cache.
+of your application's unique cache.
 
 ### Build related variables
 
@@ -92,9 +92,9 @@ Let's take a look at a selection of them available during a build:
 </tbody>
 </table>
 
-When a step is being run, wercker also creates additional environment variables
-for you to use. Please see [A guide to steps](/articles/steps/guide.html).
-for more information
+When a step is executed, wercker also creates additional environment variables
+for you to use. Please see [the steps section](/learn/steps/01_introduction.html).
+for more information.
 
 ### Deploy related variables
 
@@ -178,9 +178,6 @@ or less an expanded version of the information available during a build.
 </tr>
 </tbody>
 </table>
-
-Once again, please remember that when you create your own steps, wercker also creates
-additional environment variables for you to use. They are outlined in the [A guide to steps](/articles/steps/guide.html).
 
 [&lsaquo; How it works](/learn/pipelines/02_how-it-works.html "nav previous pipelines")
 [Using env vars &rsaquo;](/learn/pipelines/04_using-env-vars.html "nav next pipelines")
