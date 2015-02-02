@@ -2,37 +2,47 @@
 
 ### Full working example
 
-If you're eager to grasp the `wercker.yml` format, below an example file that includes all elements which are discussed below.
+If you're eager to grasp the `wercker.yml` format, below an example file
+that includes all elements which are explained as inline comments.
 
 ```yaml
-box: wercker/ruby
-services:
-    - mies/rethinkdb
+# use the default golang container from Docker Hub
+box: golang
+# The steps that will be executed in the build pipeline
 build:
-    steps:
-        # Execute the bundle install step, a step provided by wercker
-        - bundle-install
-        # Execute a custom script step.
-        - script:
-            name: middleman build
-            code: bundle exec middleman build --verbose
+  steps:
+    # golint step!
+    - wercker/golint
+
+    # Build the project
+    - script:
+        name: go build
+        code: |
+          go build ./...
+
+    # Test the project
+    - script:
+        name: go test
+        code: |
+          go test ./...
+
+# The steps that will be executed in the deploy pipeline
 deploy:
     steps:
-        # Execute the heroku-deploy, heroku details can be edited
-        # online at http://app.wercker.com/
-        #- heroku-deploy
-
         # Execute the s3sync deploy step, a step provided by wercker
         - s3sync:
             key_id: $AWS_ACCESS_KEY_ID
             key_secret: $AWS_SECRET_ACCESS_KEY
             bucket_url: $AWS_BUCKET_URL
             source_dir: build/
+
+    # notify slack on succesful or failed deploys
     after-steps:
-        - hipchat-notify:
-            token: $HIPCHAT_TOKEN
-            room-id: id
-            from-name: name
+        # use a slack notifcation step from the marketplace
+        - kobim/slack-post:
+            url: $SLACK_URL
+            channel: notifications
+            username: werckerbot
 ```
 
 [&lsaquo; Environtment variables](/learn/wercker-yml/04_environment-variables.html "nav previous yml")
