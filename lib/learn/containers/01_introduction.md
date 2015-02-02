@@ -11,7 +11,7 @@ Wercker uses the [Docker](http://docker.com) container implementation to
 not only run your pipelines, but also stores your build artifacts as
 containers.
 
-![image](/images/portable -container.png)
+![image](/images/portable-container.png)
 
 Within pipelines containers are used to run your language stack (for
 instance python) but also services such as a database.
