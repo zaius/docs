@@ -126,7 +126,7 @@ h2 + p {
   margin-bottom: 30px;
 }
 
-h2 + p > a {
+h2 + p > a, h2 + p > em {
   font-family: 'Merriweather', serif;
   line-height: $lineHeight_loose;
   font-weight: $fontWeight_base;

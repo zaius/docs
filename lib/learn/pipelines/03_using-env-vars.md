@@ -7,6 +7,7 @@ The interface supports two types of data:
 * text (which can be set as protected)
 * SSH key pairs
 
+![image](/images/env-vars.png)
 
 ### Protected variables
 
