@@ -1,10 +1,18 @@
 ## Sections
 
-The `wercker.yml` file allows you to set up your wercker enviroment.
+As mentioned in the introduction, the `wercker.yml` has different
+sections that each have a specific purpose. We will go over each
+individual section in this part.
 
 ### Container
 
-The box section allows you to choose a box which will be used to run the builds and deploys. This item will contain a single reference to the box. The box will be prefixed by the owner and it can be postfixed with a "@" followed by a version. If no version is given, then the latest version will be used.
+The box section allows you to choose a
+[container](/learn/containers/01_introduction.html) which will be used
+to run the builds and deploys. This item will contain a single reference
+to the box. The box will be prefixed by the owner and it can be
+postfixed with a `":"` followed by a version. If no version is given, then
+the latest version will be used. If no user is specified, default
+containers from the [Docker Hub](/learn/containers/02_docker-hub.html) will be used.
 
 ```yaml
 box: ruby
@@ -17,14 +25,16 @@ The services section allow you to specify supporting boxes, like databases or qu
 ```yaml
 services:
     - mongodb
-    - rabbitmq
+    - redis
 ```
 
-This will load two services, `mongodb` and `rabbitmq`, both owned by `wercker` and both using the latest versions.
+This will load two services, `mongodb` and `redis`, both default Docker
+containers from the Hub and both using the latest versions.
 
 ### Build
 
-The `build` section will contain all the configuration for the build pipeline.
+The `build` section will contain all the configuration information for the build
+[pipeline](/learn/pipelines/01_introduction.html).
 
 ```yaml
 build:
@@ -37,29 +47,41 @@ build:
             code: bundle exec middleman build --verbose
 ```
 
+Two types of [steps](/learn/steps/01_introduction.html) are defined in this build section. First a
+`bundle-install` step that installs the Rubygem dependencies. This step
+is availble from the [step marketplace](/learn/steps/06_step-registry.html). The second step in an inline
+script that in this case compiles our static site.
+
 ### Deploy
 
-The `deploy` section will contain all the configuration for the pipeline.
+The `deploy` section will contain all the configuration information for the deploy
+[pipeline](/learn/pipelines/01_introduction.html).
 
 ```yaml
 deploy:
     steps:
-        # Execute the heroku-deploy, heroku details can be edited
-        # online at http://app.wercker.com/
-        #- heroku-deploy
-
         # Execute the s3sync deploy step, a step provided by wercker
         - s3sync:
             key_id: $AWS_ACCESS_KEY_ID
             key_secret: $AWS_SECRET_ACCESS_KEY
             bucket_url: $AWS_BUCKET_URL
             source_dir: build/
+    # notify slack on succesful or failed deploys
     after-steps:
-        - hipchat-notify:
-            token: $HIPCHAT_TOKEN
-            room-id: id
-            from-name: name
+        - kobim/slack-post:
+            url: $SLACK_URL
+            channel: notifications
+            username: werckerbot
 ```
+
+Here we see the Amazon Web Services S3 synchronization step that can
+sync static assets to S3. Environment variables are used that hold the
+correct credentials. The values of these environment variables are
+specified through the wercker web interface.
+
+Next we have an [after-step]() that notifies a Slack chat room of either
+passed or failed deploys. The `$SLACK_URL` environment variables holds
+the webhook url it should post the notification to.
 
 [&lsaquo; Syntax](/learn/wercker-yml/02_syntax.html "nav previous yml")
 [Environment variables &rsaquo;](/learn/wercker-yml/04_environment-variables.html "nav next yml")
