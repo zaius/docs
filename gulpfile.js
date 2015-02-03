@@ -47,6 +47,9 @@ var docs = {
   learn: [
     'lib/learn/**/*.md',
     'lib/learn/*.md'
+  ],
+  error: [
+    'lib/error/*.md'
   ]
 };
 
