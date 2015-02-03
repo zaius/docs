@@ -52,20 +52,20 @@
 }
 
 .learnblocks-item:last-child {
-  margin-right: 0;
+  /*margin-right: 0;*/
 }
 
 @media screen and (min-width:769px) and (max-width: 960px) {
   .learnblocks-item {
     flex: 1 20%;
-    margin: 10px;
+    margin: 0 10px 20px 0;
   }
 }
 
 @media screen and (max-width: 768px) {
   .learnblocks-item {
-    flex: 1 35%;
-    margin: 5px;
+    flex: 1 25%;
+    margin: 0 10px 20px 0;
   }
 }
 
