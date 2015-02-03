@@ -27,11 +27,11 @@ module.exports = react.createClass({
  * Render.
  */
 function render() {
-  return dom.div({className: 'learnblocks'},
+  return dom.div({className: 'learnblocks ' + showIntro()},
     blocks.map(function(block) {
       return dom.div({className: createClassName(block), key: block},
         dom.a({
-          className: 'learnblocks-item-icon',
+          className: 'learnblocks-item-icon ',
           href: '/learn/' + slugify(block) + '/01_introduction.html'
         }, dom.img({src: '/images/icon-' + block + '.svg', alt: block}),
           dom.div({className: 'learnblocks-item-title'}, block)
@@ -58,3 +58,16 @@ function createClassName(block) {
    + block.replace(/(\.)/gm, '_')
    + (active ? ' active' : '')
 }
+
+/**
+ * Set local storage to only show intro once
+ */
+function showIntro() {
+  if (window.localStorage.getItem('learnblocks-intro') != 'true') {
+    window.localStorage.setItem('learnblocks-intro', 'true');
+    return 'intro';
+  } else {
+    return '';
+  }
+}
+

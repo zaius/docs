@@ -92,13 +92,18 @@
 
 .learnblocks-item-icon {
   display: block;
-  opacity: 0;
   height: 150px;
   padding-top: 20px;
   text-align: center;
   text-decoration: none;
   box-shadow: inset 0px -35px 0px 0px rgba(0,0,0,.06);
+}
 
+/**
+ * Only show animation on class intro.
+ */
+.intro .learnblocks-item-icon {
+  opacity: 0;
   animation: move-in;
   animation-duration: $duration_slowest;
   animation-fill-mode: forwards;
