@@ -45,4 +45,4 @@ run for specific deploy targets.
 > [docs](/docs/cli/commands.html)
 
 [&lsaquo; The wercker CLI](/learn/basics/04_the-wercker-cli.html "nav previous basics")
-[Wercker.yml &rsaquo;](/learn/wercker-yml/01_introduction.html "nav next yml")
+[The desktop app &rsaquo;](/learn/basics/05_the-desktop-app.html "nav next basics")
