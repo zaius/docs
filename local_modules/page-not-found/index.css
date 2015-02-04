@@ -1,0 +1,30 @@
+/**
+ * Page not found.
+ */
+
+.page-not-found {
+  height: 50vh;
+  min-height: 400px;
+  background-color: $color-grey_lighter;
+}
+
+.page-not-found-content {
+  text-align: center;
+}
+
+.page-not-found-links {
+  display: flex;
+  justify-content: center;
+}
+
+.page-not-found-links ul {
+  text-align: center;
+}
+
+.page-not-found-links li {
+  display: inline;
+  margin-right: 10px;
+  font-size: $fontSize_smaller;
+  color: $color-grey_light;
+  font-weight: $fontWeight_light;
+}
