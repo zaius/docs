@@ -1,4 +1,3 @@
-
 var learnblocks = require('@local/learnblocks');
 var sidebar     = require('@local/sidebar');
 var window      = require('global/window');
@@ -14,3 +13,5 @@ if (navSelector) react.renderComponent(nav(), navSelector);
 
 var sidebarSelector = document.querySelector('.sidebar');
 if (sidebarSelector) react.renderComponent(sidebar()(), sidebarSelector);
+
+var metrics     = require('@local/metrics');

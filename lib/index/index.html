@@ -29,7 +29,19 @@
       rel="stylesheet"
       type="text/css">
   </head>
-  <body>
+
+  <!-- start keen.io -->
+  <script src="https://d26b395fwzu5fz.cloudfront.net/3.2.2/keen.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    // Include the Keen IO library for Event Tracking
+    var client = new Keen({
+      projectId: "54d09b5359949a5f26b75fa4",
+      writeKey:"25ca6a1eefdd4b3541ab7a6600153dc901a1eb0b6f2eba36a15a69acb2e12fad948e78312de7555a7f6a9ff718a0d129d2c3dd5223d09710f4fde015951a5e58e4f9c55e4d49d1bedfc973d4a2f4c82682a9c0ecf884bb841e400c47f58bb0f0677293f38d1192ff1852b37db9f1e052",
+      readKey: "anything" // not used; not needed for data collection
+    });
+  </script>
+
+  <body id="devcenter">
 
     <section class="nav-sticky"></section>
 
@@ -156,7 +168,9 @@
             <h4 class="footer-logo-payoff">Automation-driven development</h4>
           </div>
           <div class="footer-signup">
-            <a class="button-footer_signup" href="https://app.wercker.com/users/new/">Sign up and get started ›</a>
+            <a id="signup-footer-sub" class="button-footer_signup" href="https://app.wercker.com/users/new/">
+              Sign up and get started &rsaquo;
+            </a>
           </div>
           <div class="footer-social">
             <span>Follow us on</span>
@@ -169,7 +183,9 @@
             <a href="https://www.facebook.com/Wercker" class="footer-social-icon">
               <img class="logo_base" src="/images/icon-facebook.svg">
             </a>
-            <a href="http://www.wercker.com/newsletter" class="footer-newsletter">Join the developer newsletter ›</a>
+            <a id="newsletter-join" href="http://www.wercker.com/newsletter" class="footer-newsletter">
+              Join the developer newsletter &rsaquo;
+            </a>
           </div>
         </div>
         <div class="footer-links">

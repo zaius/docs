@@ -51,6 +51,7 @@ function render() {
         dom.div({className: 'navbar-signup'},
           dom.a({
             className: 'button-nav_signup',
+            id: 'signup-nav-sub',
             href: 'https://app.wercker.com/users/new/',
             onClick: changeLocation.bind(this, 'https://app.wercker.com/users/new/'),
             children: 'Sign up'
