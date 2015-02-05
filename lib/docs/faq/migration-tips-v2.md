@@ -2,10 +2,10 @@
 tags: migrating
 ---
 
-## How do I migrate to wercker v2?
+## Migration Tips to wercker v2
 
 In this article we go over the items to take into consideration when
-migrating your application to wercker v2 (Ewok).
+migrating your application to wercker v2 (Ewok Edition).
 
 ### Table of contents
 
