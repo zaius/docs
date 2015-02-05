@@ -58,4 +58,5 @@ does nothing when used.
 #### Deployment
 
 As all build artifacts are effectively containers deploy targets other
-than custom are no longer supported.
+than custom are no longer supported. We will update our documentation in
+the future on how to deploy these containers.
