@@ -58,5 +58,7 @@ does nothing when used.
 #### Deployment
 
 As all build artifacts are effectively containers deploy targets other
-than custom are no longer supported. We will update our documentation in
+than custom are no longer supported. Please not that if you update a
+project to make use of Docker (Ewok version) and this project has
+autodeployment, this deploy will most likely fail. We will update our documentation in
 the future on how to deploy these containers.
