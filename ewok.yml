@@ -45,7 +45,7 @@ deploy:
     # - install-packages:
     #     packages: wget libmagic1 python-dateutil s3cmd
     
-    - s3sync@0.1.0-alpha1:
+    - s3sync@0.1.0-alpha2:
         source_dir: build/
         delete-removed: false
         bucket-url: $AWS_BUCKET_URL
