@@ -42,9 +42,10 @@ build:
 
 deploy:
     steps:
-    - install-packages:
-        packages: wget libmagic1 python-dateutil s3cmd
-    - s3sync:
+    # - install-packages:
+    #     packages: wget libmagic1 python-dateutil s3cmd
+    
+    - s3sync@2.0.0-alpha1:
         source_dir: build/
         delete-removed: false
         bucket-url: $AWS_BUCKET_URL
