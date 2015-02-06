@@ -23,6 +23,18 @@ Docker environment. As an alternative you can use
 [Vagrant](http://vagrantup.com) to install a separate boot2docker
 virtual machine using [this vagrant box](https://github.com/mitchellh/boot2docker-vagrant-box).
 
+###### OSX quick start
+```sh
+brew install boot2docker
+
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
+
+boot2docker init
+boot2docker up
+```
+
 ### Commands
 
 The wercker command line interface comes with the following commands:
