@@ -1,7 +1,45 @@
 ## Using Containers
 
-* specify in yml
-* pulling in containers
+You can use Docker cointainers obtained from the Hub by specifying them
+in your [wercker.yml file](/learn/wercker-yml/01_introduction.html).
+
+### Boxes and Services
+
+The *box section* in your `wercker.yml` defines the main language stack
+of your application and is the box that runs your build pipelines.
+Service containers are spun up separately from your main language stack
+and can be leveraged for databases or queues.
+
+### Specifying versions
+
+Docker repositories can hold various versions of an image. Tags can be leveraged to specify a specfic version of a container.
+
+> When using containers make sure you specify the correct tag for the
+container you want to use.
+
+You can specify a version tag in your
+[wercker.yml]((/learn/wercker-yml/01_introduction.html) as follows.
+
+```yaml
+# using python version 2.7
+box: python:2.7
+```
+
+Without specifying a tag you will get the latest build of the container
+on the Hub, which in this case contains python version 3.
+
+```yaml
+# using python version 3
+box: python
+```
+
+This same method applies for service containers.
+
+```yaml
+# using a specific tag for a redis service
+services:
+    - redis:2.8
+```
 
 [&lsaquo; Docker Hub](/learn/containers/02_docker-hub.html "nav previous containers")
 [Pipelines &rsaquo;](/learn/pipelines/01_introduction.html "nav next pipelines")
