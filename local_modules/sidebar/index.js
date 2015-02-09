@@ -6,6 +6,7 @@ var react   = require('react');
 
 var db = require('../../../build/db.json');
 var ss = require('./simple-sidebar');
+var scrubDataSet = require('./scrubData');
 
 var dom = react.DOM;
 
@@ -23,28 +24,31 @@ function createClass() {
 // we manage the state of the object here. source out into search,
 // return the result and pass it into the display function.
 function getDefaultProps() {
-  return {
-    data: db[stripUrl()]
-  }
+  return { data: scrubDataSet(db[stripUrl()]) }
 }
 
 /**
  * Get initial state.
  */
 function getInitialState() {
-  return {
-    data: db[stripUrl()]
-  }
+  return { data: scrubDataSet(db[stripUrl()]) }
 }
 
 /**
  * Render.
  */
 function render() {
-  var state = this.state;
   var basePath = stripUrl();
-  if ('learn' == basePath) return ss(state, this.props)
 
+  if ('learn' == basePath) return ss(this.state, this.props)
+  return renderSidebar.call(this, basePath, this.state);
+}
+
+/**
+ * Render the sidebar.
+ */
+function renderSidebar(basePath, state) {
+  console.log(this.state.data)
   return dom.section({className: 'section-sidebar'},
     search({data: this.props.data, setState: this.setState.bind(this)}),
     dom.section({className: 'sidebar-list'},
@@ -53,29 +57,27 @@ function render() {
         // the value we're getting from the data. Can be either an
         // object containing children, or is a single string value.
         var val = state.data[key];
-        switch (typeof val) {
-          case 'string':
-            var origin = window.location.origin
-            var href = origin + '/' + basePath + '/' + val + '/index.html';
-            return dom.a({className: 'sidebar-li', key: val, href: href}, val)
 
-          case 'object':
-          default:
-            return dom.ul({key: key},
-              dom.li({className: 'sidebar-li'},
-                dom.a({
-                  href: createHref(basePath, key, val[0])
-                }, key.split('.')[0])
-              ),
-              val.map(function(valTwo) {
-                return dom.li({className: 'sidebar-li_sub', key: key + valTwo},
-                  dom.a({
-                    href: createHref(basePath, key, valTwo)
-                  }, stripFileName(valTwo))
-                )
-              })
-            )
+        if (typeof val === 'string') {
+          var origin = window.location.origin
+          var href = origin + '/' + basePath + '/' + val + '/index.html';
+          return dom.a({className: 'sidebar-li', key: val, href: href}, val);
         }
+
+        return dom.ul({key: key},
+          dom.li({className: 'sidebar-li'},
+            dom.a({
+              href: createHref(basePath, key, val[0])
+            }, key.split('.')[0])
+          ),
+          val.map(function(valTwo) {
+            return dom.li({className: 'sidebar-li_sub', key: key + valTwo},
+              dom.a({
+                href: createHref(basePath, key, valTwo)
+              }, stripFileName(valTwo))
+            )
+          })
+        )
       })
     )
   );
@@ -97,6 +99,7 @@ function stripFileName(valTwo) {
  * @param {String[]} val
  */
 function createHref(base, key, val) {
+  console.log(base, key, val)
   return '/'
     + base
     + '/'
