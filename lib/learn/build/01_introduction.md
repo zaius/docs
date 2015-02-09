@@ -13,11 +13,11 @@ The outcome of a successful build is packaged and stored, readying it for deploy
 Of course you can add your own steps as well. See the [steps section](/learn/steps/01_introduction.html)
 for more information.
   
-#### get code
+### Get code
 Wercker retrieves your repository from you version control system and
 clones it into a container.
 
-#### setup environment
+### Setup environment
 
 If no [wercker.yml](/learn/wercker-yml/01_introduction.html) file is present in the
 repository, wercker will generate a default one depending on your stack.
@@ -28,12 +28,12 @@ In the `environment variables` step these are declared and exported. See
 the [article](/learn/pipelines/03_using-env-vars.html) about env vars in
 the pipeline section for more information.
 
-#### wercker init
+### Wercker init
 
 In the wercker-init step, the programming environment is bootstrapped. For Ruby this means rbenv, for Python virtualenv and for Node.js nodeenv. The default version of the programming language is used. You can use version in [wercker.yml](/articles/werckeryml/) to override this version number.
 stalls the depencies of your project. For Ruby this means bundle install, for Python pip install -r requirements.txt, for Node.js npm install and for blank make
 
-#### store
+### Store
 
 If all steps are successful, the resulting folder is packaged to a zip file, to be used later in the deployment process.
 
