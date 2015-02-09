@@ -25,6 +25,7 @@ deploy:
             code: echo my-deploy-script.sh
 ```
 
-When a Build is passed, it can be deployed to a Target.
+When a build is passed, it can be deployed to a target. In the next
+section we'll look at how to set up deploy targets.
 
 [Targets &rsaquo;](/learn/deploy/02_targets.html "nav next deploy")
