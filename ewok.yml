@@ -34,7 +34,7 @@ build:
             tasks: build
 
     after-steps:
-        - kobim/slack-post:
+        - slack-notifier:
             url: $SLACK_URL
             channel: notifications 
             username: megatron
@@ -52,7 +52,7 @@ deploy:
         key-secret: $AWS_SECRET_ACCESS_KEY
 
     after-steps:
-        - kobim/slack-post:
+        - slack-notifier:
             url: $SLACK_URL
             channel: notifications
             username: megatron
