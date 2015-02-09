@@ -18,7 +18,7 @@ will package the files in the `$WERCKER_OUTPUT_DIR`. Here is an example that
 builds a [Jekyll](http://jekyllrb.com) website and places the static html
 output in the `$WERCKER_OUTPUT_DIR`.
 
-``` yaml
+```yaml
 build:
     - bundle-install
     - script:

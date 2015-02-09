@@ -18,7 +18,7 @@ Docker repositories can hold various versions of an image. Tags can be leveraged
 container you want to use.
 
 You can specify a version tag in your
-[wercker.yml]((/learn/wercker-yml/01_introduction.html) as follows.
+[wercker.yml](/learn/wercker-yml/01_introduction.html) as follows.
 
 ```yaml
 # using python version 2.7
