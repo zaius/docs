@@ -83,5 +83,5 @@ Next, we have an [after-step](/learn/steps/03_after-steps.html) that notifies a 
 passed or failed deploys. The `$SLACK_URL` environment variables holds
 the webhook url it should post the notification to.
 
-[&lsaquo; Syntax](/learn/wercker-yml/02_syntax.html "nav previous yml")
-[Environment variables &rsaquo;](/learn/wercker-yml/04_environment-variables.html "nav next yml")
+[&lsaquo; Introduction](/learn/wercker-yml/01_introduction.html "nav previous yml")
+[Environment variables &rsaquo;](/learn/wercker-yml/03_environment-variables.html "nav next yml")

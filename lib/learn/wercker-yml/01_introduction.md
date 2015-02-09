@@ -2,7 +2,7 @@
 
 The `wercker.yml` file allows you to set up your [automation
 pipelines](/learn/pipelines/01_introduction.html). YAML is a readable
-and friendly markup language. 
+and friendly markup language.
 
 The `wercker.yml` file is a configuration
 file in the YAML format that specify how your build and deploy pipelines
@@ -18,4 +18,4 @@ In the next sections we will go over the syntax and sections of the
 `wercker.yml`, how you can program it using environment variables and
 finally a showing a complete working example.
 
-[Syntax &rsaquo;](/learn/wercker-yml/02_syntax.html "nav next yml")
+[Sections &rsaquo;](/learn/wercker-yml/02_sections.html "nav next yml")

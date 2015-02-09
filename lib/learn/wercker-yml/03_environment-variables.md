@@ -2,7 +2,7 @@
 
 Often times an application needs specific information during a build or
 deploy. This could be an IP address for a server, a secret token or an
-SSH key pair. 
+SSH key pair.
 
 This type of information is either unique for each server you want to deploy to
 or may be too sensitive to store in the repository. Wercker supports a number
@@ -30,5 +30,5 @@ such as hostnames, ssh-keys, passwords and more.
 > Want to learn more? Read more about using environment variables
 > [docs](/docs/cli/commands.html)
 
-[&lsaquo; Sections](/learn/wercker-yml/03_sections.html "nav previous yml")
-[Creating a yaml &rsaquo;](/learn/wercker-yml/05_creating-a-yml.html "nav next yml")
+[&lsaquo; Sections](/learn/wercker-yml/02_sections.html "nav previous yml")
+[Creating a yaml &rsaquo;](/learn/wercker-yml/04_creating-a-yml.html "nav next yml")

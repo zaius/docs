@@ -23,7 +23,12 @@ Docker environment. As an alternative you can use
 [Vagrant](http://vagrantup.com) to install a separate boot2docker
 virtual machine using [this vagrant box](https://github.com/mitchellh/boot2docker-vagrant-box).
 
-###### OSX quick start
+### OSX quick start
+
+If you're eager to get up to speed on OSX, below is a quickstart that
+installs boot2docker via the [homebrew package
+manager](http://brew.sh/).
+
 ```sh
 brew install boot2docker
 
