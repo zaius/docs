@@ -30,8 +30,8 @@ the pipeline section for more information.
 
 ### Wercker init
 
-In the wercker-init step, the programming environment is bootstrapped. For Ruby this means rbenv, for Python virtualenv and for Node.js nodeenv. The default version of the programming language is used. You can use version in [wercker.yml](/articles/werckeryml/) to override this version number.
-stalls the depencies of your project. For Ruby this means bundle install, for Python pip install -r requirements.txt, for Node.js npm install and for blank make
+In the wercker-init step, the pipeline environment variables are
+bootstrapped. 
 
 ### Store
 
