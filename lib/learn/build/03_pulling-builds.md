@@ -12,11 +12,9 @@ command:
 wercker pull <BUILD-ID>
 ```
 
-Now that you've downloaded a build you're able to run them as follows:
-
-```sh
-docker run -it --rm build-<BUILD-ID> /bin/bash
-```
+Make sure you have boot2docker or a working docker environment running
+as the `wercker pull` command will store this container in the docker
+environment after pulling it.
 
 [&lsaquo; Local builds](/learn/build/02_local-builds.html "nav previous build")
 [Introspecting builds &rsaquo;](/learn/build/04_introspecting-builds.html "nav next build")
