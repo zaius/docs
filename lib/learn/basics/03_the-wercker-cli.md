@@ -74,7 +74,6 @@ The wercker command line interface comes with the following commands:
 COMMANDS:
    build, b     build a project
    deploy, d    deploy a project
-   inspect, i   inspect a recent container
    detect, de   detect the type of project
    login, l     log into wercker
    pull, p      pull a build result
