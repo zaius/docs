@@ -3,7 +3,7 @@
 This section describes the different deployment possiblities within wercker.
 
 Wercker allows you to deploy your application to various Platform-as-a-Service
-(PaaS) providers such as Heroku (see example) but also Infrastructure-as-a-Service
+(PaaS) providers such as Heroku but also Infrastructure-as-a-Service
 providers including Amazon Web Services and Rackspace. We call these deploy targets.
 
 Furthermore you can use any mechanism to orchestrate and streamline your deploys
