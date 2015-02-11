@@ -40,6 +40,21 @@ boot2docker init
 boot2docker up
 ```
 
+### Getting the CLI
+
+You can obtain versions for Mac and Linux of the CLI as follows:
+
+```sh
+# downloads the CLI to /usr/local/bin YMMV
+curl https://downloads.wercker.com/cli /usr/local/bin
+```
+
+Next you want to make the CLI executable:
+
+```sh
+chmod +x /usr/local/bin/wercker
+```
+
 ### Commands
 
 The wercker command line interface comes with the following commands:

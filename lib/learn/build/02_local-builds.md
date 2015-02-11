@@ -12,12 +12,6 @@ From within your project folder run the following command.
 wercker build
 ```
 
-### Tagging and committing a build
-
-```sh
-wercker build --commit --tag foo
-```
-
 In the next section we'll look at how to pull builds into your local
 environment.
 

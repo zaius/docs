@@ -4,6 +4,10 @@ The result of a passed build is a deployable package. The package is created at
 the end of the build pipeline and contains all the assets and code that are
 inside the working directory.
 
+Wercker packages your artifact in two ways. First, the container is
+stored as a tarball on wercker. Second, the source code of your
+application is also packaged separately as a tarball.
+
 This package can be the input of a deployment pipeline. For advanced use-cases
 it can make sense to create a sub-selection to be packaged, this is for instance
 applicable to compiled languages whereby the compiled output is the selection
