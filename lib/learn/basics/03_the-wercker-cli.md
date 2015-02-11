@@ -46,13 +46,21 @@ You can obtain versions for Mac and Linux of the CLI as follows:
 
 ```sh
 # downloads the CLI to /usr/local/bin YMMV
-curl https://downloads.wercker.com/cli /usr/local/bin
+curl https://downloads.wercker.com/cli/stable/wercker /usr/local/bin
 ```
 
 Next you want to make the CLI executable:
 
 ```sh
 chmod +x /usr/local/bin/wercker
+```
+
+### Logging in
+
+You can log into wercker with your username and password as follows:
+
+```sh
+wercker login
 ```
 
 ### Commands
