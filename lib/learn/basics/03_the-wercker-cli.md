@@ -49,6 +49,9 @@ You can obtain versions for Mac and Linux of the CLI as follows:
 curl https://downloads.wercker.com/cli/stable/wercker /usr/local/bin
 ```
 
+> If you've installed the legacy version of the CLI, make sure its not
+in your PATH
+
 Next you want to make the CLI executable:
 
 ```sh
