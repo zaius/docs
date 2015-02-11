@@ -86,7 +86,7 @@ The *detect* command introspects your projects and generates
 [wercker.yml](/learn/wercker-yml/01_introduction.html) files for your
 projects.
 
-> Currently go, python, nodejs and ruby are support in the detect
+> Currently go, python, nodejs and ruby are supported in the detect
 > command
 
 The *build* and *deploy* commands execute these pipelines locally. Using
