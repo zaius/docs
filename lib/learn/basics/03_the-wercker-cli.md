@@ -50,7 +50,8 @@ following locations:
 * [Mac 64bit](http://downloads.wercker.com/cli/stable/darwin_amd64/wercker)
 
 For example downloading the Mac OSX version and
-installing it in `/usr/local/bin`:
+installing it in `/usr/local/bin` (make sure this directory is available
+in your PATH):
 
 ```sh
 # downloads the Mac OSX CLI to /usr/local/bin (YMMV)
@@ -58,7 +59,7 @@ curl http://downloads.wercker.com/cli/stable/darwin_amd64/wercker -o /usr/local/
 ```
 
 And for Linux 64 bit (make sure this directory is available in your
-PATH)
+PATH):
 
 ```sh
 # downloads the Linux CLI to /usr/local/bin (YMMV)
