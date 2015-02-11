@@ -42,7 +42,15 @@ boot2docker up
 
 ### Getting the CLI
 
-You can obtain versions for Mac and Linux of the CLI as follows:
+You can obtain both versions for Mac OSX and Linux of the CLI at the
+following locations:
+
+* [Linux 32bit](http://downloads.wercker.com/cli/stable/linux_386/wercker)
+* [Linux 64bit](http://downloads.wercker.com/cli/stable/linux_amd64/wercker)
+* [Mac 64bit](http://downloads.wercker.com/cli/stable/darwin_amd64/wercker)
+
+For example downloading the Mac OSX version and
+installing it in `/usr/local/bin`:
 
 ```sh
 # downloads the CLI to /usr/local/bin YMMV
