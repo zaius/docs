@@ -44,7 +44,7 @@ deploy:
     steps:
     - install-packages:
         packages: wget libmagic1 python-dateutil s3cmd
-    - s3sync:
+    - s3sync@0.1.0-alpha2:
         source_dir: build/
         delete-removed: false
         bucket-url: $AWS_BUCKET_URL
@@ -55,5 +55,6 @@ deploy:
         - slack-notifier:
             url: $SLACK_URL
             channel: notifications
-            username: megatron
+            username: soundwave
+            notify_on: "failed"
 
