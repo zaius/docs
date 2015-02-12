@@ -83,6 +83,15 @@ You can log into wercker with your username and password as follows:
 wercker login
 ```
 
+### Updating
+
+You can check if you're running the laster version of the CLI by
+running:
+
+```sh
+wercker version
+```
+
 ### Commands
 
 The wercker command line interface comes with the following commands:

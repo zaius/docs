@@ -44,7 +44,7 @@ deploy:
     steps:
     - s3sync@0.1.0-alpha2:
         source_dir: build/
-        delete-removed: false
+        delete-removed: true
         bucket-url: $AWS_BUCKET_URL
         key-id: $AWS_ACCESS_KEY_ID
         key-secret: $AWS_SECRET_ACCESS_KEY
