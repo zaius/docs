@@ -6,7 +6,8 @@ even faster.
 The CLI can be used to execute *single player mode*
 [pipelines](/learn/pipelines/01_introduction.html) locally for easy
 introspection and debugging. You can get the CLI for either Mac or Linux from our [downloads
-page](http://wercker.com/downloads).
+page](http://wercker.com/downloads) or through the instructions on this
+page.
 
 ### Requirements
 
@@ -19,11 +20,11 @@ instructions](https://docs.docker.com/installation/#installation) fore more info
 If you are running Mac OSX you can install Docker using an installer
 called [boot2docker](https://docs.docker.com/installation/mac/) that
 will install [VirtualBox](https://www.virtualbox.org/) and a minimal
-Docker environment. As an alternative you can use
+Docker environment. As an alternative, you can use
 [Vagrant](http://vagrantup.com) to install a separate boot2docker
 virtual machine using [this vagrant box](https://github.com/mitchellh/boot2docker-vagrant-box).
 
-### OSX quick start
+### OSX boot2docker quick start
 
 If you're eager to get up to speed on OSX, below is a quickstart that
 installs boot2docker via the [homebrew package
@@ -83,14 +84,24 @@ You can log into wercker with your username and password as follows:
 wercker login
 ```
 
+This will save a token in your `$HOME/.wercker` folder, so you don't
+have to login the next time.
+
 ### Updating
 
-You can check if you're running the laster version of the CLI by
+You can check if you're running the latest version of the CLI by
 running:
 
 ```sh
-wercker version
+> wercker version
+
+Version: 1.0.41
+Git commit: 5efcc26716ccf608908bb87e30ef4c23414cb79e
 ```
+
+When not up to date the CLI will nudge you to download a newer version
+of the CLI.
+
 
 ### Commands
 

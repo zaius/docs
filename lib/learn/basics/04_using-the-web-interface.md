@@ -2,7 +2,7 @@
 
 The wercker web interface lets you add and manage your applications
 It also allows you to create deploy workflows, add team members and see
-an overview of both your build and deploy pipeline runs.
+an overview of both your build and deploy pipeline executions.
 
 ### Features
 
@@ -14,7 +14,7 @@ your applications' activity.
 
 ![image](/images/feed-add-app.png)
 
-The add application wizard allows toy to add either repositories from
+The add application wizard allows you to add either repositories from
 GitHub or Bitbucket. If these repositories are private, the wizard gives
 your various option for enabling wercker to access these repositories.
 
@@ -32,7 +32,7 @@ graphical overview of the distribution of sucessful versus failed builds
 and deploys, and who are the top builders within your team.
 
 A specific build page for an application shows the steps that were
-executed for that *pipeline run*, and of course if this build has passed or
+run for that *pipeline execution*, and of course if this build has passed or
 failed.
 
 ![image](/images/build-deploy.png)
