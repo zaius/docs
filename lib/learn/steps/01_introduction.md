@@ -6,13 +6,16 @@ deploy phase within the pipeline.
 > steps can be used to customize your pipelines
 
 Examples of a **build step** are compilation of your code, running your
-unit tests or performing
-[jshint](https://github.com/wercker/step-jshint/).
+unit tests or even static code analysis such as `jshint` or `golint`.
+
 
 A **deploy step** could be the synchronization of static assets, for
 which we've created the [s3sync
 step](https://github.com/wercker/step-s3sync/), that takes some Amazon
 Web Services
 credentials and bucket information and places these assets on Amazon S3.
+
+Finally, there's the notion of *after-steps*, which can be used for
+notifications.
 
 [Using steps &rsaquo;](/learn/steps/02_using-steps.html "nav next steps")
