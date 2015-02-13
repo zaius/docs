@@ -1,10 +1,11 @@
 ## Introduction to pipelines
 
-A key concept within wercker is the *pipeline*; a set of steps aimed at building,
+A key concept within wercker is the *pipeline*; a sequence of steps aimed at building,
 testing and delivering your applications.
 
 Currently wercker support two types of pipelines; a **build** and a
-**deploy** pipeline. Pipelines can be executed locally and on the wercker platform.
+**deploy** pipeline. Pipelines can be executed [locally](/learn/build/02_local-builds.html) through the
+[CLI](/learn/basics/03_the-wercker-cli.html) and on the wercker platform.
 
 > A key benefit of wercker is that you can customize your pipelines
 

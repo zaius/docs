@@ -11,9 +11,10 @@ application is also packaged separately as a tarball.
 This package can be the input of a deployment pipeline. For advanced use-cases
 it can make sense to create a sub-selection to be packaged, this is for instance
 applicable to compiled languages whereby the compiled output is the selection
-that you want to actually deploy.
+that you want to actually deploy (not the source code).
 
-Another example is the minification of javascript files which should be made
+Another example is the minification of javascript files or the
+compilation of static assets which should be made
 available for deployment.
 
 You can write the files you want packaged to the `$WERCKER_OUTPUT_DIR`.
@@ -34,6 +35,7 @@ build:
 The static html files will be copied into the `$WERCKER_OUTPUT_DIR` folder
 readying them for the deployment pipeline.
 
+In the next section we will have a closer look at steps.
 
 [&lsaquo; Using env vars](/learn/pipelines/03_using-env-vars.html "nav previous pipelines")
 [Steps &rsaquo;](/learn/steps/01_introduction.html "nav next steps")

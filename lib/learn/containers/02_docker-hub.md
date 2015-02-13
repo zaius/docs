@@ -13,7 +13,7 @@ In order to use these containers you have to specify them in your
 need to specify  the main language stack you want to use via the `box`
 section.
 
->Currently only public repositories on the Hub are supported.
+> Currently only public repositories on the Hub are supported.
 
 Private repositories are not yet supported in wercker, so make sure your
 containers are public on the Hub.
