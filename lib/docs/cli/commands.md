@@ -27,3 +27,18 @@ projects.
 The *build* and *deploy* commands execute these pipelines locally. Using
 the *pull* command you can download a container from the wercker
 platform and use *inspect* to debug this container locally.
+
+For using local environment variables you can use the global
+`--environment` flag that points to a file that holds environment
+variables in the form of `key-value` pairs:
+
+```sh
+# specify this in a file called wercker.env
+TOKEN=thisismytoken
+```
+
+Now for instance use this in the `build` command:
+
+```sh
+wercker build --environment wercker.env
+```
