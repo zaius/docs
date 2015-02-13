@@ -10,7 +10,7 @@ The box section allows you to choose a
 [container](/learn/containers/01_introduction.html) which will be used
 to run the builds and deploys. This item will contain a single reference
 to the box. The box will be prefixed by the owner and it can be
-postfixed with a `":"` followed by a version. If no version is given, then
+postfixed with a `":"` followed by a version or tag. If no version is given, then
 the latest version will be used. If no user is specified, default
 containers from the [Docker Hub](/learn/containers/02_docker-hub.html) will be used.
 
@@ -82,6 +82,10 @@ specified through the wercker web interface.
 Next, we have an [after-step](/learn/steps/03_after-steps.html) that notifies a Slack chat room of either
 passed or failed deploys. The `$SLACK_URL` environment variables holds
 the webhook url it should post the notification to.
+
+We've covered a lot of ground on this page but fortunately there are
+dedicated sections for topics such as [pipelines](/learn/pipelines/01_introduction.html), [containers](/learn/containers/01_introduction.html) and
+[steps](/learn/steps/01_introduction.html).
 
 [&lsaquo; Introduction](/learn/wercker-yml/01_introduction.html "nav previous yml")
 [Environment variables &rsaquo;](/learn/wercker-yml/03_environment-variables.html "nav next yml")

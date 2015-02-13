@@ -9,7 +9,7 @@ file in the YAML format that specify how your build and deploy pipelines
 should be run and which [steps](/learn/steps/01_introduction.html)
 should be executed in those pipelines.
 
-As your `werkcer.yml` configuration is under source control its contents
+As your `werkcer.yml` configuration is under source control, its contents
 can vary per git commit.
 
 > the contents of your wercker.yml can be different per commit

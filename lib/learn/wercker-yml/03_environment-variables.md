@@ -12,7 +12,7 @@ of ways to store and expose this data as environment variables.
 > are available during pipeline runs
 
 If you want to know which environment variables are available during a build
-or deploy, look at the `environment variables` step of your [pipeline](/learn/pipelines/01_introduction.html) run.
+or deploy, look at the `Setup Environment` step of your [pipeline](/learn/pipelines/01_introduction.html) run.
 
 Environment variables can be *global* and as such are available
 during both build and deploy pipelines. Typically, these are used to store API tokens for

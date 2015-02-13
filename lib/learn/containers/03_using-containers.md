@@ -41,5 +41,8 @@ services:
     - redis:2.8
 ```
 
+Now that we know how to use containers and define them in our
+`wercker.yml`, we will have a look at how pipelines work.
+
 [&lsaquo; Docker Hub](/learn/containers/02_docker-hub.html "nav previous containers")
 [Pipelines &rsaquo;](/learn/pipelines/01_introduction.html "nav next pipelines")
