@@ -6,6 +6,7 @@ build:
       - script:
             name: set up permissions
             code: |
+              exit 1
               export NODE_ENV=development
               chmod 777 -R .
               chmod 777 -R $WERCKER_CACHE_DIR
