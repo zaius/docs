@@ -47,7 +47,7 @@ Usage:
 ```yaml
 build:
     steps:
-        - setup-go-workspace 
+        - setup-go-workspace
 ```
 
 #### golint
@@ -63,12 +63,30 @@ build:
         - golint
 ```
 
-#### s3sync and mhook
+#### s3sync
 
 As compiled go applications are single binaries, they are easily
-shippable and deployable to s3.
+shippable and deployable to for instance s3. You can leverage the
+s3sync step in the wercker marketplace to do this. To use this step,
+you will need your AWS access keys and the bucket that you would like to deploy to:
+
+```yaml
+deploy:
+    steps:
+    - s3sync@0.1.0-alpha2:
+        # use the build folder in the wercker pipeline
+        source_dir: build/
+        # delete remote files that are no longer in your local folder
+        delete-removed: true
+        # set up environment variables
+        bucket-url: $AWS_BUCKET_URL
+        key-id: $AWS_ACCESS_KEY_ID
+        key-secret: $AWS_SECRET_ACCESS_KEY
+```
 
 ### Complete wercker.yml
+
+Below you can find the entire `wercker.yml` file for a golang application.
 
 ```yaml
 # use the official google golang container
@@ -79,14 +97,14 @@ box: google/golang
 build:
   # The steps that will be executed on build
   steps:
-        
+
     # Sets the go workspace and places you package
     # at the right place in the workspace tree
-    - setup-go-workspace 
+    - setup-go-workspace
 
     # golint step!
     - wercker/golint
-    
+
     # Build the project
     - script:
         name: go build
@@ -99,7 +117,14 @@ build:
         code: |
           go test ./...
 
-          ### TODO: deploy section
+deploy:
+    steps:
+    - s3sync@0.1.0-alpha2:
+        source_dir: build/
+        delete-removed: true
+        bucket-url: $AWS_BUCKET_URL
+        key-id: $AWS_ACCESS_KEY_ID
+        key-secret: $AWS_SECRET_ACCESS_KEY
 ```
 
 ### Sample application
@@ -107,4 +132,4 @@ build:
 You can checkout and clone a sample application in golang at the
 following location:
 
-[getting-started-golang]()
+[getting-started-golang](http://github.com/wercker/gettingstarted-golang)
