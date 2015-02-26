@@ -33,13 +33,6 @@ build:
       - hgen/gulp:
             tasks: build
 
-    after-steps:
-        - slack-notifier:
-            url: $SLACK_URL
-            channel: notifications 
-            username: megatron
-
-
 deploy:
     steps:
     - s3sync@0.1.0-alpha2:

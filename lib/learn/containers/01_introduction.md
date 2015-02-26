@@ -7,11 +7,11 @@ Not only are containers an isolated unit of work, they're also portable.
 
 ### Docker
 
-Wercker uses the [Docker](http://docker.com) container implementation to
+Wercker uses [Docker](http://docker.com) containers to
 not only run your pipelines, but also stores your build artifacts as
 containers.
 
-This means that you can deploy these containers to your servers.
+This means that you can ship and deploy these containers to your servers.
 
 ![image](/images/portable-container.png)
 

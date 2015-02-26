@@ -13,5 +13,5 @@ Auto deployment is specified in the wercker web interface depending on
 the branch and can be specified per deploy target.
 
 [&lsaquo; Targets](/learn/deploy/02_targets.html "nav previous deploy")
-[Dive into specific topics &rsaquo;](/docs/best-practices/index.html "nav next docs")
+[Dive into specific topics &rsaquo;](/docs/index.html "nav next docs")
 

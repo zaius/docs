@@ -1,5 +1,35 @@
 ---
-tags: example
+tags: cli
 ---
 
 ## Requirements
+
+In order to make use of all of the features within the CLI you will need
+a working Docker environment. On linux it is easy to install Docker
+depending on your distribution and package manager. See Docker's
+[installation
+instructions](https://docs.docker.com/installation/#installation) fore more information.
+
+If you are running Mac OSX you can install Docker using an installer
+called [boot2docker](https://docs.docker.com/installation/mac/) that
+will install [VirtualBox](https://www.virtualbox.org/) and a minimal
+Docker environment. As an alternative, you can use
+[Vagrant](http://vagrantup.com) to install a separate boot2docker
+virtual machine using [this vagrant box](https://github.com/mitchellh/boot2docker-vagrant-box).
+
+### OSX boot2docker quick start
+
+If you're eager to get up to speed on OSX, below is a quickstart that
+installs boot2docker via the [homebrew package
+manager](http://brew.sh/).
+
+```sh
+brew install boot2docker
+
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
+
+boot2docker init
+boot2docker up
+```
