@@ -9,4 +9,9 @@ language and wercker.
 
 ### Table of Contents
 
+* The box
+* Useful steps
+* Complete wercker.yml
+* Sample application
+
 https://registry.hub.docker.com/_/python/

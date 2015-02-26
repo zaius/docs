@@ -1,7 +1,7 @@
 ## Using the web interface
 
-The wercker web interface lets you add and manage your applications
-It also allows you to create deploy workflows, add team members and see
+The wercker web interface lets you add and manage your applications.
+It also allows you to create and deploy workflows, add team members and see
 an overview of both your build and deploy pipeline executions.
 
 ### Features
@@ -14,11 +14,11 @@ your applications' activity.
 
 ![image](/images/feed-add-app.png)
 
-The add application wizard allows you to add either repositories from
+The *add application wizard* allows you to add either repositories from
 GitHub or Bitbucket. If these repositories are private, the wizard gives
 your various option for enabling wercker to access these repositories.
 
-The application page shows a live view of your
+The *application page* shows a live view of your
 [builds](/learn/build/01_introduction.html) and
 [deploys](/learn/deploy/01_introduction.html). Within the *settings tab*
 you can control various aspects of your application; invite team

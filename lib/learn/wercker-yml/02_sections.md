@@ -80,7 +80,7 @@ correct credentials. The values of these environment variables are
 specified through the wercker web interface.
 
 Next, we have an [after-step](/learn/steps/03_after-steps.html) that notifies a Slack chat room of either
-passed or failed deploys. The `$SLACK_URL` environment variables holds
+passed or failed deploys in a [Slack](http://slack.com) chat room. The `$SLACK_URL` environment variables holds
 the webhook url it should post the notification to.
 
 We've covered a lot of ground on this page but fortunately there are

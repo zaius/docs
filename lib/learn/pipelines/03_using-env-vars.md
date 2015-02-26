@@ -1,6 +1,6 @@
 ## Using environment variables
 
-Environment variables are used to store information which is need during
+Environment variables are used to store information which is needed during
 the execution of a pipeline, such as tokens or keys.
 
 ### Data types
