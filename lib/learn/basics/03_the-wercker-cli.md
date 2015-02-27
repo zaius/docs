@@ -108,14 +108,34 @@ of the CLI.
 The wercker command line interface comes with the following commands:
 
 ```bash
+NAME:
+   wercker - build and deploy from the command line
+
+USAGE:
+   wercker [global options] command [command options] [arguments...]
+
+VERSION:
+   1.0.54 (Git commit: dabc15876b877209047fa926774f97f001afbf43)
+
+AUTHOR:
+  Team wercker - <pleasemailus@wercker.com>
+
 COMMANDS:
    build, b     build a project
    deploy, d    deploy a project
    detect, de   detect the type of project
    login, l     log into wercker
-   pull, p      pull a build result
-   version, v   display version information
+   pull, p      pull <build id>
+   version, v   print versions
    help, h      Shows a list of commands or help for one command
+
+GLOBAL OPTIONS:
+   --environment "ENVIRONMENT"  specify additional environment variables in a file
+   --debug                      print additional debug information
+   --journal                    Send logs to systemd-journald. Suppresses stdout logging.
+   --auth-token                 authentication token to use
+   --help, -h                   show help
+   --version, -v                print the version
 ```
 
 The *detect* command introspects your projects and generates
