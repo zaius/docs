@@ -32,6 +32,12 @@ build:
       # gulp build the docs    
       - hgen/gulp:
             tasks: build
+     
+    after-steps:
+        - slack-notifier:
+            url: $SLACK_URL
+            channel: notifications
+            username: megatron
 
 deploy:
     steps:
