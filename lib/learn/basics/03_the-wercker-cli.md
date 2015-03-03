@@ -105,7 +105,7 @@ of the CLI.
 
 ### Commands
 
-The wercker command line interface comes with the following commands:
+Below an overview of all the commands of the wercker CLI:
 
 ```bash
 NAME:

@@ -32,3 +32,6 @@ Next you want to make the CLI executable:
 ```sh
 chmod +x /usr/local/bin/wercker
 ```
+
+You can use the `wercker version` command to see if a new version of the
+CLI is available. See the [commands section](/docs/cli/commands.html) for more information.
