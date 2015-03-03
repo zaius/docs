@@ -14,6 +14,10 @@ of your application and is the box that runs your build pipelines.
 Service containers are spun up *separately* from your main language stack
 and can be leveraged for databases or queues.
 
+Note that some containers might need configuration or setup such as
+seeding the database with a username and password. Make sure you do this
+before using the container within the wercker pipeline.
+
 ### Specifying versions
 
 Docker repositories can hold various versions of an image. Tags can be leveraged to specify a specfic version of a container.
