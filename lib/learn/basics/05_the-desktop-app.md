@@ -8,5 +8,10 @@ It also comes with a *notification view* that shows notifications such as commen
 
 You're able to navigate the different views using keyboard shortcuts and if desktop notifications become too much you can turn these off.
 
+### Download
+
+You can download the desktop app from our [downloads
+section](http://wercker.com/downloads)
+
 [Using the web interface &rsaquo;](/learn/basics/04_using-the-web-interface.html "nav previous basics")
 [Wercker.yml &rsaquo;](/learn/wercker-yml/01_introduction.html "nav next yml")

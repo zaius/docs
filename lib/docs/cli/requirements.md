@@ -10,6 +10,8 @@ depending on your distribution and package manager. See Docker's
 [installation
 instructions](https://docs.docker.com/installation/#installation) fore more information.
 
+### Docker on Mac OSX
+
 If you are running Mac OSX you can install Docker using an installer
 called [boot2docker](https://docs.docker.com/installation/mac/) that
 will install [VirtualBox](https://www.virtualbox.org/) and a minimal
@@ -33,3 +35,8 @@ export DOCKER_TLS_VERIFY=1
 boot2docker init
 boot2docker up
 ```
+
+Note that opening up a new terminal or reboorting your machine might
+cause your Docker endpoint or boot2docker environment to be no longer
+avalable, so you might want to at least export the environment variables
+in your `.profile`, `.zshrc` or `.bashrc` file.
