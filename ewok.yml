@@ -38,6 +38,7 @@ build:
             url: $SLACK_URL
             channel: notifications
             username: megatron
+            notify_on: "failed"
 
 deploy:
     steps:
