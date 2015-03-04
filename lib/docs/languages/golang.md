@@ -33,8 +33,9 @@ box: google/golang
 
 ### Useful steps
 
-* golint
-* s3sync for syncing your binaries
+* [golint](https://app.wercker.com/#applications/548b1cef6b3ba8733d6d4db3/tab/details)
+* [s3sync for syncing your binaries](https://app.wercker.com/#applications/51c82a063179be4478002245/tab/details)
+* [setup-go-workspace](https://app.wercker.com/#applications/51fa5e6ba4037f7171000f75/tab/details)
 
 #### golint
 
