@@ -21,7 +21,7 @@ environment.
 
 - - -
 > Want to learn more about using local environment variables? Read more about this on the
-> [docs](/docs/cli/commands.html)
+> [docs](/docs/environment-variables/using-env-vars.html)
 
 [&lsaquo; Introduction to build](/learn/build/01_introduction.html "nav previous build")
 [Pulling builds &rsaquo;](/learn/build/03_pulling-builds.html "nav next build")
