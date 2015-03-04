@@ -8,6 +8,8 @@ It also comes with a *notification view* that shows notifications such as commen
 
 You're able to navigate the different views using keyboard shortcuts and if desktop notifications become too much you can turn these off.
 
+![image](/images/notifier-app.png)
+
 ### Download
 
 You can download the desktop app from our [downloads
