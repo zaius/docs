@@ -33,9 +33,8 @@ box: google/golang
 
 ### Useful steps
 
-* setup-go-workspace
 * golint
-* s3sync and mhook
+* s3sync for syncing your binaries
 
 #### setup-go-workspace
 
