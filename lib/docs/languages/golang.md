@@ -36,19 +36,6 @@ box: google/golang
 * golint
 * s3sync for syncing your binaries
 
-#### setup-go-workspace
-
-This step adds the project within your build pipeline to the go
-workspace hierarchy
-
-Usage:
-
-```yaml
-build:
-    steps:
-        - setup-go-workspace
-```
-
 #### golint
 
 A lint step for go source code that uses
@@ -72,7 +59,7 @@ you will need your AWS access keys and the bucket that you would like to deploy 
 ```yaml
 deploy:
     steps:
-    - s3sync@0.1.0-alpha2:
+    - s3sync:
         # use the build folder in the wercker pipeline
         source_dir: build/
         # delete remote files that are no longer in your local folder
@@ -118,7 +105,7 @@ build:
 
 deploy:
     steps:
-    - s3sync@0.1.0-alpha2:
+    - s3sync:
         source_dir: build/
         delete-removed: true
         bucket-url: $AWS_BUCKET_URL
