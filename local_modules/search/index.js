@@ -29,7 +29,7 @@ function render() {
         placeholder: 'search',
         className: 'search-input',
         onChange: handleChange.bind(this),
-        onKeyDown: clearSearch.bind(this)
+        onKeyDown: onKeyDown.bind(this)
       }),
       dom.img({src:'/images/icon-magnifier.svg', alt:'search'})
     )
@@ -55,7 +55,10 @@ function handleChange(e) {
  *
  * @param {Event} e
  */
-function clearSearch(e) {
+function onKeyDown(e) {
+  if (e.which == 13) {
+    e.preventDefault();
+  }
   if (e.which != 27) return;
 
   e.target.value = '';
