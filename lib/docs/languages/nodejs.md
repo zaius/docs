@@ -54,4 +54,5 @@ build:
 
 You can checkout and clone a sample application in ruby at the
 following location:
-[getting-started-nodejs](https://github.com/wercker/getting-started-nodejs)
+
+![image](/images/github-icon.svg)[getting-started-nodejs](https://github.com/wercker/getting-started-nodejs)

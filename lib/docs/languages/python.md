@@ -96,4 +96,5 @@ build:
 
 You can checkout and clone a sample application in python at the
 following location:
-[getting-started-python](http://github.com/wercker/getting-started-python)
+
+![image](/images/github-icon.svg)[getting-started-python](http://github.com/wercker/getting-started-python)

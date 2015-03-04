@@ -49,4 +49,5 @@ build:
 
 You can checkout and clone a sample application in ruby at the
 following location:
-[getting-started-ruby](https://github.com/wercker/getting-started-ruby)
+
+![image](/images/github-icon.svg)[getting-started-ruby](https://github.com/wercker/getting-started-ruby)
