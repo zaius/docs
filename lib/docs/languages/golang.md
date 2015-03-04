@@ -118,5 +118,4 @@ deploy:
 
 You can checkout and clone a sample application in golang at the
 following location:
-
 [getting-started-golang](http://github.com/wercker/gettingstarted-golang)
