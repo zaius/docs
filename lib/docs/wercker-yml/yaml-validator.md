@@ -1,5 +1,0 @@
----
-tags: example
----
-
-## Yaml validator

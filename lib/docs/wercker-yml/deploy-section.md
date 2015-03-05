@@ -1,5 +1,0 @@
----
-tags: example
----
-
-## Deploy section
