@@ -1,5 +1,28 @@
 ---
-tags: example
+tags: yml
 ---
 
 ## Creating a yaml
+
+A `wercker.yml` defines your automation pipeline for builds and deploys.
+
+Below a complete working example for a `nodejs` application.
+
+```yaml
+box: nodesource/trusty
+# Build definition
+build:
+  # The steps that will be executed on build
+  steps:
+    # A step that executes `npm install` command
+    - npm-install
+    # A step that executes `npm test` command
+    - npm-test
+
+    # A custom script step, name value is used in the UI
+    # and the code value contains the command that get executed
+    - script:
+        name: echo nodejs information
+        code: |
+          echo "node version $(node -v) running"
+          echo "npm version $(npm -v) running"
