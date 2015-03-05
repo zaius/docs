@@ -1,0 +1,27 @@
+/**
+ * Badge wip.
+ */
+
+.badge-wip {
+  position: absolute;
+  right: -45px;
+  top: -25px;
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+}
+
+.badge-wip-content {
+  margin-top: 60px;
+  width: 200px;
+  height: 40px;
+  background-color: $color-red_base;
+  color: $color-white;
+  font-size: $fontSize_small;
+  letter-spacing: .5px;
+  text-align: center;
+  line-height: 40px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
