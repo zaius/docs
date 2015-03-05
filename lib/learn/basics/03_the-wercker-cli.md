@@ -87,6 +87,8 @@ wercker login
 This will save a token in your `$HOME/.wercker` folder, so you don't
 have to login the next time.
 
+> Note that if you've signed up with GitHub you will need a password for the CLI which you can create on your profile page on wercker.
+
 ### Updating
 
 You can check if you're running the latest version of the CLI by

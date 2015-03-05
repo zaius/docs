@@ -26,13 +26,11 @@ projects.
 > Currently go, python, nodejs and ruby are supported in the detect
 > command
 
-Detect is a good starting point when create a new project from scratch.
-
 ### Build and Deploy
 
 The *build* and *deploy* commands execute these pipelines locally. Using
 the *pull* command you can download a container from the wercker
-platform and use *inspect* to debug this container locally.
+platform after which you can use Docker commands to debug this container locally.
 
 For using local environment variables you can use the global
 `--environment` flag that points to a file that holds environment
@@ -59,6 +57,8 @@ wercker login
 
 This will save a token in your `$HOME/.wercker` folder, so you don't
 have to login the next time.
+
+Note that if you've signed up with GitHub you will need a password for the CLI which you can create on your profile page on wercker.
 
 ### Update
 
