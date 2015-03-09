@@ -15,7 +15,7 @@ This is useful for debugging purposes and having a closer look at what
 happened during your build.
 
 As wercker currently supports [Docker containers](/docs/containers/dockerhub.html), introspection is
-doen via the Docker command.
+done via the Docker command.
 
 ### Using the Docker command
 
