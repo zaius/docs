@@ -1,6 +1,6 @@
 ## Using Containers
 
-You can use Docker cointainers obtained from the Hub by specifying them
+You can use Docker cointainers obtained from Docker Hub by specifying them
 in your [wercker.yml file](/learn/wercker-yml/01_introduction.html).
 
 ### Boxes and Services
@@ -26,7 +26,7 @@ box: python:2.7
 ```
 
 Without specifying a tag you will get the latest build of the container
-on the Hub, which in this case contains python version 3.
+from Docker Hub, which in this case contains python version 3.
 
 ```yaml
 # using python version 3

@@ -28,7 +28,7 @@ such as hostnames, ssh-keys, passwords and more.
 
 - - -
 > Want to learn more? Read more about using environment variables
-> [docs](/docs/cli/commands.html)
+> [docs](/docs/environment-variables/index.html)
 
 [&lsaquo; Sections](/learn/wercker-yml/02_sections.html "nav previous yml")
 [Creating a yaml &rsaquo;](/learn/wercker-yml/04_creating-a-yml.html "nav next yml")

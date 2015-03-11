@@ -17,7 +17,7 @@ migrating your application to wercker v2 (Ewok Edition).
 
 The classic `boxes` system no longer works in wercker v2. Instead, you
 can now use Docker containers in your
-[wercker.yml](http://localhost:1337/learn/wercker-yml/03_sections.html).
+[wercker.yml](/learn/wercker-yml/03_sections.html).
 
 In the example below the officual [Ruby
 container](https://registry.hub.docker.com/u/library/ruby/) from the

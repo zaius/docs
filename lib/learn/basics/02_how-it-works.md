@@ -18,10 +18,12 @@ Once a pipeline completes it either has a *passed* or *failed* status.
 
 ![image](/images/how-it-works.png)
 
-Once these steps have been completed your `build` has either passed or
-failed. If all went well you are ready to deploy your application to
-platforms such as [Heroku](http://heroku.com), [Amazon Web
-Services](http://aws.amazon.com) or other deploy targets. Similar to the build phase, the deployment part of the wercker [pipeline](/articles/introduction/pipeline.html) consists of [deploy steps](/articles/introduction/deploys.html).
+Once these steps have been completed your `build` has either passed or failed.
+If all went well you are ready to deploy your application to platforms such as
+[Heroku](http://heroku.com), [Amazon Web Services](http://aws.amazon.com) or
+other deploy targets. Similar to the build phase, the deployment part of the
+wercker [pipeline](/learn/pipelines/01_introduction.html) consists of [deploy
+steps](/learn/deploy/01_introduction.html#deploy-steps).
 
 
 Continuously repeating these steps allows you and your team to work in
