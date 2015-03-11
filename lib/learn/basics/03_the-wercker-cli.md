@@ -94,7 +94,7 @@ have to login the next time.
 You can check if you're running the latest version of the CLI by
 running:
 
-```sh
+```
 > wercker version
 
 Version: 1.0.41
@@ -109,7 +109,7 @@ of the CLI.
 
 Below an overview of all the commands of the wercker CLI:
 
-```bash
+```
 NAME:
    wercker - build and deploy from the command line
 
@@ -153,7 +153,7 @@ platform and use *inspect* to debug this container locally.
 
 - - -
 > Want to learn more? Read more about this on the
-> [docs](/docs/cli/commands.html)
+> [docs](/docs/cli/index.html)
 
-[&lsaquo; Signing up](/learn/basics/03_signing-up.html "nav previous basics")
+[&lsaquo; How it works](/learn/basics/02_how-it-works.html "nav previous basics")
 [Using the web interface &rsaquo;](/learn/basics/04_using-the-web-interface.html "nav next basics")

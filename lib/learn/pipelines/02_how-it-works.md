@@ -17,7 +17,7 @@ When a build pipeline starts it uses the *box* section in your
 [Docker Hub](/learn/containers/02_docker-hub.html), after which the
 [steps](/learn/steps/01_introduction.html) as defined in your `wercker.yml` are executed.
 
-Any [service](http://localhost:1337/learn/wercker-yml/03_sections.html)
+Any [service](/learn/wercker-yml/02_sections.html#services)
 container that was specified as well will be spun up as a separate
 container and available during the build pipeline. Communication with
 service containers is done through [environment variables](/learn/containers/03_using-containers.html).
@@ -27,9 +27,10 @@ service containers is done through [environment variables](/learn/containers/03_
 The starting point for a *deploy pipeline* is the artifact that was
 created during the build pipeline.
 
-Within pipelines [environment variables](/learn/containers/03_using-containers.html) can be used to for tokens,
-passwords and other configuration information that might be needed
-during the lifetime and execution of a pipeline.
+Within pipelines [environment variables](/learn/pipelines/03_using-env-
+vars.html) can be used to for tokens, passwords and other configuration
+information that might be needed during the lifetime and execution of a
+pipeline.
 
 [&lsaquo; Introduction to pipelines ](/learn/pipelines/01_introduction.html "nav previous pipelines")
 [Using env vars &rsaquo;](/learn/pipelines/03_using-env-vars.html "nav next pipelines")

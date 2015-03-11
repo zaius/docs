@@ -20,10 +20,10 @@ your various option for enabling wercker to access these repositories.
 
 The *application page* shows a live view of your
 [builds](/learn/build/01_introduction.html) and
-[deploys](/learn/deploy/01_introduction.html). Within the *settings tab*
-you can control various aspects of your application; invite team
-members, set up deploy targets and create [environment variables](/learn/wercker-yml/04_environment-variables.html) for
-your [pipelines](/learn/pipelines/01_introduction.html).
+[deploys](/learn/deploy/01_introduction.html). Within the *settings tab* you can
+control various aspects of your application; invite team members, set up deploy
+targets and create [environment variables](/learn/wercker-yml/03_environment-
+variables.html) for your [pipelines](/learn/pipelines/01_introduction.html).
 
 ![image](/images/app-stats.png)
 
@@ -42,7 +42,7 @@ run for specific deploy targets.
 
 - - -
 > Want to learn more? Read more about using the web interface
-> [docs](/docs/cli/commands.html)
+> [docs](/docs/web-interface/index.html)
 
-[&lsaquo; The wercker CLI](/learn/basics/04_the-wercker-cli.html "nav previous basics")
+[&lsaquo; The wercker CLI](/learn/basics/03_the-wercker-cli.html "nav previous basics")
 [The desktop app &rsaquo;](/learn/basics/05_the-desktop-app.html "nav next basics")

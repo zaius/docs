@@ -4,15 +4,15 @@ As mentioned in the introduction, the `wercker.yml` has different
 sections that each have a specific purpose. We will go over each
 individual section in this part.
 
-### Container
+### Box
 
 The box section allows you to choose a
-[container](/learn/containers/01_introduction.html) which will be used
-to run the builds and deploys. This item will contain a single reference
-to the box. The box will be prefixed by the owner and it can be
-postfixed with a `":"` followed by a version or tag. If no version is given, then
-the latest version will be used. If no user is specified, default
-containers from the [Docker Hub](/learn/containers/02_docker-hub.html) will be used.
+[container](/learn/containers/01_introduction.html) which will be used to run
+the builds and deploys. This item will contain a single reference to the box.
+The box will be prefixed by the owner and it can be postfixed with a `":"`
+followed by a tag. If no tag is given, then the tag "latest" will be used.
+If no user is specified, default containers from the [Docker
+Hub](/learn/containers/02_docker-hub.html) will be used.
 
 ```yaml
 box: ruby
@@ -20,7 +20,10 @@ box: ruby
 
 ### Services
 
-The services section allow you to specify supporting boxes, like databases or queue servers. This item should contain an array of supporting boxes. The reference will be the same as to a main box. So it will be prefixed and can contain a version.
+The services section allow you to specify supporting boxes, like databases or
+queue servers. This item should contain an array of supporting boxes. The
+reference will be the same as to a main box. So it will be prefixed and can
+contain a tag.
 
 ```yaml
 services:
@@ -29,7 +32,7 @@ services:
 ```
 
 This will load two services, `mongodb` and `redis`, both default Docker
-containers from the Hub and both using the latest versions.
+containers from Docker Hub, and both using the latest versions.
 
 ### Build
 
@@ -47,10 +50,11 @@ build:
             code: bundle exec middleman build --verbose
 ```
 
-Two types of [steps](/learn/steps/01_introduction.html) are defined in this build section. First a
-`bundle-install` step that installs the Rubygem dependencies. This step
-is availble from the [step marketplace](/learn/steps/06_step-registry.html). The second step in an inline
-script that in this case compiles our static site.
+Two types of [steps](/learn/steps/01_introduction.html) are defined in this
+build section. First a `bundle-install` step that installs the Rubygem
+dependencies. This step is availble from the [step registry](/learn/steps
+/04_step-registry.html). The second step in an inline script that in this case
+compiles our static site.
 
 ### Deploy
 

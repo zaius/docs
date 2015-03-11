@@ -4,7 +4,7 @@ tags: docker
 
 ## Using containers
 
-You can use Docker cointainers obtained from the Hub by specifying them
+You can use Docker cointainers obtained from Docker Hub by specifying them
 in your [wercker.yml file](/docs/wercker-yml/build-section.html).
 
 ### Boxes and Services
@@ -33,7 +33,7 @@ You can specify a version tag in your
 box: python:2.7
 ```
 
-Without specifying a tag you will get the latest build of the container.
+Without specifying a tag you will get the latest tag of the container.
 
 ```yaml
 # using python version 3
