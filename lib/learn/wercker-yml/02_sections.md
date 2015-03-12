@@ -1,6 +1,6 @@
 ## Sections
 
-As mentioned in the introduction, the `wercker.yml` has different
+As mentioned in the introduction, the wercker.yml has different
 sections that each have a specific purpose. We will go over each
 individual section in this part.
 
@@ -81,7 +81,7 @@ deploy:
 Here we see the Amazon Web Services S3 synchronization step that can
 sync static assets to S3. Environment variables are used that hold the
 correct credentials. The values of these environment variables are
-specified through the wercker web interface.
+specified through the [wercker web interface](/learn/pipelines/03_using-env-vars.html).
 
 Next, we have an [after-step](/learn/steps/03_after-steps.html) that notifies a Slack chat room of either
 passed or failed deploys in a [Slack](http://slack.com) chat room. The `$SLACK_URL` environment variables holds
