@@ -1,7 +1,8 @@
-## Introduction to build
+## Introduction to builds
 
 Builds can encompass your unit tests but also any other steps such as minifying javascript, compass compiliation, installing dependencies and packaging your code, thus readying it for deployment.
-Builds are triggered through a `git push` to your version control platform, such as GitHub and Bitbucket.
+Builds are triggered through a `git push` to your version control
+platform, such as GitHub or Bitbucket.
 
 -------
 

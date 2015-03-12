@@ -3,7 +3,7 @@
 ### Full working example
 
 If you're eager to grasp the `wercker.yml` format, below an example file
-that includes all elements which are explained as inline comments.
+that includes all elements which are explained with inline comments.
 
 ```yaml
 # use the default golang container from Docker Hub
