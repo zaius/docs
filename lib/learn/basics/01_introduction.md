@@ -1,7 +1,7 @@
 ## Introduction to wercker
 
 Wercker is an automation platform and toolchain that helps you speed up
-your development, build and deployment workflows.
+your development, build, and deployment workflows.
 
 You can use wercker to build, test and deliver your applications in an
 automated fashion, so you can focus on what matters most; **creating your
