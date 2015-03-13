@@ -20,12 +20,11 @@ Each build has a number of fixed and configurable steps. Here are the fixed step
 * store (cloud only).
 
 ### get code
-During this step wercker retreives the code from 
-Bitbucket/GitHub.
+During this step wercker retreives the code from Bitbucket/GitHub.
 
 ### setup environment
-During this step the relevant docker 
-containers are being pulled.
+During this step the relevant Docker containers are being pulled. This
+applies to the `main` box as well ass any services that you've defined.
 
 ### wercker-init
 This steps executes a small script that injects some utility bash functions. 
@@ -33,5 +32,8 @@ For more information see the [wercker-init repository](https://github.com/wercke
 
 ### store
 During this step two outputs of the pipeline run are stored; both the
-source code as tarball and a container (also compressed as a tarball)
+source code as tarball and a container (also compressed as a tarball).
+
+Between the *wercker-init* and *store* steps you can have your own
+steps to customize your pipelines.
 
