@@ -4,8 +4,8 @@ Often times an application needs specific information during a build or
 deploy. This could be an IP address for a server, a secret token or an
 SSH key pair.
 
-This type of information is either unique for each server you want to deploy to
-or may be too sensitive to store in the repository. Wercker supports a number
+This type of information is either unique for each server you want to
+deploy to, or maybe too sensitive to store in the git repository. Wercker supports a number
 of ways to store and expose this data as environment variables.
 
 > wercker can store sensitive information as environment variables that

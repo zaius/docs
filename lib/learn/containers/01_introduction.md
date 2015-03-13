@@ -1,6 +1,6 @@
 ## Introduction to containers
 
-Software containerization is way to isolate your applications and
+Software containerization is a way to isolate your applications and
 services from the rest of the operating system (or other containers).
 Not only are containers an isolated unit of work, they're also portable.
 
@@ -15,7 +15,7 @@ This means that you can ship and deploy these containers to your servers.
 
 ![image](/images/portable-container.png)
 
-Within pipelines containers are used to run your language stack (for
+Within pipelines, containers are used to run your language stack (for
 instance python) but also services such as a database.
 
 > Every wercker pipeline runs inside a container

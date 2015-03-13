@@ -1,6 +1,6 @@
 ## Using Containers
 
-You can use Docker cointainers obtained from Docker Hub by specifying them
+You can use Docker containers obtained from Docker Hub by specifying them
 in your [wercker.yml file](/learn/wercker-yml/01_introduction.html).
 
 ### Boxes and Services
@@ -9,6 +9,9 @@ The *box section* in your `wercker.yml` defines the main language stack
 of your application and is the box that runs your build pipelines.
 Service containers are spun up separately from your main language stack
 and can be leveraged for databases or queues.
+
+> Service containers are initialized separately from the main box in
+your pipelines
 
 ### Specifying versions
 
