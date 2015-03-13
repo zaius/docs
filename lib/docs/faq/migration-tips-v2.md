@@ -34,8 +34,7 @@ follows:
 box: nodesource/node
 ```
 
-Here we use the nodejs
-[containter](https://registry.hub.docker.com/u/nodesource/node/) from
+Here we use the nodejs [container](https://registry.hub.docker.com/u/nodesource/node/) from
 [Nodesource](https://nodesource.com/).
 
 If we want to specify a specific version or tag we do that in the
@@ -58,7 +57,7 @@ does nothing when used.
 #### Deployment
 
 As all build artifacts are effectively containers deploy targets other
-than custom are no longer supported. Please not that if you update a
+than custom are no longer supported. Please note that if you update a
 project to make use of Docker (Ewok version) and this project has
 autodeployment, this deploy will most likely fail. We will update our documentation in
 the future on how to deploy these containers.
