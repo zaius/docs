@@ -56,8 +56,9 @@
   color: $color-blue_light;
 }
 
-.doc-cards-item_title  {
+.doc-cards-item_title {
   display: block;
+  margin-top: 0;
   margin-bottom: 10px;
   padding-bottom: 10px;
   font-size: $fontSize_medium;
