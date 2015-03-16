@@ -17,23 +17,13 @@
   top: 0;
   left: 0;
   right: 0;
-  width: 100vw;
   background-color: $color-blue_base;
-
-  -webkit-animation: moveDown $duration_slow ease-out;
-  animation: moveDown $duration_slow ease-out;
+  transition: background-color $duration_fast $easing_smooth;
 }
 
-@-webkit-keyframes moveDown {
-  from {opacity: 0; }
-  to {opacity: 1; }
+.navbar-container.navbar-floating {
+  background-color: $color-blue_base;
 }
-
-@keyframes moveDown {
-  from {opacity: 0; }
-  to {opacity: 1; }
-}
-
 
 .navbar {
   margin-top: 16px;
