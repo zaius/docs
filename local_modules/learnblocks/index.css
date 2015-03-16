@@ -36,7 +36,7 @@
 }
 
 .learnblocks-item.active .learnblocks-item-icon {
-  box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0);
+  box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0);
 }
 
 .learnblocks-item:hover {
@@ -55,7 +55,7 @@
   /*margin-right: 0;*/
 }
 
-@media screen and (min-width:769px) and (max-width: 960px) {
+@media screen and (min-width: 769px) and (max-width: 960px) {
   .learnblocks-item {
     flex: 1 20%;
     margin: 0 10px 20px 0;
@@ -64,7 +64,7 @@
 
 @media screen and (max-width: 768px) {
   .learnblocks-item {
-    flex: 1 25%;
+    flex: 1 20%;
     margin: 0 10px 20px 0;
   }
 }
@@ -96,7 +96,7 @@
   padding-top: 20px;
   text-align: center;
   text-decoration: none;
-  box-shadow: inset 0px -35px 0px 0px rgba(0,0,0,.06);
+  box-shadow: inset 0px -35px 0px 0px rgba(0, 0, 0, 0.06);
 }
 
 /**
@@ -124,27 +124,33 @@
 .learnblocks-item_basics .learnblocks-item-icon {
   background-color: $color-fuchsia_base;
 }
-.learnblocks-item_wercker_yml .learnblocks-item-icon{
+
+.learnblocks-item_wercker_yml .learnblocks-item-icon {
   background-color: $color-skyblue_base;
   animation-delay: .04s;
 }
-.learnblocks-item_containers .learnblocks-item-icon{
+
+.learnblocks-item_containers .learnblocks-item-icon {
   background-color: $color-green_base;
   animation-delay: .1s;
 }
-.learnblocks-item_pipelines .learnblocks-item-icon{
+
+.learnblocks-item_pipelines .learnblocks-item-icon {
   background-color: $color-red_base;
   animation-delay: .14s;
 }
-.learnblocks-item_steps .learnblocks-item-icon{
+
+.learnblocks-item_steps .learnblocks-item-icon {
   background-color: $color-purple_base;
   animation-delay: .18s;
 }
-.learnblocks-item_build .learnblocks-item-icon{
+
+.learnblocks-item_build .learnblocks-item-icon {
   background-color: $color-yellow_base;
   animation-delay: .21s;
 }
-.learnblocks-item_deploy .learnblocks-item-icon{
+
+.learnblocks-item_deploy .learnblocks-item-icon {
   background-color: $color-orange_base;
   animation-delay: .27s;
 }
@@ -153,17 +159,41 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
 
+
 @keyframes move-in {
-  0% { transform: translateY(0px);opacity: 0; }
-  10% { transform: translateY(30px); }
-  50% { transform: translateY(-10px); }
-  70% { transform: translateY(6px); }
-  80% { transform: translateY(3px); }
-  90% { transform: translateY(1px); }
-  100% { transform: translateY(0px); opacity: 1;}
+  0% {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+
+  10% {
+    transform: translateY(30px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  70% {
+    transform: translateY(6px);
+  }
+
+  80% {
+    transform: translateY(3px);
+  }
+
+  90% {
+    transform: translateY(1px);
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }

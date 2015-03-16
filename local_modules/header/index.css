@@ -4,19 +4,19 @@
 
 .header {
   position: relative;
-  height: 30vh;
+  height: 32vh;
   max-height: 250px;
   background-color: $color-grey_lighter;
 }
 
-.header .flex-inner {
-}
+.header .flex-inner {}
 
 .header h1 {
-position: relative;
-left: -10px;
-font-weight: bold;
-font-size: 140px;
-color: #60718C;
-letter-spacing: -5px;
+  position: relative;
+  left: -10px;
+  font-weight: bold;
+  font-size: 140px;
+  color: #60718C;
+  letter-spacing: -5px;
+  line-height: 110px;
 }

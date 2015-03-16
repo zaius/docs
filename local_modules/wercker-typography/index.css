@@ -43,16 +43,19 @@ $fontWeight_bold: bold;
   font-weight: normal;
   font-style: normal;
 }
+
 .DINNextLTPro-Regular {
   font-family: DINNextLTPro-Regular;
   font-weight: normal;
   font-style: normal;
 }
+
 .DINNextLTPro-Medium {
   font-family: DINNextLTPro-Medium;
   font-weight: normal;
   font-style: normal;
 }
+
 .DINNextLTPro-Light {
   font-family: DINNextLTPro-Light;
   font-weight: normal;
@@ -106,7 +109,6 @@ h1 {
   letter-spacing: -2px;
 }
 
-
 h2 {
   font-family: DINNextLTPro-Light;
   line-height: $lineHeight_looser;
@@ -149,7 +151,6 @@ h4 {
   color: $color-blue_light;
   margin-top: 30px;
 }
-
 
 h5 {
   line-height: $lineHeight_base;

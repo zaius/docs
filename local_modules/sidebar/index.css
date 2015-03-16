@@ -21,6 +21,7 @@
   font-size: $fontSize_base;
   text-transform: capitalize;
   font-weight: $fontWeight_base;
+  line-height: $lineHeight_loose;
   font-family: 'Open Sans', sans-serif;
   color: $color-blue_base;
   text-decoration: none;
@@ -28,10 +29,10 @@
 
 .sidebar-li_sub {
   margin: 15px 0;
+  margin-left: 5px;
 }
 
 .sidebar-li_sub > a {
-  margin-left: 5px;
   text-transform: capitalize;
 }
 
