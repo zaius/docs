@@ -2,4 +2,4 @@
 tags: example
 ---
 
-## Explore the steps registry
+## Explore the step registry
