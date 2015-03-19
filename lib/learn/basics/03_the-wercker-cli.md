@@ -151,7 +151,7 @@ platform and use *inspect* to debug this container locally.
 
 - - -
 > Want to learn more? Read more about this on the
-> [docs](/docs/cli/index.html)
+> [docs](/docs/cli/requirements.html)
 
 [&lsaquo; How it works](/learn/basics/02_how-it-works.html "nav previous basics")
 [Using the web interface &rsaquo;](/learn/basics/04_using-the-web-interface.html "nav next basics")
