@@ -10,24 +10,24 @@ When you're part of the **owners** team on an organization you're allowed to acc
 
 ### People
 
-Here you can add users to be part of your organization.
+Managing members happens in the people section of your organization's settings page.
 
 ![image](/images/people.jpg)
 
 > You can only add users who are signed up for wercker
 
-Once you added a user you have the option to set them to `public` or `private`, this enables you to hide certain people of your organization from the public profile page.
+After adding a user to the organization, you can set the visibility of their membership as either `public` or `private`. That enables you to hide certain people from the organization's public profile.
 
 Now that you have added some people you can start adding them to a team.
 
 ### Teams
 
-Here you can create and manage teams of your organization.
+Managing teams happens in the teams tab of your organization's settings page.
 
 ![image](/images/create-team.jpg)
 
-The **owners** team is already created with creating the organization.
- This team is responsible for managing the organzation account, people and teams.
+All organizations have an **owners** team which is created together with the organization.
+The owners team is responsible for managing the organization's settings, members and teams.
 [Read more on the owners team &rsaquo;](/docs/organization/owners-team.html)
 
 When you create a new team called **frontend** for example, you can start adding team members.
@@ -38,4 +38,4 @@ When you create a new team called **frontend** for example, you can start adding
 
 Next step is adding an application to your organization so you can add teams to collaborate with.
 
-[Read more on adding an app &rsaquo;](/docs/organization/adding-an-application.html)
+[Read more on adding an application &rsaquo;](/docs/organization/adding-an-application.html)
