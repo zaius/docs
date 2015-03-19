@@ -6,7 +6,7 @@ tags: example
 
 An application that belongs to an organization only accepts teams as collaborators and always have the **owners** team setup as **admin** collaborator.
 
-[image of collaborators settings]
+![image](/images/collaborators.jpg)
 
 A **team** can have the same permissions as a single collaborator, that permissions are `build + view deploys`, `build + deployment` and `admin`. [Read more about permissons &rsaquo;](/docs/web-interface/roles-and-permissions.html)
 

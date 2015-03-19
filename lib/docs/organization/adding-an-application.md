@@ -12,11 +12,11 @@ There are two ways of adding an application to your organization. One is through
 
 When adding a new application on wercker you now have the option to choose the owner of the app.
 
-[image of choose owner]
+![image](/images/select-owner.jpg)
 
 When the app is created the **owners** team automatically gets **admin** rights to the app, as you can see in the collaborators section of the application settings.
 
-[image of collaborators settings]
+![image](/images/collaborators.jpg)
 
 Now you start adding the teams you want to collaborate on the new app.
 
@@ -25,7 +25,7 @@ Now you start adding the teams you want to collaborate on the new app.
 
 You can also transfer the ownership of an existing application to an organization. Note that you can only do this when on the **owners** of an organization.
 
-[image of transfer ownership settings]
+![image](/images/transfer-ownership.jpg)
 
 > When you're transferring an application all the access that has been granted earlier, automatically gets revoked. This is done because the “owners” team is responsible for all management of an organization and they can re add those users through teams.
 
@@ -38,7 +38,7 @@ Normally the owner's GitHub or BitBucket credentials are used for setting the st
 
 Because an organization doesn't have the option to connect to GitHub or BitBucket we added an extra option to select which user's credentials are used to do those API calls.
 
-[image of API user setting]
+![image](/images/api-user.jpg)
 
 When you're adding or transferring an application it will automatically set you as the API user on that app.
 
