@@ -1,5 +1,5 @@
 ---
-tags: example
+tags: organizations
 ---
 
 ## Owners team
