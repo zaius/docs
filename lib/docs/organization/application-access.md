@@ -15,4 +15,4 @@ are: `build + view deploys`, `build + deployment` and `admin`.
 
 Giving a team `admin` access means they are allowed to do the same type of
 management on an application as the **owners** team. Meaning they can also
-change the permission on a team or delete the applications.
+change the permission on a team or delete the application.

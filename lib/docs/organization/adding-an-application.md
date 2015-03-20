@@ -53,6 +53,6 @@ so you can select an organization member whose credentials will be used.
 
 ![image](/images/api-user.jpg)
 
-When you're adding or transferring an application wercker will automatically
-set you as the API user on that application.
+The account of the user who added the application is used by default.
+Users with admin permissions can change which account is used for this.
 

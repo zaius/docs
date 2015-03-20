@@ -172,25 +172,25 @@ hr + blockquote > p{
  * Learn article footer
  */
 
-.docs-articles.docs-learn > p:last-child  {
+.docs-articles.docs-articles_learn > p:last-child  {
   margin-top: 30px;
   padding-top: 20px;
   border-top: 1px solid $color-grey_light;
 }
 
-.docs-articles.docs-learn p a[title~="next"] {
+.docs-articles.docs-articles_learn a[title~="next"] {
   float: right;
   font-weight: $fontWeight_semibold;
   font-size: $fontSize_base;
 }
 
-.docs-articles.docs-learn p a[title~="previous"] {
+.docs-articles.docs-articles_learn a[title~="previous"] {
   float: left;
   font-weight: $fontWeight_semibold;
   font-size: $fontSize_base;
 }
 
-.docs-articles.docs-learn p a[title~="nav"] {
+.docs-articles.docs-articles_learn a[title~="nav"] {
   border-radius: 2px;
   padding: 10px 14px;
   color: $color-grey_lighter;
@@ -200,83 +200,83 @@ hr + blockquote > p{
   transition: all $duration_fastest $easing_smooth;
 }
 
-.docs-articles.docs-learn p a[title~="basics"] {
+.docs-articles.docs-articles_learn a[title~="basics"] {
   box-shadow: inset 0 0 0 2px $color-fuchsia_base;
   background-color: $color-fuchsia_base;
 }
 
-.docs-articles.docs-learn p a[title~="basics"]:hover {
+.docs-articles.docs-articles_learn a[title~="basics"]:hover {
   color: $color-fuchsia_base;
   background-color: transparent;
 }
 
-.docs-articles.docs-learn p a[title~="yml"] {
+.docs-articles.docs-articles_learn a[title~="yml"] {
   box-shadow: inset 0 0 0 2px $color-skyblue_base;
   background-color: $color-skyblue_base;
 }
 
-.docs-articles.docs-learn p a[title~="yml"]:hover {
+.docs-articles.docs-articles_learn a[title~="yml"]:hover {
   color: $color-skyblue_base;
   background-color: transparent;
 }
 
-.docs-articles.docs-learn p a[title~="containers"] {
+.docs-articles.docs-articles_learn a[title~="containers"] {
   box-shadow: inset 0 0 0 2px $color-green_base;
   background-color: $color-green_base;
 }
 
-.docs-articles.docs-learn p a[title~="containers"]:hover {
+.docs-articles.docs-articles_learn a[title~="containers"]:hover {
   color: $color-green_base;
   background-color: transparent;
 }
 
-.docs-articles.docs-learn p a[title~="pipelines"] {
+.docs-articles.docs-articles_learn a[title~="pipelines"] {
   box-shadow: inset 0 0 0 2px $color-red_base;
   background-color: $color-red_base;
 }
 
-.docs-articles.docs-learn p a[title~="pipelines"]:hover {
+.docs-articles.docs-articles_learn a[title~="pipelines"]:hover {
   color: $color-red_base;
   background-color: transparent;
 }
 
-.docs-articles.docs-learn p a[title~="steps"] {
+.docs-articles.docs-articles_learn a[title~="steps"] {
   box-shadow: inset 0 0 0 2px $color-purple_base;
   background-color: $color-purple_base;
 }
 
-.docs-articles.docs-learn p a[title~="steps"]:hover {
+.docs-articles.docs-articles_learn a[title~="steps"]:hover {
   color: $color-purple_base;
   background-color: transparent;
 }
 
-.docs-articles.docs-learn p a[title~="build"] {
+.docs-articles.docs-articles_learn a[title~="build"] {
   color: $color-white;
   box-shadow: inset 0 0 0 2px $color-yellow_dark;
   background-color: $color-yellow_dark;
 }
 
-.docs-articles.docs-learn p a[title~="build"]:hover {
+.docs-articles.docs-articles_learn a[title~="build"]:hover {
   color: $color-yellow_dark;
   background-color: transparent;
 }
 
-.docs-articles.docs-learn p a[title~="deploy"] {
+.docs-articles.docs-articles_learn a[title~="deploy"] {
   box-shadow: inset 0 0 0 2px $color-orange_base;
   background-color: $color-orange_base;
 }
 
-.docs-articles.docs-learn p a[title~="deploy"]:hover {
+.docs-articles.docs-articles_learn a[title~="deploy"]:hover {
   color: $color-orange_base;
   background-color: transparent;
 }
 
-.docs-articles.docs-learn p a[title~="docs"] {
+.docs-articles.docs-articles_learn a[title~="docs"] {
   box-shadow: inset 0 0 0 2px $color-blue_light;
   background-color: $color-blue_light;
 }
 
-.docs-articles.docs-learn p a[title~="docs"]:hover {
+.docs-articles.docs-articles_learn a[title~="docs"]:hover {
   color: $color-blue_light;
   background-color: transparent;
 }
