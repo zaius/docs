@@ -18,6 +18,28 @@ Hub](/learn/containers/02_docker-hub.html) will be used.
 box: ruby
 ```
 
+It is also possible to reference a box based on an `id`. This is
+convenient and more clear when using different container per
+[pipeline](/learn/pipelines/01_introduction.html) and as such it doesn't
+make sense to have a *top-level* box definition. You specify an `id` as
+follows:
+
+```yaml
+box:
+    id: nodesource/wheezy
+```
+
+It is also to specify environment variables that your container might
+need:
+
+```yaml
+box:
+    id: nodesource/wheezy
+    env:
+        SOME_ENV_VAR: foo
+```
+
+
 ### Services
 
 The services section allow you to specify supporting boxes, like databases or
@@ -33,6 +55,20 @@ services:
 
 This will load two services, `mongodb` and `redis`, both default Docker
 containers from Docker Hub, and both using the latest versions.
+
+Similar to non-service containers, you might require environment variables
+which you need to inject inside the container. This could be for
+instance a `username/password` combination. You can use the `env`
+clause to do exactly that:
+
+```yaml
+box:
+    id: mies/rethinkdb
+    env:
+        USERNAME: foo
+        PASSWORD: bar
+```
+
 
 ### Build
 

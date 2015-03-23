@@ -48,5 +48,6 @@ services:
     - redis:2.8
 ```
 
-Note that currently only *public* containers are supported from the
-Docker Hub.
+Currently only *public* containers are supported from the Docker Hub. 
+
+Note that it is also possible to specify a containers on a [per-pipeline basis](docs/pipelines/per-pipeline-containers.html).

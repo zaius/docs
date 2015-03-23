@@ -21,11 +21,20 @@ Docker repositories can hold various versions of an image. Tags can be leveraged
 container you want to use.
 
 You can specify a version tag in your
-[wercker.yml](/learn/wercker-yml/01_introduction.html) as follows.
+[wercker.yml](/learn/wercker-yml/01_introduction.html) as follows:
 
 ```yaml
 # using python version 2.7
 box: python:2.7
+```
+
+As mentioned in the
+[wercker.yml](/learn/wercker-yml/01_introduction.html) section it is
+also possible to reference a container via an `id` clause:
+
+```yaml
+box:
+    id: python:2.7
 ```
 
 Without specifying a tag you will get the latest build of the container
