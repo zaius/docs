@@ -34,7 +34,7 @@ Managing teams happens in the teams tab of your organization's settings page.
 All organizations have an **owners** team which is created together with the
 organization. The owners team is responsible for managing the organization's
 settings, members and teams.
-[Read more on the owners team &rsaquo;](/docs/organization/owners-team.html)
+[Read more on the owners team &rsaquo;](/docs/organizations/owners-team.html)
 
 When you create a new team called **frontend** for example, you can start
 adding team members.
@@ -46,4 +46,4 @@ adding team members.
 Next step is adding an application to your organization so you can add teams to
 collaborate with.
 
-[Read more on adding an application &rsaquo;](/docs/organization/adding-an-application.html)
+[Read more on adding an application &rsaquo;](/docs/organizations/adding-an-application.html)

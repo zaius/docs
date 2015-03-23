@@ -15,4 +15,4 @@ When you have created your organization a new **owners** team is added with you
 as the first team member. The **owners** team is responsible for the applications,
 people, teams, and access management of an organization.
 
-[Read more on People and Teams &rsaquo;](/docs/organization/people-and-teams.html)
+[Read more on People and Teams &rsaquo;](/docs/organizations/people-and-teams.html)
