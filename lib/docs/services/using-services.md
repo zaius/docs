@@ -7,19 +7,19 @@ tags: services
 Services are separate containers in your pipelines that you need
 alongside your *main* language stack container.
 
-Service containers are *spun up separate* from the main container. 
+Service containers are *spun up separate* from the main container.
 Examples of services are databases and queues. You specify service
 containers in your [wercker.yml](/docs/wercker-yml/creating-a-yml.html) file through the `services` clause:
 
 ```yaml
-services:
+- services:
     - mongodb
 ```
 
 Having multiple services is also possible:
 
 ```yaml
-services:
+- services:
     - mongodb
     - redis
 ```
@@ -38,8 +38,7 @@ reference them through an id:
 
 ```yaml
 services:
-    box:
-        id: mongodb
+    - id: mongodb
 ```
 
 Sometimes services need additional environment variables injected in
@@ -47,11 +46,10 @@ them:
 
 ```yaml
 services:
-    box:
-        id: mongodb
-        env:
-            USERNAME: foo
-            PASSWORD: bar
+    - id: mongodb
+    - env:
+      USERNAME: foo
+      PASSWORD: bar
 ```
 
 Please check the documentation of the container you are using if

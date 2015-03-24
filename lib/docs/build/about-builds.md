@@ -20,8 +20,8 @@ Each build has a number of fixed and configurable steps. Here are the fixed step
 * store (cloud only).
 
 ### get code
-During this step wercker retreives the code from your version control
-provider; either Bitbucket or GitHub.
+During this step wercker retrieves the code from your version control
+provider. Currently either Bitbucket or GitHub are supported.
 
 ### setup environment
 During this step the relevant Docker containers are being pulled. This
