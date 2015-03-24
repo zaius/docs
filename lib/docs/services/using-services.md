@@ -12,14 +12,14 @@ Examples of services are databases and queues. You specify service
 containers in your [wercker.yml](/docs/wercker-yml/creating-a-yml.html) file through the `services` clause:
 
 ```yaml
-- services:
+services:
     - mongodb
 ```
 
 Having multiple services is also possible:
 
 ```yaml
-- services:
+services:
     - mongodb
     - redis
 ```
@@ -31,9 +31,9 @@ services:
     - mongodb:2.2.7
 ```
 
-Though the above syntax is short and sweet, sometimes you need to pass
-along more information to you service container. As such you probably
-want to be explicit in defining your service containers and
+Though the above syntax is short and sweet, sometimes services need
+additional environment variables injected in them. As such you probably
+want to start off with being explicit in defining your service containers and
 reference them through an id:
 
 ```yaml
@@ -41,15 +41,14 @@ services:
     - id: mongodb
 ```
 
-Sometimes services need additional environment variables injected in
-them:
+and the pass along additional environment information:
 
 ```yaml
 services:
     - id: mongodb
     - env:
-      USERNAME: foo
-      PASSWORD: bar
+        USERNAME: foo
+        PASSWORD: bar
 ```
 
 Please check the documentation of the container you are using if
