@@ -49,8 +49,8 @@ binaries baked in.
 
 #### Known hosts
 
-In the classic `boxes` usually the fingerprints of bitbucket.org and github.com 
-were already added to the known\_hosts file. Docker containers may or may not 
+In the [classic stack](/docs/wercker-yml/wercker-classic.html) the fingerprints of bitbucket.org and github.com 
+were already added to the known\_hosts file on the *boxes*. Docker containers may or may not 
 also have these. If you encounter the message `host_key verification failed` 
 during your pipeline run, then you need to add the following step 
 [add-to-know_hosts](https://app.wercker.com/#applications/521764dde36a64ff110022f2/tab/details) 
