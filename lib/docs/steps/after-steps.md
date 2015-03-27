@@ -22,4 +22,4 @@ deploy:
             from-name: name
 ```
 
-One major difference between steps and after steps is that failing steps after-steps do not change not change the result of the pipeline run. 
+One major difference between steps and after steps is that failing after-steps do not change the result of the pipeline run.
