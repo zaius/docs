@@ -40,7 +40,8 @@ build:
          name: env
          code: env 
 (...) 
-``` 
+```
+
 To use these env vars in your application you
 would simply query the environment for the variables you are looking for. In
 this example, you would want the IP and the port elasticsearch is running on. In
