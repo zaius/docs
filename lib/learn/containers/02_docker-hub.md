@@ -21,5 +21,9 @@ containers are public on Docker Hub.
 In the next section we'll explain how you can use containers in your
 pipelines.
 
+- - -
+> Want to push containers to the Docker Hub? Read more on our
+> [docs](/docs/containers/pushing-containers.html)
+
 [&lsaquo; Introduction to containers](/learn/containers/01_introduction.html "nav previous containers")
 [Using containers &rsaquo;](/learn/containers/03_using-containers.html "nav next containers")
