@@ -14,9 +14,17 @@ Build:
 make
 ```
 
-Watch:
+## Live reload while working
+
+In one terminal run:
 ```sh
 make watch
+```
+
+and in another run:
+
+```sh
+make open
 ```
 
 ## License
@@ -26,3 +34,4 @@ make watch
 [metalsmith]: http://www.metalsmith.io/
 [node]: http://nodejs.com
 [npm]: http://npmjs.com
+
