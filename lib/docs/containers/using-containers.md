@@ -4,7 +4,7 @@ tags: docker
 
 ## Using containers
 
-You can use Docker cointainers obtained from Docker Hub by specifying them
+You can use Docker containers obtained from Docker Hub by specifying them
 in your [wercker.yml file](/docs/wercker-yml/build-section.html).
 
 ### Boxes and Services
@@ -48,6 +48,6 @@ services:
     - redis:2.8
 ```
 
-Currently only *public* containers are supported from the Docker Hub. 
+Currently only *public* containers are supported from the Docker Hub.
 
 Note that it is also possible to specify a containers on a [per-pipeline basis](docs/pipelines/per-pipeline-containers.html).
