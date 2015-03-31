@@ -58,6 +58,8 @@ Again the `$USERNAME/$PASSWORD` combo is passed along through environment variab
 that you either have exported or defined in the
 [wercker web interface](/learn/pipelines/03_using-env-vars.html).
 
-
-Note that the domain name for the private registry (in this case `quay.io`)
+The domain name for the private registry (in this case `quay.io`)
 is defined before the `username/repo` combination when using a custom registry.
+
+Note that as opposed to the [services](/docs/services/using-services.html) section, which is a list of items,
+the box section contains a singular item and as such is not preceeded by a `-`.
