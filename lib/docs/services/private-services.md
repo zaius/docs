@@ -1,11 +1,11 @@
 ---
-tags: services
+tags: services, docker
 ---
 
 ## Private services
 
 Similar to private containers for your
-[main boxes](/docs/containers/using-containers.html) wercker also
+[main boxes](/docs/containers/private-containers.html) wercker also
 allows for private service containers.
 
 Private services can either be pulled in from a private repository
