@@ -31,7 +31,7 @@ deploy:
         username: $USERNAME
         password: $PASSWORD
         tag: my-amazing-tag
-        repo: turing/bar
+        repository: turing/bar
         registry: https://registry.hub.docker.com
 ```
 
@@ -39,7 +39,7 @@ The `$USERNAME` and `$PASSWORD` fields are environment variables that
 you should specify through the [wercker web interface](/learn/pipelines/03_using-env-vars.html). The `repo`
 field contains the repository that you want to push to (in this case the
 username `turing` with the `bar` image), and `registry` is
-the URL of your Docker registry. 
+the URL of your Docker registry.
 
 > If you're pushing to the Docker Hub, the registry field is optional and can be omitted.
 
@@ -55,7 +55,7 @@ deploy:
         username: $USERNAME
         password: $PASSWORD
         tag: my-amazing-tag
-        repo: quay.io/knuth/foo
+        repository: quay.io/knuth/foo
         registry: https://quay.io
 ```
 
