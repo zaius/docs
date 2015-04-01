@@ -5,7 +5,6 @@
 var logo = require('@local/wercker-logo');
 var slugify = require('slugificate');
 var react = require('react');
-var sticky = require('react-sticky')
 
 var dom = react.DOM;
 var logoFull = logo.full;
@@ -27,7 +26,7 @@ module.exports = react.createClass({
 function render() {
   var state = this.state;
 
-  return sticky({stickyClassName: 'navbar-floating'},
+  return dom.div(null,
     dom.div({className: 'flex-outer navbar-container'},
       dom.div({className: 'flex-inner'},
         dom.div({className: 'navbar-logo'},
