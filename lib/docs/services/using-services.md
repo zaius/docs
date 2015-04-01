@@ -41,14 +41,14 @@ services:
     - id: mongodb
 ```
 
-and the pass along additional environment information:
+and the pass along additional environment information, for instance a username and password:
 
 ```yaml
 services:
-    - id: mongodb
-    - env:
-        USERNAME: foo
-        PASSWORD: bar
+    - id: mariadb
+      env:
+        MYSQL_ROOT_USERNAME: myusername
+        MYSQL_ROOT_PASSWORD: mysecretpassword
 ```
 
 Please check the documentation of the container you are using if
@@ -57,3 +57,6 @@ not.
 
 Note that as opposed to the [main containers](/docs/containers/using-containers.html) section, which is a singular item,
 the services section contains a list of items and as such is preceeded by a `-`.
+
+For more advanced usage of services including custom commands and defining
+services on a per-pipeline basis, see our [advanced services section](/docs/services/advanced-services.html)
