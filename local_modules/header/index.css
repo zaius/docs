@@ -9,8 +9,6 @@
   background-color: $color-grey_lighter;
 }
 
-.header .flex-inner {}
-
 .header h1 {
   position: relative;
   left: -10px;
