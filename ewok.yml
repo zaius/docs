@@ -4,28 +4,21 @@ build:
   # The steps that will be executed on build
     steps:
         - script:
+            name: set NODE_ENV
+            code: export NODE_ENV=production
+
+        - script:
             name: set up permissions
             code: |
-                export NODE_ENV=development
                 chmod 777 -R .
                 chmod 777 -R $WERCKER_CACHE_DIR
 
         - script:
             name: install npm@2
-            code: |
-                npm cache clean
-                sudo npm i -g npm
+            code: npm i -g npm
 
         - npm-install
 
-        - script:
-            name: npm postinstall
-            code: |
-                rm -rf node_modules/@local
-                ./node_modules/.bin/linklocal link -r
-                ./node_modules/.bin/linklocal list -r | ./node_modules/.bin/bulk -c 'npm install'
-
-        # gulp build the docs
         - hgen/gulp:
             tasks: build
 
