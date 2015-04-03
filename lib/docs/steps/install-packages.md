@@ -26,3 +26,6 @@ You can also specify version:
     - install-packages:
         packages: apache2=2.2.20-1ubuntu1
 ```
+
+Note that this currently only works for ubuntu-based distributions. We're working
+on making this step more portable.
