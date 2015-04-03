@@ -1,5 +1,5 @@
 ---
-tags: environment variables
+tags: services, postgres
 ---
 
 ## PostgreSQL
