@@ -9,11 +9,28 @@ migrating your application to wercker v2 (Ewok Edition).
 
 ### Table of contents
 
-* Docker containers
+* What is this Docker-based stack (Ewok)?
+* How do I migrate to the new Docker-based stack?
+* How do I get started with the Docker stack and containers?
 * Git Submodules
 * Using sudo
 
-#### Docker containers
+#### What is this Docker-based stack (Ewok)?
+
+Ewok is the codename of our new Docker stack. Instead of Linux containers
+you can now use Docker containers for your build and deploy pipelines.
+You can [pull](/docs/containers/private-containers.html) and [push](/docs/containers/pushing-containers.html)
+containers from the [Docker Hub](/docs/containers/dockerhub.html) or from privates registries.
+
+#### How do I migrate to the new Docker-based stack?
+
+On the settings page for your project there is an *infrastructure* section
+with a dropdown menu. You can select *verion 5* here for the Docker-base stack.
+*Note* that a [wercker.yml](/docs/wercker-yml/creating-a-yml.html) for
+[classic](/docs/wercker-yml/wercker-classic.html) boxes does not work for
+with the Docker-based stack! (see the next point)
+
+#### How do I get started with the Docker stack and containers?
 
 The classic `boxes` system no longer works in wercker v2. Instead, you
 can now use Docker containers in your
