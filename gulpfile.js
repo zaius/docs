@@ -57,14 +57,7 @@ var docs = {
   ]
 };
 
-var styleFiles = [
-  'node_modules/css-wipe/index.css',
-  'node_modules/@local/wercker-animations/index.css',
-  'node_modules/@local/wercker-colors/index.css',
-  'node_modules/@local/wercker-fonts/index.css',
-  'node_modules/@local/wercker-typography/index.css',
-  // '**/*.css'
-];
+var styleFiles = ['index.css'];
 
 var imageFiles = [
   '**/*.jpg',
@@ -93,7 +86,6 @@ gulp.task('styles', function() {
     .src(styleFiles)
     .pipe(concat('build.css'))
     .pipe(myth())
-    .pipe(sass())
     .pipe(gulp.dest(path.join(__dirname, '/build/')));
 });
 
