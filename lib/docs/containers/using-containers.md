@@ -5,7 +5,7 @@ tags: docker
 ## Using containers
 
 You can use Docker containers obtained from Docker Hub by specifying them
-in your [wercker.yml file](/docs/wercker-yml/build-section.html).
+in your [wercker.yml file](/docs/wercker-yml/creating-a-yml.html).
 
 ### Boxes and Services
 
