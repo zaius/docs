@@ -1,13 +1,13 @@
 ---
-tags: example
+tags: steps
 ---
 
 ## About steps
 
 Steps make up the wercker
-[pipeline](/docs/pipeline/about.html) and can either be
-executed in the [build](/docs/build/about.html) or
-[deploy](/docs/deploys/deploy-steps.html) phase within the pipeline.
+[pipeline](/learn/pipelines/01-introduction.html) and can either be
+executed in the [build](/learn/build/01_introduction.html) or
+[deploy](/docs/deploy/deploy-steps.html) phase within the pipeline.
 
 Examples of a **build step** are compilation of your code, running your
 unit tests or performing
@@ -15,12 +15,12 @@ unit tests or performing
 
 A **deploy step** could be the synchronization of static assets, for
 which we've created the [s3sync step](https://github.com/wercker/step-s3sync/),
-that takes some Amazon Web Services credentials and bucket information and 
+that takes some Amazon Web Services credentials and bucket information and
 places these assets on Amazon S3.
 
-You define your steps in the [wercker.yml](/docs/wercker-yml/creating-a-yaml.html) file
-in your application. Steps can have parameters. Some parameters are 
-optional and some are required. Consult the **readme** of the step to see the 
+You define your steps in the [wercker.yml](/docs/wercker-yml/creating-a-yml.html) file
+in your application. Steps can have parameters. Some parameters are
+optional and some are required. Consult the **readme** of the step to see the
 available options.
 
 An example of a step with parameters:
@@ -38,7 +38,7 @@ An example of a step with parameters:
 
 This will pass two parameters to the **npm install** step, `package` and `strict-ssl`.
 
-Apart from predefined steps there are also **custom**, or inline 
+Apart from predefined steps there are also **custom**, or inline
 steps. Custom steps are basically bash scripts defined via the 'script' clause,
 requiring **name** and **code** elements:
 
@@ -59,7 +59,7 @@ information`.
 
 #### after-steps
 
-Wercker also has the notion of [after-steps](/docs/steps/after-steps.html) ideally suited for notifications. See the subsection for [wercker.yml](/docs/wercker-yml) for more information.
+Wercker also has the notion of [after-steps](/docs/steps/after-steps.html) ideally suited for notifications. See the subsection for [wercker.yml](/docs/wercker-yml/creating-a-yml.html) for more information.
 
 #### Changing the working directory
 
