@@ -38,7 +38,7 @@
 }
 
 .doc-cards-item p {
-  line-height: $lineHeight_loose;
+  line-height: $lineHeight_base;
   font-size: $fontSize-small;
   color: $color-blue_light;
 }

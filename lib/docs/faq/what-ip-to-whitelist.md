@@ -4,6 +4,8 @@ tags: example
 
 ## What IP addresses does wercker use that you can whitelist
 
+These IP addresses only apply for classic wercker builds and deploys.
+
 * 54.84.120.252
 * 54.84.97.93
 * 54.84.78.203
