@@ -3,8 +3,9 @@
  */
 .gh-button {
   position: absolute;
-  top: 48px;
+  top: 32px;
   right: 30px;
+  text-decoration: none;
 }
 
 .gh-button-button {

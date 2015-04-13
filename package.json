@@ -8,7 +8,8 @@
     "build": "make build",
     "postinstall": "echo 'linklocal' && linklocal link -r && linklocal list -r | bulk -c 'npm install'",
     "start": "make all",
-    "test": "make test"
+    "test": "make test",
+    "watch": "watchify index.js -t brfs -o build/build.js"
   },
   "repository": "wercker/dev",
   "keywords": [],
@@ -18,6 +19,7 @@
     "@docs/quicklinks": "file:docs-quicklinks",
     "@docs/articles": "file:docs-articles",
     "@docs/footer": "file:docs-footer",
+    "@docs/gh-button": "file:docs-gh-button",
     "@docs/header": "file:docs-header",
     "@docs/highlight": "file:docs-highlight",
     "@docs/learnblocks": "file:docs-learnblocks",
@@ -38,7 +40,9 @@
     "object-assign": "^1.0.0",
     "global": "^4.3.0",
     "react": "^0.11.2",
-    "slugificate": "^0.2.1"
+    "slugificate": "^0.2.1",
+    "through2": "^0.6.3",
+    "webcomponents.js": "^0.6.0"
   },
   "devDependencies": {
     "brfs": "^1.2.0",
@@ -67,7 +71,7 @@
     "metalsmith-templates": "^0.6.0",
     "mustache": "^0.8.2",
     "should": "^4.1.0",
-    "through2": "^0.6.3",
-    "vinyl-source-stream": "^1.0.0"
+    "vinyl-source-stream": "^1.0.0",
+    "watchify": "^3.1.1"
   }
 }

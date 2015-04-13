@@ -1,5 +1,16 @@
 {
   "name": "@docs/gh-button",
   "version": "1.0.0",
-  "repository": "@docs"
+  "repository": "@docs",
+  "browserify": {
+    "transform": [
+      "brfs"
+    ]
+  },
+  "dependencies": {
+    "custom-element": "^2.0.0"
+  },
+  "devDependencies": {
+    "brfs": "^1.4.0"
+  }
 }

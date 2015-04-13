@@ -57,15 +57,10 @@
       <div class="flex-inner">
         <div class="flex-outer docs-content">
           <aside class="sidebar"></aside>
-          <aside class="docs-articles">
-            <div class="gh-button">
-              <a href="" class="gh-button-button">
-                <img src="/images/octocat.svg">
-                edit on GitHub
-              </a>
-            </div>
+          <main class="docs-articles">
+            <a is="gh-button"></a>
             {{{contents}}}
-          </aside>
+          </main>
         </div>
       </div>
     </section>
@@ -149,7 +144,6 @@
         </div>
       </footer>
     </section>
-
     <script src="/build.js"></script>
     <script type="text/javascript">
       var _gaq = _gaq || [];
