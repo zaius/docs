@@ -41,19 +41,19 @@ var moduleEntryPoint = [
 
 var docs = {
   docs: [
-    'lib/docs/**/*.md',
-    'lib/docs/*.md'
+    'content/docs/**/*.md',
+    'content/docs/*.md'
   ],
   index: [
-    'lib/index/**/*.md',
-    'lib/index/*.md'
+    'content/index/**/*.md',
+    'content/index/*.md'
   ],
   learn: [
-    'lib/learn/**/*.md',
-    'lib/learn/*.md'
+    'content/learn/**/*.md',
+    'content/learn/*.md'
   ],
   error: [
-    'lib/error/*.md'
+    'content/error/*.md'
   ]
 };
 
@@ -65,10 +65,10 @@ var imageFiles = [
   '**/*.gif',
   '**/*.svg',
   '**/*.ico',
-  'lib/**/*.jpg',
-  'lib/**/*.png',
-  'lib/**/*.gif',
-  'lib/**/*.svg'
+  'content/**/*.jpg',
+  'content/**/*.png',
+  'content/**/*.gif',
+  'content/**/*.svg'
 ];
 
 var fontFiles = [
@@ -96,7 +96,7 @@ gulp.task('modules', function() {
   var env = process.env.NODE_ENV || 'development';
   var debug = (env === 'development');
   var opts = {
-    path: path.resolve('./lib'),
+    path: path.resolve('./content'),
     noDot: true
   }
   dtj(opts, './build/db.json', function(err) {
@@ -165,9 +165,9 @@ gulp.task('watch', function() {
   // determine which folders to watch for doc changes.
   var watchDocs = [];
   Object.keys(docs).forEach(function(key) {
-    watchDocs.push('lib/' + key + '/*.md');
-    watchDocs.push('lib/' + key + '/**/*.md');
-    watchDocs.push('lib/' + key + '/index.html');
+    watchDocs.push('content/' + key + '/*.md');
+    watchDocs.push('content/' + key + '/**/*.md');
+    watchDocs.push('content/' + key + '/index.html');
   });
 
   gulp.watch(['/build/**']).on('change', livereload.changed);
@@ -216,7 +216,7 @@ function buildTemplate(tn) {
     }))
     .use(templates({
       engine: 'mustache',
-      directory: 'lib/' + tn
+      directory: 'content/' + tn
     }));
 
   function parseFile(file) {
