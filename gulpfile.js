@@ -1,24 +1,27 @@
 /*eslint no-console: 0 camelcase: 0*/
 
-var templates   = require('metalsmith-templates');
-var highlight   = require('metalsmith-metallic');
-var markdown    = require('metalsmith-markdown');
-var source      = require('vinyl-source-stream');
-var spawn       = require('child_process').spawn;
-var dtj         = require('directory-to-json');
+var assert = require('assert');
+var assign = require('object-assign');
+var browserify = require('browserify');
+var concat = require('gulp-concat');
+var dtj = require('directory-to-json');
+var envify = require('envify/custom');
+var flatten = require('gulp-flatten');
 var frontMatter = require('gulp-front-matter');
-var livereload  = require('gulp-livereload');
-var envify      = require('envify/custom');
-var assign      = require('object-assign');
-var flatten     = require('gulp-flatten');
-var concat      = require('gulp-concat');
-var browserify  = require('browserify');
-var gulpsmith   = require('gulpsmith');
-var sass        = require('gulp-sass');
-var myth        = require('gulp-myth');
-var assert      = require('assert');
-var gulp        = require('gulp');
-var path        = require('path');
+var gulp = require('gulp');
+var gulpsmith = require('gulpsmith');
+var highlight = require('metalsmith-metallic');
+var livereload = require('gulp-livereload');
+var markdown = require('metalsmith-markdown');
+var myth = require('gulp-myth');
+var path = require('path');
+var sass = require('gulp-sass');
+var source = require('vinyl-source-stream');
+var spawn = require('child_process').spawn;
+var streamify = require('gulp-streamify');
+var templates = require('metalsmith-templates');
+var through = require('through2');
+var uglify = require('gulp-uglify');
 
 module.exports = gulp;
 
@@ -98,7 +101,7 @@ gulp.task('styles', function() {
  */
 gulp.task('modules', function() {
   var env = process.env.NODE_ENV || 'development';
-  var debug = (env !== 'production');
+  var debug = (env === 'development');
   var opts = {
     path: path.resolve('./lib'),
     noDot: true
@@ -114,6 +117,7 @@ gulp.task('modules', function() {
       .transform(envify({NODE_ENV: env}))
       .bundle()
       .pipe(source('build.js'))
+      .pipe(debug ? through.obj() : streamify(uglify()))
       .pipe(gulp.dest(path.join(__dirname, '/build/')));
   }
 });

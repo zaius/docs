@@ -5,7 +5,9 @@ Wercker docs built with [gulp][gulp] and [metalsmith][metalsmith].
 ## Installation
 With [node][node] and [npm@2][npm] installed:
 ```sh
-git clone https://github.com/wercker/dev
+git clone https://github.com/wercker/docs
+cd docs
+npm install
 ```
 
 ## Building
@@ -34,4 +36,3 @@ make open
 [metalsmith]: http://www.metalsmith.io/
 [node]: http://nodejs.com
 [npm]: http://npmjs.com
-
