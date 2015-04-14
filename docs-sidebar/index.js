@@ -48,7 +48,6 @@ function render() {
  * Render the sidebar.
  */
 function renderSidebar(basePath, state) {
-  console.log(this.state.data)
   return dom.section({className: 'section-sidebar'},
     search({data: this.props.data, setState: this.setState.bind(this)}),
     dom.section({className: 'sidebar-list'},
@@ -99,7 +98,6 @@ function stripFileName(valTwo) {
  * @param {String[]} val
  */
 function createHref(base, key, val) {
-  console.log(base, key, val)
   return '/'
     + base
     + '/'
