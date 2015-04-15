@@ -1,12 +1,11 @@
-
-var search  = require('@docs/search');
 var window  = require('global/window');
 var slugify = require('slugificate');
 var react   = require('react');
 
 var db = require('../../../build/db.json');
-var ss = require('./simple-sidebar');
 var scrubDataSet = require('./scrubData');
+var ss = require('./list-learn');
+var search = require('./search');
 
 var dom = react.DOM;
 

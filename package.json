@@ -25,7 +25,6 @@
     "@docs/nav": "file:docs-nav",
     "@docs/page-not-found": "file:docs-page-not-found",
     "@react/icon": "file:react-icon",
-    "@docs/search": "file:docs-search",
     "@docs/sidebar": "file:docs-sidebar",
     "@wercker/wercker-animations": "file:wercker-animations",
     "@wercker/wercker-colors": "file:wercker-colors",

@@ -1,7 +1,4 @@
-
-var search = require('@docs/search');
-var react = require('react');
-
+var react = require('react')
 var textFilter = require('./algorithm');
 
 var dom = react.DOM;
@@ -38,7 +35,6 @@ function render() {
 
 /**
  * Handle change.
- *
  * @param {Event} e
  */
 function handleChange(e) {
@@ -52,17 +48,12 @@ function handleChange(e) {
 
 /**
  * Clear input field if `esc` is pressed
- *
  * @param {Event} e
  */
 function onKeyDown(e) {
-  if (e.which == 13) {
-    e.preventDefault();
-  }
-  if (e.which != 27) return;
+  if (e.which === 13) e.preventDefault();
+  if (e.which !== 27) return;
 
   e.target.value = '';
-  this.props.setState({
-    data: this.props.data
-  });
+  this.props.setState({data: this.props.data});
 }
