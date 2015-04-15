@@ -1,78 +1,52 @@
-var assert = require('assert');
-
-/**
- * Expose `filter()`.
- */
+const assert = require('assert');
 
 module.exports = filter;
 
-/**
- * Create a filter
- *
- * @param {Object} opts
- *   @prop {String} query
- *   @prop {String[]} fields
- * @return {Function}
- * @api public
- */
-
+// filter an object of arrays
+// for the query
+// obj, str -> fn
 function filter(data, query) {
-
   if (!query) return data;
 
-  // create regexp
   var regexps = createRegExps(query)
-  var objKeys = Object.keys(data);
+  var keys = Object.keys(data);
 
-  // cast all values to array
-  var vals = objKeys
-    .map((key) => data[key])
-    .map((val) => Array.isArray(val) ? val : [val]);
+  const arrarr = keys.map((key) => {
+    const val = data[key];
+    return Array.isArray(val) ? val : [val];
+  });
 
-  // filter values in array
-  var arr = vals.map((val) =>
-    val.filter((inn) =>
-      regexps.every((regexp) =>
-        inn.match(regexp)
-      )
-    )
-  );
+  const barr = arrarr.map((val) => val.filter(matchRegex));
 
-  // prune empty values in object.
+  // build response object
   var nw = {};
-  arr.forEach((val, i) => {
-    var objKey = objKeys[i];
+  barr.forEach((val, i) => {
+    const key = keys[i];
+    if (matchRegex(key)) return nw[key] = data[key];
+    if (val.length) return nw[key] = val;
 
-    if (val.length) return nw[objKey] = val;
-
-    var keyMatch = regexps
-      .every((regexp) => objKey.match(regexp));
-
-    if (keyMatch) nw[objKey] = objKey;
+    const keyMatch = regexps.every((regexp) => key.match(regexp));
+    if (keyMatch) nw[key] = key;
   });
 
   return nw;
+
+  // str -> bool
+  function matchRegex(val) {
+    return regexps.every((regex) => val.match(regex));
+  }
 };
 
-/**
- * Create regexsp for query.
- *
- * @param {String} querytext
- * @return {RegExp[]}
- * @api private
- */
+// create regexps for query
+// str -> regex
+function createRegExps(query) {
+  query = query || '';
 
-function createRegExps(qr) {
-  assert(!qr || 'string' == typeof qr, 'queryText should be a string');
-
-  qr = qr || '';
-
-  var nlz = qr.trim().toLowerCase();
-
-  var parts = nlz
+  return query
+    .trim()
+    .toLowerCase()
     .split(/[\s\'']+/)
     .filter((s) => !!s)
-    .filter((s, index) => index < 10);
-
-  return parts.map((i) => new RegExp('\\b' + i, 'i'));
+    .filter((s, index) => index < 10)
+    .map((i) => new RegExp('\\b' + i, 'i'));
 }

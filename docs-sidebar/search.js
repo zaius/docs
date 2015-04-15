@@ -3,9 +3,7 @@ var textFilter = require('./algorithm');
 
 var dom = react.DOM;
 
-/**
- * Create class.
- */
+// create class
 module.exports = react.createClass({
   displayName: 'search',
   props: {
@@ -15,9 +13,7 @@ module.exports = react.createClass({
   render: render
 });
 
-/**
- * Render.
- */
+// render
 function render() {
   return dom.section({className: 'section-search'},
     dom.form(null,
@@ -33,10 +29,8 @@ function render() {
   );
 }
 
-/**
- * Handle change.
- * @param {Event} e
- */
+// handle change
+// e -> null
 function handleChange(e) {
   var setParentState = this.props.setState;
   var parentData = this.props.data;
@@ -46,10 +40,9 @@ function handleChange(e) {
   });
 }
 
-/**
- * Clear input field if `esc` is pressed
- * @param {Event} e
- */
+// clear input field if `esc` is pressed.
+// ignore `enter`.
+// e -> null
 function onKeyDown(e) {
   if (e.which === 13) e.preventDefault();
   if (e.which !== 27) return;
