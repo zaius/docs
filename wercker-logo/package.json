@@ -1,0 +1,8 @@
+{
+  "name": "@wercker/logo",
+  "repository": "@wercker",
+  "version": "1.0.0",
+  "browserify": {
+    "transform": ["brfs"]
+  }
+}

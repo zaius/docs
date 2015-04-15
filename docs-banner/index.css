@@ -1,0 +1,17 @@
+/**
+ * Banner.
+ */
+
+.banner {
+  margin-top: 20px;
+  height: 50px;
+  text-align: center;
+}
+
+.banner p {
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  border-radius: 2px;
+  background: var(--color-grey_lighter);
+}
