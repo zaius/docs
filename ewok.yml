@@ -4,10 +4,6 @@ build:
   # The steps that will be executed on build
     steps:
         - script:
-            name: set NODE_ENV
-            code: export NODE_ENV=production
-
-        - script:
             name: set up permissions
             code: |
                 chmod 777 -R .
@@ -17,10 +13,13 @@ build:
             name: install npm@2
             code: npm i -g npm
 
-        - npm-install
+        - script:
+            name: npm install
+            code: npm install
 
-        - hgen/gulp:
-            tasks: build
+        - script:
+            name: build
+            code: NODE_ENV=production make build
 
     after-steps:
         - slack-notifier:

@@ -5,6 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
+    "build": "make build",
     "postinstall": "echo 'linklocal' && linklocal link -r && linklocal list -r | bulk -c 'npm install'",
     "start": "make all",
     "test": "make test"
