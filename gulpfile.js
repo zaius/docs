@@ -15,7 +15,6 @@ var livereload = require('gulp-livereload');
 var markdown = require('metalsmith-markdown');
 var myth = require('gulp-myth');
 var path = require('path');
-var sass = require('gulp-sass');
 var source = require('vinyl-source-stream');
 var spawn = require('child_process').spawn;
 var streamify = require('gulp-streamify');
