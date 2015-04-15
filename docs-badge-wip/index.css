@@ -21,7 +21,5 @@
   letter-spacing: .5px;
   text-align: center;
   line-height: 40px;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
