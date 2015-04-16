@@ -5,6 +5,11 @@ var nav = require('@docs/nav');
 var react = require('react');
 var dom = react.DOM;
 
+require('webcomponents.js');
+
+// register custom elements
+document.registerElement('gh-button', require('@docs/gh-button'));
+
 var learnblocksSelector = document.querySelector('.learn-blocks');
 if (learnblocksSelector) react.renderComponent(learnblocks(), learnblocksSelector);
 
@@ -14,4 +19,5 @@ if (navSelector) react.renderComponent(nav(), navSelector);
 var sidebarSelector = document.querySelector('.sidebar');
 if (sidebarSelector) react.renderComponent(sidebar()(), sidebarSelector);
 
-var metrics = require('@docs/metrics');
+// init metrics
+require('@docs/metrics');

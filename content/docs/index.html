@@ -57,7 +57,10 @@
       <div class="flex-inner">
         <div class="flex-outer docs-content">
           <aside class="sidebar"></aside>
-          <aside class="docs-articles">{{{contents}}}</aside>
+          <main class="docs-articles">
+            <a is="gh-button"></a>
+            {{{contents}}}
+          </main>
         </div>
       </div>
     </section>
@@ -141,7 +144,6 @@
         </div>
       </footer>
     </section>
-
     <script src="/build.js"></script>
     <script type="text/javascript">
       var _gaq = _gaq || [];

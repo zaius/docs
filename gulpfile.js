@@ -104,7 +104,7 @@ gulp.task('modules', function() {
   });
 
   function bundle() {
-    browserify(moduleEntryPoint, {debug: debug})
+    browserify(moduleEntryPoint)
       .transform('brfs')
       .transform(envify({NODE_ENV: env}))
       .bundle()

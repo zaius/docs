@@ -1,0 +1,29 @@
+/**
+ * Edit on GitHub button.
+ */
+.gh-button {
+  position: absolute;
+  top: 32px;
+  right: 30px;
+  text-decoration: none;
+}
+
+.gh-button-button {
+  padding: 8px 10px;
+  border-radius: 2px;
+  color: var(--color-skyblue_base);
+  background-color: transparent;
+  font-weight: var(--fontWeight_light);
+  font-size: var(--fontSize_small);
+  text-decoration: none;
+  box-shadow: inset 0 0 0 1px var(--color-skyblue_base);
+  transition: all var(--duration_fastest) var(--easing_smooth);
+}
+
+.gh-button-button:hover {
+  color: var(--color-skyblue_base);
+}
+
+.gh-button-button img {
+  vertical-align: bottom;
+}
