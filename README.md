@@ -1,5 +1,7 @@
 # wercker-docs
 
+[![wercker status](https://app.wercker.com/status/05eb642a41844e42b392d2db39bb7552/m "wercker status")](https://app.wercker.com/project/bykey/05eb642a41844e42b392d2db39bb7552)
+
 Wercker docs built with [gulp][gulp] and [metalsmith][metalsmith].
 
 ## Installation
