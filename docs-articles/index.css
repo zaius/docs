@@ -25,6 +25,13 @@
 
 .docs-articles h2 {
   margin-top: 0;
+  max-width: 80%;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .docs-articles h2 {
+    max-width: 70%;
+  }
 }
 
 /**
