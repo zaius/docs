@@ -14,3 +14,17 @@ build:
    ... # insert build section here
 ```
 
+## How do I increase the timeout for individual steps?
+
+In case you want to increase the time-limit for individual steps (from the
+default 25 minutes) you add the following to your `wercker.yml`:
+
+```yaml
+box: google/golang
+command-timeout: 30
+build:
+   ... # insert build section here
+```
+
+Note that 60 minutes is the maximum amount of time you can allocate to
+a step with this option.
