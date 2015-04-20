@@ -1,0 +1,31 @@
+{
+  "name": "@docs/build",
+  "version": "1.0.0",
+  "description": "@docs/build",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && NODE_ENV=test node test",
+    "test-cov": "standard && NODE_ENV=test istanbul cover test.js"
+  },
+  "repository": "@docs/build",
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {
+    "bl": "^0.9.4",
+    "brick-router": "^2.0.1",
+    "browserify": "^9.0.8",
+    "myth": "^1.4.0",
+    "rework": "^1.0.1",
+    "watchify": "^3.1.2"
+  },
+  "devDependencies": {
+    "istanbul": "^0.3.13",
+    "standard": "^3.6.1",
+    "tape": "^4.0.0"
+  },
+  "files": [
+    "LICENSE",
+    "index.js",
+    "README.md"
+  ]
+}
