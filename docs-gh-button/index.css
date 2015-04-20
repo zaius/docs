@@ -4,7 +4,7 @@
 .gh-button {
   position: absolute;
   top: 32px;
-  right: 30px;
+  right: 40px;
   text-decoration: none;
 }
 
@@ -21,9 +21,6 @@
 }
 
 .gh-button-button:hover {
-  color: var(--color-skyblue_base);
-}
-
-.gh-button-button img {
-  vertical-align: bottom;
+  background-color: var(--color-skyblue_base);
+  color: var(--color-white);
 }
