@@ -9,7 +9,7 @@
     "postinstall": "echo 'linklocal' && linklocal link -r && linklocal list -r | bulk -c 'npm install'",
     "start": "make all",
     "test": "make test",
-    "watch": "watchify index.js -t brfs -o build/build.js"
+    "watch": "watchify index.js -t brfs -o build/bundle.js"
   },
   "repository": "wercker/dev",
   "keywords": [],
