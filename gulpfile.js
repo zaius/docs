@@ -108,7 +108,7 @@ gulp.task('modules', function() {
       .transform('brfs')
       .transform(envify({NODE_ENV: env}))
       .bundle()
-      .pipe(source('build.js'))
+      .pipe(source('bundle.js'))
       .pipe(debug ? through.obj() : streamify(uglify()))
       .pipe(gulp.dest(path.join(__dirname, '/build/')));
   }
