@@ -17,6 +17,8 @@ happened during your build.
 As wercker currently supports [Docker containers](/docs/containers/dockerhub.html), introspection is
 done via the Docker command.
 
+> NOTE: To use this feature on local builds, you'll need to use the --commit flag to save a copy of your build.
+
 ### Using the Docker command
 
 We expect you to have a [working Docker environment](/learn/basics/03_the-wercker-cli.html) available on your
