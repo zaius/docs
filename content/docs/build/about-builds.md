@@ -25,7 +25,7 @@ provider. Currently either Bitbucket or GitHub are supported.
 
 ### setup environment
 During this step the relevant Docker containers are being pulled. This
-applies to the `main` box as well ass any services that you've defined.
+applies to the `main` box as well as any services that you've defined.
 
 ### wercker-init
 This steps executes a small script that injects some utility bash functions. 
