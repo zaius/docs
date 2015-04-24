@@ -1,23 +1,32 @@
 ## Builds
 
+Proin tincidunt, sem sit amet porttitor vulputate, `odio nisi gravidaz` nisi,
+[link](url). quis pharetra odio orci et mi.
+
 * [chapter1](#chapter1)
 * [chapter2](#chapter2)
 
 ### <a name="chapter1"></a>Get a build
 
+Proin tincidunt, sem sit amet porttitor vulputate, `odio nisi gravidaz` nisi,
+[link](url). quis pharetra odio orci et mi.
+
+***
 `GET /application/builds`
+***
 
 #### Response
 
 ```
 Status: 200 OK
-Link:
-<https://api.github.com/resource?page=2>; rel="next",
-<https://api.github.com/resource?page=5>; rel="last"
+Link: <https://api.github.com/resource?page=2>; rel="next",
+      <https://api.github.com/resource?page=5>; rel="last"
 X-RateLimit-Limit: 5000
 X-RateLimit-Remaining: 4999
 ```
-``` json [
+
+```json
+[
   {
     "login": "github",
     "id": 1,
@@ -25,7 +34,8 @@ X-RateLimit-Remaining: 4999
     "avatar_url": "https://github.com/images/error/octocat_happy.gif",
     "description": "A great organization"
   }
-]```
+]
+```
 
 ### <a name="chapter2"></a>Chapter2
 
