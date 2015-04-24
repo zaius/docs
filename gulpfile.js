@@ -43,6 +43,10 @@ var docs = {
     'content/docs/**/*.md',
     'content/docs/*.md'
   ],
+  api: [
+    'content/api/**/*.md',
+    'content/api/*.md'
+  ],
   index: [
     'content/index/**/*.md',
     'content/index/*.md'
