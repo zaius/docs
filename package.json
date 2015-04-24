@@ -18,6 +18,7 @@
   "license": "MIT",
   "dependencies": {
     "@docs/articles": "file:docs-articles",
+    "@docs/api": "file:docs-api",
     "@docs/build": "file:docs-build",
     "@docs/cards": "file:docs-cards",
     "@docs/footer": "file:docs-footer",
