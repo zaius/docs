@@ -22,8 +22,8 @@ done via the Docker command.
 ### Using the Docker command
 
 We expect you to have a [working Docker environment](/learn/basics/03_the-wercker-cli.html) available on your
-machine. Assuming you have a [built a container
-locally]((/docs/build/local-builds.html) ) or have [pulled](/docs/build/pulling-builds.html), a
+machine. Assuming you have [built a container
+locally](/docs/build/local-builds.html) or have [pulled](/docs/build/pulling-builds.html) a
 build artifact as container you can run the following command to inspect
 your container:
 
