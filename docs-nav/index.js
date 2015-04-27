@@ -76,6 +76,14 @@ function render() {
           dom.li(null,
             dom.a({
               className: 'navbar-item',
+              href: '/api',
+              onClick: changeLocation.bind(this, '/api/index.html'),
+              children: 'Api'
+            })
+          ),
+          dom.li(null,
+            dom.a({
+              className: 'navbar-item',
               href: 'http://blog.wercker.com',
               onClick: changeLocation.bind(this, 'http://blog.wercker.com'),
               children: 'Blog'
