@@ -1,21 +1,28 @@
 ## Authenticating with the wercker API
 
-You authenticate to the wercker API by providing one of your `bearer` tokens in the request.
+You authenticate to the wercker API by providing one of your `bearer` tokens in
+the request. From the 
+[OAuth 2.0 Authorization Framework](https://tools.ietf.org/html/rfc6750)
+specification:
 
-From the [OAuth 2.0 Authorization Framework](https://tools.ietf.org/html/rfc6750) specification:
+> Any party in possession of a bearer token (a "bearer") can use it to get
+access to the associated resources (without demonstrating possession of a 
+cryptographic key)
 
-> Any party in possession of a bearer token (a "bearer") can use it to get access to the associated resources (without demonstrating possession of a cryptographic key)
-
-You can manage and create your tokens from your account on the personal profile page under personal tokens. You can have multiple tokens active at the same time.
-
+You can manage and create your tokens from your account on the personal
+profile page under personal tokens. You can have multiple tokens active at the
+same time.
 ![image](/images/tokens.png)
 
-Make sure to keep these tokens secret as they give access to information about your applications. You can only generate a token once, so be sure to save it somewhere. You can *regenerate* tokens but note that any application you've written that uses the old token needs to be updated with the regenerated one.
+Make sure to keep these tokens secret as they give access to information about
+your applications. You can only generate a token once, so be sure to save it
+somewhere. You can *regenerate* tokens but note that any application you've
+written that uses the old token needs to be updated with the regenerated one.
 
-All API requests must be made over HTTPS. Requests made over plain HTTP will fail and all requests must be authenticated.
+All API requests must be made over HTTPS. Requests made over plain HTTP will
+fail and all requests must be authenticated.
 
 ### Curl example
-
 Below an example by using the `curl` command:
 
 ```bash
@@ -50,5 +57,6 @@ and the response
 ```
 
 ### NETRC
-
-Note that if you've previously installed the deprecated version of the wercker command line interface (written in Python), you will probably have a .netrc file with credentials that prevents the Bearer token to be used.
+Note that if you've previously installed the deprecated version of the wercker
+command line interface (written in Python), you will probably have a .netrc
+file with credentials that prevents the Bearer token to be used.
