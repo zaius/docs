@@ -73,14 +73,14 @@ function render() {
               children: 'Docs'
             })
           ),
-          dom.li(null,
-            dom.a({
-              className: 'navbar-item',
-              href: '/api',
-              onClick: changeLocation.bind(this, '/api/index.html'),
-              children: 'Api'
-            })
-          ),
+          // dom.li(null,
+          //   dom.a({
+          //     className: 'navbar-item',
+          //     href: '/api',
+          //     onClick: changeLocation.bind(this, '/api/index.html'),
+          //     children: 'Api'
+          //   })
+          // ),
           dom.li(null,
             dom.a({
               className: 'navbar-item',
