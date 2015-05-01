@@ -85,7 +85,7 @@ var fontFiles = [
  * Compile CSS
  */
 gulp.task('styles', function() {
-  gulp
+  return gulp
     .src(styleFiles)
     .pipe(concat('build.css'))
     .pipe(myth())
@@ -131,7 +131,7 @@ gulp.task('docs', function() {
  * Copy assets
  */
 gulp.task('assets', function() {
-  gulp
+  return gulp
     .src(imageFiles)
     .pipe(flatten())
     .pipe(gulp.dest(path.join(__dirname, '/build/images')));
@@ -141,7 +141,7 @@ gulp.task('assets', function() {
  * Copy fonts
  */
 gulp.task('fonts', function() {
-  gulp
+  return gulp
     .src(fontFiles)
     .pipe(flatten())
     .pipe(gulp.dest(path.join(__dirname, '/build/fonts')));
