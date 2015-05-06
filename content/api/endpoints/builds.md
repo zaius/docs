@@ -1,46 +1,52 @@
 ## Builds
 
-Proin tincidunt, sem sit amet porttitor vulputate, `odio nisi gravidaz` nisi,
-[link](url). quis pharetra odio orci et mi.
+* [Get a build](#get-a-build)
 
-* [chapter1](#chapter1)
-* [chapter2](#chapter2)
+### <a name="get-a-build"></a>Get a build
 
-### <a name="chapter1"></a>Get a build
-
-Proin tincidunt, sem sit amet porttitor vulputate, `odio nisi gravidaz` nisi,
-[link](url). quis pharetra odio orci et mi.
+Get the details of a single build.
 
 ***
-`GET /application/builds`
+`GET /api/v3/builds/:build`
 ***
 
 #### Response
 
 ```
 Status: 200 OK
-Link: <https://api.github.com/resource?page=2>; rel="next",
-      <https://api.github.com/resource?page=5>; rel="last"
-X-RateLimit-Limit: 5000
-X-RateLimit-Remaining: 4999
 ```
 
 ```json
-[
-  {
-    "login": "github",
-    "id": 1,
-    "url": "https://api.github.com/orgs/github",
-    "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-    "description": "A great organization"
-  }
-]
+{
+  "status": "finished",
+  "startedAt": "2015-04-30T17:06:04.686Z",
+  "result": "passed",
+  "id": "554260f7dc16db44791955a7",
+  "url": "https://app.wercker.com/api/v3/builds/554260f7dc16db44791955a7",
+  "application": {
+    "stack": 5,
+    "privacy": "public",
+    "createdAt": "2015-01-28T17:04:09.851Z",
+    "owner": {
+      "meta": {
+        "werckerEmployee": false,
+        "username": "wercker"
+      },
+      "userId": "55310d295732ce8a41000054",
+      "avatar": {
+        "gravatar": "33a5bfbcf8a2b90f40e849b6f1fa5eeb"
+      },
+      "name": "wercker",
+      "type": "wercker"
+    },
+    "name": "docs",
+    "url": "https://app.wercker.com/api/v3/applications/wercker/docs",
+    "id": "54c9168980c7075225004157"
+  },
+  "branch": "hide_api",
+  "createdAt": "2015-04-30T17:05:59.209Z",
+  "finishedAt": "2015-04-30T17:09:02.753Z",
+  "message": "Hide API header",
+  "progress": 100
+}
 ```
-
-### <a name="chapter2"></a>Chapter2
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
