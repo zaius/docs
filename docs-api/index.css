@@ -73,6 +73,10 @@
   border-top: none;
 }
 
+.api-articles > pre + p {
+  margin-top: 30px;
+}
+
 .api-articles pre code {
   line-height: var(--lineHeight_base);
   background-color: transparent;
