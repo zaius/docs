@@ -184,11 +184,18 @@ gulp.task('watch', function() {
  * build
  */
 gulp.task('build', [
-  'docs',
-  'modules',
-  'styles',
+  'content',
   'assets',
   'fonts'
+]);
+
+/**
+ * content
+ */
+gulp.task('content', [
+  'docs',
+  'modules',
+  'styles'
 ]);
 
 /**
