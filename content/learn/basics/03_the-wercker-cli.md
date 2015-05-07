@@ -4,8 +4,8 @@ Wercker offers a command line interface (CLI) that speeds up your workflow
 even faster.
 
 The CLI can be used to execute *single player mode*
-[pipelines](/learn/pipelines/01_introduction.html) locally for easy
-introspection and debugging. You can get the CLI for either Mac or Linux from our [downloads
+[pipelines](/learn/pipelines/01_introduction.html) locally for both local
+development and easy introspection. You can get the CLI for either Mac or Linux from our [downloads
 page](http://wercker.com/downloads) or through the instructions on this
 page.
 
@@ -95,7 +95,7 @@ running:
 ```
 > wercker version
 
-Version: 1.0.41
+Version: 1.0.114
 Git commit: 5efcc26716ccf608908bb87e30ef4c23414cb79e
 ```
 

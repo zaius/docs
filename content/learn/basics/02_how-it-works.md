@@ -4,6 +4,8 @@ Wercker is centered around the notion of
 [pipelines](/learn/pipelines/01_introduction.html). A pipeline is an
 automated workflow that takes your code and executes a series of
 [steps](/learn/steps/01_introduction.html) on it, the end result being an artifact.
+Each artifact is both stored as a Docker [container]() and a Tarball (`tar.gz` file)
+that contains the source code of your application.
 
 In order to trigger these pipelines, wercker integrates with your source
 control platforms. Each time you do a `git push` wercker gets a signal via the source

@@ -69,6 +69,19 @@ box:
         PASSWORD: bar
 ```
 
+### Dev
+
+The `dev` section sets up your local development pipeline. It ensures that
+the local development environment is executed in the same way and with the same
+containers that are set up in the wercker
+[cloud environment](/learn/build/03_pulling-builds.html).
+With a `development` pipeline you can also run and test your applications locally.
+
+In order to use the the development pipeline, incorporate the following in your
+`wercker.yml` file.
+
+```yaml
+```
 
 ### Build
 
