@@ -2,8 +2,8 @@
 
 Welcome to the documentation of the wercker API. Before starting to use the API,
 be sure to check out this document. Also have a look at the getting started
-guides, such as [authentication](gettings-started/authentication.html), and
-[clients](gettings-started/clients.html)
+guides, such as [authentication](getting-started/authentication.html), and
+[clients](getting-started/clients.html).
 
 The current version of the API should be considered to be an _alpha_ version.
 Though we will try to keep it backwards compatible, we cannot make that
