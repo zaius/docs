@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "repository": "@docs",
   "browserify": {
-    "transform": ["es6ify"]
+    "transform": [
+      "es6ify"
+    ]
+  },
+  "dependencies": {
+    "urit": "^1.0.1"
   }
 }

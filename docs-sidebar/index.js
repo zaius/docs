@@ -1,116 +1,110 @@
-var window  = require('global/window');
-var slugify = require('slugificate');
-var react   = require('react');
+const slugify = require('slugificate');
+const react = require('react');
+const urit = require('urit');
 
-var db = require('../../../build/db.json');
-var scrubDataSet = require('./scrubData');
-var ss = require('./list-learn');
-var search = require('./search');
+const renderSimpleSidebar = require('./list-learn');
+const docsToc = require('./toc-docs.json');
+const renderSearch = require('./search');
 
 var dom = react.DOM;
 
 module.exports = createClass;
 
+// create react class
+// null -> null
 function createClass() {
   return react.createClass({
     displayName: 'sidebar',
-    getDefaultProps: getDefaultProps,
-    getInitialState: getInitialState,
-    render: render
+    getDefaultProps: function() {
+      return {data: docsToc}
+    },
+    getInitialState: function() {
+      console.log(this.props)
+      return {data: this.props.data}
+    },
+    render: function render() {
+      if (getWindowUrl() === 'learn') {
+        return renderSimpleSidebar(this.state, this.props);
+      }
+      return renderSidebar.call(this);
+    }
   });
 }
 
-// we manage the state of the object here. source out into search,
-// return the result and pass it into the display function.
-function getDefaultProps() {
-  return { data: scrubDataSet(db[stripUrl()]) }
-}
-
-/**
- * Get initial state.
- */
-function getInitialState() {
-  return { data: scrubDataSet(db[stripUrl()]) }
-}
-
-/**
- * Render.
- */
-function render() {
-  var basePath = stripUrl();
-
-  if ('learn' == basePath) return ss(this.state, this.props)
-  return renderSidebar.call(this, basePath, this.state);
-}
-
-/**
- * Render the sidebar.
- */
-function renderSidebar(basePath, state) {
+// render the sidebar
+// obj -> obj
+function renderSidebar() {
   return dom.section({className: 'section-sidebar'},
-    search({data: this.props.data, setState: this.setState.bind(this)}),
+    renderSearch({data: this.props.data, setState: this.setState.bind(this)}),
     dom.section({className: 'sidebar-list'},
-      Object.keys(state.data).map(function(key) {
-
-        // the value we're getting from the data. Can be either an
-        // object containing children, or is a single string value.
-        var val = state.data[key];
-
-        if (typeof val === 'string') {
-          var origin = window.location.origin
-          var href = origin + '/' + basePath + '/' + val + '/index.html';
-          return dom.a({className: 'sidebar-li', key: val, href: href}, val);
-        }
-
-        return dom.ul({key: key},
-          dom.li({className: 'sidebar-li'},
-            dom.a({
-              href: createHref(basePath, key, val[0])
-            }, key.split('.')[0])
-          ),
-          val.map(function(valTwo) {
-            return dom.li({className: 'sidebar-li_sub', key: key + valTwo},
-              dom.a({
-                href: createHref(basePath, key, valTwo)
-              }, stripFileName(valTwo))
-            )
-          })
-        )
-      })
+      createList(this.props.data)
     )
   );
 }
 
-/**
- * Cleans up the file name
- *
- * @param {String} valTwo
- */
-function stripFileName(valTwo) {
+// transform data into a
+// list of ui components
+// obj -> obj
+function createList(data) {
+  return data.map((arr, i) => {
+    const section = arr[0];
+    const ret = arr.map((article, j) => {
+      if (j === 0) {
+        const uri = createUri(section, arr[1]);
+        return renderHeadElement(stripFileExt(article), uri);
+      }
+      const uri = createUri(section, article);
+      return renderLiElement(stripFileExt(article), uri);
+    });
+    return renderSubListContainer('arr' + i, ret);
+  })
+}
+
+// render a list heading element
+// str, str -> obj
+function renderHeadElement(str, uri) {
+  var params = {
+    className: 'sidebar-li',
+    key: str,
+    href: uri
+  }
+  return dom.a(params, str);
+}
+
+// render a li element
+// str, str -> obj
+function renderLiElement(str, uri) {
+  return dom.li({className: 'sidebar-li_sub', key: str + uri},
+    dom.a({href: uri}, str)
+  )
+}
+
+// render the sub list container
+// str, [obj] -> obj
+function renderSubListContainer(key, els) {
+  return dom.ul({key: key}, els);
+}
+
+// clean file name
+// str -> str
+function stripFileExt(valTwo) {
   var name = valTwo.replace(/([-])/g, ' ');
   return name.split('.')[0];
 }
 
-/**
- * Create the link used for the menu.
- * @param {String} base
- * @param {String[]} val
- */
-function createHref(base, key, val) {
-  return '/'
-    + base
-    + '/'
-    + key
-    + '/'
-    + slugify(val.split('.')[0])
-    + '.html';
+// create href links for the sidebar
+// str, str, -> str
+function createUri(section, article) {
+  const tmpl = urit('/docs{/section}{/article}.html');
+  return tmpl({
+    section: section,
+    article: slugify(article.split('.')[0])
+  });
 }
 
-/**
- * Get the current url and only get the
- * base path.
- */
-function stripUrl() {
+// get the baseUrl from the window
+// null -> str
+function getWindowUrl() {
   var pathName = window.location.pathname.match(/\/\w+\//)[0];
   return pathName.split('/')[1];
 }
