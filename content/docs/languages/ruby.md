@@ -50,4 +50,4 @@ build:
 You can checkout and clone a sample application in ruby at the
 following location:
 
-![image](/images/github-icon.svg)[getting-started-ruby](https://github.com/wercker/getting-started-ruby)
+[getting-started-ruby](https://github.com/wercker/getting-started-ruby)
