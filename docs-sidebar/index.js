@@ -1,6 +1,5 @@
 const slugify = require('slugificate');
 const react = require('react');
-const urit = require('urit');
 
 const renderSimpleSidebar = require('./list-learn');
 const docsToc = require('./toc-docs.json');
@@ -47,6 +46,7 @@ function renderSidebar(props, state, setState) {
 function createList(data, propdata) {
   return data.map((arr, i) => {
     const section = propdata[i][0];
+
     const nw = arr.map((article, j) => {
       if (j === 0 && article === section) {
         const uri = createUri(section, propdata[i][1]);
@@ -55,6 +55,7 @@ function createList(data, propdata) {
       const uri = createUri(section, article);
       return renderLiElement(stripFileExt(article), uri);
     });
+
     return renderSubListContainer('arr' + i, nw);
   });
 }
@@ -86,19 +87,16 @@ function renderSubListContainer(key, els) {
 
 // clean file name
 // str -> str
-function stripFileExt(valTwo) {
-  var name = valTwo.replace(/([-])/g, ' ');
+function stripFileExt(filename) {
+  var name = filename.replace(/-/g, ' ');
   return name.split('.')[0];
 }
 
 // create href links for the sidebar
 // str, str, -> str
 function createUri(section, article) {
-  const tmpl = urit('/docs{/section}{/article}.html');
-  return tmpl({
-    section: section,
-    article: slugify(article.split('.')[0])
-  });
+  article = article.split('.')[0];
+  return '/docs/' + section + '/' + article + '.html';
 }
 
 // get the baseUrl from the window
