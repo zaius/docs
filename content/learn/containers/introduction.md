@@ -23,4 +23,4 @@ instance python) but also services such as a database.
 In the next couple of sections we will explain where to get your
 containers from, and how to use them.
 
-[Docker Hub &rsaquo;](/learn/containers/02_docker-hub.html "nav next containers")
+[Docker Hub &rsaquo;](/learn/containers/docker-hub.html "nav next containers")

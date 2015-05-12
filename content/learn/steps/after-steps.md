@@ -15,5 +15,5 @@ deploy:
             username: myamazingbotname
 ```
 
-[&lsaquo; Using steps](/learn/steps/02_using-steps.html "nav previous steps")
-[Step registry &rsaquo;](/learn/steps/04_step-registry.html "nav next steps")
+[&lsaquo; Using steps](/learn/steps/using-steps.html "nav previous steps")
+[Step registry &rsaquo;](/learn/steps/step-registry.html "nav next steps")

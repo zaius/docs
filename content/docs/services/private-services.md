@@ -18,7 +18,7 @@ file that retrieves a private container from the user `dijkstra` containing a th
 [rethinkdb](http://rethinkdb.org). The credentials for Docker Hub are
 passed along as environment variables
 (`$USERNAME` and `$PASSWORD`) that are either exported or defined in
-the [wercker web interface](/learn/pipelines/03_using-env-vars.html).
+the [wercker web interface](/learn/pipelines/using-env-vars.html).
 
 
 ```yaml
@@ -35,7 +35,7 @@ showcases how to fetch a container from [quay.io](http://quay.io).
 The username in this case is `lamport` and the repository is `rabbitmq`.
 Again the `$USERNAME/$PASSWORD` combo is passed along through environment variables
 that you either have exported or defined in the
-[wercker web interface](/learn/pipelines/03_using-env-vars.html).
+[wercker web interface](/learn/pipelines/using-env-vars.html).
 
 ```yaml
 services:

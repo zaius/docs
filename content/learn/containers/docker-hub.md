@@ -9,7 +9,7 @@ ranging from language stacks to databases.
 ### Getting containers from Docker Hub
 
 In order to use these containers you have to specify them in your
-[wercker.yml](/learn/wercker-yml/01_introduction.html). You at least
+[wercker.yml](/learn/wercker-yml/introduction.html). You at least
 need to specify  the main language stack you want to use via the `box`
 section.
 
@@ -25,5 +25,5 @@ pipelines.
 > Want to push containers to the Docker Hub? Read more on our
 > [docs](/docs/containers/pushing-containers.html)
 
-[&lsaquo; Introduction to containers](/learn/containers/01_introduction.html "nav previous containers")
-[Using containers &rsaquo;](/learn/containers/03_using-containers.html "nav next containers")
+[&lsaquo; Introduction to containers](/learn/containers/introduction.html "nav previous containers")
+[Using containers &rsaquo;](/learn/containers/using-containers.html "nav next containers")

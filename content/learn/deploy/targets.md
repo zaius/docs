@@ -12,8 +12,8 @@ environment variables.
 
 > Each deploy target can have its own environment variables
 
-See the [environment variables](/learn/pipelines/03_using-env-vars.html) section
+See the [environment variables](/learn/pipelines/using-env-vars.html) section
 for more information.
 
-[&lsaquo; Introduction to deploy](/learn/deploy/01_introduction.html "nav previous deploy")
-[Auto deployment &rsaquo;](/learn/deploy/03_auto-deployment.html "nav next deploy")
+[&lsaquo; Introduction to deploy](/learn/deploy/introduction.html "nav previous deploy")
+[Auto deployment &rsaquo;](/learn/deploy/auto-deployment.html "nav next deploy")

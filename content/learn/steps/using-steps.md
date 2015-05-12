@@ -58,5 +58,5 @@ that the result of these commands area available in the wercker ui and
 will be exposed as a build step under the name `echo python
 information`.
 
-[&lsaquo; Introduction to steps](/learn/steps/01_introduction.html "nav previous steps")
-[After steps &rsaquo;](/learn/steps/03_after-steps.html "nav next steps")
+[&lsaquo; Introduction to steps](/learn/steps/introduction.html "nav previous steps")
+[After steps &rsaquo;](/learn/steps/after-steps.html "nav next steps")

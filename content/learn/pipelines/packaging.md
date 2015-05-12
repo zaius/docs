@@ -37,5 +37,5 @@ readying them for the deployment pipeline.
 
 In the next section we will have a closer look at steps.
 
-[&lsaquo; Using env vars](/learn/pipelines/03_using-env-vars.html "nav previous pipelines")
-[Steps &rsaquo;](/learn/steps/01_introduction.html "nav next steps")
+[&lsaquo; Using env vars](/learn/pipelines/using-env-vars.html "nav previous pipelines")
+[Steps &rsaquo;](/learn/steps/introduction.html "nav next steps")

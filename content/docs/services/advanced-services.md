@@ -72,4 +72,4 @@ build:
             go build ./...
 ```
 
-Here we define the `mariadb` service to be only available in the [build pipeline](http://devcenter.wercker.com/learn/pipelines/01_introduction.html).
+Here we define the `mariadb` service to be only available in the [build pipeline](http://devcenter.wercker.com/learn/pipelines/introduction.html).
