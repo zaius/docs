@@ -76,18 +76,10 @@
   [
      "organizations",
      "adding-an-application.md",
-     "api-user.jpg",
      "application-access.md",
-     "collaborators.jpg",
-     "creat-an-org.jpg",
      "create-an-organization.md",
-     "create-team.jpg",
      "owners-team.md",
-     "people-and-teams.md",
-     "people.jpg",
-     "select-owner.jpg",
-     "team-example.jpg",
-     "transfer-ownership.jpg"
+     "people-and-teams.md"
   ],
   [
      "notifications",

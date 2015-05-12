@@ -19,45 +19,44 @@ function createClass() {
       return {data: docsToc}
     },
     getInitialState: function() {
-      console.log(this.props)
       return {data: this.props.data}
     },
     render: function render() {
       if (getWindowUrl() === 'learn') {
         return renderSimpleSidebar(this.state, this.props);
       }
-      return renderSidebar.call(this);
+      return renderSidebar(this.props, this.state, this.setState.bind(this));
     }
   });
 }
 
 // render the sidebar
-// obj -> obj
-function renderSidebar() {
+// obj, obj, fn -> obj
+function renderSidebar(props, state, setState) {
   return dom.section({className: 'section-sidebar'},
-    renderSearch({data: this.props.data, setState: this.setState.bind(this)}),
+    renderSearch({data: props.data, setState: setState}),
     dom.section({className: 'sidebar-list'},
-      createList(this.props.data)
+      createList(state.data, props.data)
     )
   );
 }
 
 // transform data into a
 // list of ui components
-// obj -> obj
-function createList(data) {
+// [[str]], [[str]] -> [obj]
+function createList(data, propdata) {
   return data.map((arr, i) => {
-    const section = arr[0];
-    const ret = arr.map((article, j) => {
-      if (j === 0) {
-        const uri = createUri(section, arr[1]);
+    const section = propdata[i][0];
+    const nw = arr.map((article, j) => {
+      if (j === 0 && article === section) {
+        const uri = createUri(section, propdata[i][1]);
         return renderHeadElement(stripFileExt(article), uri);
       }
       const uri = createUri(section, article);
       return renderLiElement(stripFileExt(article), uri);
     });
-    return renderSubListContainer('arr' + i, ret);
-  })
+    return renderSubListContainer('arr' + i, nw);
+  });
 }
 
 // render a list heading element
