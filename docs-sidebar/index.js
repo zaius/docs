@@ -3,6 +3,7 @@ const react = require('react');
 
 const renderSimpleSidebar = require('./list-learn');
 const docsToc = require('./toc-docs.json');
+const apiToc = require('./toc-api.json');
 const renderSearch = require('./search');
 
 var dom = react.DOM;
@@ -15,7 +16,9 @@ function createClass() {
   return react.createClass({
     displayName: 'sidebar',
     getDefaultProps: function() {
-      return {data: docsToc}
+      const base = getWindowUrl();
+      const data = base === 'docs' ? docsToc : apiToc;
+      return {data: data}
     },
     getInitialState: function() {
       return {data: this.props.data}
@@ -44,15 +47,16 @@ function renderSidebar(props, state, setState) {
 // list of ui components
 // [[str]], [[str]] -> [obj]
 function createList(data, propdata) {
+  const base = getWindowUrl();
   return data.map((arr, i) => {
     const section = propdata[i][0];
 
     const nw = arr.map((article, j) => {
       if (j === 0 && article === section) {
-        const uri = createUri(section, propdata[i][1]);
+        const uri = createUri(base, section, propdata[i][1]);
         return renderHeadElement(stripFileExt(article), uri);
       }
-      const uri = createUri(section, article);
+      const uri = createUri(base, section, article);
       return renderLiElement(stripFileExt(article), uri);
     });
 
@@ -93,10 +97,10 @@ function stripFileExt(filename) {
 }
 
 // create href links for the sidebar
-// str, str, -> str
-function createUri(section, article) {
+// str, str, str, -> str
+function createUri(base, section, article) {
   article = article.split('.')[0];
-  return '/docs/' + section + '/' + article + '.html';
+  return '/' + base + '/' + section + '/' + article + '.html';
 }
 
 // get the baseUrl from the window
