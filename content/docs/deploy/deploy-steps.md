@@ -39,4 +39,5 @@ deploy:
         key-secret: $AWS_SECRET_ACCESS_KEY
 ```
 
-Note that if you can't find a deploy step for your use-case you can [create your own!](/docs/steps/creating-steps.html)
+Note that if you can't find a deploy step for your use-case you can
+[create your own!](/docs/steps/creating-steps.html)

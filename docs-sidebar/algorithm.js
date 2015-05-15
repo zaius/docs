@@ -8,33 +8,14 @@ module.exports = filter;
 function filter(data, query) {
   if (!query) return data;
 
-  var regexps = createRegExps(query)
-  var keys = Object.keys(data);
-
-  const arrarr = keys.map((key) => {
-    const val = data[key];
-    return Array.isArray(val) ? val : [val];
-  });
-
-  const barr = arrarr.map((val) => val.filter(matchRegex));
+  const regexps = createRegExps(query);
+  const matches = data.map(val => val.filter(ival => {
+    return regexps.every(regex => ival.match(regex));
+  }));
 
   // build response object
-  var nw = {};
-  barr.forEach((val, i) => {
-    const key = keys[i];
-    if (matchRegex(key)) return nw[key] = data[key];
-    if (val.length) return nw[key] = val;
-
-    const keyMatch = regexps.every((regexp) => key.match(regexp));
-    if (keyMatch) nw[key] = key;
-  });
-
-  return nw;
-
-  // str -> bool
-  function matchRegex(val) {
-    return regexps.every((regex) => val.match(regex));
-  }
+  return matches
+    .map((arr, i) => arr[0] === data[i][0] ? data[i] : arr);
 };
 
 // create regexps for query

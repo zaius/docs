@@ -96,7 +96,7 @@ Let's take a look at a selection of them available during a build:
 </table>
 
 When a step is executed, wercker also creates additional environment variables
-for you to use. Please see [the steps section](/learn/steps/01_introduction.html).
+for you to use. Please see [the steps section](/learn/steps/introduction.html).
 for more information.
 
 ### Deploy related variables

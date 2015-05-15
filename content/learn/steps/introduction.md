@@ -18,4 +18,4 @@ credentials and bucket information and places these assets on Amazon S3.
 Finally, there's the notion of *after-steps*, which can be used for
 notifications.
 
-[Using steps &rsaquo;](/learn/steps/02_using-steps.html "nav next steps")
+[Using steps &rsaquo;](/learn/steps/using-steps.html "nav next steps")

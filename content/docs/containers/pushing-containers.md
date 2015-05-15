@@ -36,7 +36,7 @@ deploy:
 ```
 
 The `$USERNAME` and `$PASSWORD` fields are environment variables that
-you should specify through the [wercker web interface](/learn/pipelines/03_using-env-vars.html). The `repo`
+you should specify through the [wercker web interface](/learn/pipelines/using-env-vars.html). The `repo`
 field contains the repository that you want to push to (in this case the
 username `turing` with the `bar` image), and `registry` is
 the URL of your Docker registry.

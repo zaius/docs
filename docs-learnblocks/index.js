@@ -32,7 +32,7 @@ function render() {
       return dom.div({className: createClassName(block), key: block},
         dom.a({
           className: 'learnblocks-item-icon ',
-          href: '/learn/' + slugify(block) + '/01_introduction.html'
+          href: '/learn/' + slugify(block) + '/introduction.html'
         }, dom.img({src: '/images/icon-' + block + '.svg', alt: block}),
           dom.div({className: 'learnblocks-item-title'}, block)
         ),

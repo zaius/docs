@@ -20,5 +20,5 @@ This gives you a prompt inside the container. Now you can jump into the
 `pipeline` directory and have a look at the contents of your build
 pipeline.
 
-[&lsaquo; Pulling builds](/learn/build/03_pulling-builds.html "nav previous build")
-[Deploy &rsaquo;](/learn/deploy/01_introduction.html "nav next deploy")
+[&lsaquo; Pulling builds](/learn/build/pulling-builds.html "nav previous build")
+[Deploy &rsaquo;](/learn/deploy/introduction.html "nav next deploy")

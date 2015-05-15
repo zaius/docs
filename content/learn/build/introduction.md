@@ -11,8 +11,8 @@ platform, such as GitHub or Bitbucket.
 Builds are the result of a run-through of the steps in the wercker pipeline. If all steps in the pipeline are succesful, a build has passed.
 The outcome of a successful build is packaged and stored, readying it for deployment. Though the number of build steps varies per programming environment and type of project, all projects have several buildsteps in common:
 
-Of course you can add your own steps as well. See the [steps section](/learn/steps/01_introduction.html)
-for more information.
+Of course you can add your own steps as well. See the
+[steps section](/learn/steps/introduction.html) for more information.
   
 ### Get code
 Wercker retrieves your repository from you version control system and
@@ -20,13 +20,13 @@ clones it into a container.
 
 ### Setup environment
 
-If no [wercker.yml](/learn/wercker-yml/01_introduction.html) file is present in the
+If no [wercker.yml](/learn/wercker-yml/introduction.html) file is present in the
 repository, wercker will generate a default one depending on your stack.
 
 If you have defined a service such as a database, you will need
 environment variables (env vars) to connect to these services. 
 In the `environment variables` step these are declared and exported. See
-the [article](/learn/pipelines/03_using-env-vars.html) about env vars in
+the [article](/learn/pipelines/using-env-vars.html) about env vars in
 the pipeline section for more information.
 
 ### Wercker init
@@ -41,4 +41,4 @@ If all steps are successful, the resulting folder is packaged to a zip file, to 
 In the next section we'll dive into the various ways you can work with
 builds.
 
-[Local builds &rsaquo;](/learn/build/02_local-builds.html "nav next build")
+[Local builds &rsaquo;](/learn/build/local-builds.html "nav next build")

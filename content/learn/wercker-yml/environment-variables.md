@@ -12,11 +12,11 @@ of ways to store and expose this data as environment variables.
 > are available during pipeline runs
 
 If you want to know which environment variables are available during a build
-or deploy, look at the `Setup Environment` step of your [pipeline](/learn/pipelines/01_introduction.html) run.
+or deploy, look at the `Setup Environment` step of your [pipeline](/learn/pipelines/introduction.html) run.
 
 Environment variables can be *global* and as such are available
 during both build and deploy pipelines. Typically, these are used to store API tokens for
-[after-steps](/learn/steps/03_after-steps.html) that post build and
+[after-steps](/learn/steps/after-steps.html) that post build and
 deploy notifications in chatrooms such as Slack.
 
 >Global variables are called pipeline variables and can be set in the settings
@@ -30,5 +30,5 @@ such as hostnames, ssh-keys, passwords and more.
 > Want to learn more? Read more about using environment variables
 > [docs](/docs/environment-variables/index.html)
 
-[&lsaquo; Sections](/learn/wercker-yml/02_sections.html "nav previous yml")
-[Creating a yaml &rsaquo;](/learn/wercker-yml/04_creating-a-yml.html "nav next yml")
+[&lsaquo; Sections](/learn/wercker-yml/sections.html "nav previous yml")
+[Creating a yaml &rsaquo;](/learn/wercker-yml/creating-a-yml.html "nav next yml")

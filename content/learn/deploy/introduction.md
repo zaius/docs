@@ -28,4 +28,4 @@ deploy:
 When a build is passed, it can be deployed to a target. In the next
 section we'll look at how to set up deploy targets.
 
-[Targets &rsaquo;](/learn/deploy/02_targets.html "nav next deploy")
+[Targets &rsaquo;](/learn/deploy/targets.html "nav next deploy")

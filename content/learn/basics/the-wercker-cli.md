@@ -4,10 +4,10 @@ Wercker offers a command line interface (CLI) that speeds up your workflow
 even faster.
 
 The CLI can be used to execute *single player mode*
-[pipelines](/learn/pipelines/01_introduction.html) locally for both local
-development and easy introspection. You can get the CLI for either Mac or Linux from our [downloads
-page](http://wercker.com/downloads) or through the instructions on this
-page.
+[pipelines](/learn/pipelines/introduction.html) locally for both local
+development and easy introspection. You can get the CLI for either Mac or
+Linux from our [downloads page](http://wercker.com/downloads) or through the
+instructions on this page.
 
 ### Requirements
 
@@ -139,7 +139,7 @@ GLOBAL OPTIONS:
 ```
 
 The *detect* command introspects your projects and generates
-[wercker.yml](/learn/wercker-yml/01_introduction.html) files for your
+[wercker.yml](/learn/wercker-yml/introduction.html) files for your
 projects.
 
 > Currently go, python, nodejs and ruby are supported in the detect
@@ -153,5 +153,5 @@ platform and use *inspect* to debug this container locally.
 > Want to learn more? Read more about this on the
 > [docs](/docs/cli/requirements.html)
 
-[&lsaquo; How it works](/learn/basics/02_how-it-works.html "nav previous basics")
-[Using the web interface &rsaquo;](/learn/basics/04_using-the-web-interface.html "nav next basics")
+[&lsaquo; How it works](/learn/basics/how-it-works.html "nav previous basics")
+[Using the web interface &rsaquo;](/learn/basics/using-the-web-interface.html "nav next basics")

@@ -11,7 +11,7 @@ additional setup.
 To use the basic [docker Image](https://registry.hub.docker.com/_/mongo/) in
 your build, you can use the following
 [wercker.yml](http://devcenter.wercker.io/learn/wercker-
-yml/01_introduction.html) as a starting point:
+yml/introduction.html) as a starting point:
 
 ```
 # wercker.yml
