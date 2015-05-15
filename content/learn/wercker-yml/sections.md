@@ -7,12 +7,12 @@ individual section in this part.
 ### Box
 
 The box section allows you to choose a
-[container](/learn/containers/01_introduction.html) which will be used to run
+[container](/learn/containers/introduction.html) which will be used to run
 the builds and deploys. This item will contain a single reference to the box.
 The box will be prefixed by the owner and it can be postfixed with a `":"`
 followed by a tag. If no tag is given, then the tag "latest" will be used.
 If no user is specified, default containers from the [Docker
-Hub](/learn/containers/02_docker-hub.html) will be used.
+Hub](/learn/containers/docker-hub.html) will be used.
 
 ```yaml
 box: ruby
@@ -20,7 +20,7 @@ box: ruby
 
 It is also possible to reference a box based on an `id`. This is
 convenient and more clear when using different container per
-[pipeline](/learn/pipelines/01_introduction.html) and as such it doesn't
+[pipeline](/learn/pipelines/introduction.html) and as such it doesn't
 make sense to have a *top-level* box definition. You specify an `id` as
 follows:
 
@@ -74,7 +74,7 @@ box:
 The `dev` section sets up your local development pipeline. It ensures that
 the local development environment is executed in the same way and with the same
 containers that are set up in the wercker
-[cloud environment](/learn/build/03_pulling-builds.html).
+[cloud environment](/learn/build/pulling-builds.html).
 With a `development` pipeline you can also run and test your applications locally.
 
 In order to use the the development pipeline, incorporate the following in your
@@ -86,7 +86,7 @@ In order to use the the development pipeline, incorporate the following in your
 ### Build
 
 The `build` section will contain all the configuration information for the build
-[pipeline](/learn/pipelines/01_introduction.html).
+[pipeline](/learn/pipelines/introduction.html).
 
 ```yaml
 build:
@@ -99,16 +99,16 @@ build:
             code: bundle exec middleman build --verbose
 ```
 
-Two types of [steps](/learn/steps/01_introduction.html) are defined in this
+Two types of [steps](/learn/steps/introduction.html) are defined in this
 build section. First a `bundle-install` step that installs the Rubygem
 dependencies. This step is availble from the [step registry](/learn/steps
-/04_step-registry.html). The second step in an inline script that in this case
+/step-registry.html). The second step in an inline script that in this case
 compiles our static site.
 
 ### Deploy
 
 The `deploy` section will contain all the configuration information for the deploy
-[pipeline](/learn/pipelines/01_introduction.html).
+[pipeline](/learn/pipelines/introduction.html).
 
 ```yaml
 deploy:
@@ -130,15 +130,15 @@ deploy:
 Here we see the Amazon Web Services S3 synchronization step that can
 sync static assets to S3. Environment variables are used that hold the
 correct credentials. The values of these environment variables are
-specified through the [wercker web interface](/learn/pipelines/03_using-env-vars.html).
+specified through the [wercker web interface](/learn/pipelines/using-env-vars.html).
 
-Next, we have an [after-step](/learn/steps/03_after-steps.html) that notifies a Slack chat room of either
+Next, we have an [after-step](/learn/steps/after-steps.html) that notifies a Slack chat room of either
 passed or failed deploys in a [Slack](http://slack.com) chat room. The `$SLACK_URL` environment variables holds
 the webhook url it should post the notification to.
 
 We've covered a lot of ground on this page but fortunately there are
-dedicated sections for topics such as [pipelines](/learn/pipelines/01_introduction.html), [containers](/learn/containers/01_introduction.html) and
-[steps](/learn/steps/01_introduction.html).
+dedicated sections for topics such as [pipelines](/learn/pipelines/introduction.html), [containers](/learn/containers/introduction.html) and
+[steps](/learn/steps/introduction.html).
 
-[&lsaquo; Introduction](/learn/wercker-yml/01_introduction.html "nav previous yml")
-[Environment variables &rsaquo;](/learn/wercker-yml/03_environment-variables.html "nav next yml")
+[&lsaquo; Introduction](/learn/wercker-yml/introduction.html "nav previous yml")
+[Environment variables &rsaquo;](/learn/wercker-yml/environment-variables.html "nav next yml")

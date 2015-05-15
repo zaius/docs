@@ -20,7 +20,7 @@ COMMANDS:
 ### Detect
 
 The *detect* command introspects your projects and generates
-[wercker.yml](/learn/wercker-yml/01_introduction.html) files for your
+[wercker.yml](/learn/wercker-yml/introduction.html) files for your
 projects.
 
 > Currently go, python, nodejs and ruby are supported in the detect
@@ -58,7 +58,8 @@ wercker login
 This will save a token in your `$HOME/.wercker` folder, so you don't
 have to login the next time.
 
-Note that if you've signed up with GitHub you will need a password for the CLI which you can create on your profile page on wercker.
+Note that if you've signed up with GitHub you will need a password for the CLI
+which you can create on your profile page on wercker.
 
 ### Update
 

@@ -16,7 +16,7 @@ main container in your build pipeline.
 In order to pull in a private container you specify your repository via
 the `id` parameter. Here we fetch the repository `python` belonging to the user `guido`.
 You can provide a `$USERNAME` and `$PASSWORD` via environment
-variables specified through the [wercker web interface](/learn/pipelines/03_using-env-vars.html).
+variables specified through the [wercker web interface](/learn/pipelines/using-env-vars.html).
 
 ```yaml
 build:
@@ -56,7 +56,7 @@ build:
 The username in this case is `knuth` and the repository is `golang`.
 Again the `$USERNAME/$PASSWORD` combo is passed along through environment variables
 that you either have exported or defined in the
-[wercker web interface](/learn/pipelines/03_using-env-vars.html).
+[wercker web interface](/learn/pipelines/using-env-vars.html).
 
 The domain name for the private registry (in this case `quay.io`)
 is defined before the `username/repo` combination when using a custom registry.

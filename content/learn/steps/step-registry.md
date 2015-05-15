@@ -17,5 +17,5 @@ version of wercker.
 > Keep an eye on our blog and documentaiton for when we do support step
 creation and deployment on Ewok.
 
-[&lsaquo; After steps &rsaquo;](/learn/steps/03_after-steps.html "nav previous steps")
-[Build &rsaquo;](/learn/build/01_introduction.html "nav next build")
+[&lsaquo; After steps &rsaquo;](/learn/steps/after-steps.html "nav previous steps")
+[Build &rsaquo;](/learn/build/introduction.html "nav next build")

@@ -12,4 +12,4 @@ product!**
 In the next couple of sections we will explain how wercker works, how to
 sign up and how to use the wercker toolchain. Let's get started!
 
-[How it works &rsaquo;](/learn/basics/02_how-it-works.html "nav next basics")
+[How it works &rsaquo;](/learn/basics/how-it-works.html "nav next basics")
