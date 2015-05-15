@@ -1,3 +1,6 @@
+/learn | /learn/basics/introduction.html
+/api | /api/index.html
+/docs | /docs/index.html
 articles/gettingstarted/repositoryaccess.html | http://old-devcenter.wercker.com/articles/gettingstarted/repositoryaccess.html
 articles/gettingstarted/cli.html | http://old-devcenter.wercker.com/articles/gettingstarted/cli.html
 articles/gettingstarted/werckerbot.html | http://old-devcenter.wercker.com/articles/gettingstarted/werckerbot.html

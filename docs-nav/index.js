@@ -32,16 +32,14 @@ function render() {
         dom.div({className: 'navbar-logo'},
           dom.a({
             className: 'logo-full',
-            href: '/',
-            onClick: changeLocation.bind(this, '/index.html'),
+            href: '/index.html',
             dangerouslySetInnerHTML: {
               __html: logoFull
             }
           }),
           dom.a({
             className: 'logo-small',
-            href: '/',
-            onClick: changeLocation.bind(this, '/index.html'),
+            href: '/index.html',
             dangerouslySetInnerHTML: {
               __html: logoBase
             }
@@ -52,7 +50,6 @@ function render() {
             className: 'button-nav_signup',
             id: 'signup-nav-sub',
             href: 'https://app.wercker.com/users/new/',
-            onClick: changeLocation.bind(this, 'https://app.wercker.com/users/new/'),
             children: 'Sign up'
           })
         ),
@@ -60,24 +57,21 @@ function render() {
           dom.li(null,
             dom.a({
               className: 'navbar-item',
-              href: '/learn',
-              onClick: changeLocation.bind(this, '/learn/basics/introduction.html'),
+              href: '/learn/basics/introduction.html',
               children: 'Learn'
             })
           ),
           dom.li(null,
             dom.a({
               className: 'navbar-item',
-              href: '/docs',
-              onClick: changeLocation.bind(this, '/docs/index.html'),
+              href: '/docs/index.html',
               children: 'Docs'
             })
           ),
           dom.li(null,
             dom.a({
               className: 'navbar-item',
-              href: '/api',
-              onClick: changeLocation.bind(this, '/api/index.html'),
+              href: '/api/index.html',
               children: 'Api'
             })
           ),
@@ -85,7 +79,6 @@ function render() {
             dom.a({
               className: 'navbar-item',
               href: 'http://blog.wercker.com',
-              onClick: changeLocation.bind(this, 'http://blog.wercker.com'),
               children: 'Blog'
             })
           ),
@@ -93,7 +86,6 @@ function render() {
             dom.a({
               className: 'navbar-item navbar-item_right',
               href: 'https://app.wercker.com/sessions/new',
-              onClick: changeLocation.bind(this, 'https://app.wercker.com/sessions/new'),
               children: 'Log in'
             })
           )
@@ -101,18 +93,4 @@ function render() {
       )
     )
   );
-}
-
-/**
- * Change location.
- *
- * @param {String} href
- * @param {Event} e
- */
-
-function changeLocation(href, e) {
-  e.preventDefault();
-  e.stopPropagation();
-
-  window.location = href;
 }
