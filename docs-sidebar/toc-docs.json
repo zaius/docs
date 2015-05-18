@@ -4,14 +4,14 @@
     "setting-up-the-cli"
   ],
   [
-    "using-the-cli",
+     "using-the-cli",
      "installing.md",
      "requirements.md",
      "local-development.md",
      "building-projects.md",
      "pulling-containers",
      "introspecting-containers",
-     "commands.md"
+     "available-commands.md"
   ],
   [
      "build",
