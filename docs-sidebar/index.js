@@ -53,7 +53,7 @@ function createList(data, propdata) {
 
     const nw = arr.map((article, j) => {
       if (j === 0 && article === section) {
-        const uri = createUri(base, section, propdata[i][1]);
+        const uri = createHeadUri(base, section);
         return renderHeadElement(stripFileExt(article), uri);
       }
       const uri = createUri(base, section, article);
@@ -101,6 +101,10 @@ function stripFileExt(filename) {
 function createUri(base, section, article) {
   article = article.split('.')[0];
   return '/' + base + '/' + section + '/' + article + '.html';
+}
+
+function createHeadUri(base, section) {
+  return '/' + base + '/' + section + '/' + 'index.html';
 }
 
 // get the baseUrl from the window
