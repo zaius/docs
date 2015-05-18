@@ -1,5 +1,5 @@
 ---
-tags: docker
+tags: docker, cli
 ---
 
 ## Troubleshooting
