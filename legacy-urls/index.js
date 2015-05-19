@@ -68,6 +68,7 @@ fs.createReadStream(path.join(__dirname, 'urlmappings.txt'))
       if (err) {
         process.stderr.write(util.format('Error occured while adding file for %s\n', original));
         process.stderr.write(util.format('%s\n', util.inspect(err)));
+        process.exit(1);
       } else {
         process.stdout.write(util.format('Added redirect file for %s to %s\n', original, mapping));
       }
