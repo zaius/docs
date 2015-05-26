@@ -4,6 +4,14 @@
     "setting-up-the-cli"
   ],
   [
+    "what-is-wercker",
+    "pipelines",
+    "steps",
+    "containers",
+    "werckeryml",
+    "organizations"
+  ],
+  [
      "using-the-cli",
      "installing.md",
      "requirements.md",
@@ -12,6 +20,11 @@
      "pulling-containers",
      "introspecting-containers",
      "available-commands.md"
+  ],
+  [
+     "wercker-yml",
+     "creating-a-yml.md",
+     "wercker-classic.md"
   ],
   [
      "build",
@@ -143,10 +156,5 @@
      "roles-and-permissions.md",
      "step-registry.md",
      "troubleshooting.m"
-  ],
-  [
-     "wercker-yml",
-     "creating-a-yml.md",
-     "wercker-classic.md"
   ]
-]
+  ]
