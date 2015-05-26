@@ -13,3 +13,4 @@ tags: faq
 * [How can I bypass timeouts?](/docs/faq/how-to-bypass-timeouts.html)
 * [What is my concurrency?](/docs/faq/what-is-my-concurrency.html)
 * [What IP's should I whitelist](/docs/faq/what-ip-to-whitelist.html)
+* [How do I deal with submodules for the Docker stack?](/docs/faq/submodules.html)
