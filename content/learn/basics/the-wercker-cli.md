@@ -44,9 +44,9 @@ $(boot2docker shellinit)
 You can obtain both versions for Mac OSX and Linux of the CLI at the
 following locations:
 
-* [Linux 32bit](http://downloads.wercker.com/cli/stable/linux_386/wercker)
-* [Linux 64bit](http://downloads.wercker.com/cli/stable/linux_amd64/wercker)
-* [Mac 64bit](http://downloads.wercker.com/cli/stable/darwin_amd64/wercker)
+* [Linux 32bit](https://s3.amazonaws.com/downloads.wercker.com/cli/stable/linux_386/wercker)
+* [Linux 64bit](https://s3.amazonaws.com/downloads.wercker.com/cli/stable/linux_amd64/wercker)
+* [Mac 64bit](https://s3.amazonaws.com/downloads.wercker.com/cli/stable/darwin_amd64/wercker)
 
 For example downloading the Mac OSX version and
 installing it in `/usr/local/bin` (make sure this directory is available
@@ -54,7 +54,7 @@ in your PATH):
 
 ```sh
 # downloads the Mac OSX CLI to /usr/local/bin (YMMV)
-curl http://downloads.wercker.com/cli/stable/darwin_amd64/wercker -o /usr/local/bin/wercker
+curl https://s3.amazonaws.com/downloads.wercker.com/cli/stable/darwin_amd64/wercker -o /usr/local/bin/wercker
 ```
 
 And for Linux 64 bit (make sure this directory is available in your
@@ -62,7 +62,7 @@ PATH):
 
 ```sh
 # downloads the Linux CLI to /usr/local/bin (YMMV)
-curl http://downloads.wercker.com/cli/stable/linux_amd64/wercker -o /usr/local/bin/wercker
+curl https://s3.amazonaws.com/downloads.wercker.com/cli/stable/linux_amd64/wercker -o /usr/local/bin/wercker
 ```
 
 > If you've installed the legacy version of the CLI, make sure its not
