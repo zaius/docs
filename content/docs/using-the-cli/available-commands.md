@@ -17,14 +17,6 @@ COMMANDS:
    help, h      Shows a list of commands or help for one command
 ```
 
-### Getting Help
-
-You can get help on any individual command by running:
-
-```sh
-wercker help <command>
-```
-
 ### Detect
 
 The *detect* command introspects your projects and generates

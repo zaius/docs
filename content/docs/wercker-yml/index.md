@@ -1,3 +1,0 @@
-## The wercker.yml file
-
-
