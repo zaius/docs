@@ -28,7 +28,10 @@ You can read more about how wercker uses the Docker Hub in [this section](/docs/
 
 Wercker classic (codename: Andorian) uses LXC as its container runtime. Because developers want
 different programming languages, build tools, libraries and services on their
-environment, we offered the ability to create your own boxes and publish these
-on the marketplace. In classic we also introduced the ability to customize
+environment, we offer the ability to create your own boxes and publish these
+on the marketplace. However with Docker and other container formats gaining popularity
+ and the ample choice of containers, Ewok is now the preferred stack.
+
+In classic we also introduced the ability to customize
 your pipelines via [steps](/docs/steps/about-steps.html) and publish these
-to the marketplace as well.
+to the marketplace as well. Steps are still available in Ewok.
