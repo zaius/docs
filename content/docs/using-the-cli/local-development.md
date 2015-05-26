@@ -12,7 +12,7 @@ changes _before_ you commit them.
 ### wercker dev
 
 The `wercker dev` command executes the `dev` pipeline designed for live
-development. Whereas the [wercker build command](/docs/using-the-cli/building-projects.html) a copy of your code
+development. Whereas the wercker [build command](/docs/using-the-cli/local-builds.html) a copy of your code
 is built inside a container in order to mitigate side effects, 
 the `dev` command directly mounts your local directory inside the
 container. 
@@ -24,7 +24,7 @@ on code changes. The `internal/watch` step is a long-running step that
 does exactly that and goes hand in hand with the `wercker dev` command.
 
 In order to use `wercker dev` and `internal/watch` you create a `dev` section in your
-[wercker.yml file](/docs/wercker-yml/index.html):
+[wercker.yml](/docs/wercker-yml/index.html) file:
 
 ```yaml
 box: nodesource/trusty
@@ -41,17 +41,17 @@ In this example we set up a `dev` pipeline in which one initial step,
 the necessary dependencies. 
 
 Next, we use the `internal/watch` step to
-launch our application and through `reload: true` we reload the
+launch the application and through `reload: true` we reload the
 environment on file changes.
 
-We run our development pipeline as follows:
+We run the development pipeline as follows:
 
 ```sh
 wercker dev --publish 5000
 ```
 
-We expose the port on which our application is listening such that we
-can see it action by browsing to our Docker host). If you are using
+We expose the port on which the application is listening such that we
+can see it action by browsing to your Docker host). If you are using
 [boot2docker](http://boot2docker.io) the IP is usually `192.168.59.103`
 but we tell you the IP address of the host once the step is run.
 
@@ -94,7 +94,7 @@ wercker dev --publish 5000 --attach-on-error
 ```
 
 You can see some `dev` pipelines in action in the `wercker.yml` files of
-our sample applications.
+these sample applications.
 
  * [golang](https://github.com/wercker/getting-started-golang)
  * [node.js](https://github.com/wercker/getting-started-nodejs)

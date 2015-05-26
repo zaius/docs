@@ -4,101 +4,28 @@
      "installing.md",
      "requirements.md",
      "local-development.md",
-     "building-projects.md",
+     "local-builds.md",
      "pulling-containers",
      "introspecting-containers",
      "available-commands.md"
   ],
   [
-     "build",
-     "about-builds.md",
-     "introspecting-builds.md",
-     "cloud-builds.md",
-     "local-builds.md",
-     "pulling-builds.md"
-  ],
-  [
-     "deploy",
-     "auto-deploy.md",
-     "deploy-steps.md",
-     "heroku.md",
-     "targets.md",
-     "s3.md"
-  ],
-  [
-     "containers",
-     "dockerhub.md",
-     "private-containers.md",
-     "pushing-containers.md",
-     "tested-containers.md",
-     "using-containers.md"
-  ],
-  [
-     "desktop-app",
-     "download.md"
-  ],
-  [
-     "environment-variables",
-     "after-step-variables.md",
-     "available-env-vars.md",
-     "creating-env-vars.md",
-     "data-types.md",
-     "deploy-variables.md",
-     "protected-variables.md",
-     "using-env-vars.md"
-  ],
-  [
-     "faq",
-     "can-i-build-dockerfiles.md",
-     "can-i-run-docker-commands.md",
-     "how-can-i-change-my-username.md",
-     "how-can-i-update-a-repo-url.md",
-     "how-to-bypass-timeouts.md",
-     "migration-tips-v2.md",
-     "what-ip-to-whitelist.md",
-     "what-is-my-concurrency.md",
-     "troubleshooting.md"
-  ],
-  [
-     "git",
-     "pull-requests.md",
-     "repository-access.md",
-     "webhooks.md"
-  ],
-  [
-     "languages",
-     "github-icon.svg",
-     "golang.md",
-     "nodejs.md",
-     "python.md",
-     "ruby.md"
-  ],
-  [
-     "organizations",
-     "adding-an-application.md",
-     "application-access.md",
-     "create-an-organization.md",
-     "owners-team.md",
-     "people-and-teams.md"
-  ],
-  [
-     "notifications",
-     "create-a-notification-step.md",
-     "email.md",
-     "hipchat.md",
-     "slack.md",
-     "using-notifications.md"
-  ],
-  [
      "pipelines",
-     "packaging.md",
      "per-pipeline-containers.md",
      "stacks.md"
   ],
   [
-     "security",
-     "authorization.md",
-     "sensitive-information.md"
+     "wercker-yml",
+     "creating-a-yml.md",
+     "wercker-classic.md"
+  ],
+  [
+     "containers",
+     "using-containers.md",
+     "dockerhub.md",
+     "private-containers.md",
+     "pushing-containers.md",
+     "tested-containers.md"
   ],
   [
      "services",
@@ -111,12 +38,6 @@
      "rabbitmq.md",
      "redis.md",
      "using-services.md"
-  ],
-  [
-     "ssh-keys",
-     "add-to-known-host.md",
-     "creating-ssh-keys.md",
-     "using-ssh-keys.md"
   ],
   [
      "steps",
@@ -132,6 +53,71 @@
      "using-steps.md"
   ],
   [
+     "deploy",
+     "auto-deploy.md",
+     "deploy-steps.md",
+     "heroku.md",
+     "targets.md",
+     "s3.md"
+  ], 
+  [
+     "languages",
+     "github-icon.svg",
+     "golang.md",
+     "nodejs.md",
+     "python.md",
+     "ruby.md"
+  ],
+  [
+     "environment-variables",
+     "after-step-variables.md",
+     "available-env-vars.md",
+     "creating-env-vars.md",
+     "data-types.md",
+     "deploy-variables.md",
+     "protected-variables.md",
+     "using-env-vars.md"
+  ],
+  [
+     "organizations",
+     "adding-an-application.md",
+     "application-access.md",
+     "create-an-organization.md",
+     "owners-team.md",
+     "people-and-teams.md"
+  ],
+  [
+     "faq",
+     "can-i-build-dockerfiles.md",
+     "can-i-run-docker-commands.md",
+     "how-can-i-change-my-username.md",
+     "how-can-i-update-a-repo-url.md",
+     "how-to-bypass-timeouts.md",
+     "migration-tips-v2.md",
+     "what-ip-to-whitelist.md",
+     "what-is-my-concurrency.md",
+     "troubleshooting.md"
+  ],
+  [
+     "git",
+     "pull-requests.md"
+  ],
+  [
+     "notifications",
+     "create-a-notification-step.md",
+     "email.md",
+     "hipchat.md",
+     "slack.md",
+     "using-notifications.md"
+  ],
+  [
+     "desktop-app"
+  ],
+  [
+     "security",
+     "authorization.md"
+  ],
+  [
      "web-interface",
      "adding-a-new-application.md",
      "application-settings.md",
@@ -139,10 +125,5 @@
      "roles-and-permissions.md",
      "step-registry.md",
      "troubleshooting.m"
-  ],
-  [
-     "wercker-yml",
-     "creating-a-yml.md",
-     "wercker-classic.md"
   ]
 ]
