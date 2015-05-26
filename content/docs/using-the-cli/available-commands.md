@@ -2,7 +2,7 @@
 tags: cli
 ---
 
-## Available commands
+## Overview of Available commands
 
 The wercker command line interface comes with the following commands:
 

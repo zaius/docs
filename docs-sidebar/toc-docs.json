@@ -1,4 +1,14 @@
-[
+[  
+  [
+     "using-the-cli",
+     "installing.md",
+     "requirements.md",
+     "local-development.md",
+     "building-projects.md",
+     "pulling-containers",
+     "introspecting-containers",
+     "available-commands.md"
+  ],
   [
      "build",
      "about-builds.md",
@@ -6,17 +16,6 @@
      "cloud-builds.md",
      "local-builds.md",
      "pulling-builds.md"
-  ],
-  [
-     "cache",
-     "using-wercker-cache.md"
-  ],
-  [
-     "cli",
-     "commands.md",
-     "installing.md",
-     "requirements.md",
-     "troubleshooting.md"
   ],
   [
      "deploy",
@@ -57,7 +56,8 @@
      "how-to-bypass-timeouts.md",
      "migration-tips-v2.md",
      "what-ip-to-whitelist.md",
-     "what-is-my-concurrency.md"
+     "what-is-my-concurrency.md",
+     "troubleshooting.md"
   ],
   [
      "git",
