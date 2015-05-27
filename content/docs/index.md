@@ -2,7 +2,7 @@
 
 Welcome to the wercker documentation! The *docs* section covers all the
 wercker concepts and common tasks. If you are completely new to wercker,
-it's recommended to first go through the [learn section](http://devcenter.wercker.com/learn/basics/01_introduction.html).
+it's recommended to first go through the [learn section](http://devcenter.wercker.com/learn/basics/introduction.html).
 
 If you feel like something is missing
 [open an issue on GitHub](https://github.com/wercker/docs/issues). To the left
