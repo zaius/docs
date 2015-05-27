@@ -1,4 +1,4 @@
-[  
+[
   [
      "using-the-cli",
      "installing.md",
@@ -29,15 +29,12 @@
   ],
   [
      "services",
+     "private-services.md",
      "advanced-services.md",
      "available-env-vars.md",
      "mariadb.md",
      "mongodb.md",
-     "postgresql.md",
-     "private-services.md",
-     "rabbitmq.md",
-     "redis.md",
-     "using-services.md"
+     "postgresql.md"
   ],
   [
      "steps",
@@ -59,7 +56,7 @@
      "heroku.md",
      "targets.md",
      "s3.md"
-  ], 
+  ],
   [
      "languages",
      "github-icon.svg",
