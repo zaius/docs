@@ -5,7 +5,7 @@ tags: migrating
 ## Migration Tips to wercker v2
 
 In this article we go over the items to take into consideration when
-migrating your application to wercker v2 (Ewok Edition).
+migrating your application to [wercker v2](http://blog.wercker.com/2015/04/02/Introducing-our-docker-stack.html) (Ewok Edition).
 
 ### Table of contents
 

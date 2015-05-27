@@ -7,8 +7,8 @@ tags: builds, introspecting
 Often you want to have a closer look at what happened within your
 pipelines.
 
-Builds that you have [pulled](/docs/build/pulling-builds.html), or
-[built locally](/docs/build/local-builds.html) using the [wercker command line
+Builds that you have [pulled](/docs/using-the-cli/pulling-containers.html), or
+[built locally](/docs/using-the-cli/local-builds.html) using the [wercker command line
 interface](/docs/cli/commands.html) can be introspected.
 
 This is useful for debugging purposes and having a closer look at what
@@ -23,7 +23,8 @@ done via the Docker command.
 
 We expect you to have a [working Docker environment](/learn/basics/the-wercker-cli.html) available on your
 machine. Assuming you have [built a container
-locally](/docs/build/local-builds.html) or have [pulled](/docs/build/pulling-builds.html) a
+locally](/docs/using-the-cli/local-builds.html) or have
+[pulled](/docs/using-the-cli/pulling-containers.html) a
 build artifact as container you can run the following command to inspect
 your container:
 

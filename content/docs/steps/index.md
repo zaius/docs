@@ -2,7 +2,7 @@
 tags: steps
 ---
 
-## About steps
+## Steps
 
 Steps make up the wercker
 [pipeline](/learn/pipelines/01-introduction.html) and can either be
