@@ -21,7 +21,6 @@
   ],
   [
      "containers",
-     "using-containers.md",
      "dockerhub.md",
      "private-containers.md",
      "pushing-containers.md",

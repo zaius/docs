@@ -13,6 +13,9 @@ There are currently *two* stacks available on wercker:
 * wercker (newest, also known as Ewok)
 * wercker classic (also known as Andorian)
 
+If you're already familiar with the _classic_ stack, see our [migration guide](/docs/faq/migration-tips-v2.html)
+to move to the Docker stack.
+
 ### Docker Stack
 
 The new wercker stack (codename: Ewok) uses the [Docker](http://docker.io) container runtime.
