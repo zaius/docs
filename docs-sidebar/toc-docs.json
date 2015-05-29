@@ -1,124 +1,126 @@
+
 [
   [
-     "Using-the-cli",
-     "Installing.md",
-     "Requirements.md",
-     "Local-development.md",
-     "Local-builds.md",
-     "Pulling-containers",
-     "Introspecting-containers",
-     "Available-commands.md"
+     "using-the-cli",
+     "installing.md",
+     "requirements.md",
+     "local-development.md",
+     "local-builds.md",
+     "pulling-containers",
+     "introspecting-containers",
+     "available-commands.md"
   ],
   [
-     "Pipelines",
-     "Per-pipeline-containers.md",
-     "Stacks.md"
+     "pipelines",
+     "per-pipeline-containers.md",
+     "stacks.md"
   ],
   [
-     "Wercker-yml",
-     "Creating-a-yml.md",
-     "Wercker-classic.md"
+     "wercker-yml",
+     "creating-a-yml.md",
+     "wercker-classic.md"
   ],
   [
-     "Containers",
-     "Dockerhub.md",
-     "Private-containers.md",
-     "Pushing-containers.md",
-     "Tested-containers.md"
+     "containers",
+     "dockerhub.md",
+     "private-containers.md",
+     "pushing-containers.md",
+     "tested-containers.md"
   ],
   [
-     "Services",
-     "Private-services.md",
-     "Advanced-services.md",
-     "Available-env-vars.md",
-     "Mariadb.md",
-     "Mongodb.md",
-     "Postgresql.md"
+     "services",
+     "private-services.md",
+     "advanced-services.md",
+     "available-env-vars.md",
+     "mariadb.md",
+     "mongodb.md",
+     "postgresql.md"
   ],
   [
-     "Steps",
-     "After-steps.md",
-     "Creating-steps.md",
-     "Deploy-env-vars.md",
-     "Deploy-steps.md",
-     "Install-packages.md",
-     "Publishing-steps.md",
-     "Script-step.md",
-     "Step-environment-variables.md",
-     "Using-steps.md"
+     "steps",
+     "about-steps.md",
+     "after-steps.md",
+     "creating-steps.md",
+     "deploy-env-vars.md",
+     "deploy-steps.md",
+     "install-packages.md",
+     "publishing-steps.md",
+     "script-step.md",
+     "step-environment-variables.md",
+     "using-steps.md"
   ],
   [
-     "Deploy",
-     "Auto-deploy.md",
-     "Deploy-steps.md",
-     "Heroku.md",
-     "Targets.md",
-     "S3.md"
+     "deploy",
+     "auto-deploy.md",
+     "deploy-steps.md",
+     "heroku.md",
+     "targets.md",
+     "s3.md"
   ],
   [
-     "Languages",
-     "Github-icon.svg",
-     "Golang.md",
-     "Nodejs.md",
-     "Python.md",
-     "Ruby.md"
+     "languages",
+     "github-icon.svg",
+     "golang.md",
+     "nodejs.md",
+     "python.md",
+     "ruby.md"
   ],
   [
-     "Environment-variables",
-     "After-step-variables.md",
-     "Available-env-vars.md",
-     "Creating-env-vars.md",
-     "Data-types.md",
-     "Deploy-variables.md",
-     "Protected-variables.md",
-     "Using-env-vars.md"
+     "environment-variables",
+     "after-step-variables.md",
+     "available-env-vars.md",
+     "creating-env-vars.md",
+     "data-types.md",
+     "deploy-variables.md",
+     "protected-variables.md",
+     "using-env-vars.md"
   ],
   [
-     "Organizations",
-     "Adding-an-application.md",
-     "Application-access.md",
-     "Create-an-organization.md",
-     "Owners-team.md",
-     "People-and-teams.md"
+     "organizations",
+     "adding-an-application.md",
+     "application-access.md",
+     "create-an-organization.md",
+     "owners-team.md",
+     "people-and-teams.md"
   ],
   [
-     "Faq",
-     "Can-i-build-dockerfiles.md",
-     "Can-i-run-docker-commands.md",
-     "How-can-i-change-my-username.md",
-     "How-can-i-update-a-repo-url.md",
-     "How-to-bypass-timeouts.md",
-     "Migration-tips-v2.md",
-     "What-ip-to-whitelist.md",
-     "What-is-my-concurrency.md",
-     "Troubleshooting.md"
+     "faq",
+     "can-i-build-dockerfiles.md",
+     "can-i-run-docker-commands.md",
+     "how-can-i-change-my-username.md",
+     "how-can-i-update-a-repo-url.md",
+     "how-to-bypass-timeouts.md",
+     "migration-tips-v2.md",
+     "what-ip-to-whitelist.md",
+     "what-is-my-concurrency.md",
+     "troubleshooting.md"
   ],
   [
-     "Git",
-     "Pull-requests.md"
+     "git",
+     "pull-requests.md"
   ],
   [
-     "Notifications",
-     "Create-a-notification-step.md",
-     "Email.md",
-     "Hipchat.md",
-     "Slack.md",
-     "Using-notifications.md"
+     "notifications",
+     "create-a-notification-step.md",
+     "email.md",
+     "hipchat.md",
+     "slack.md",
+     "using-notifications.md"
   ],
   [
-     "Desktop-app"
+     "desktop-app"
   ],
   [
-     "Security",
-     "Authorization.md"
+     "security",
+     "authorization.md"
   ],
   [
-     "Web-interface",
-     "Adding-a-new-application.md",
-     "Application-settings.md",
-     "Notifications.md",
-     "Roles-and-permissions.md",
-     "Step-registry.md",
-     "Troubleshooting.m"
+     "web-interface",
+     "adding-a-new-application.md",
+     "application-settings.md",
+     "notifications.md",
+     "roles-and-permissions.md",
+     "step-registry.md",
+     "troubleshooting.m"
   ]
 ]
