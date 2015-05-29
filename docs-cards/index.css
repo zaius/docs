@@ -51,6 +51,11 @@
   list-style: none;
 }
 
+.doc-cards-item ul .doc-cards-item_list-header {
+  font-weight: var(--fontWeight_semibold);
+  padding-bottom: 10px;
+}
+
 .doc-cards-item li:before {
   content: " ";
   color: var(--color-blue_light);

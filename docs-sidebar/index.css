@@ -1,4 +1,4 @@
-@import 'search.css';
+@import "search.css";
 
 /**
  * Sidebar.
@@ -21,7 +21,6 @@
 .sidebar-li > a {
   margin-top: 25px;
   font-size: var(--fontSize_base);
-  text-transform: capitalize;
   font-weight: var(--fontWeight_base);
   line-height: var(--lineHeight_loose);
   font-family: 'Open Sans', sans-serif;
@@ -32,10 +31,6 @@
 .sidebar-li_sub {
   margin: 15px 0;
   margin-left: 5px;
-}
-
-.sidebar-li_sub > a {
-  text-transform: capitalize;
 }
 
 .sidebar-li_sub.active > a {
