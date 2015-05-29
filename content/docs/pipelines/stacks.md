@@ -8,6 +8,7 @@ A stack is a complete environment that runs your pipelines, including the
 operating system and container technology. Different stacks have different
 feature sets.
 
+You can change stacks by going to the infrastructure settings of your application.
 There are currently *two* stacks available on wercker:
 
 * wercker (newest, also known as Ewok)
