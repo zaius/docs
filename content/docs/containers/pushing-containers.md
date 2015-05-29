@@ -41,6 +41,35 @@ field contains the repository that you want to push to (in this case the
 username `turing` with the `bar` image), and `registry` is
 the URL of your Docker registry.
 
+If your container needs a `cmd` to be run on startup of the container you
+can "bake" that into the container as well:
+
+```yaml
+deploy:
+  steps:
+    - internal/docker-push:
+        username: $USERNAME
+        password: $PASSWORD
+        tag: my-amazing-tag
+        cmd: my-amazing-command
+        repository: turing/bar
+        registry: https://registry.hub.docker.com
+```
+
+Same goes for an `entrypoint` directive:
+
+```yaml
+deploy:
+  steps:
+    - internal/docker-push:
+        username: $USERNAME
+        password: $PASSWORD
+        tag: my-amazing-tag
+        entrypoint: my-entrypoint
+        repository: turing/bar
+        registry: https://registry.hub.docker.com
+```
+
 > If you're pushing to the Docker Hub, the registry field is optional and can be omitted.
 
 ### Pushing to private registries
