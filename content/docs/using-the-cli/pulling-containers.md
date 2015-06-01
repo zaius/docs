@@ -13,6 +13,12 @@ You can also pull a specific build using the build-id as identfier:
 wercker pull <BUILD-ID>
 ```
 
+This will download the container as a `tarball`. If you have a working Docker environment and you want to directly load the container
+after download, than use the `--load` flag.
+
+If you've already downloaded a `tarball`, you will get an error message that the `container.tar` already exists. You must
+either delete the file, or use the `-f` flag and rerun the `wercker pull` command.
+
 You can also query for a certain build. For this, you need the *name*
 of the owner and *project-name* on wercker. Then you can optionally give some
 extra queries such as *branch* or result.
@@ -21,11 +27,9 @@ extra queries such as *branch* or result.
 wercker pull owner/project-name [query flags]
 ```
 
-Checkout the all available flags in the help page: 
+Checkout the all available flags in the help page:
 
 ```sh
 wercker pull --help
 ```
 
-If you have a working Docker environment and you want to load the container
-after download, than use the `--load` flag.
