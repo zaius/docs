@@ -16,7 +16,7 @@ wercker pull <BUILD-ID>
 This will download the container as a `tarball`. If you have a working Docker environment and you want to directly load the container
 after download, than use the `--load` flag.
 
-If you've already downloaded a `tarball`, you will get an error message that the `container.tar` already exists. You must
+If you've already downloaded a `tarball`, you will get an error message that the `repository.tar` already exists. You must
 either delete the file, or use the `-f` flag and rerun the `wercker pull` command.
 
 You can also query for a certain build. For this, you need the *name*
@@ -33,3 +33,4 @@ Checkout the all available flags in the help page:
 wercker pull --help
 ```
 
+Make sure you have a working [Docker environment](/docs/using-the-cli/requirements.html) when pulling your builds.
