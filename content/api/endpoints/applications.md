@@ -21,7 +21,7 @@ without a token, only public applications will be returned.
 |------|-------------|
 | `stack` | Stack used by application. Currently supported: `1` (classic), `5` (Docker enabled) |
 | `limit` | Limit the results that will get returned. Default: `10`. Min: `1`. Max: `20`. |
-| `skip` | Skip a certain ammount of builds. Default: `0`. Min: `0`. |
+| `skip` | Skip a certain ammount of builds. |
 | `sort` | Sort builds using this key. Default: `nameAsc`. Possible values: `nameAsc`, `nameDesc`, `createdAtAsc`, `createdAtDesc`, `updateAtAsc`, `updatedAtDesc`. |
 
 #### Response
@@ -117,7 +117,7 @@ Retrieve all builds of an application.
 | `stack` | Stack used to run a build. Currently supported: `1` (classic), `5` (Docker enabled) |
 | `status` | Status of the build. Possible values: `notstarted`, `started`, `finished`, `running`. |
 | `limit` | Limit the results that will get returned. Default: `10`. Min: `1`. Max: `20`. |
-| `skip` | Skip a certain ammount of builds. Default: `0`. Min: `0`. |
+| `skip` | Skip a certain ammount of builds. |
 | `sort` | Sort builds using this key. Default: `creationDateDesc`. Possible values: `creationDateAsc`, `creationDateDesc`. |
 
 #### Response
@@ -160,7 +160,7 @@ Retrieve all deploys of an application.
 | `stack` | Stack used to run a deploy. Currently supported: `1` (classic), `5` (Docker enabled) |
 | `status` | Status of the deploy. Possible values: `notstarted`, `started`, `finished`, `running`. |
 | `limit` | Limit the results that will get returned. Default: `10`. Min: `1`. Max: `20`. |
-| `skip` | Skip a certain ammount of builds. Default: `0`. Min: `0`. |
+| `skip` | Skip a certain ammount of builds. |
 | `sort` | Sort builds using this key. Default: `creationDateDesc`. Possible values: `creationDateAsc`, `creationDateDesc`. |
 
 #### Response
