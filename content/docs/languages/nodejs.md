@@ -52,7 +52,7 @@ build:
 
 ### Sample application
 
-You can checkout and clone a sample application in ruby at the
+You can checkout and clone a sample application in Nodejs at the
 following location:
 
 [getting-started-nodejs](https://github.com/wercker/getting-started-nodejs)
