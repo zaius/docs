@@ -7,8 +7,8 @@
 
 ### <a name="list-user-applications"></a>List user applications
 
-List all applications owned by the user or organization. This will only contain
-application that the authenticated user has access to. If the call is made
+List all applications owned by the user or organization. The result will only contain
+applications that the authenticated user has access to. If the call is made
 without a token, only public applications will be returned.
 
 ***
@@ -21,10 +21,8 @@ without a token, only public applications will be returned.
 |:--------|:------------|
 | `stack` | Stack used by application. Currently supported: `1` (classic), `5` (Docker enabled) |
 | `limit` | Limit the results that will get returned. Default: `10`. Min: `1`. Max: `20`. |
-| `skip`  | Skip a certain ammount of builds. Default: `0`. Min: `0`. |
-| `sort`  | Sort builds using this key. Default: `nameAsc`. Possible values: `nameAsc`, `nameDesc`, `createdAtAsc`, `createdAtDesc`, `updateAtAsc`, `updatedAtDesc`. |
-
-
+| `skip` | Skip a certain ammount of builds. |
+| `sort` | Sort builds using this key. Default: `nameAsc`. Possible values: `nameAsc`, `nameDesc`, `createdAtAsc`, `createdAtDesc`, `updateAtAsc`, `updatedAtDesc`. |
 
 #### Response
 
@@ -119,7 +117,7 @@ Retrieve all builds of an application.
 | `stack` | Stack used to run a build. Currently supported: `1` (classic), `5` (Docker enabled) |
 | `status` | Status of the build. Possible values: `notstarted`, `started`, `finished`, `running`. |
 | `limit` | Limit the results that will get returned. Default: `10`. Min: `1`. Max: `20`. |
-| `skip` | Skip a certain ammount of builds. Default: `0`. Min: `0`. |
+| `skip` | Skip a certain ammount of builds. |
 | `sort` | Sort builds using this key. Default: `creationDateDesc`. Possible values: `creationDateAsc`, `creationDateDesc`. |
 
 #### Response
@@ -162,7 +160,7 @@ Retrieve all deploys of an application.
 | `stack` | Stack used to run a deploy. Currently supported: `1` (classic), `5` (Docker enabled) |
 | `status` | Status of the deploy. Possible values: `notstarted`, `started`, `finished`, `running`. |
 | `limit` | Limit the results that will get returned. Default: `10`. Min: `1`. Max: `20`. |
-| `skip` | Skip a certain ammount of builds. Default: `0`. Min: `0`. |
+| `skip` | Skip a certain ammount of builds. |
 | `sort` | Sort builds using this key. Default: `creationDateDesc`. Possible values: `creationDateAsc`, `creationDateDesc`. |
 
 #### Response
