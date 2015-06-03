@@ -7,8 +7,8 @@
 
 ### <a name="list-user-applications"></a>List user applications
 
-List all applications owned by the user or organization. This will only contain
-application that the authenticated user has access to. If the call is made
+List all applications owned by the user or organization. The result will only contain
+applications that the authenticated user has access to. If the call is made
 without a token, only public applications will be returned.
 
 ***
