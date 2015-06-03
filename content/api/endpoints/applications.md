@@ -17,12 +17,14 @@ without a token, only public applications will be returned.
 
 #### Querystring values
 
-| Name | Description |
-|------|-------------|
+| Name    | Description |
+|:--------|:------------|
 | `stack` | Stack used by application. Currently supported: `1` (classic), `5` (Docker enabled) |
 | `limit` | Limit the results that will get returned. Default: `10`. Min: `1`. Max: `20`. |
-| `skip` | Skip a certain ammount of builds. Default: `0`. Min: `0`. |
-| `sort` | Sort builds using this key. Default: `nameAsc`. Possible values: `nameAsc`, `nameDesc`, `createdAtAsc`, `createdAtDesc`, `updateAtAsc`, `updatedAtDesc`. |
+| `skip`  | Skip a certain ammount of builds. Default: `0`. Min: `0`. |
+| `sort`  | Sort builds using this key. Default: `nameAsc`. Possible values: `nameAsc`, `nameDesc`, `createdAtAsc`, `createdAtDesc`, `updateAtAsc`, `updatedAtDesc`. |
+
+
 
 #### Response
 
@@ -109,8 +111,8 @@ Retrieve all builds of an application.
 
 #### Querystring values
 
-| Name | Description |
-|------|-------------|
+| Name    | Description |
+|:--------|:------------|
 | `branch` | Branch of the commit that triggered a build. |
 | `commit` | Commit of the build that triggered the build. `40` characters. |
 | `result` | Result of the build. Possible values: `aborted`, `unknown`, `passed`, `failed`. |
@@ -153,8 +155,8 @@ Retrieve all deploys of an application.
 
 #### Querystring values
 
-| Name | Description |
-|------|-------------|
+| Name    | Description |
+|:--------|:------------|
 | `buildId` | The ID of the build which was used for a deploy. |
 | `result` | Result of the deploy. Possible values: `aborted`, `unknown`, `passed`, `failed`. |
 | `stack` | Stack used to run a deploy. Currently supported: `1` (classic), `5` (Docker enabled) |
