@@ -98,6 +98,7 @@
   [
      "git",
      "pull-requests.md"
+     "submodules.md"
   ],
   [
      "notifications",
