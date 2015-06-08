@@ -17,7 +17,7 @@ build:
 
         - script:
             name: build
-            code: NODE_ENV=production make build
+            code: NODE_ENV=production npm run build
 
         - script:
             name: test

@@ -5,17 +5,17 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "build": "make build",
+    "build": "gulp build",
+    "clean": "rm -rf {cache,release,coverage}",
+    "content": "gulp content",
     "postinstall": "echo 'linklocal' && linklocal link -r && linklocal list -r | bulk -c 'npm install'",
-    "start": "make all",
-    "nwstart": "NODE_ENV=development ./bin.js server -p 1337",
-    "nwbuild": "./bin.js build",
+    "start": "npm run build && npm run open",
+    "open": "open http://localhost:1337 && httpster -d build -p 1337",
     "test": "semistandard",
     "watch": "watchify index.js -t brfs -o build/bundle.js",
     "format": "semistandard-format -w"
   },
   "repository": "wercker/dev",
-  "keywords": [],
   "license": "MIT",
   "dependencies": {
     "@docs/api": "file:docs-api",
