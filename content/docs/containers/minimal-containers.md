@@ -56,7 +56,7 @@ deploy:
         registry: https://quay.io
 ```
 
-The google/golang image is used as a base container for the build pipeline as
+The `google/golang` image is used as a base container for the build pipeline as
 it has the golang language and build tools installed in it. The next
 step is the compilation of the code which results in the executable of
 the application.
