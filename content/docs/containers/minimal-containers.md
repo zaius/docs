@@ -78,5 +78,6 @@ and `ports` directive, the command to run on startup of the container
 and the port on which the application is avaiable are both baked into
 the container respectively.
 
-This final container is *1.2MB* in size.
+The final container is tagged with the `$WERCKER_GIT_COMMIT` for easy
+trackback and is *1.2MB* in size!
 
