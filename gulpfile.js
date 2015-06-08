@@ -1,5 +1,3 @@
-/*eslint no-console: 0 camelcase: 0*/
-
 var assert = require('assert');
 var assign = require('object-assign');
 var browserify = require('browserify');
@@ -213,9 +211,9 @@ gulp.task('default', [
  * @api private
  */
 function buildTemplate (tn) {
-  assert('string' == typeof tn, 'TemplateName should be a string');
+  assert.equal(typeof tn, 'string', 'TemplateName should be a string');
 
-  var outDir = 'index' == tn ? '' : tn;
+  var outDir = tn === 'index' ? '' : tn;
 
   var metalPipe = gulpsmith()
     .use(highlight())

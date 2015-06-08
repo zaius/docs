@@ -50,19 +50,19 @@ function render () {
  */
 function createClassName (block) {
   const head = window.location.pathname.split('/')[2];
-  const active = (head == slugify(block));
+  const active = (head === slugify(block));
 
-  return 'learnblocks-item '
-    + 'learnblocks-item_'
-    + block.replace(/(\.)/gm, '_')
-    + (active ? ' active' : '');
+  return 'learnblocks-item ' +
+    'learnblocks-item_' +
+    block.replace(/(\.)/gm, '_') +
+    (active ? ' active' : '');
 }
 
 /**
  * Set local storage to only show intro once
  */
 function showIntro () {
-  if (window.localStorage.getItem('learnblocks-intro') != 'true') {
+  if (window.localStorage.getItem('learnblocks-intro') !== 'true') {
     window.localStorage.setItem('learnblocks-intro', 'true');
     return 'intro';
   } else {

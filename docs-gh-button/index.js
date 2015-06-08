@@ -1,5 +1,4 @@
 const customElement = require('custom-element');
-const path = require('path');
 const fs = require('fs');
 
 const template = fs.readFileSync(__dirname + '/index.html', 'utf8');

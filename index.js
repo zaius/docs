@@ -1,9 +1,7 @@
 var learnblocks = require('@docs/learnblocks');
 var sidebar = require('@docs/sidebar');
-var window = require('global/window');
 var nav = require('@docs/nav');
 var react = require('react');
-var dom = react.DOM;
 
 require('webcomponents.js');
 

@@ -33,13 +33,15 @@ if (cmd === 'listen' || cmd === 'server') {
 }
 
 // build
-if (cmd === 'build') router.build(__dirname + '/build', function (err, res) {
+if (cmd === 'build') {
+  router.build(__dirname + '/build', function (err, res) {
     if (err) {
       console.log('error:', err);
       process.exit(1);
     }
     process.exit();
   });
+}
 
 // create a server
 // null -> null

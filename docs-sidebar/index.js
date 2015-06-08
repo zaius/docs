@@ -1,4 +1,3 @@
-const slugify = require('slugificate');
 const react = require('react');
 
 const renderSimpleSidebar = require('./list-learn');

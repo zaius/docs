@@ -2,7 +2,6 @@ const browserify = require('browserify');
 const brick = require('brick-router');
 const watchify = require('watchify');
 const npm = require('rework-npm');
-const assert = require('assert');
 const rework = require('rework');
 const path = require('path');
 const myth = require('myth');

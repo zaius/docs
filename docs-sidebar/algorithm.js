@@ -1,5 +1,3 @@
-const assert = require('assert');
-
 module.exports = filter;
 
 // filter an object of arrays
@@ -10,8 +8,8 @@ function filter (data, query) {
 
   const regexps = createRegExps(query);
   const matches = data.map(val => val.filter(ival => {
-      return regexps.every(regex => ival.match(regex));
-    }));
+    return regexps.every(regex => ival.match(regex));
+  }));
 
   // build response object
   return matches

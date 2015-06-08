@@ -19,6 +19,10 @@ build:
             name: build
             code: NODE_ENV=production make build
 
+        - script:
+            name: test
+            code: npm t
+
     after-steps:
         - slack-notifier:
             url: $SLACK_URL
