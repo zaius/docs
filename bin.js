@@ -22,7 +22,7 @@ const cmd = argv._[0];
 
 // help
 if (argv.help || !cmd) {
-  console.log('Usage: command [options]')
+  console.log('Usage: command [options]');
   copts.print();
   process.exit();
 }
@@ -33,20 +33,20 @@ if (cmd === 'listen' || cmd === 'server') {
 }
 
 // build
-if (cmd === 'build') router.build(__dirname + '/build', function(err, res) {
-  if (err) {
-    console.log('error:', err);
-    process.exit(1);
-  }
-  process.exit();
-});
+if (cmd === 'build') router.build(__dirname + '/build', function (err, res) {
+    if (err) {
+      console.log('error:', err);
+      process.exit(1);
+    }
+    process.exit();
+  });
 
 // create a server
 // null -> null
-function server() {
-  return http.createServer(function(req, res) {
+function server () {
+  return http.createServer(function (req, res) {
     const pathname = url.parse(req.url).pathname;
-    router.match(pathname, function(err, body) {
+    router.match(pathname, function (err, body) {
       assert.ifError(err);
       res.end(body);
     });

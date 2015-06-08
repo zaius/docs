@@ -5,22 +5,22 @@ module.exports = filter;
 // filter an object of arrays
 // for the query
 // obj, str -> fn
-function filter(data, query) {
+function filter (data, query) {
   if (!query) return data;
 
   const regexps = createRegExps(query);
   const matches = data.map(val => val.filter(ival => {
-    return regexps.every(regex => ival.match(regex));
-  }));
+      return regexps.every(regex => ival.match(regex));
+    }));
 
   // build response object
   return matches
     .map((arr, i) => arr[0] === data[i][0] ? data[i] : arr);
-};
+}
 
 // create regexps for query
 // str -> regex
-function createRegExps(query) {
+function createRegExps (query) {
   query = query || '';
 
   return query

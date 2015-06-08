@@ -1,4 +1,4 @@
-var react = require('react')
+var react = require('react');
 var textFilter = require('./algorithm');
 
 var dom = react.DOM;
@@ -14,7 +14,7 @@ module.exports = react.createClass({
 });
 
 // render
-function render() {
+function render () {
   return dom.section({className: 'section-search'},
     dom.form(null,
       dom.input({
@@ -24,14 +24,14 @@ function render() {
         onChange: handleChange.bind(this),
         onKeyDown: onKeyDown.bind(this)
       }),
-      dom.img({src:'/images/icon-magnifier.svg', alt:'search'})
+      dom.img({src: '/images/icon-magnifier.svg', alt: 'search'})
     )
   );
 }
 
 // handle change
 // e -> null
-function handleChange(e) {
+function handleChange (e) {
   var setParentState = this.props.setState;
   var parentData = this.props.data;
 
@@ -43,7 +43,7 @@ function handleChange(e) {
 // clear input field if `esc` is pressed.
 // ignore `enter`.
 // e -> null
-function onKeyDown(e) {
+function onKeyDown (e) {
   if (e.which === 13) e.preventDefault();
   if (e.which !== 27) return;
 

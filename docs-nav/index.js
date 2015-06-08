@@ -23,7 +23,7 @@ module.exports = react.createClass({
  * Render.
  */
 
-function render() {
+function render () {
   var state = this.state;
 
   return dom.div(null,

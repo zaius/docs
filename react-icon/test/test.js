@@ -10,12 +10,12 @@ var react = require('react');
  * Test.
  */
 
-describe('react-icon', function() {
-  it('should have a displayName', function() {
+describe('react-icon', function () {
+  it('should have a displayName', function () {
     icon.type.displayName.should.eql('icon');
   });
 
-  it('should require propTypes', function() {
+  it('should require propTypes', function () {
     var propTypes = icon.propTypes;
     propTypes.should.be.ok;
     propTypes.className.isRequired.should.be.of.type('function');

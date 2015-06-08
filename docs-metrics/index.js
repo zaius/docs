@@ -34,8 +34,8 @@ newsletterJoin.onclick = trackCorporateClick;
  * Sign up clicks on sub pages
  */
 function trackSignupClick (e) {
-  var buttonId  =  e.target.getAttribute('id');
-  var pageId    =  document.querySelector('body').getAttribute('id');
+  var buttonId = e.target.getAttribute('id');
+  var pageId = document.querySelector('body').getAttribute('id');
   return window.client.trackExternalLink(e, 'signup_click', {id: buttonId, page: pageId});
 }
 
@@ -43,7 +43,7 @@ function trackSignupClick (e) {
  * External link clicks
  */
 function trackCorporateClick (e) {
-  var buttonId  =  e.target.getAttribute('id');
-  var pageId    =  document.querySelector('body').getAttribute('id');
-  return window.client.trackExternalLink(e, "corporate_click", {id: buttonId, page: pageId});
+  var buttonId = e.target.getAttribute('id');
+  var pageId = document.querySelector('body').getAttribute('id');
+  return window.client.trackExternalLink(e, 'corporate_click', {id: buttonId, page: pageId});
 }

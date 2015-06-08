@@ -12,18 +12,18 @@ module.exports = createClass;
 
 // create react class
 // null -> null
-function createClass() {
+function createClass () {
   return react.createClass({
     displayName: 'sidebar',
-    getDefaultProps: function() {
+    getDefaultProps: function () {
       const base = getWindowUrl();
       const data = base === 'docs' ? docsToc : apiToc;
-      return {data: data}
+      return {data: data};
     },
-    getInitialState: function() {
-      return {data: this.props.data}
+    getInitialState: function () {
+      return {data: this.props.data};
     },
-    render: function render() {
+    render: function render () {
       if (getWindowUrl() === 'learn') {
         return renderSimpleSidebar(this.state, this.props);
       }
@@ -34,7 +34,7 @@ function createClass() {
 
 // render the sidebar
 // obj, obj, fn -> obj
-function renderSidebar(props, state, setState) {
+function renderSidebar (props, state, setState) {
   return dom.section({className: 'section-sidebar'},
     renderSearch({data: props.data, setState: setState}),
     dom.section({className: 'sidebar-list'},
@@ -46,7 +46,7 @@ function renderSidebar(props, state, setState) {
 // transform data into a
 // list of ui components
 // [[str]], [[str]] -> [obj]
-function createList(data, propdata) {
+function createList (data, propdata) {
   const base = getWindowUrl();
   return data.map((arr, i) => {
     const section = propdata[i][0];
@@ -66,50 +66,50 @@ function createList(data, propdata) {
 
 // render a list heading element
 // str, str -> obj
-function renderHeadElement(str, uri) {
+function renderHeadElement (str, uri) {
   var params = {
     className: 'sidebar-li',
     key: str,
     href: uri
-  }
+  };
   return dom.a(params, str);
 }
 
 // render a li element
 // str, str -> obj
-function renderLiElement(str, uri) {
+function renderLiElement (str, uri) {
   return dom.li({className: 'sidebar-li_sub', key: str + uri},
     dom.a({href: uri}, str)
-  )
+  );
 }
 
 // render the sub list container
 // str, [obj] -> obj
-function renderSubListContainer(key, els) {
+function renderSubListContainer (key, els) {
   return dom.ul({key: key}, els);
 }
 
 // clean file name
 // str -> str
-function stripFileExt(filename) {
+function stripFileExt (filename) {
   var name = filename.replace(/-/g, ' ');
   return name.split('.')[0];
 }
 
 // create href links for the sidebar
 // str, str, str, -> str
-function createUri(base, section, article) {
+function createUri (base, section, article) {
   article = article.split('.')[0];
   return '/' + base + '/' + section + '/' + article + '.html';
 }
 
-function createHeadUri(base, section) {
+function createHeadUri (base, section) {
   return '/' + base + '/' + section + '/' + 'index.html';
 }
 
 // get the baseUrl from the window
 // null -> str
-function getWindowUrl() {
+function getWindowUrl () {
   var pathName = window.location.pathname.match(/\/\w+\//)[0];
   return pathName.split('/')[1];
 }

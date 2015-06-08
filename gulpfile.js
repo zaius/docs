@@ -84,7 +84,7 @@ var fontFiles = [
 /**
  * Compile CSS
  */
-gulp.task('styles', function() {
+gulp.task('styles', function () {
   return gulp
     .src(styleFiles)
     .pipe(concat('build.css'))
@@ -95,19 +95,19 @@ gulp.task('styles', function() {
 /**
  * Compile JS
  */
-gulp.task('modules', function() {
+gulp.task('modules', function () {
   var env = process.env.NODE_ENV || 'development';
   var debug = (env === 'development');
   var opts = {
     path: path.resolve('./content'),
     noDot: true
-  }
-  dtj(opts, './build/db.json', function(err) {
+  };
+  dtj(opts, './build/db.json', function (err) {
     if (err) return console.log(err);
-    bundle()
+    bundle();
   });
 
-  function bundle() {
+  function bundle () {
     browserify(moduleEntryPoint)
       .transform('brfs')
       .transform(envify({NODE_ENV: env}))
@@ -121,8 +121,8 @@ gulp.task('modules', function() {
 /**
  * Compile docs.
  */
-gulp.task('docs', function() {
-  Object.keys(docs).forEach(function(key) {
+gulp.task('docs', function () {
+  Object.keys(docs).forEach(function (key) {
     buildTemplate(key);
   });
 });
@@ -130,7 +130,7 @@ gulp.task('docs', function() {
 /**
  * Copy assets
  */
-gulp.task('assets', function() {
+gulp.task('assets', function () {
   return gulp
     .src(imageFiles)
     .pipe(flatten())
@@ -140,7 +140,7 @@ gulp.task('assets', function() {
 /**
  * Copy fonts
  */
-gulp.task('fonts', function() {
+gulp.task('fonts', function () {
   return gulp
     .src(fontFiles)
     .pipe(flatten())
@@ -150,7 +150,7 @@ gulp.task('fonts', function() {
 /**
  * Lint files
  */
-gulp.task('lint', function() {
+gulp.task('lint', function () {
   var childProcess = Object.create(process);
   childProcess.env.NODE_ENV = 'test';
   var args = [
@@ -163,11 +163,10 @@ gulp.task('lint', function() {
 /**
  * Watch for file changes
  */
-gulp.task('watch', function() {
-
+gulp.task('watch', function () {
   // determine which folders to watch for doc changes.
   var watchDocs = [];
-  Object.keys(docs).forEach(function(key) {
+  Object.keys(docs).forEach(function (key) {
     watchDocs.push('content/' + key + '/*.md');
     watchDocs.push('content/' + key + '/**/*.md');
     watchDocs.push('content/' + key + '/index.html');
@@ -213,7 +212,7 @@ gulp.task('default', [
  * @param {String} tn
  * @api private
  */
-function buildTemplate(tn) {
+function buildTemplate (tn) {
   assert('string' == typeof tn, 'TemplateName should be a string');
 
   var outDir = 'index' == tn ? '' : tn;
@@ -229,7 +228,7 @@ function buildTemplate(tn) {
       directory: 'content/' + tn
     }));
 
-  function parseFile(file) {
+  function parseFile (file) {
     assign(file, {template: 'index.html'});
     delete file.frontMatter;
   }

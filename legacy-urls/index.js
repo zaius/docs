@@ -41,7 +41,7 @@ var s3 = new aws.S3({
 
 fs.createReadStream(path.join(__dirname, 'urlmappings.txt'))
   .pipe(split())
-  .on('data', function(line) {
+  .on('data', function (line) {
     if (line.length === 0) {
       return;
     }
@@ -64,7 +64,7 @@ fs.createReadStream(path.join(__dirname, 'urlmappings.txt'))
       WebsiteRedirectLocation: mapping
     };
 
-    s3.putObject(params, function(err, data) {
+    s3.putObject(params, function (err, data) {
       if (err) {
         process.stderr.write(util.format('Error occured while adding file for %s\n', original));
         process.stderr.write(util.format('%s\n', util.inspect(err)));
@@ -75,7 +75,7 @@ fs.createReadStream(path.join(__dirname, 'urlmappings.txt'))
     });
   });
 
-function printUsage() {
+function printUsage () {
   var cmd = path.basename(process.argv[1]);
   process.stdout.write('USAGE: \n\t' + cmd + ' --bucket [bucket] --access-key [access-key] --secret-key [secret-key]\n');
 }
