@@ -47,8 +47,7 @@
      "install-packages.md",
      "publishing-steps.md",
      "script-step.md",
-     "step-environment-variables.md",
-     "using-steps.md"
+     "step-environment-variables.md"
   ],
   [
      "deploy",
@@ -74,7 +73,6 @@
      "data-types.md",
      "deploy-variables.md",
      "protected-variables.md",
-     "using-env-vars.md"
   ],
   [
      "organizations",
@@ -99,7 +97,7 @@
   ],
   [
      "git",
-     "pull-requests.md",
+     "pullrequests.md",
      "submodules.md"
   ],
   [
@@ -108,7 +106,6 @@
      "email.md",
      "hipchat.md",
      "slack.md",
-     "using-notifications.md"
   ],
   [
      "desktop-app"
