@@ -1,34 +1,39 @@
 # wercker-docs
 
-[![wercker status](https://app.wercker.com/status/05eb642a41844e42b392d2db39bb7552/m "wercker status")](https://app.wercker.com/project/bykey/05eb642a41844e42b392d2db39bb7552)
+[![wercker status][wercker-image]][wercker-url]
+[![semistandard-style][semistandard-image]][semistandard-url]
 
 Wercker docs built with [gulp][gulp] and [metalsmith][metalsmith].
 
-## Installation
-With [node][node] and [npm@2][npm] installed:
+## Install
 ```sh
-git clone https://github.com/wercker/docs
-cd docs
-npm install
+$ hub clone wercker/docs
 ```
+Make sure to have [`npm>=2.0.0`][npm] installed to build local modules.
 
-## Building
-Build:
-```bash
-make
-```
+## Usage
+```txt
+Lifecycle scripts included in dev:
+  postinstall
+    echo 'linklocal' && linklocal link -r && linklocal list -r | bulk -c 'npm install'
+  start
+    npm run build && npm run open
+  test
+    semistandard
 
-## Live reload while working
-
-In one terminal run:
-```sh
-make watch
-```
-
-and in another run:
-
-```sh
-make open
+available via `npm run-script`:
+  build
+    gulp build
+  clean
+    rm -rf {cache,release,coverage}
+  content
+    gulp content
+  open
+    open http://localhost:1337 && httpster -d build -p 1337
+  watch
+    watchify index.js -t brfs -o build/bundle.js
+  format
+    semistandard-format -w
 ```
 
 ## License
@@ -36,5 +41,9 @@ make open
 
 [gulp]: http://gulpjs.com
 [metalsmith]: http://www.metalsmith.io/
-[node]: http://nodejs.com
 [npm]: http://npmjs.com
+
+[wercker-image]: https://app.wercker.com/status/05eb642a41844e42b392d2db39bb7552/s "wercker status"
+[wercker-url]: https://img.shields.io/wercker/ci/wercker/docs.svg
+[semistandard-image]: https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square
+[semistandard-url]: https://github.com/Flet/semistandard

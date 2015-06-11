@@ -3,7 +3,6 @@
  */
 
 var logo = require('@wercker/logo');
-var slugify = require('slugificate');
 var react = require('react');
 
 var dom = react.DOM;
@@ -23,9 +22,7 @@ module.exports = react.createClass({
  * Render.
  */
 
-function render() {
-  var state = this.state;
-
+function render () {
   return dom.div(null,
     dom.div({className: 'flex-outer navbar-container'},
       dom.div({className: 'flex-inner'},

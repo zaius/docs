@@ -24,7 +24,7 @@ module.exports = react.createClass({
  * Render.
  */
 
-function render() {
+function render () {
   return dom.span({
     className: 'icon ' + this.props.className,
     dangerouslySetInnerHTML: {__html: this.props.children},

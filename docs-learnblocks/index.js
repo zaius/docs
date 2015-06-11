@@ -1,7 +1,6 @@
-
-const window  = require('global/window');
+const window = require('global/window');
 const slugify = require('slugificate');
-const react   = require('react');
+const react = require('react');
 
 const dom = react.DOM;
 
@@ -26,9 +25,9 @@ module.exports = react.createClass({
 /**
  * Render.
  */
-function render() {
+function render () {
   return dom.div({className: 'learnblocks ' + showIntro()},
-    blocks.map(function(block) {
+    blocks.map(function (block) {
       return dom.div({className: createClassName(block), key: block},
         dom.a({
           className: 'learnblocks-item-icon ',
@@ -49,25 +48,24 @@ function render() {
  *
  * @param {String} block
  */
-function createClassName(block) {
+function createClassName (block) {
   const head = window.location.pathname.split('/')[2];
-  const active = (head == slugify(block));
+  const active = (head === slugify(block));
 
-  return 'learnblocks-item '
-   + 'learnblocks-item_'
-   + block.replace(/(\.)/gm, '_')
-   + (active ? ' active' : '')
+  return 'learnblocks-item ' +
+    'learnblocks-item_' +
+    block.replace(/(\.)/gm, '_') +
+    (active ? ' active' : '');
 }
 
 /**
  * Set local storage to only show intro once
  */
-function showIntro() {
-  if (window.localStorage.getItem('learnblocks-intro') != 'true') {
+function showIntro () {
+  if (window.localStorage.getItem('learnblocks-intro') !== 'true') {
     window.localStorage.setItem('learnblocks-intro', 'true');
     return 'intro';
   } else {
     return '';
   }
 }
-
