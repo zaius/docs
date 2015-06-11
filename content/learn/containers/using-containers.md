@@ -53,6 +53,11 @@ services:
     - redis:2.8
 ```
 
+- - -
+> Want to pull private containers? Read more on our
+> [docs](/docs/containers/private-containers.html)
+
+
 Now that we know how to use containers and define them in our
 `wercker.yml`, we will have a look at how pipelines work.
 
