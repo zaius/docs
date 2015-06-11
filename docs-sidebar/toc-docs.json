@@ -38,11 +38,9 @@
   ],
   [
      "steps",
-     "about-steps.md",
      "after-steps.md",
      "creating-steps.md",
      "deploy-env-vars.md",
-     "deploy-steps.md",
      "install-packages.md",
      "publishing-steps.md",
      "script-step.md",
@@ -52,14 +50,12 @@
   [
      "deploy",
      "auto-deploy.md",
-     "deploy-steps.md",
      "heroku.md",
      "targets.md",
      "s3.md"
   ],
   [
      "languages",
-     "github-icon.svg",
      "golang.md",
      "nodejs.md",
      "python.md",
