@@ -34,6 +34,6 @@ chmod +x /usr/local/bin/wercker
 ```
 
 You can use the `wercker version` command to see if a new version of the
-CLI is available. See the [commands section](/docs/using-the-cli/commands.html) for more information.
+CLI is available. See the [commands section](/docs/using-the-cli/available-commands.html) for more information.
 Some commands require docker to be installed/available, see 
 [requirements](/docs/using-the-cli/requirements.html) for more information.
