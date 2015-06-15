@@ -42,10 +42,7 @@
      "after-steps.md",
      "creating-steps.md",
      "deploy-env-vars.md",
-     "install-packages.md",
-     "publishing-steps.md",
-     "script-step.md",
-     "step-environment-variables.md"
+     "install-packages.md"
   ],
   [
      "deploy",
