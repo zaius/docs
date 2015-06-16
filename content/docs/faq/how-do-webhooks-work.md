@@ -6,7 +6,7 @@ tags: faq, webhooks
 
 Webhooks are a way of communicating events between services.
 It allows one service to let another service know that something has happened.
-This is ussually achieved by making a request to a server using http.
+This is usually achieved by making a request to a server using http.
 
 ### Why does wercker need to set Webhooks? ##
 
@@ -21,14 +21,13 @@ GitHub sends a Webhook when a pull request is created, wercker uses this Webhook
 ### Permissions
 
 Wercker uses the credentials of the user creating the application to create the Webhooks.
-It is however possible that user doesn't have permissions to change Webhook settings of your source control provider.
+It is, however, possible that user doesn't have permissions to change Webhook settings of your source control provider.
 The user will be warned during the creation of the application.
 
-If you already created an application and wercker was unable to create a Webhook.
-You'll still be able to create a Webhook at a later stage.
-You can find the `fix Webhook` button in the settings page.
+If you already created an application and wercker was unable to create a Webhook, you'll still be able to create a Webhook at a later stage.
+You can find the `fix Webhook` button in the settings page of your application on wercker.
 This needs to be initiated by someone with sufficient permissions.
-The fix Webhook is also avaiable as a nudge when you've added an application for which you do not have sufficient permissions.
+The fix Webhook is also available as a nudge when you've added an application for which you do not have sufficient permissions.
 
 ### Permissions on GitHub
 
