@@ -21,7 +21,7 @@ GitHub sends a Webhook when a pull request is created, wercker uses this Webhook
 ### Permissions
 
 Wercker uses the credentials of the user creating the application to create the Webhooks.
-It is, however, possible that user doesn't have permissions to change Webhook settings of your source control provider.
+It is, however, possible that a user doesn't have permissions to change Webhook settings of your source control provider.
 The user will be warned during the creation of the application.
 
 If you already created an application and wercker was unable to create a Webhook, you'll still be able to create a Webhook at a later stage.
