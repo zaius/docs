@@ -41,8 +41,9 @@ field contains the repository that you want to push to (in this case the
 username `turing` with the `bar` image), and `registry` is
 the URL of your Docker registry.
 
-If your container needs a `cmd` to be run on startup of the container you
-can "bake" that into the container as well:
+If your container needs a `cmd` to be run on startup of the container along
+with a `port` that your application listens on, you can "bake" that into
+the container as well:
 
 ```yaml
 deploy:
@@ -52,6 +53,7 @@ deploy:
         password: $PASSWORD
         tag: my-amazing-tag
         cmd: my-amazing-command
+        ports: "5000"
         repository: turing/bar
         registry: https://registry.hub.docker.com
 ```
