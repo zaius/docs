@@ -6,6 +6,13 @@
   overflow: hidden;
 }
 
+.docs-header {
+  position: relative;
+  height: 22vh;
+  max-height: 150px;
+  background-color: var(--color-grey_lighter);
+}
+
 .flex-outer.docs-content {
   align-items: flex-start;
   margin-top: 30px;

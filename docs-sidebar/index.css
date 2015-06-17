@@ -21,10 +21,28 @@
   margin-top: 20px;
 }
 
+.sidebar-list ul.closed {
+  height: 30px;
+  overflow: hidden;
+}
+
+.sidebar-list ul.closed:empty {
+  height: 0;
+}
+
+.sidebar-list ul.open {
+  height: auto;
+}
+
+.sidebar-li {
+  position: relative;
+  margin-left: 10px;
+}
+
 .sidebar-li,
 .sidebar-li > a {
-  margin-top: 30px;
-  font-size: var(--fontSize_base);
+  margin-top: 20px;
+  font-size: var(--fontSize_small);
   font-weight: var(--fontWeight_base);
   line-height: var(--lineHeight_loose);
   font-family: 'Open Sans', sans-serif;
@@ -32,12 +50,24 @@
   text-decoration: none;
 }
 
-.sidebar-li_active:before {}
+.sidebar-li:before {
+  position: absolute;
+  left: -10px;
+  top: -6px;
+  content: "\203A \a0\20";
+}
+
+.sidebar-li_active.sidebar-li:before {
+  transform: rotate(90deg);
+  left: -11px;
+  top: -3px;
+  color: var(--color-red_base);
+}
 
 .sidebar-li_sub {
   position: relative;
-  margin: 15px 0;
-  margin-left: 7px;
+  margin: 10px 0;
+  margin-left: 10px;
 }
 
 .sidebar-li_sub_active > a {
@@ -50,7 +80,7 @@
 .sidebar-li_sub_active > a:before {
   content: "\203A \a0\20";
   position: absolute;
-  left: -7px;
+  left: -10px;
 }
 
 .section-learn {

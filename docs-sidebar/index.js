@@ -65,7 +65,12 @@ function createList (data, propdata, currentSection, currentArticle) {
       return renderLiElement(stripFileExt(article), uri, stripFileExt(currentArticle));
     });
 
-    return renderSubListContainer('arr' + i, nw);
+    var className = 'closed';
+    if (section === currentSection && section !== 'index') {
+      className = 'open';
+    }
+
+    return renderSubListContainer('arr' + i, className, nw);
   });
 }
 
@@ -98,8 +103,8 @@ function renderLiElement (str, uri, currentArticle) {
 
 // render the sub list container
 // str, [obj] -> obj
-function renderSubListContainer (key, els) {
-  return dom.ul({key: key}, els);
+function renderSubListContainer (key, className, els) {
+  return dom.ul({key: key, className: className}, els);
 }
 
 // clean file name

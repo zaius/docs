@@ -34,25 +34,25 @@ function render () {
 
 // componentDidMount
 function componentDidMount () {
-  var currentSection = stripFileExt(this.props.currentSection);
-  var searchInput = document.querySelector('.search-input');
-  var clearSearch = document.querySelector('.clear-search');
-  if (currentSection !== 'index') {
-    searchInput.value = currentSection;
-    searchInput.select();
-    clearSearch.classList.add('show');
-  }
-  searchInput.focus();
-  handleChange.call(this, {target: searchInput});
+  // var currentSection = stripFileExt(this.props.currentSection);
+  // var searchInput = document.querySelector('.search-input');
+  // var clearSearch = document.querySelector('.clear-search');
+  // if (currentSection !== 'index') {
+  //   searchInput.value = currentSection;
+  //   searchInput.select();
+  //   clearSearch.classList.add('show');
+  // }
+  // searchInput.focus();
+  // handleChange.call(this, {target: searchInput});
 }
 
 // handle on clear search
 function onClickClearSearch (e) {
-  var searchInput = document.querySelector('.search-input');
-  var clearSearch = document.querySelector('.clear-search');
-  searchInput.value = '';
-  clearSearch.classList.remove('show');
-  handleChange.call(this, {target: searchInput});
+  // var searchInput = document.querySelector('.search-input');
+  // var clearSearch = document.querySelector('.clear-search');
+  // searchInput.value = '';
+  // clearSearch.classList.remove('show');
+  // handleChange.call(this, {target: searchInput});
 }
 
 // handle change
