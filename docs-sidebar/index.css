@@ -17,9 +17,13 @@
   line-height: var(--lineHeight_loose);
 }
 
+.sidebar-list {
+  margin-top: 20px;
+}
+
 .sidebar-li,
 .sidebar-li > a {
-  margin-top: 25px;
+  margin-top: 30px;
   font-size: var(--fontSize_base);
   font-weight: var(--fontWeight_base);
   line-height: var(--lineHeight_loose);
@@ -28,19 +32,25 @@
   text-decoration: none;
 }
 
+.sidebar-li_active:before {}
+
 .sidebar-li_sub {
+  position: relative;
   margin: 15px 0;
-  margin-left: 5px;
+  margin-left: 7px;
 }
 
-.sidebar-li_sub.active > a {
+.sidebar-li_sub_active > a {
   text-decoration: none;
   pointer-events: none;
   color: var(--color-skyblue_dark);
+  font-weight: var(--fontWeight_base);
 }
 
-.sidebar-li_sub.active > a:before {
+.sidebar-li_sub_active > a:before {
   content: "\203A \a0\20";
+  position: absolute;
+  left: -7px;
 }
 
 .section-learn {
