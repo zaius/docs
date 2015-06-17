@@ -98,8 +98,8 @@ function renderLiElement (str, uri, currentArticle) {
 
 // render the sub list container
 // str, [obj] -> obj
-function renderSubListContainer (key, className, els) {
-  return dom.ul({key: key, className: className}, els);
+function renderSubListContainer (key, els) {
+  return dom.ul({key: key}, els);
 }
 
 // clean file name
