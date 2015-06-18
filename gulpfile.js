@@ -192,6 +192,7 @@ gulp.task('build', [
 gulp.task('content', [
   'docs',
   'modules',
+  'assets',
   'styles'
 ]);
 

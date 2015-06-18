@@ -1,11 +1,11 @@
-# Repository access
+## Repository access
 
 Wercker needs to be able to check out the code from your source control provider.
 Currently, both GitHub and Bitbucket are supported. This article describes how we
 retrieve the code and the various methods of how to set up repository access. If you have a public
 repository then you can skip to the public repository section.
 
-## SSH Keys
+### SSH Keys
 
 Currently wercker uses an SSH key pair to check out code. We provide a public SSH
 key which should be authorized to access the repository. Then, we use the private
@@ -13,7 +13,7 @@ SSH key to check out the code. There are a couple of ways to give authorization
 to a public key; each of the methods have some advantages and disadvantages over
 the others.
 
-### Deploykeys
+#### Deploykeys
 
 The first method is to add the SSH key to the repository as a deploy key. A
 deploy key is an SSH key that is associated with a single repository. The advantage
@@ -26,7 +26,7 @@ More information:
 - [Deploy keys in GitHub](https://developer.github.com/guides/managing-deploy-keys/#deploy-keys)
 - [Deploy keys in Bitbucket](https://confluence.atlassian.com/display/BITBUCKET/Use+deployment+keys)
 
-### Machine users
+#### Machine users
 
 The second method is to add the SSH key to a user on GitHub or Bitbucket. This
 allows you to add more than 1 repositories to a single SSH key. Most of the time
@@ -39,19 +39,19 @@ More information:
 
 - [Machine user on GitHub](https://developer.github.com/guides/managing-deploy-keys/#machine-users)
 
-### Picking the right method
+#### Picking the right method
 
 For repositories that do not use a private submodule we recommend using a deploy
 key. If you have a repository that uses private submodules, than you need to
 create a machine user, and authorize this user access to all repositories.
 
-## Public repositories
+### Public repositories
 
 For public repositories, you do not have to add a deploy key or authorize a
 machine user. You just have to make sure that you selected the "public repository"
 option in the "repository access" configuration.
 
-## Werckerbot
+### Werckerbot
 
 If you've created your application after September 4th, 2014, then you can skip
 this section. However, if you created your application before September 4th 2014, then you
@@ -62,8 +62,6 @@ You need to go to the settings page of your application; here you can find the
 repository access section. This wizard will migrate you from using werckerbot to using
 an SSH key pair. Read the above sections to see which method you can select.
 The wizard is similar to the add application flow presented in [this section](/articles/gettingstarted/web.html).
-
-![image](/images/articles/gettingstarted/repository_access.png)
 
 Once you've changed the key, you should remove werckerbot from your organisation teams
 or the access management sections.

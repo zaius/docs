@@ -83,11 +83,15 @@ a:hover {
 }
 
 p {
-  font-family: 'Open Sans', sans-serif;
-  color: var(--color-blue_light);
+  font-family: 'Merriweather', serif;
+  line-height: var(--lineHeight_loose);
+  color: var(--color-blue_base);
   font-size: var(--fontSize_small);
   font-weight: var(--fontWeight_light);
-  line-height: var(--lineHeight_base);
+  word-wrap: break-word;
+  text-justify: distribute;
+  word-spacing: 0px;
+  text-align: justify;
 }
 
 article p, .docs-articles p {
