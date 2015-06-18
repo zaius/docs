@@ -30,7 +30,9 @@ git clone https://github.com/wercker/wercker-nodejs-heroku.git
 
 If you clone the repository, make sure to create an new repo on GitHub.
 If you fork the project, adjust the clone URL to your username on
-GitHub.
+GitHub. This repository already contains several files that we will
+create during this tutorial, so feel free to overwrite them during your
+progress.
 
 This web application runs on port `5000` and returns `Hello World` on
 request the root route (`/`).
@@ -117,8 +119,123 @@ git push origin master
 Let's add this project to wercker. Log into wercker and click the
 create button and add a new application. You will be guided through the
 _add application wizard_ and it will detect that you already have a
-`wercker.yml` present in your repository.
+`wercker.yml` present in your repository. See the [how to add an application section](/docs/web-interface/adding-a-new-application.html) 
+for more information on how to do this.
 
-### Deploying to Heroku
+### Adding a deploy pipeline
 
-We are now ready to start deploying to heroku.
+We are now ready to start deploying to Heroku. First, let's add a
+`Procfile` which Heroku expects to be present. It defines which process
+to start for your application. Create this file with the following
+contents and add it to your repository.
+
+```sh
+web: node app.js
+```
+
+If you haven't already
+done so, now would be a good time to run `heroku create` to create an
+app on Heroku. Take note of the application name you receive back.
+
+Next, we are going to add a deploy pipeline to our `wercker.yml` file.
+Create a new top level section called `deploy:` in your `wercker.yml` as
+follows:
+
+```yaml
+deploy:
+  steps:
+    - heroku-deploy:
+        key: $HEROKU_KEY
+        user: $HEROKU_USER
+        app-name: $HEROKU_APP_NAME
+```
+
+Let's go over this section. First, we create our deploy pipeline and its
+`steps` section. We add just one step to the section called `heroku-deploy` which
+is available from the wercker [registry](https://app.wercker.com/#explore). This steps has three
+required parameters; `key` which is your Heroku API key that can
+retrieve from your account settings on Heroku. The next is `user` which
+is your username on Heroku and finally `app-name` which is the name of
+your application that you got when running `heroku create`. The
+application name is the classic Heroku _haiku_ type application name.
+
+All of the paramaters for the Heroku deploy step are filled with
+environment variables as you shouldn't hard code any of this
+information. We will now add these environment variables to the wercker
+web interface.
+
+### Creating a deploy target
+
+First, we'll create a deploy target as wercker needs to know *where* to
+deploy *to*. Navigate to your application on wercker and go to the
+settings tab.
+
+In the `deploy targets` section, add a custom deploy target called
+*heroku*. Next, we're going to add all the environment variables that we
+need.
+
+![image](/images/heroku_01.jpg)
+
+First, add your username as the `HEROKU_USER` environment variable.
+
+![image](/images/heroku_02.jpg)
+
+Next, we will add the Heroku API key that you got from your account page
+on Heroku as a _protected_ environment variable called `HEROKU_KEY` as we want it to remain
+secret. Protected environment variables are hidden from logs and can't
+be retrieved after creation.
+
+![image](/images/heroku_03.jpg)
+
+Finally, we add another plain text environment variable for the
+`HEROKU_APP_NAME` variable.
+
+![image](/images/heroku_04.jpg)
+
+Now, we're all set to deploy!
+
+### Triggering a deploy
+
+Let's commit and check in our final changes to the `wercker.yml` file.
+
+```sh
+git commit -am 'added deploy section to wercker.yml
+```
+
+Now when we do a `git push origin master` this will trigger a build on
+wercker that should pass.
+
+![image](/images/heroku_05.jpg)
+
+We can take this build and now deploy it to Heroku!
+
+![image](/images/heroku_06.jpg)
+
+The deploy should pass and you can visit your application at the
+designated url for your app!
+
+### Using SSH Keys
+
+One thing you should've noticed is that you will receive an email from
+Heroku that an SSH key has been added to your account. This can get
+pretty annoying so let's remedy it.
+
+Instead of using the API key we are going to generate an SSH key on
+wercker. First, delete the `HEROKU_KEY` environment variable for your
+deploy target. Then in the *SSH Keys* section generate a new key pair,
+for instance with the name `heroku_key_pair`. Copy that key to your
+clipboard and add it as a new key on your Heroku account page in the SSH
+keys section.
+
+![image](/images/heroku_07.jpg)
+
+Next go back to the environment variables for your deploy target and
+create a new environment variable. Instead of picking *text* field as option, now pick the *SSH Key pair*
+option and select the key you just generated. You can use the same name
+as we did before, `HEROKU_KEY`.
+
+![image](/images/heroku_08.jpg)
+
+And your all done! Now when deploying via wercker, you no longer receive
+an email that a new SSH key was added!
+
