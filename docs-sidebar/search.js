@@ -7,6 +7,7 @@ var dom = react.DOM;
 module.exports = react.createClass({
   displayName: 'search',
   props: {
+    currentSection: react.PropTypes.string,
     setState: react.PropTypes.func.required,
     data: react.PropTypes.array.required
   },
@@ -36,7 +37,8 @@ function handleChange (e) {
   var parentData = this.props.data;
 
   setParentState({
-    data: textFilter.call(this, parentData, e.target.value)
+    data: textFilter.call(this, parentData, e.target.value),
+    search: e.target.value
   });
 }
 

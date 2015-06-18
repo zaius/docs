@@ -6,6 +6,12 @@
   overflow: hidden;
 }
 
+.api-header {
+  position: relative;
+  height: 130px;
+  background-color: var(--color-grey_lighter);
+}
+
 .flex-outer.api-content {
   align-items: flex-start;
   margin-top: 30px;
