@@ -3,6 +3,7 @@ const react = require('react');
 const renderSimpleSidebar = require('./list-learn');
 const docsToc = require('./toc-docs.json');
 const apiToc = require('./toc-api.json');
+const gettinstartedToc = require('./toc-gettingstarted.json');
 const renderSearch = require('./search');
 
 var dom = react.DOM;
@@ -16,7 +17,19 @@ function createClass () {
     displayName: 'sidebar',
     getDefaultProps: function () {
       const base = getWindowUrl();
-      const data = base === 'docs' ? docsToc : apiToc;
+      var data = undefined;
+
+      switch(base) {
+        case 'api':
+          data = apiToc;
+          break;
+        case 'gettingstarted':
+          data = gettinstartedToc;
+          break;
+        default:
+          data = docsToc;
+      }
+
       return {data: data};
     },
     getInitialState: function () {
