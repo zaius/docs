@@ -1,6 +1,9 @@
 
 [
   [
+     "getting-started"
+  ],
+  [
      "using-the-cli",
      "installing.md",
      "requirements.md",
