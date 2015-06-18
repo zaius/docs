@@ -79,6 +79,14 @@ function render () {
           ),
           dom.li(null,
             dom.a({
+              className: 'navbar-item navbar-item_quickstarts',
+              className: 'navbar-item',
+              href: '/quickstarts/index.html',
+              children: 'Quickstarts'
+            })
+          ),
+          dom.li(null,
+            dom.a({
               className: 'navbar-item navbar-item_docs',
               href: '/docs/index.html',
               children: 'Docs'

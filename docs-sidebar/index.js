@@ -3,7 +3,7 @@ const react = require('react');
 const renderSimpleSidebar = require('./list-learn');
 const docsToc = require('./toc-docs.json');
 const apiToc = require('./toc-api.json');
-const gettinstartedToc = require('./toc-gettingstarted.json');
+const quickstartsToc = require('./toc-quickstarts.json');
 const renderSearch = require('./search');
 
 var dom = react.DOM;
@@ -23,8 +23,8 @@ function createClass () {
         case 'api':
           data = apiToc;
           break;
-        case 'gettingstarted':
-          data = gettinstartedToc;
+        case 'quickstarts':
+          data = quickstartsToc;
           break;
         default:
           data = docsToc;
