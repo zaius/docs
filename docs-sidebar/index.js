@@ -47,6 +47,7 @@ function createClass () {
 // render the sidebar
 // obj, obj, fn -> obj
 function renderSidebar (props, state, setState) {
+  var base = getWindowUrl();
   var currentSection = getCurrentSection();
   var currentArticle = '';
   if (currentSection !== 'index') {
@@ -54,7 +55,7 @@ function renderSidebar (props, state, setState) {
   }
 
   return dom.section({className: 'section-sidebar'},
-    renderSearch({currentSection: currentSection, data: props.data, setState: setState}),
+    renderSearch({base: base, data: props.data, setState: setState}),
     dom.section({className: 'sidebar-list'},
       createList(state.data, state.search, props.data, currentSection, currentArticle)
     )

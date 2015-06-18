@@ -7,7 +7,7 @@ var dom = react.DOM;
 module.exports = react.createClass({
   displayName: 'search',
   props: {
-    currentSection: react.PropTypes.string,
+    base: react.PropTypes.string,
     setState: react.PropTypes.func.required,
     data: react.PropTypes.array.required
   },
@@ -16,11 +16,13 @@ module.exports = react.createClass({
 
 // render
 function render () {
+  var base = stripFileExt(this.props.base);
+
   return dom.section({className: 'section-search'},
     dom.form(null,
       dom.input({
         type: 'text',
-        placeholder: 'search',
+        placeholder: 'search in ' + base,
         className: 'search-input',
         onChange: handleChange.bind(this),
         onKeyDown: onKeyDown.bind(this)
@@ -51,4 +53,11 @@ function onKeyDown (e) {
 
   e.target.value = '';
   this.props.setState({data: this.props.data});
+}
+
+// clean file name
+// str -> str
+function stripFileExt (filename) {
+  var name = filename.replace(/-/g, ' ');
+  return name.split('.')[0];
 }
