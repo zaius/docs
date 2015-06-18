@@ -101,7 +101,7 @@ dependencies, running tests (which we don't have!) and echo'ing some
 information on the `node` and `npm` versions. You can read more about
 steps in [this section](/docs/steps/index.html).
 
-### Adding our project to wercker
+### Adding your project to wercker
 
 Add and commit your `wercker.yml` file to your git repository:
 
