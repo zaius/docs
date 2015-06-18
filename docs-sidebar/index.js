@@ -17,9 +17,9 @@ function createClass () {
     displayName: 'sidebar',
     getDefaultProps: function () {
       const base = getWindowUrl();
-      var data = undefined;
+      var data;
 
-      switch(base) {
+      switch (base) {
         case 'api':
           data = apiToc;
           break;
