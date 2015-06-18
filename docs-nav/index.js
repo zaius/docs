@@ -61,6 +61,13 @@ function render () {
           dom.li(null,
             dom.a({
               className: 'navbar-item',
+              href: '/gettingstarted/index.html',
+              children: 'Getting started'
+            })
+          ),
+          dom.li(null,
+            dom.a({
+              className: 'navbar-item',
               href: '/docs/index.html',
               children: 'Docs'
             })
