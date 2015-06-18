@@ -1,5 +1,1 @@
----
-tags: example
----
-
-## Application settings
+## Web interface
