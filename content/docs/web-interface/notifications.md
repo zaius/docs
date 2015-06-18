@@ -1,5 +1,1 @@
----
-tags: example
----
-
 ## Notifications

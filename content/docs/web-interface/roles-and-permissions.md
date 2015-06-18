@@ -1,7 +1,3 @@
----
-tags: example
----
-
 ## Roles & permissions
 
 There are three roles defined at this moment, with increasing amount of permissions these are:
