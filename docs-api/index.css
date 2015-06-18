@@ -38,6 +38,7 @@
  * Code
  */
 
+.api-articles td code,
 .api-articles > p > code,
 .api-articles > ul > li > code {
   margin: 0 3px;
@@ -90,7 +91,6 @@
  * Tables.
  */
 
-
 .api-articles table {
   margin: 30px 0;
 }
@@ -99,15 +99,16 @@
 .api-articles th,
 .api-articles td {
   padding: 12px;
-  background-color: var(--color-grey_lightest);
-  border: 1px solid var(--color-grey_light);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-grey_lighter);
   font-weight: var(--fontWeight_base);
-  line-height: var(--lineHeight_base);
+  line-height: var(--lineHeight_loose);
   font-size: var(--fontSize_smaller);
   color: var(--color-blue_light);
 }
 
 .api-articles th {
+  background-color: var(--color-grey_lightest);
   font-weight: var(--fontWeight_semibold);
   line-height: var(--lineHeight_base);
   font-size: var(--fontSize_small);
