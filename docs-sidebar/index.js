@@ -43,7 +43,7 @@ function renderSidebar (props, state, setState) {
   return dom.section({className: 'section-sidebar'},
     renderSearch({currentSection: currentSection, data: props.data, setState: setState}),
     dom.section({className: 'sidebar-list'},
-      createList(state.data, props.data, currentSection, currentArticle)
+      createList(state.data, state.search, props.data, currentSection, currentArticle)
     )
   );
 }
@@ -51,8 +51,10 @@ function renderSidebar (props, state, setState) {
 // transform data into a
 // list of ui components
 // [[str]], [[str]] -> [obj]
-function createList (data, propdata, currentSection, currentArticle) {
+function createList (data, search, propdata, currentSection, currentArticle) {
   const base = getWindowUrl();
+  var searchContent = (search === undefined) ? '' : search;
+
   return data.map((arr, i) => {
     const section = propdata[i][0];
 
@@ -66,7 +68,12 @@ function createList (data, propdata, currentSection, currentArticle) {
     });
 
     var className = 'closed';
-    if (section === currentSection && section !== 'index') {
+
+    if (searchContent === '') {
+      if (section === currentSection && section !== 'index') {
+        className = 'open';
+      }
+    } else {
       className = 'open';
     }
 

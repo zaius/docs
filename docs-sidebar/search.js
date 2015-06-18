@@ -11,8 +11,7 @@ module.exports = react.createClass({
     setState: react.PropTypes.func.required,
     data: react.PropTypes.array.required
   },
-  render: render,
-  componentDidMount: componentDidMount
+  render: render
 });
 
 // render
@@ -27,32 +26,8 @@ function render () {
         onKeyDown: onKeyDown.bind(this)
       }),
       dom.img({src: '/images/icon-magnifier.svg', alt: 'search'})
-    ),
-    dom.a({className: 'clear-search', onClick: onClickClearSearch.bind(this)}, 'all docs')
+    )
   );
-}
-
-// componentDidMount
-function componentDidMount () {
-  // var currentSection = stripFileExt(this.props.currentSection);
-  // var searchInput = document.querySelector('.search-input');
-  // var clearSearch = document.querySelector('.clear-search');
-  // if (currentSection !== 'index') {
-  //   searchInput.value = currentSection;
-  //   searchInput.select();
-  //   clearSearch.classList.add('show');
-  // }
-  // searchInput.focus();
-  // handleChange.call(this, {target: searchInput});
-}
-
-// handle on clear search
-function onClickClearSearch (e) {
-  // var searchInput = document.querySelector('.search-input');
-  // var clearSearch = document.querySelector('.clear-search');
-  // searchInput.value = '';
-  // clearSearch.classList.remove('show');
-  // handleChange.call(this, {target: searchInput});
 }
 
 // handle change
@@ -62,7 +37,8 @@ function handleChange (e) {
   var parentData = this.props.data;
 
   setParentState({
-    data: textFilter.call(this, parentData, e.target.value)
+    data: textFilter.call(this, parentData, e.target.value),
+    search: e.target.value
   });
 }
 
@@ -75,11 +51,4 @@ function onKeyDown (e) {
 
   e.target.value = '';
   this.props.setState({data: this.props.data});
-}
-
-// clean file name
-// str -> str
-function stripFileExt (filename) {
-  var name = filename.replace(/-/g, ' ');
-  return name.split('.')[0];
 }

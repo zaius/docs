@@ -21,17 +21,22 @@
   margin-top: 20px;
 }
 
+.sidebar-list ul {
+  margin-top: 3px;
+}
+
 .sidebar-list ul.closed {
   height: 30px;
   overflow: hidden;
 }
 
-.sidebar-list ul.closed:empty {
-  height: 0;
+.sidebar-list ul.open {
+  display: block;
+  height: auto;
 }
 
-.sidebar-list ul.open {
-  height: auto;
+.sidebar-list ul.open:empty {
+  display: none;
 }
 
 .sidebar-li {
@@ -41,7 +46,6 @@
 
 .sidebar-li,
 .sidebar-li > a {
-  margin-top: 20px;
   font-size: var(--fontSize_small);
   font-weight: var(--fontWeight_base);
   line-height: var(--lineHeight_loose);
@@ -68,6 +72,10 @@
   position: relative;
   margin: 10px 0;
   margin-left: 10px;
+}
+
+.sidebar-li + .sidebar-li_sub {
+  margin-top: 2px;
 }
 
 .sidebar-li_sub_active > a {
