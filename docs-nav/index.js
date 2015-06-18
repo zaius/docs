@@ -61,8 +61,8 @@ function render () {
           dom.li(null,
             dom.a({
               className: 'navbar-item',
-              href: '/gettingstarted/index.html',
-              children: 'Getting started'
+              href: '/quickstarts/index.html',
+              children: 'Quickstarts'
             })
           ),
           dom.li(null,

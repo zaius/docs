@@ -45,9 +45,9 @@ var docs = {
     'content/api/**/*.md',
     'content/api/*.md'
   ],
-  gettingstarted: [
-    'content/gettingstarted/**/*.md',
-    'content/gettingstarted/*.md'
+  quickstarts: [
+    'content/quickstarts/**/*.md',
+    'content/quickstarts/*.md'
   ],
   index: [
     'content/index/**/*.md',
