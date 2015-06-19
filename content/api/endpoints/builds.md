@@ -54,7 +54,7 @@ Status: 200 OK
 
 ### <a name="get-a-build"></a>Trigger a new build
 
-Trigger a new build using an `applicationId`. 
+Trigger a new build for an application.
 
 Returns a build object.
 
@@ -62,19 +62,21 @@ Returns a build object.
 `POST /api/v3/builds/`
 ***
 
+#### JSON payload
+
 | Name | Type | Description |
-|------|------|-------------|
-|projectId|String|**Required.** The projectId for which a build should be triggered.|
-|branch|String|**Optional.** The Git branch that the build should use. If not specified, 'master' will be used.|
-|commit|String|**Optional.** The Git commit that the build should used. **Requires** `branch` to be set. If not specified, the latest commit is fetched|
-|message|String|**Optional.** The message to use for the build. If not specified, the Git commit message is used.|
+|:-----|:-----|:------------|
+| `applicationId` | String | **Required** The id of the application for which a build should be triggered. |
+| `branch` | String | **Optional** The Git branch that the build should use. If not specified, the default branch will be used. |
+| `commitHash` | String | **Optional** The Git commit hash that the build should used. **Requires** `branch` to be set. If not specified, the latest commit is fetched |
+| `message` | String | **Optional** The message to use for the build. If not specified, the Git commit message is used. |
 
 #### Response
 
 ```json
 {
   "id": "557591da3f1aefa778000009",
-  "url": "https:/app.wercker.com/api/v3/builds/557591da3f1aefa778000009",
+  "url": "https://app.wercker.com/api/v3/builds/557591da3f1aefa778000009",
   "application": {
     "id": "54c9168980c7075225004157",
     "url": "https://app.wercker.com/api/v3/applications/wercker/docs",
@@ -97,6 +99,7 @@ Returns a build object.
   },
   "branch": "master",
   "createdAt": "2015-06-08T13:00:10.180Z",
+  "commitHash": "27625930a8afcaff8e4c3f5370f38e712db7d61e",
   "message": "Fixed OAuth error",
   "progress": null,
   "result": "unknown",
