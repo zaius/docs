@@ -65,6 +65,11 @@
      "protected-variables.md"
   ],
   [
+     "ssh-keys",
+     "generating-ssh-keys.md",
+     "using-ssh-keys.md"
+  ],
+  [
      "organizations",
      "adding-an-application.md",
      "application-access.md",
