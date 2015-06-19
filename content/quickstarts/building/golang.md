@@ -64,7 +64,7 @@ dev:
 ```
 
 The first line specifies which container image you want to use for your
-project.  Since we're developing with Ruby, we've already specified a ruby
+project.  Since we're developing with Go, we've already specified a Go
 image for you.  These container images are retrieved from [Docker
 Hub](https://registry.hub.docker.com/u/library/python/) if no other registry is
 specified. You can read more about containers
