@@ -41,14 +41,13 @@
      "steps",
      "after-steps.md",
      "creating-steps.md",
-     "deploy-env-vars.md",
      "install-packages.md"
   ],
   [
      "deploy",
+     "targets.md",
      "auto-deploy.md",
      "heroku.md",
-     "targets.md",
      "s3.md"
   ],
   [
@@ -63,7 +62,6 @@
      "after-step-variables.md",
      "available-env-vars.md",
      "creating-env-vars.md",
-     "deploy-variables.md",
      "protected-variables.md"
   ],
   [
