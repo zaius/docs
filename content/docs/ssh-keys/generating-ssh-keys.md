@@ -18,5 +18,5 @@ regenertate the `SSH Key pair`.
 
 ![image](/images/generating-ssh-keys_3.jpg)
 
-
+[Read more on using SSH Key pairs &rsaquo;](/docs/ssh-keys/using-ssh-keys.html)
 
