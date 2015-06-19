@@ -4,11 +4,11 @@
 articles/gettingstarted/repositoryaccess.html | http://old-devcenter.wercker.com/articles/gettingstarted/repositoryaccess.html
 articles/gettingstarted/cli.html | http://old-devcenter.wercker.com/articles/gettingstarted/cli.html
 articles/gettingstarted/werckerbot.html | http://old-devcenter.wercker.com/articles/gettingstarted/werckerbot.html
-articles/gettingstarted/web.html | http://old-devcenter.wercker.com/articles/gettingstarted/web.html
+articles/gettingstarted/web.html | /learn/basics/using-the-web-interface.html
 articles/gettingstarted/index.html | http://old-devcenter.wercker.com/articles/gettingstarted/index.html
 articles/werckeryml/validate.html | http://old-devcenter.wercker.com/articles/werckeryml/validate.html
 articles/werckeryml/index.html | http://old-devcenter.wercker.com/articles/werckeryml/index.html
-articles/werckeryml/notifications.html | http://old-devcenter.wercker.com/articles/werckeryml/notifications.html
+articles/werckeryml/notifications.html | /docs/notifications/index.html
 articles/docker/index.html | http://old-devcenter.wercker.com/articles/docker/index.html
 articles/faq/ccmenu.html | http://old-devcenter.wercker.com/articles/faq/ccmenu.html
 articles/faq/whitelist.html | /docs/faq/what-ip-to-whitelist.html
