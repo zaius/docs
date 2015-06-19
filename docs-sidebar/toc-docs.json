@@ -45,7 +45,6 @@
   ],
   [
      "deploy",
-     "targets.md",
      "auto-deploy.md",
      "steps.md",
      "heroku.md",
