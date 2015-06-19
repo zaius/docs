@@ -1,4 +1,4 @@
-## Using environment variables
+## Environment variables
 
 What if you have an API key you need during a deploy or during a build? This is
 information that is either unique for each server you want to deploy to or may be
