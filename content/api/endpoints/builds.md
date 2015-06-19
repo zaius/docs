@@ -52,7 +52,7 @@ Status: 200 OK
 }
 ```
 
-### <a name="get-a-build"></a>Trigger a new build
+### <a name="trigger-a-build"></a>Trigger a new build
 
 Trigger a new build for an application.
 
