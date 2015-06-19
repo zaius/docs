@@ -18,11 +18,18 @@ deploy:
         fingerprint: ce:83:e9:7d:02:a4:e3:63:3f:8a:07:cc:d5:d9:bb:cd
 ```
 
-[Read more on the steo add-to-kwown_hosts &rsaquo;](https://app.wercker.com/#applications/521764dde36a64ff110022f2/tab/details)
+[Read more on the step add-to-kwown_hosts &rsaquo;](https://app.wercker.com/#applications/521764dde36a64ff110022f2/tab/details)
 
 ### Add ssh key pipeline step
 
-This step can be used to write these values to an `EdentityFile` and add them to the SSH configuration.
+Depending on the container you are using, you may want to use this step so
+builds/deploys don't halt when you setup a connection with them:
+
+```sh
+The authenticity of host 'some-server.wercker.com (1.2.3.4)' can't be established.
+RSA key fingerprint is ff:ee:dd:cc:bb:aa:99:88:77:66:55:44:33:22:11:00.
+Are you sure you want to continue connecting (yes/no)?
+```
 
 ```yaml
 build:
@@ -34,4 +41,6 @@ build:
 Now your `SSH Key pair` could be used to clone private reposities during a pipeline run.
 This solution works as long as we clone via SSH (i.e. not using https).
 
-[Read more on the step add-ssh-key &rsaquo;](https://app.wercker.com/#applications/523afff01aa016c8590015b1/tab/details)
+* [Read more on the step add-ssh-key &rsaquo;](https://app.wercker.com/#applications/523afff01aa016c8590015b1/tab/details)
+* [Read more on how to use submodules &rsaquo;](/docs/git/submodules.html)
+
