@@ -20,3 +20,7 @@ These IP addresses only apply for classic wercker builds and deploys.
 * 52.0.121.246
 * 54.86.61.205
 * 52.4.3.172
+
+The docker enabled stack does not have static IP's at the moment. There's
+[a GitHub issue](https://github.com/wercker/support/issues/47) that contain the
+IP addresses currently in use.
