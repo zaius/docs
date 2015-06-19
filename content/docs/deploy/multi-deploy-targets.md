@@ -5,8 +5,8 @@ tags: deployment
 ## Multi deploy targets
 
 Currently when deploying, the steps defined in the `steps` property will be used
-to deploy, see [deploys step](/docs/deploy/index.html). It is also possible use
-different steps for different deploy targets.
+to deploy, see [deploys step](/docs/deploy/index.html). It is also possible to
+use different steps for different deploy targets.
 
 You need to use the same name of the deploy target instead of the `steps`
 property. In the following example, deploys to deploy target `stable` and `beta`
