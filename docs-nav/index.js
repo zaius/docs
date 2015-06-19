@@ -29,6 +29,9 @@ module.exports = react.createClass({
       case 'api':
         data = 'api';
         break;
+      case 'quickstarts':
+        data = 'quickstarts';
+        break;
     }
 
     return {data: data};
@@ -80,7 +83,6 @@ function render () {
           dom.li(null,
             dom.a({
               className: 'navbar-item navbar-item_quickstarts',
-              className: 'navbar-item',
               href: '/quickstarts/index.html',
               children: 'Quickstarts'
             })
