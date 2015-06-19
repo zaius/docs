@@ -63,9 +63,8 @@
      "after-step-variables.md",
      "available-env-vars.md",
      "creating-env-vars.md",
-     "data-types.md",
      "deploy-variables.md",
-     "protected-variables.md",
+     "protected-variables.md"
   ],
   [
      "organizations",
