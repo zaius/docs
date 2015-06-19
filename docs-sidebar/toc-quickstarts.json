@@ -1,10 +1,15 @@
 [
   [
-    "chapter-one",
-    "article.md"
+    "building",
+    "golang.md",
+    "javascript.md",
+    "python.md",
+    "ruby.md"
   ],
   [
-    "chapter-two",
-    "article.md"
+    "deploying"
+  ],
+  [
+    "services"
   ]
 ]
