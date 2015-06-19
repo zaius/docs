@@ -22,9 +22,9 @@ com/#applications/51c82a063179be4478002245/tab/details), deploying to
 0c5b46/tab/details) or [AWS Code-Deploy](https://app.wercker.com/#applic
 ations/547fe5be6b3ba8733d2aabba/tab/details).
 
-Within deploy steps you can leverage [environment variables](/docs
-/environment-variables/using-env-vars.html) for storing sensitive
-information such as passwords, IP addresses and tokens.
+Within deploy steps you can leverage
+[environment variables](/docs/environment-variables/index.html) for storing
+sensitive information such as passwords, IP addresses and tokens.
 
 Below a snippet for using the S3 deploy step:
 
