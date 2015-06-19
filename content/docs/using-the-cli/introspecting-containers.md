@@ -9,7 +9,7 @@ pipelines.
 
 Builds that you have [pulled](/docs/using-the-cli/pulling-containers.html), or
 [built locally](/docs/using-the-cli/local-builds.html) using the [wercker command line
-interface](/docs/cli/commands.html) can be introspected.
+interface](/docs/using-the-cli/available-commands.html) can be introspected.
 
 This is useful for debugging purposes and having a closer look at what
 happened during your build.

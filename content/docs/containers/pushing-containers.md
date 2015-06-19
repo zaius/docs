@@ -9,7 +9,7 @@ would require being able to be [outside](/docs/faq/can-i-run-docker-commands.htm
 several *internal* steps in order to interact with docker.
 
 Internal [steps](/docs/steps/index.html) are steps that are baked into the
-wercker [cli](/docs/cli/commands.html) as these interact with
+wercker [cli](/docs/using-the-cli/available-commands.html) as these interact with
 the Docker API that is external from the container. From a security perspective
 we don't want to make this funcionality
 available from inside the Docker container, and as such have created these *internal* steps.
