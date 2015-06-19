@@ -1,5 +1,5 @@
 ---
-tags: target
+tags: target, deployment, environment variables
 ---
 
 ## Deploy
