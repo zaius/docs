@@ -37,5 +37,5 @@ on the marketplace. However with Docker and other container formats gaining popu
  and the ample choice of containers, Ewok is now the preferred stack.
 
 In classic we also introduced the ability to customize
-your pipelines via [steps](/docs/steps/about-steps.html) and publish these
+your pipelines via [steps](/docs/steps/index.html) and publish these
 to the marketplace as well. Steps are still available in Ewok.
