@@ -208,6 +208,7 @@ wercker that should pass.
 ![image](/images/heroku_05.jpg)
 
 We can take this build and now deploy it to Heroku!
+for more information on how to do this.
 
 ![image](/images/heroku_06.jpg)
 
