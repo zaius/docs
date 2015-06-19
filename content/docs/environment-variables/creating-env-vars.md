@@ -12,7 +12,7 @@ application and click `Add new variable`.
 ### <a name="text-env-var"></a>Creating a text environment variable
 
 Creating a new environment variable is as simple as filling in a name, value and
-hit save. The next build or deploy you will trigger now has the environment variable
+hit Save. The next build or deploy you will trigger now has the environment variable
 available in its pipeline.
 
 > Please not that the name has to start with a letter and after that the following
@@ -51,13 +51,16 @@ is exposed via two environment variables ending with: `_PRIVATE` and `_PUBLIC`.
 
 To use the SSH key pairs in wercker, you have to do two things.
 
-* let wercker generate a pair, [read more on creating a SSH key pair &rsaquo;](/docs/ssh-keys/creating-ssh-keys.html)
+* let wercker generate a pair, [read more on creating a SSH key pair &rsaquo;](/docs/ssh-keys/generating-ssh-keys.html)
 * create a variable
 
 #### Create a variable
 
-When you create a new variable for the `SSH key pair`, remember you are actually
-creating two environment variables who are based on the name you are entering.
+Instead `text`, choose the `SSH Key pair` option, and select the `SSH Key pair`
+you just created.
+
+When you create a new variable for the `SSH key pair`, you will notice that you
+are actually creating two environment variables who are based on the name you are entering.
 
 For instance if you created an `SSH key pair` to use as a bitbucket deploy key,
 you may want to name the variable `BITBUCKET_DEPLOY_KEY`. During the pipeline
