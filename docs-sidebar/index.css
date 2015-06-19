@@ -62,14 +62,14 @@
 }
 
 .sidebar-li_active {
-  color: var(--color-red_base);
+  color: var(--color-fuchsia_base);
 }
 
 .sidebar-li_active.sidebar-li:before {
   transform: rotate(90deg);
   left: -11px;
   top: -3px;
-  color: var(--color-red_base);
+  color: var(--color-fuchsia_base);
 }
 
 .sidebar-li_sub {

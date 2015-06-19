@@ -3,6 +3,7 @@ const react = require('react');
 const renderSimpleSidebar = require('./list-learn');
 const docsToc = require('./toc-docs.json');
 const apiToc = require('./toc-api.json');
+const quickstartsToc = require('./toc-quickstarts.json');
 const renderSearch = require('./search');
 
 var dom = react.DOM;
@@ -16,7 +17,19 @@ function createClass () {
     displayName: 'sidebar',
     getDefaultProps: function () {
       const base = getWindowUrl();
-      const data = base === 'docs' ? docsToc : apiToc;
+      var data;
+
+      switch (base) {
+        case 'api':
+          data = apiToc;
+          break;
+        case 'quickstarts':
+          data = quickstartsToc;
+          break;
+        default:
+          data = docsToc;
+      }
+
       return {data: data};
     },
     getInitialState: function () {
@@ -34,6 +47,7 @@ function createClass () {
 // render the sidebar
 // obj, obj, fn -> obj
 function renderSidebar (props, state, setState) {
+  var base = getWindowUrl();
   var currentSection = getCurrentSection();
   var currentArticle = '';
   if (currentSection !== 'index') {
@@ -41,7 +55,7 @@ function renderSidebar (props, state, setState) {
   }
 
   return dom.section({className: 'section-sidebar'},
-    renderSearch({currentSection: currentSection, data: props.data, setState: setState}),
+    renderSearch({base: base, data: props.data, setState: setState}),
     dom.section({className: 'sidebar-list'},
       createList(state.data, state.search, props.data, currentSection, currentArticle)
     )
