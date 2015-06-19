@@ -15,7 +15,26 @@ var logoBase = logo.base;
 
 module.exports = react.createClass({
   displayName: 'nav',
-  render: render
+  getDefaultProps: function () {
+    const base = getWindowUrl();
+    var data;
+
+    switch (base) {
+      case 'learn':
+        data = 'learn';
+        break;
+      case 'docs':
+        data = 'docs';
+        break;
+      case 'api':
+        data = 'api';
+        break;
+    }
+
+    return {data: data};
+  },
+  render: render,
+  componentDidMount: componentDidMount
 });
 
 /**
@@ -53,21 +72,21 @@ function render () {
         dom.ul({className: 'navbar'},
           dom.li(null,
             dom.a({
-              className: 'navbar-item',
+              className: 'navbar-item navbar-item_learn',
               href: '/learn/basics/introduction.html',
               children: 'Learn'
             })
           ),
           dom.li(null,
             dom.a({
-              className: 'navbar-item',
+              className: 'navbar-item navbar-item_docs',
               href: '/docs/index.html',
               children: 'Docs'
             })
           ),
           dom.li(null,
             dom.a({
-              className: 'navbar-item',
+              className: 'navbar-item navbar-item_api',
               href: '/api/index.html',
               children: 'Api'
             })
@@ -90,4 +109,20 @@ function render () {
       )
     )
   );
+}
+
+// componentDidMount
+function componentDidMount () {
+  var navbarItem = document.querySelector('.navbar-item_' + this.props.data);
+  if (navbarItem) navbarItem.classList.add('navbar-item_active');
+}
+
+// get the baseUrl from the window
+// null -> str
+function getWindowUrl () {
+  var pathName = window.location.pathname.match(/\/\w+/);
+  if (pathName) {
+    return pathName[0].split('/')[1];
+  }
+  return '';
 }

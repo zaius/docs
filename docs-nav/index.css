@@ -57,8 +57,10 @@
   color: var(--color-white);
 }
 
-.navbar-item_active {
-  font-weight: var(--fontWeight_bold);
+.navbar-item_active,
+.navbar-item_active:hover {
+  font-weight: var(--fontWeight_semibold);
+  color: var(--color-red_base);
   opacity: 1;
 }
 

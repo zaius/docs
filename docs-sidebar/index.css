@@ -61,6 +61,10 @@
   content: "\203A \a0\20";
 }
 
+.sidebar-li_active {
+  color: var(--color-red_base);
+}
+
 .sidebar-li_active.sidebar-li:before {
   transform: rotate(90deg);
   left: -11px;
@@ -71,7 +75,7 @@
 .sidebar-li_sub {
   position: relative;
   margin: 10px 0;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .sidebar-li + .sidebar-li_sub {
