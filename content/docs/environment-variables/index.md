@@ -21,8 +21,6 @@ directly on the deploy target. Typically, these are used to store information
 such as `hostnames`, `ssh-keys`, `passwords` and more.
 These variables are called `deploy target variables`.
 
-[Read more on deploy env vars &rsaquo;](/docs/environment-variables/deploy-variables.html)
-
 ### Available environment variables
 
 You can also use a [script step](/learn/steps/introduction.html) and use the export
