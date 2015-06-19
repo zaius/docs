@@ -12,6 +12,6 @@ section.
 
 Wercker automatically fetches these containers when your
 pipelines are executed. If you need `service` containers such as
-databases, specify them in the [services](/docs/services/using-services.html) section of your [wercker.yml
+databases, specify them in the [services](/docs/services/index.html) section of your [wercker.yml
 file](/docs/wercker-yml/creating-a-yml.html).
 
