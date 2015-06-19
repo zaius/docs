@@ -8,8 +8,8 @@ Though you are unable to run `docker` commands in your pipelines as this
 would require being able to be [outside](/docs/faq/can-i-run-docker-commands.html) the container, we have created
 several *internal* steps in order to interact with docker.
 
-Internal [steps](docs/steps/about-steps.html) are steps that are baked into the
-wercker [cli](/docs/cli/commands.html) as these interact with
+Internal [steps](/docs/steps/index.html) are steps that are baked into the
+wercker [cli](/docs/using-the-cli/available-commands.html) as these interact with
 the Docker API that is external from the container. From a security perspective
 we don't want to make this funcionality
 available from inside the Docker container, and as such have created these *internal* steps.

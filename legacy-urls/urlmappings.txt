@@ -86,6 +86,7 @@ learn/deploy/01_introduction.html | /learn/deploy/introduction.html
 learn/deploy/02_targets.html | /learn/deploy/targets.html
 learn/deploy/03_auto-deployment.html | /learn/deploy/auto-deployment.html
 learn/pipelines/01_introduction.html | /learn/pipelines/introduction.html
+learn/pipelines/01-introduction.html | /learn/pipelines/introduction.html
 learn/pipelines/02_how-it-works.html | /learn/pipelines/how-it-works.html
 learn/pipelines/03_using-env-vars.html | /learn/pipelines/using-env-vars.html
 learn/pipelines/04_packaging.html | /learn/pipelines/packaging.html
