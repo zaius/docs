@@ -101,7 +101,7 @@ dependencies, running tests (which we don't have!) and echo'ing some
 information on the `node` and `npm` versions. You can read more about
 steps in [this section](/docs/steps/index.html).
 
-### Adding our project to wercker
+### Adding your project to wercker
 
 Add and commit your `wercker.yml` file to your git repository:
 
@@ -119,7 +119,7 @@ git push origin master
 Let's add this project to wercker. Log into wercker and click the
 create button and add a new application. You will be guided through the
 _add application wizard_ and it will detect that you already have a
-`wercker.yml` present in your repository. See the [how to add an application section](/docs/web-interface/adding-a-new-application.html) 
+`wercker.yml` present in your repository. See the [how to add an application section](/docs/web-interface/adding-a-new-application.html)
 for more information on how to do this.
 
 ### Adding a deploy pipeline
