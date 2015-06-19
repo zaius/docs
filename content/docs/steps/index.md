@@ -5,7 +5,7 @@ tags: steps
 ## Steps
 
 Steps make up the wercker
-[pipeline](/learn/pipelines/01-introduction.html) and can either be
+[pipeline](/learn/pipelines/introduction.html) and can either be
 executed in the [build](/learn/build/introduction.html) or
 [deploy](/docs/deploy/deploy-steps.html) phase within the pipeline.
 
