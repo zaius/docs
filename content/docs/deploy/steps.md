@@ -26,7 +26,7 @@ Within deploy steps you can leverage
 [environment variables](/docs/environment-variables/index.html) for storing
 sensitive information such as passwords, IP addresses and tokens.
 
-Below a snippet for using the S3 deploy step:
+Below a snippet for using the S3 synchronization step:
 
 ```yaml
 deploy:
@@ -39,5 +39,5 @@ deploy:
         key-secret: $AWS_SECRET_ACCESS_KEY
 ```
 
-Note that if you can't find a deploy step for your use-case you can
+Note that if you can't find the right steps for your use-case you can
 [create your own!](/docs/steps/creating-steps.html)

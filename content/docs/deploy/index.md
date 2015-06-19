@@ -4,9 +4,9 @@ tags: target, deployment, environment variables
 
 ## Deploy
 
-A deploy is a [pipeline](/docs/pipelines/index.html) and similar to build can
-have its own set of [steps](/docs/deploy/steps.html). The major differences
-between a build and a deploy are:
+A deploy is a [pipeline](/docs/pipelines/index.html) and similar to a build
+pipeline can have its own set of [steps](/docs/deploy/steps.html). The major
+differences between a build and a deploy are:
 
 * deploy uses the output of a (green) build.
 * requires a deploy target
