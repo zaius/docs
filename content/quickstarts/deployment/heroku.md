@@ -222,8 +222,10 @@ Heroku that an SSH key has been added to your account. This can get
 pretty annoying so let's remedy it.
 
 Instead of using the API key we are going to generate an SSH key on
-wercker. First, delete the `HEROKU_KEY` environment variable for your
-deploy target. Then in the *SSH Keys* section generate a new key pair,
+wercker. We leave the `HEROKU_KEY` environment variable in place just in
+case as it
+is needed if we want to do anything with the `heroku toolbelt`.
+Then in the *SSH Keys* section generate a new key pair,
 for instance with the name `heroku_key_pair`. Copy that key to your
 clipboard and add it as a new key on your Heroku account page in the SSH
 keys section.
@@ -232,8 +234,21 @@ keys section.
 
 Next go back to the environment variables for your deploy target and
 create a new environment variable. Instead of picking *text* field as option, now pick the *SSH Key pair*
-option and select the key you just generated. You can use the same name
-as we did before, `HEROKU_KEY`.
+option and select the key you just generated. Assign the name
+`HEROKU_KEY_PAIR` to the environment variable.
+
+Update your `wercker.yml` as follows:
+
+```yaml
+deploy:
+  steps:
+    - heroku-deploy:
+        key: $HEROKU_KEY
+        key-name: $HEROKU_KEY_PAIR
+        user: $HEROKU_USER
+        app-name: $HEROKU_APP_NAME
+```
+
 
 ![image](/images/heroku_08.jpg)
 
