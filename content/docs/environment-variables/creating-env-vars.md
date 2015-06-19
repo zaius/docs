@@ -1,29 +1,31 @@
 ## Creating environment variables
 
 The interface supports two types of data, this article will show how to create
-both a `text` and `SSH Key pair` evn var.
+both a `text` and `SSH Key pair` environment variable.
 
-To create an env var go to the `Pipeline` settings section of your application
-and click `Add new variable`.
+To create an environment variable go to the `Pipeline` settings section of your
+application and click `Add new variable`.
 
-* [Creating a text env var](#text-env-var)
-* [Creating a SSH key pair env var](#ssh-env-var)
+* [Creating a text environment variable](#text-env-var)
+* [Creating a SSH key pair environment variable](#ssh-env-var)
 
-### <a name="text-env-var"></a>Creating a text env var
+### <a name="text-env-var"></a>Creating a text environment variable
 
-Creating a new env var is as simple as filling in a name, value and hit save.
-The next build or deploy you will trigger now has the env var available.
+Creating a new environment variable is as simple as filling in a name, value and
+hit save. The next build or deploy you will trigger now has the environment variable
+available in its pipeline.
 
-> Please not that the name has to start with a letter and after that the following characters are supported: 'a-z', '0-9' and '_'
+> Please not that the name has to start with a letter and after that the following
+characters are supported: 'a-z', '0-9' and '_'
 
 ![image](/images/creating-env-vars_1.jpg)
 
 #### How to use it
 
-All env variables that are available need to be used by adding a `$` character.
+All environment variable that are available need to be used by adding a `$` character.
 The `SLACK_URL` created in the image above can be used in your wercker.yml as `$SLACK_URL`.
 
-Example how you to use a env var with our
+Example how you to use a environment variable with our
 [Slack notify step](https://app.wercker.com/#applications/54d4a6c742494161430000f5/tab/details).
 
 ```yaml
@@ -35,12 +37,12 @@ build:
             username: myamazingbotname
 ```
 
-#### Protected env vars
+#### Protected environment variable
 
-Text env vars have the option to be set to `protected`.
+`Text` environment variable have the option to be set to `protected`.
 [Read more on protected env vars &rsaquo;](/docs/environment-variables/protected-variables.html)
 
-### <a name="ssh-env-var"></a>Creating a SSH key pair env var
+### <a name="ssh-env-var"></a>Creating a SSH key pair environment variable
 
 Another common type of information used during deploys (but also during builds)
 are `SSH key pairs`. Wercker can help you generate them for you and will only expose
@@ -55,11 +57,12 @@ To use the SSH key pairs in wercker, you have to do two things.
 #### Create a variable
 
 When you create a new variable for the `SSH key pair`, remember you are actually
-creating two variables who are based on the name you are entering.
+creating two environment variables who are based on the name you are entering.
 
-So, if you created an SSH key pair to use as a bitbucket deploy key. You may want to name
-the variable `BITBUCKET_DEPLOY_KEY`. During the pipeline run you will now have two
-environment variables: `$BITBUCKET_DEPLOY_KEY_PRIVATE` and `$BITBUCKET_DEPLOY_KEY_PUBLIC`.
+For instance if you created an `SSH key pair` to use as a bitbucket deploy key,
+you may want to name the variable `BITBUCKET_DEPLOY_KEY`. During the pipeline
+run you will now have two environment variables: `$BITBUCKET_DEPLOY_KEY_PRIVATE`
+and `$BITBUCKET_DEPLOY_KEY_PUBLIC`.
 
 ![image](/images/creating-env-vars_2.jpg)
 
