@@ -97,7 +97,7 @@ In the `dev` clause we define what we want to happen in our development
 pipeline, which in this case are two steps: `pip-install` and `internal-watch`.
 These `steps` are pre-written bash scripts written by either wercker or the
 community. You can read more about steps
-[here](/docs/steps/index.html)
+[here](/docs/steps/index.html).
 
 `internal-watch` watches your files for changes, and if `reload` is set to
 `true` it restarts your app so your changes are reflected immediately. This is
@@ -168,14 +168,14 @@ refresh your page, our new city should be there! Hurray!
 
 There are [many more steps](https://app.wercker.com/#explore) to use for
 developing your app.  Take a look around, and if you can't find the step you're
-looking for, you can [make your
+looking for, you can always just [make your
 own](/docs/steps/creating-steps.html)
 
 Now that we're done developing, we want to push our changes and let wercker
 build and deploy our app for us. 
 
 ### Building your app
-Before we continue, Let's revist our **werkcer.yml** again. 
+Before we continue, Let's revisit our **wercker.yml** again. 
 
 ```yaml
 box: python:2.7-slim
@@ -198,13 +198,7 @@ build:
 We're now interested in what's happening in the _build_ pipeline. Notice that
 the `- pip-install` step remains the same, but we've added a new kind of step:
 a _script step_. This script step is a piece of inline bash code which we're
-using to run our tests. You can create and share these kind of steps with the
-community by [submitting a step to our
-repository](/docs/steps/creating-steps.html).
-
-
-This is the same step that we used in our `dev section`. It installs all our
-requirements specified in the requirements.txt.
+using to run our tests.
 
 ```
 - script:
@@ -316,7 +310,7 @@ example you forked earlier from the list and click on **Use selected repo**.
 
 #### Select the owner
 Now we have to choose who owns the app. For this tutorial, go ahead and select
-yourself. If you like, you can also select an organization you created on
+yourself. If you like, you can also select an organisation you created on
 wercker. Click on **Use selected owner** once you're ready.
 
 #### Configure Access
@@ -358,3 +352,4 @@ but now everyone in your team can see and comment on the build.
 Congratulations! You've built your first app using wercker. The next tutorial
 in this series will be about how to deploy your python app to a Digital Ocean
 server (Coming soon!).
+

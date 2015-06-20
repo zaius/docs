@@ -14,7 +14,7 @@ To be able to follow along with this guide, you will need the following things:
 ### Setting up the app
 Before we can start developing, we have to fork and clone the [sample
 app](https://github.com/wercker/getting-started-nodejs) into our local development 
-environment. AFter you've done that, `cd` into the project directory.
+environment. After you've done that, `cd` into the project directory.
 
 ```
 $ cd getting-started-nodejs/
@@ -289,7 +289,7 @@ example you forked earlier from the list and click on **Use selected repo**.
 
 #### Select the owner
 Now we have to choose who owns the app. For this tutorial, go ahead and select
-yourself. If you like, you can also select an organization you created on
+yourself. If you like, you can also select an organisation you created on
 wercker. Click on **Use selected owner** once you're ready.
 
 #### Configure Access
