@@ -31,7 +31,7 @@ Now in your browser navigate to `127.0.0.1:8080/cities.json` and you should be
 presented with the following json:
 
 ```
-"{'cities':'San Francisco, Amsterdam, Berlin, New York','Tokyo'}"
+"{'cities':'San Francisco, Amsterdam, Berlin, New York, Tokyo'}"
 ```
 
 ### Developing the app
