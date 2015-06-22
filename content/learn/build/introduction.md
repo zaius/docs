@@ -13,7 +13,7 @@ The outcome of a successful build is packaged and stored, readying it for deploy
 
 Of course you can add your own steps as well. See the
 [steps section](/learn/steps/introduction.html) for more information.
-  
+
 ### Get code
 Wercker retrieves your repository from you version control system and
 clones it into a container.
@@ -24,7 +24,7 @@ If no [wercker.yml](/learn/wercker-yml/introduction.html) file is present in the
 repository, wercker will generate a default one depending on your stack.
 
 If you have defined a service such as a database, you will need
-environment variables (env vars) to connect to these services. 
+environment variables (env vars) to connect to these services.
 In the `environment variables` step these are declared and exported. See
 the [article](/learn/pipelines/using-env-vars.html) about env vars in
 the pipeline section for more information.
@@ -32,7 +32,7 @@ the pipeline section for more information.
 ### Wercker init
 
 In the wercker-init step, the pipeline environment variables are
-bootstrapped. 
+bootstrapped.
 
 ### Store
 

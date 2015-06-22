@@ -8,7 +8,7 @@ Wercker can send notifications on build or deploy events to your [Slack](http://
 
 For notifications we leverage [after-steps](/docs/steps/after-steps.html) that are executed when a build
 or deploy finishes.
-Various notifications for Slack exist in the [step registry[(/docs/web-interface/step-registry.html), but below we showcase how to use one that wercker has created.
+Various notifications for Slack exist in the [step registry[(https://app.wercker.com/#explore/steps), but below we showcase how to use one that wercker has created.
 You define after-steps in your [wercker.yml](/docs/wercker-yml/creating-a-yml.html) either in your `build` or `deploy` pipeline (or both!).
 
 ``` yaml

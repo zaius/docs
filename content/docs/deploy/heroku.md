@@ -28,7 +28,7 @@ deploy:
 ```
 
 For a quickstart on deploying to Heroku, see [this
-article](/docs/quickstarts/deployment/heroku.html). You can also check
+article](/quickstarts/deployment/heroku.html). You can also check
 out a sample application that uses this step on
 [GitHub](https://github.com/wercker/wercker-nodejs-heroku)
 
