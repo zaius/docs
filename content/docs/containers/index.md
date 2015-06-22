@@ -53,4 +53,4 @@ You can also [pull in](/docs/containers/private-containers.html) *private*
 containers from Docker Hub or private registries.
 
 Note that it is also possible to specify a containers on a
-[per-pipeline basis](docs/pipelines/per-pipeline-containers.html).
+[per-pipeline basis](/docs/pipelines/per-pipeline-containers.html).
