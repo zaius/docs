@@ -1,6 +1,7 @@
 var learnblocks = require('@docs/learnblocks');
 var sidebar = require('@docs/sidebar');
 var nav = require('@docs/nav');
+var quicklinks = require('@docs/quicklinks');
 var react = require('react');
 
 require('webcomponents.js');
@@ -13,6 +14,9 @@ if (learnblocksSelector) react.renderComponent(learnblocks(), learnblocksSelecto
 
 var navSelector = document.querySelector('.nav-sticky');
 if (navSelector) react.renderComponent(nav(), navSelector);
+
+var quickLinksSelector = document.querySelector('.quicklinks');
+if (quickLinksSelector) react.renderComponent(quicklinks(), quickLinksSelector);
 
 var sidebarSelector = document.querySelector('.sidebar');
 if (sidebarSelector) react.renderComponent(sidebar()(), sidebarSelector);
