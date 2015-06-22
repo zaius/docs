@@ -4,7 +4,7 @@
 
 .nav-sticky {
   min-height: 60px;
-  background-color: var(--color-grey_lighter);
+  background-color: var(--color-grey_lightest);
 }
 
 .navbar-container {
@@ -46,7 +46,7 @@
 }
 
 .navbar-item:hover {
-  color: var(--color-blue_base);
+  color: var(--color-skyblue_dark);
 }
 
 .navbar-item_right {
@@ -54,14 +54,19 @@
 }
 
 .navbar-floating .navbar-item {
+  color: var(--color-grey_light);
+}
+
+.navbar-floating .navbar-item:hover,
+.navbar-floating .navbar-item_active,
+.navbar-floating .navbar-item_active:hover {
   color: var(--color-white);
 }
 
 .navbar-item_active,
 .navbar-item_active:hover {
-  font-weight: var(--fontWeight_semibold);
+  font-weight: var(--fontWeight_base);
   color: var(--color-fuchsia_base);
-  opacity: 1;
 }
 
 .navbar-logo {
