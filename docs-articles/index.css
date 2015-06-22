@@ -9,7 +9,7 @@
 .docs-header {
   position: relative;
   height: 130px;
-  background-color: var(--color-grey_lighter);
+  background-color: var(--color-grey_lightest);
 }
 
 .flex-outer.docs-content {

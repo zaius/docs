@@ -5,7 +5,7 @@
 .learn {
   padding: 30px 0;
   min-height: 380px;
-  background-color: var(--color-grey_light);
+  background-color: var(--color-grey_lighter);
   overflow: hidden;
 }
 

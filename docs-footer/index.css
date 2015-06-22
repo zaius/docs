@@ -15,7 +15,7 @@
 
 .footer-logo {
   flex: 1 50%;
-  margin-top: 60px;
+  margin-top: 55px;
   padding-bottom: 20px;
   border-bottom: 1px solid var(--color-blue_light);
 }
