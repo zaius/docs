@@ -8,6 +8,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
+  margin-bottom: 60px;
 }
 
 .doc-quicklinks-item {
@@ -15,7 +16,6 @@
   margin: 10px;
   padding: 20px 0;
 }
-
 
 @media screen and (max-width: 768px) {
   .doc-quicklinks-item {
@@ -28,7 +28,6 @@
   font-size: var(--fontSize_base);
   color: var(--color-grey_base);
   list-style: none;
-  margin-bottom: 60px;
 }
 
 .doc-quicklinks-item li:before {
