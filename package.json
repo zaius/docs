@@ -32,6 +32,7 @@
     "@docs/page-not-found": "file:docs-page-not-found",
     "@docs/quicklinks": "file:docs-quicklinks",
     "@docs/sidebar": "file:docs-sidebar",
+    "@docs/start": "file:docs-start",
     "@react/icon": "file:react-icon",
     "@wercker/wercker-animations": "file:wercker-animations",
     "@wercker/wercker-colors": "file:wercker-colors",
