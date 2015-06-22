@@ -2,7 +2,6 @@
  * Module dependencies.
  */
 
-var logo = require('@wercker/logo');
 var react = require('react');
 
 var dom = react.DOM;
@@ -100,7 +99,7 @@ function render () {
           dom.li(null,
             dom.a({
               href: '/docs/notifications/index.html',
-              children: 'Using notifications',
+              children: 'Using notifications'
             })
           )
         )
