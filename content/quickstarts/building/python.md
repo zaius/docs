@@ -67,13 +67,13 @@ dev:
     # first we want to run pip-install to install all the dependencies
     - pip-install
     # then we want to run a wercker step that watches your files and reloads
-    # when changes are detected. 
+    # when changes are detected.
     - internal-watch:
         code: python app.py
         reload: true
 ```
 
-Let's take a closer look at what's happening. 
+Let's take a closer look at what's happening.
 
 `box: python:2.7-slim`
 
@@ -172,10 +172,10 @@ looking for, you can always just [make your
 own](/docs/steps/creating-steps.html)
 
 Now that we're done developing, we want to push our changes and let wercker
-build and deploy our app for us. 
+build and deploy our app for us.
 
 ### Building your app
-Before we continue, Let's revisit our **wercker.yml** again. 
+Before we continue, Let's revisit our **wercker.yml** again.
 
 ```yaml
 box: python:2.7-slim
@@ -210,7 +210,7 @@ using to run our tests.
 This is a simple inline **bash** script. You can create these steps directly in
 your **wercker.yml** or share them with the community by [submitting a step to
 our repository](/docs/steps/creating-steps.html).
-This script simply runs the unit tests using python. 
+This script simply runs the unit tests using python.
 
 #### Wercker build
 Now that we have a better understanding of our **wercker.yml** let's go ahead
@@ -265,7 +265,7 @@ FAILED (failures=1)
 ```
 
 It seems like our test is failing because we added a new city that isn't
-reflected in the tests.  Go ahead ahead and add our new city to `app_test.py`
+reflected in the tests.  Go ahead and add our new city to `app_test.py`
 and run the `wercker build` again.
 
 ```
@@ -286,7 +286,7 @@ OK
 --> Pipeline finished
 ```
 
-Success! 
+Success!
 
 Building locally is very useful when you're not sure your code  will run
 because of some changes you made. As such you don't want to push these
@@ -296,7 +296,7 @@ But since we've verified that our app is compiling and running correctly, it's
 time to let wercker build & deploy your app in the cloud, which is what we'll
 be doing in the next section.
 
-### Adding your app to wercker 
+### Adding your app to wercker
 The next step is to create a new application on wercker. Head over to
 [https://app.wercker.com/](https://app.wercker.com/) and select _create_ ->
 _application_.
@@ -304,7 +304,7 @@ _application_.
 #### Select your Git Provider
 First select your Git provider, after which a list of your existing
 repositories on either GitHub or BitBucket is presented. Select the python
-example you forked earlier from the list and click on **Use selected repo**. 
+example you forked earlier from the list and click on **Use selected repo**.
 
 ![image](/images/getting_started_select_repo_python.png)
 
@@ -330,7 +330,7 @@ wercker.yml**. Be sure to leave the **Docker enabled** as it is.
 #### Finishing up
 Finally, once you've verified all the settings you can click **Finish** to
 complete setting up our app!  When done, you will be redirected to your very
-own app page, which looks empty now, so let's go ahead and change that. 
+own app page, which looks empty now, so let's go ahead and change that.
 
 ### Triggering your first build
 
@@ -344,7 +344,7 @@ $ git push origin master
 
 Next, navigate to your app page and you should see a new build has been
 triggered! This build will do the exact same as the one you triggered locally
-but now everyone in your team can see and comment on the build. 
+but now everyone in your team can see and comment on the build.
 
 ![image](/images/getting_started_wercker_build_python.png)
 

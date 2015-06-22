@@ -4,7 +4,7 @@ Welcome to the wercker documentation! The *docs* section covers all the
 wercker concepts and common tasks. If you are completely new to wercker,
 it's recommended to first go through the [learn section](http://devcenter.wercker.com/learn/basics/introduction.html).
 
-To get started right ahead, we recommend starting with one of these tutorials:
+To get started right away, we recommend starting with one of these tutorials:
 * [Golang](/quickstarts/building/golang.html)
 * [Javascript](/quickstarts/building/javascript.html)
 * [Python](/quickstarts/building/python.html)
