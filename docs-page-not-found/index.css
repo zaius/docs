@@ -8,7 +8,8 @@
   background-color: var(--color-grey_lighter);
 }
 
-.page-not-found-content {
+.page-not-found-content,
+.page-not-found-content p {
   text-align: center;
 }
 
