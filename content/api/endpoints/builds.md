@@ -1,6 +1,7 @@
 ## Builds
 
 * [Get a build](#get-a-build)
+* [Trigger a build](#trigger-a-build)
 
 ### <a name="get-a-build" class="anchor"></a>Get a build
 
@@ -48,5 +49,60 @@ Status: 200 OK
   "finishedAt": "2015-04-30T17:09:02.753Z",
   "message": "Hide API header",
   "progress": 100
+}
+```
+
+### <a name="trigger-a-build" class="anchor"></a>Trigger a new build
+
+Trigger a new build for an application.
+
+Returns a build object.
+
+***
+`POST /api/v3/builds/`
+***
+
+#### JSON payload
+
+| Name | Type | Description |
+|:-----|:-----|:------------|
+| `applicationId` | String | **Required** The id of the application for which a build should be triggered. |
+| `branch` | String | **Optional** The Git branch that the build should use. If not specified, the default branch will be used. |
+| `commitHash` | String | **Optional** The Git commit hash that the build should used. **Requires** `branch` to be set. If not specified, the latest commit is fetched |
+| `message` | String | **Optional** The message to use for the build. If not specified, the Git commit message is used. |
+
+#### Response
+
+```json
+{
+  "id": "557591da3f1aefa778000009",
+  "url": "https://app.wercker.com/api/v3/builds/557591da3f1aefa778000009",
+  "application": {
+    "id": "54c9168980c7075225004157",
+    "url": "https://app.wercker.com/api/v3/applications/wercker/docs",
+    "name": "docs",
+    "owner": {
+      "type": "wercker",
+      "name": "wercker",
+      "avatar": {
+        "gravatar": "33a5bfbcf8a2b90f40e849b6f1fa5eeb"
+      },
+      "userId": "55310d295732ce8a41000054",
+      "meta": {
+        "username": "wercker",
+        "werckerEmployee": false
+      }
+    },
+    "createdAt": "2015-06-08T12:47:39.819Z",
+    "privacy": "private",
+    "stack": 5
+  },
+  "branch": "master",
+  "createdAt": "2015-06-08T13:00:10.180Z",
+  "commitHash": "27625930a8afcaff8e4c3f5370f38e712db7d61e",
+  "message": "Fixed OAuth error",
+  "progress": null,
+  "result": "unknown",
+  "status": "notstarted"
 }
 ```
