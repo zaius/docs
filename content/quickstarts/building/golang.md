@@ -7,7 +7,7 @@ apply to every other programming language.
 
 ### Requirements
 To be able to follow along with this guide, you will need the following things:
-* [A wercker account](https:/https://app.wercker.com/users/new/)
+* [A wercker account](https://app.wercker.com/users/new/)
 * [A working Docker environment](/docs/cli/requirements.html)
 * [The wercker CLI](/docs/using-the-cli/installing.html)
 
