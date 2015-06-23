@@ -136,7 +136,7 @@ function render () {
           ),
           dom.li(null,
             dom.a({
-              href: 'docs/containers/pushing-containers.html',
+              href: '/docs/containers/pushing-containers.html',
               children: 'Pushing containters'
             })
           )
