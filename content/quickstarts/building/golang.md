@@ -8,12 +8,12 @@ apply to every other programming language.
 ### Requirements
 To be able to follow along with this guide, you will need the following things:
 * [A wercker account](https://app.wercker.com/users/new/)
-* [A working Docker environment](/docs/cli/requirements.html)
+* [A working Docker environment](/docs/using-the-cli/requirements.html)
 * [The wercker CLI](/docs/using-the-cli/installing.html)
 
 ### Setting up the app
 Before we can start developing, we have to fork and clone the [sample
-app](https://github.com/wercker/getting-started-golang) into our local development 
+app](https://github.com/wercker/getting-started-golang) into our local development
 environment. After you've done that, `cd` into the project directory.
 
 ```
@@ -52,7 +52,7 @@ let's take a closer look at this `dev` _pipeline_ right now.
 
 ```yaml
 # The container definition we want to use for developing our app
-box: golang 
+box: golang
 # Defining the dev pipeline
 dev:
   steps:
@@ -71,7 +71,7 @@ specified. You can read more about containers
 [here](/docs/containers/index.html).
 
 In the `dev` clause we define what we want to happen in our development
-pipeline, which in this case is just one step: `internal/watch`. 
+pipeline, which in this case is just one step: `internal/watch`.
 
 `internal-watch` watches your files for changes, and if `reload` is set to
 `true` it restarts your app so your changes are reflected immediately. This is
@@ -117,10 +117,10 @@ Status: Image is up to date for golang:latest
 Wercker first checks out your code and then sets up the container environment.
 This means that the container will be pulled from Docker Hub and subsequently
 started with access to your checked out code. It will then start executing all the
-steps that are defined in the **wercker.yml**. 
+steps that are defined in the **wercker.yml**.
 
 Please note that the IP displayed here could be different for you, as this
-tutorial was written using boot2docker. 
+tutorial was written using boot2docker.
 
 If you navigate to DOCKER_HOST_IP:5000/cities.json you should see the same
 output as before.  That's not very exciting, so let's see our live reloading in
@@ -143,14 +143,14 @@ looking for, you can always [make your
 own](/docs/steps/creating-steps.html).
 
 Now that we're done developing, we want to push our changes and let wercker
-build and deploy our app for us. 
+build and deploy our app for us.
 
 ### Building your app
 First, let's revisit our **wercker.yml** again.
 
 ```yaml
 # The container definition we want to use for developing our app
-box: golang 
+box: golang
 # Defining the dev pipeline
 dev:
   steps:
@@ -180,8 +180,8 @@ checks our code and fails if it thinks we're not doing a good job.  We've also
 added a new kind of step: a _script step_. This script step is a piece of
 inline bash code which we're using to run our tests. You can create and share
 these kind of steps with the community by [submitting a step to our
-repository](/docs/steps/creating-steps.html). The rest of the steps should be 
-self-explanatory: one for building and for testing. 
+repository](/docs/steps/creating-steps.html). The rest of the steps should be
+self-explanatory: one for building and for testing.
 
 #### wercker build
 Now that we have a better understanding of our **wercker.yml** let's go ahead
@@ -221,7 +221,7 @@ ok  	_/pipeline/source	0.006s
 --> Pipeline finished
 ```
 
-Success! 
+Success!
 
 Building locally is very useful when you're not sure your code  will run
 because of some changes you made. As such you don't want to push these
@@ -231,7 +231,7 @@ But since we've verified that our app is compiling and running correctly, it's
 time to let wercker build & deploy your app in the cloud, which is what we'll
 be doing in the next section.
 
-### Adding your app to wercker 
+### Adding your app to wercker
 The next step is to create a new application on wercker. Head over to
 [https://app.wercker.com/](https://app.wercker.com/) and in the menu bar select
 _create_ -> _application_.
@@ -239,7 +239,7 @@ _create_ -> _application_.
 #### Select your Git Provider
 First select your Git provider, after which a list of your existing
 repositories on either GitHub or BitBucket is presented. Select the ruby
-example you forked earlier from the list and click on **Use selected repo**. 
+example you forked earlier from the list and click on **Use selected repo**.
 
 ![image](/images/getting_started_select_repo_golang.png)
 
@@ -265,7 +265,7 @@ wercker.yml**. Be sure to leave the **Docker enabled** as it is.
 #### Finishing up
 Finally, once you've verified all the settings you can click **Finish** to
 complete setting up our app!  When done, you will be redirected to your very
-own app page, which looks empty now, so let's go ahead and change that. 
+own app page, which looks empty now, so let's go ahead and change that.
 
 ### Triggering your first build
 
@@ -279,7 +279,7 @@ $ git push origin master
 
 Next, navigate to your app page and you should see a new build has been
 triggered! This build will do the exact same as the one you triggered locally
-but now everyone in your team can see and comment on the build. 
+but now everyone in your team can see and comment on the build.
 
 ![image](/images/getting_started_wercker_build_golang.png)
 

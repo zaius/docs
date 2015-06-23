@@ -33,4 +33,6 @@ Checkout the all available flags in the help page:
 wercker pull --help
 ```
 
-Make sure you have a working [Docker environment](/docs/using-the-cli/requirements.html) when pulling your builds.
+Make sure you have a working
+[Docker environment](/docs/using-the-cli/requirements.html)
+when pulling your builds.

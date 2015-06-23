@@ -7,20 +7,20 @@ apply to every other programming language.
 
 ### Requirements
 To be able to follow along with this guide, you will need the following things:
-* [A wercker account](https:/https://app.wercker.com/users/new/)
-* [A working Docker environment](/docs/cli/requirements.html)
+* [A wercker account](https://app.wercker.com/users/new/)
+* [A working Docker environment](/docs/using-the-cli/requirements.html)
 * [The wercker CLI](/docs/using-the-cli/installing.html)
 
 ### Setting up the app
 Before we can start developing, we have to fork and clone the [sample
-app](https://github.com/wercker/getting-started-ruby) into our local development 
+app](https://github.com/wercker/getting-started-ruby) into our local development
 environment. After you've done that, `cd` into the project directory.
 
 ```
 $ cd getting-started-ruby/
 ```
 
-Next, install the dependencies using `bundle install` and run the app to verify 
+Next, install the dependencies using `bundle install` and run the app to verify
 everything is working.
 
 ```
@@ -169,10 +169,10 @@ skipping rbenv rehash because rbenv is not found
 Wercker first checks out your code and then sets up the container environment.
 This means that the container will be pulled from Docker Hub and subsequently
 started with access to your checked out code. It will then start executing all the
-steps that are defined in the **wercker.yml**. 
+steps that are defined in the **wercker.yml**.
 
 Please not that the IP displayed here could be different for you, as this
-tutorial was written using boot2docker. 
+tutorial was written using boot2docker.
 
 If you navigate to DOCKER_HOST_IP:8080/cities.json you should see the same
 output as before.  That's not very exciting, so let's see our live reloading in
@@ -194,7 +194,7 @@ looking for, you can always [make your
 own](/docs/steps/creating-steps.html).
 
 Now that we're done developing, we want to push our changes and let wercker
-build and deploy our app for us. 
+build and deploy our app for us.
 
 ### Building your app
 Before we continue, let's revisit our **wercker.yml** again.
@@ -298,7 +298,7 @@ deprecation warnings into errors, giving you the full backtrace.
 --> Pipeline finished
 ```
 
-Success! 
+Success!
 
 Building locally is very useful when you're not sure your code  will run
 because of some changes you made. As such you don't want to push these
@@ -308,7 +308,7 @@ But since we've verified that our app is compiling and running correctly, it's
 time to let wercker build & deploy your app in the cloud, which is what we'll
 be doing in the next section.
 
-### Adding your app to wercker 
+### Adding your app to wercker
 The next step is to create a new application on wercker. Head over to
 [https://app.wercker.com/](https://app.wercker.com/) and in the menu bar select
 _create_ -> _application_.
@@ -316,7 +316,7 @@ _create_ -> _application_.
 #### Select your Git Provider
 First select your Git provider, after which a list of your existing
 repositories on either GitHub or BitBucket is presented. Select the ruby
-example you forked earlier from the list and click on **Use selected repo**. 
+example you forked earlier from the list and click on **Use selected repo**.
 
 ![image](/images/getting_started_select_repo_ruby.png)
 
@@ -342,7 +342,7 @@ wercker.yml**. Be sure to leave the **Docker enabled** as it is.
 #### Finishing up
 Finally, once you've verified all the settings you can click **Finish** to
 complete setting up our app!  When done, you will be redirected to your very
-own app page, which looks empty now, so let's go ahead and change that. 
+own app page, which looks empty now, so let's go ahead and change that.
 
 ### Triggering your first build
 
@@ -356,7 +356,7 @@ $ git push origin master
 
 Next, navigate to your app page and you should see a new build has been
 triggered! This build will do the exact same as the one you triggered locally
-but now everyone in your team can see and comment on the build. 
+but now everyone in your team can see and comment on the build.
 
 ![image](/images/getting_started_wercker_build_ruby.png)
 
