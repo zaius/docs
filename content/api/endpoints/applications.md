@@ -5,7 +5,7 @@
 * [List builds](#list-builds)
 * [List deploys](#list-deploys)
 
-### <a name="list-user-applications"></a>List user applications
+### <a name="list-user-applications" class="anchor"></a>List user applications
 
 List all applications owned by the user or organization. The result will only contain
 applications that the authenticated user has access to. If the call is made
@@ -55,7 +55,7 @@ Status: 200 OK
 ]
 ```
 
-### <a name="get-an-application"></a>Get an application
+### <a name="get-an-application" class="anchor"></a>Get an application
 
 Get the details of a single application.
 
@@ -99,7 +99,7 @@ Status: 200 OK
 }
 ```
 
-### <a name="list-builds"></a>List builds
+### <a name="list-builds" class="anchor"></a>List builds
 
 Retrieve all builds of an application.
 
@@ -143,7 +143,7 @@ Status: 200 OK
 ]
 ```
 
-### <a name="list-deploys"></a>List deploys
+### <a name="list-deploys" class="anchor"></a>List deploys
 
 Retrieve all deploys of an application.
 

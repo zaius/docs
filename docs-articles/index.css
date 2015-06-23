@@ -34,10 +34,22 @@
   max-width: 80%;
 }
 
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .docs-articles h2 {
     max-width: 70%;
   }
+}
+
+/**
+ * Anchor targets
+ */
+
+.docs-articles .anchor:target:before {
+  content: "";
+  display: block;
+  height: 70px;
+  margin: -70px 0 0;
 }
 
 /**

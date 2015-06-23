@@ -9,7 +9,7 @@ application and click `Add new variable`.
 * [Creating a text environment variable](#text-env-var)
 * [Creating a SSH key pair environment variable](#ssh-env-var)
 
-### <a name="text-env-var"></a>Creating a text environment variable
+### <a name="text-env-var" class="anchor"></a>Creating a text environment variable
 
 Creating a new environment variable is as simple as filling in a name, value and
 hit Save. The next build or deploy you will trigger now has the environment variable
@@ -42,7 +42,7 @@ build:
 `Text` environment variable have the option to be set to `protected`.
 [Read more on protected env vars &rsaquo;](/docs/environment-variables/protected-variables.html)
 
-### <a name="ssh-env-var"></a>Creating a SSH key pair environment variable
+### <a name="ssh-env-var" class="anchor"></a>Creating a SSH key pair environment variable
 
 Another common type of information used during deploys (but also during builds)
 are `SSH key pairs`. Wercker can help you generate them for you and will only expose

@@ -2,7 +2,7 @@
 
 * [Get a build](#get-a-build)
 
-### <a name="get-a-build"></a>Get a build
+### <a name="get-a-build" class="anchor"></a>Get a build
 
 Get the details of a single build.
 
