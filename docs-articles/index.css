@@ -6,12 +6,6 @@
   overflow: hidden;
 }
 
-.docs-header {
-  position: relative;
-  height: 130px;
-  background-color: var(--color-grey_lightest);
-}
-
 .flex-outer.docs-content {
   align-items: flex-start;
   margin-top: 30px;
