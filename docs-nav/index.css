@@ -7,21 +7,17 @@
   background-color: var(--color-grey_lightest);
 }
 
-.navbar-container {
-  padding: 10px 0;
+.navbar-floating {
+  z-index: 200;
 }
 
-.navbar-floating {
-  position: fixed;
-  z-index: 200;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: var(--color-blue_base);
+.navbar-container {
+  padding: 10px 0;
+  background-color: var(--color-grey_lightest);
   transition: background-color var(--duration_fast) var(--easing_smooth);
 }
 
-.navbar-container.navbar-floating {
+.navbar-floating .navbar-container {
   background-color: var(--color-blue_base);
 }
 

@@ -1,3 +1,4 @@
+var breadCrumb = require('@docs/bread-crumb');
 var learnblocks = require('@docs/learnblocks');
 var sidebar = require('@docs/sidebar');
 var nav = require('@docs/nav');
@@ -20,6 +21,9 @@ if (quickLinksSelector) react.renderComponent(quicklinks(), quickLinksSelector);
 
 var sidebarSelector = document.querySelector('.sidebar');
 if (sidebarSelector) react.renderComponent(sidebar()(), sidebarSelector);
+
+var breadCrumbSelector = document.querySelector('.bread-crumb-sticky');
+if (breadCrumbSelector) react.renderComponent(breadCrumb(), breadCrumbSelector);
 
 // init metrics
 require('@docs/metrics');
