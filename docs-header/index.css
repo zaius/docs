@@ -1,15 +1,15 @@
 /**
- * Header.
+ * homepage header.
  */
 
-.header {
+.header_homepage {
   position: relative;
   height: 32vh;
   max-height: 250px;
   background-color: var(--color-grey_lightest);
 }
 
-.header h1 {
+.header_homepage h1 {
   position: relative;
   left: -10px;
   font-weight: bold;
@@ -17,4 +17,17 @@
   color: #60718C;
   letter-spacing: -5px;
   line-height: 110px;
+}
+
+/**
+ * Header.
+ */
+
+.header {
+  height: 130px;
+  background-color: var(--color-grey_lightest);
+}
+
+.header_small {
+  height: inherit;
 }
