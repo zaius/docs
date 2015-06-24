@@ -30,7 +30,8 @@ module.exports = react.createClass({
 
     return {data: data};
   },
-  render: render
+  render: render,
+  componentDidMount: componentDidMount
 });
 
 /**
@@ -43,6 +44,15 @@ function render () {
       dom.h1({children: this.props.data})
     )
   );
+}
+
+// componentDidMount
+function componentDidMount () {
+  var pathName = document.referrer.match(/[^.]+/)[0];
+  console.log(pathName)
+  if (pathName) {
+    console.log(pathName.split('/'));
+  }
 }
 
 // get the baseUrl from the window
