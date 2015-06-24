@@ -10,7 +10,6 @@ var dom = react.DOM;
 /**
  * Create class.
  */
-
 module.exports = react.createClass({
   displayName: 'bread-crumb',
   render: render
@@ -19,7 +18,6 @@ module.exports = react.createClass({
 /**
  * Render.
  */
-
 function render () {
   return sticky({
       stickyClass: 'bread-crumb-floating',
@@ -46,19 +44,19 @@ function render () {
  * On scroll up event
  */
 function onScrollUp () {
-  var     scrollDuration = 500,
-          scrollOffset = 140;
-          scrollHeight = window.scrollY - scrollOffset,
-          startTime = Date.now();
+  var scrollDuration = 500;
+  var scrollOffset = 140;
+  var scrollHeight = window.scrollY - scrollOffset;
+  var startTime = Date.now();
 
-  requestAnimationFrame(step);
+  window.requestAnimationFrame(step);
 
   function step () {
     var currentTime = Date.now();
-    if ( window.scrollY > scrollOffset && currentTime - startTime < scrollDuration) {
+    if (window.scrollY > scrollOffset && currentTime - startTime < scrollDuration) {
       scrollHeight -= scrollHeight * 0.2;
-      window.scrollTo( 0, scrollHeight + scrollOffset);
-      requestAnimationFrame(step);
+      window.scrollTo(0, scrollHeight + scrollOffset);
+      window.requestAnimationFrame(step);
     }
   }
 }
@@ -71,17 +69,17 @@ function createList () {
   var base = currentLocation[0];
   var section = currentLocation[1];
 
-  return currentLocation.map(function(item) {
+  return currentLocation.map(function (item) {
     return renderLiElement(item, base, section);
   });
 }
 
 // render a li element
-// str, str -> obj
+// str, str, str -> obj
 function renderLiElement (item, base, section) {
   var uri = '';
-  if (item == base) uri = createBaseUri(base);
-  if (item == section) uri = createSectionUri(base, section);
+  if (item === base) uri = createBaseUri(base);
+  if (item === section) uri = createSectionUri(base, section);
 
   return dom.li(
     {className: 'bread-crumb-item', key: item},
@@ -90,7 +88,7 @@ function renderLiElement (item, base, section) {
 }
 
 // create href link for base
-// str, str, str, -> str
+// str -> str
 function createBaseUri (base) {
   return '/' + base + '/index.html';
 }
@@ -105,10 +103,10 @@ function createSectionUri (base, section) {
  * handleStickyStateChange.
  * Adds extra positioning.
  */
-function handleStickyStateChange() {
+function handleStickyStateChange () {
   var breadCrumb = document.querySelector('.bread-crumb');
-  if (arguments[0] == true) breadCrumb.classList.add('bread-crumb_active');
-  else {breadCrumb.classList.remove('bread-crumb_active');}
+  if (arguments[0] === true) breadCrumb.classList.add('bread-crumb_active');
+  else breadCrumb.classList.remove('bread-crumb_active');
 }
 
 // // clean file name
@@ -126,7 +124,7 @@ function getCurrentLocation () {
   // removes first item because it is empty
   section.shift();
   // removes index from the array
-  if(section.indexOf('index') > -1)section.splice(section.indexOf('index'),1);
+  if (section.indexOf('index') > -1) section.splice(section.indexOf('index'), 1);
 
   return section;
 }
