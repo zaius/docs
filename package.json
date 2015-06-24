@@ -21,6 +21,7 @@
     "@docs/api": "file:docs-api",
     "@docs/articles": "file:docs-articles",
     "@docs/build": "file:docs-build",
+    "@docs/bread-crumb": "file:docs-bread-crumb",
     "@docs/cards": "file:docs-cards",
     "@docs/footer": "file:docs-footer",
     "@docs/gh-button": "file:docs-gh-button",

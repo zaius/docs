@@ -11,8 +11,8 @@
 }
 
 .section-sidebar {
-  padding-top: 20px;
   padding-right: 20px;
+  padding-top: 20px;
   border-right: 1px solid var(--color-grey_light);
   line-height: var(--lineHeight_loose);
 }
@@ -115,7 +115,7 @@
 }
 
 .section-sidebar_pipelines {
-  border-color: var(--color-red_base);
+  border-color: var(--color-pink_base);
 }
 
 .section-sidebar_steps {

@@ -10,6 +10,7 @@
 @import "docs-api/index.css";
 @import "docs-badge-wip/index.css";
 @import "docs-banner/index.css";
+@import "docs-bread-crumb/index.css";
 @import "docs-cards/index.css";
 @import "docs-footer/index.css";
 @import "docs-header/index.css";
