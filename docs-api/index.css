@@ -1,22 +1,35 @@
 /**
  * api-articles.
  */
+
 .api {
   position: relative;
   overflow: hidden;
 }
 
 .flex-outer.api-content {
-  align-items: flex-start;
-  margin-top: 30px;
+  margin-top: 0;
 }
 
 .api-articles {
-  flex: 3;
-  order: 2;
-  padding: 30px;
-  z-index: 2;
-  position: relative;
+  padding: 0;
+  padding-top: 70px;
+}
+
+@media screen and (min-width: 768px) {
+  .flex-outer.api-content {
+    align-items: flex-start;
+    margin-top: 30px;
+  }
+
+  .api-articles {
+    flex: 3;
+    order: 2;
+    padding: 30px;
+    padding-top: 20px;
+    z-index: 2;
+    position: relative;
+  }
 }
 
 /**
@@ -68,6 +81,7 @@
 
 .api-articles > hr + p code {
   display: block;
+  overflow-x: scroll;
   margin-top: 20px;
   padding: 10px 12px;
 }

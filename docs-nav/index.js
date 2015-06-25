@@ -8,7 +8,6 @@ var sticky = require('react-sticky');
 
 var dom = react.DOM;
 var logoFull = logo.full;
-var logoBase = logo.base;
 
 /**
  * Create class.
@@ -55,13 +54,6 @@ function render () {
             href: '/index.html',
             dangerouslySetInnerHTML: {
               __html: logoFull
-            }
-          }),
-          dom.a({
-            className: 'logo-small',
-            href: '/index.html',
-            dangerouslySetInnerHTML: {
-              __html: logoBase
             }
           })
         ),

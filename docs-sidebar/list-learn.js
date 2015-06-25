@@ -11,14 +11,23 @@ module.exports = learnList;
 // null -> obj
 function learnList () {
   const lesson = getLesson();
+  const chapters = getChapters();
   const lessonData = getLessonData(toc, lesson);
   const sectionClass = 'section-sidebar section-learn section-sidebar_' + lesson;
+  const listChapters = crearChaptersList(chapters, lesson);
+  const currentChapter = createChapter(lesson);
   const list = createList(lessonData, lesson);
+
 
   return dom.section({className: sectionClass},
     dom.section({className: 'sidebar-list'},
-      dom.ul(null, dom.li(null, dom.ul(null, list)))
-
+      dom.ul(null,
+        currentChapter,
+        list
+      ),
+      dom.ul({className: 'sidebar-list_chapters'},
+        listChapters
+      )
     )
   );
 }
@@ -32,6 +41,7 @@ function getLessonData (lessons, key) {
   arr.shift();
   return arr;
 }
+
 
 // create the element list
 // [[str]] -> obj
@@ -47,12 +57,50 @@ function createList (data, lesson) {
   });
 }
 
+// create the element list
+// [[str]] -> obj
+function createChapter (lesson) {
+  const innerUri = createHref(stripUrl(), lesson, 'introduction');
+  const outerClass = 'sidebar-li sidebar-li_active';
+  const innerText = stripFileName(lesson);
+
+  return dom.li({
+    className: outerClass,
+    key: lesson},
+    dom.a({href: innerUri}, innerText)
+  );
+}
+
+// get all chapters
+function getChapters () {
+  var chapters = [];
+  toc.map((arr, i) => {
+    chapters.push(arr[0]);
+  })
+  return chapters;
+}
+
+// get all chapters
+function crearChaptersList (data, lesson) {
+  return data.map(function (val) {
+    if (val === lesson) return;
+
+    const innerUri = createHref(stripUrl(), val, 'introduction');
+    const outerClass = 'sidebar-li';
+    const innerText = stripFileName(val);
+
+    return dom.li({className: outerClass, key: val},
+      dom.a({href: innerUri}, innerText)
+    );
+  });
+}
+
 // set active className
 // str -> str
 function activeClass (val) {
   const head = window.location.pathname.split('/')[3].split('.')[0];
   const isActive = (head === slugify(val.split('.')[0]));
-  return isActive ? ' active' : '';
+  return isActive ? ' sidebar-li_sub_active' : '';
 }
 
 // clean up file name

@@ -29,7 +29,6 @@ function render () {
         dom.ul(null,
           dom.li({className: 'bread-crumb-scroll-up'},
             dom.a({
-              children: 'Back to top',
               onClick: onScrollUp
             })
           ),
@@ -45,7 +44,7 @@ function render () {
  */
 function onScrollUp () {
   var scrollDuration = 500;
-  var scrollOffset = 140;
+  var scrollOffset = 1;
   var scrollHeight = window.scrollY - scrollOffset;
   var startTime = Date.now();
 
@@ -57,6 +56,8 @@ function onScrollUp () {
       scrollHeight -= scrollHeight * 0.2;
       window.scrollTo(0, scrollHeight + scrollOffset);
       window.requestAnimationFrame(step);
+    } if (window.scrollY < 10) {
+      window.scrollTo(0, 0);
     }
   }
 }

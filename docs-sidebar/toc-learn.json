@@ -1,12 +1,5 @@
 [
   [
-    "build",
-    "introduction.md",
-    "local-builds.md",
-    "pulling-builds.md",
-    "introspecting-builds.md"
-  ],
-  [
     "basics",
     "introduction.md",
     "how-it-works.md",
@@ -15,16 +8,17 @@
     "the-desktop-app.md"
   ],
   [
+    "wercker-yml",
+    "introduction.md",
+    "sections.md",
+    "environment-variables.md",
+    "creating-a-yml.md"
+  ],
+  [
     "containers",
     "introduction.md",
     "docker-hub.md",
     "using-containers.md"
-  ],
-  [
-    "deploy",
-    "introduction.md",
-    "targets.md",
-    "auto-deployment.md"
   ],
   [
     "pipelines",
@@ -41,10 +35,16 @@
     "step-registry.md"
   ],
   [
-    "wercker-yml",
+    "build",
     "introduction.md",
-    "sections.md",
-    "environment-variables.md",
-    "creating-a-yml.md"
+    "local-builds.md",
+    "pulling-builds.md",
+    "introspecting-builds.md"
+  ],
+  [
+    "deploy",
+    "introduction.md",
+    "targets.md",
+    "auto-deployment.md"
   ]
 ]

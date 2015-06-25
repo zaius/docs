@@ -7,17 +7,28 @@
 }
 
 .flex-outer.docs-content {
-  align-items: flex-start;
-  margin-top: 30px;
+  margin-top: 0;
 }
 
 .docs-articles {
-  flex: 3;
-  order: 2;
-  padding: 30px;
-  padding-top: 20px;
-  z-index: 2;
-  position: relative;
+  padding: 0;
+  padding-top: 70px;
+}
+
+@media screen and (min-width: 768px) {
+  .flex-outer.docs-content {
+    align-items: flex-start;
+    margin-top: 30px;
+  }
+
+  .docs-articles {
+    flex: 3;
+    order: 2;
+    padding: 30px;
+    padding-top: 20px;
+    z-index: 2;
+    position: relative;
+  }
 }
 
 /**

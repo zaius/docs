@@ -10,7 +10,7 @@
 }
 
 .bread-crumb.bread-crumb_active {
-  top: 58px;
+  top: 0;
   height: 45px;
   animation: move-in-bread-crumb;
   animation-duration: var(--duration_slowest);
@@ -63,13 +63,32 @@
   text-decoration: underline;
 }
 
+.bread-crumb-scroll-up a:after {
+  content: "";
+}
+
 .bread-crumb-scroll-up a:before {
   content: "\203A";
-  margin-right: 10px;
   display: inline-block;
   vertical-align: top;
+  margin-right: 13px;
   transform: rotate(-90deg);
-  font-size: var(--fontSize_large);
+  font-size: var(--fontSize_larger);
+}
+
+@media screen and (min-width: 768px) {
+  .bread-crumb.bread-crumb_active {
+    top: 58px;
+  }
+
+  .bread-crumb-scroll-up a:after {
+    content: "Back to top";
+  }
+
+  .bread-crumb-scroll-up a:before {
+    font-size: var(--fontSize_large);
+    margin-right: 10px;
+  }
 }
 
 @keyframes move-in-bread-crumb {

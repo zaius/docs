@@ -43,6 +43,14 @@ function render () {
   );
 }
 
+// function componentDidMount function() {
+//   var body = document.querySelector('#learn');
+//   if(body) {
+//     var anchor = document.querySelector('#anchor');
+//     console.log(anchor.offsetTop);
+//   }
+// }
+
 /**
  * Create className.
  *

@@ -34,6 +34,7 @@
     "@docs/quicklinks": "file:docs-quicklinks",
     "@docs/sidebar": "file:docs-sidebar",
     "@docs/start": "file:docs-start",
+    "@docs/toc-menu": "file:docs-toc-menu",
     "@react/icon": "file:react-icon",
     "@wercker/wercker-animations": "file:wercker-animations",
     "@wercker/wercker-colors": "file:wercker-colors",

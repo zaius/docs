@@ -1,15 +1,24 @@
 /**
- * Edit on GitHub button.
+ * Table of content menu button.
  */
-.gh-button {
-  display: none;
-  position: absolute;
-  top: 22px;
-  right: 40px;
-  text-decoration: none;
+
+body.sidebar-open .toc-menu-button:before {
+  content: "Close menu ";
 }
 
-.gh-button-button {
+.toc-menu {}
+
+.toc-menu-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.toc-menu-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-decoration: none;
   padding: 8px 10px;
   border-radius: 2px;
   color: var(--color-skyblue_base);
@@ -21,13 +30,15 @@
   transition: all var(--duration_fastest) var(--easing_smooth);
 }
 
-.gh-button-button:hover {
+.toc-menu-button:hover {
+  cursor: pointer;
+  cursor: hand;
   background-color: var(--color-skyblue_base);
   color: var(--color-white);
 }
 
 @media screen and (min-width: 768px) {
-  .gh-button {
-    display: block;
+  .toc-menu {
+    display: none;
   }
 }
