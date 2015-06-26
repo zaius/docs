@@ -7,7 +7,8 @@ tags: organizations
 Through organizations you can create and organize teams to make access management
 on applications way easier and efficient.
 
-You can start creating an organization from your profile settings page.
+You can start to create a new 'Organization' from the create dropdown or
+from your profile settings page.
 
 ![image](/images/creat-an-org.jpg)
 
