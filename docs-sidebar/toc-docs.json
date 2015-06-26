@@ -13,7 +13,8 @@
   [
      "pipelines",
      "per-pipeline-containers.md",
-     "stacks.md"
+     "stacks.md",
+     "wercker-cache"
   ],
   [
      "wercker-yml",
