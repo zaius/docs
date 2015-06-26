@@ -19,7 +19,7 @@ and sort by popularity.
 
 Each [step](/docs/steps/index.html) has a detailed page that shows all the information you need to start using it.
 In the header you will find some basic information on the version number, who published it, last updated
-and how many uses it has.
+and how many times it has been executed.
 
 #### How to use it
 
