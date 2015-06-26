@@ -62,7 +62,7 @@ The `name` field is the name of your step. Toghether with your username this is
 the unique identifier of your step (`username/name`).
 
 The `version` field is the specific version of the step when deploying. This
-step needs to be unique for your step and must adhere to the [semantic version
+field needs to be unique for your step and must adhere to the [semantic version
 scheme](http://semver.org). Your first version would be `0.1.0` and each minor
 change would bump up the last digit by one. 
 
