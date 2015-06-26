@@ -112,6 +112,7 @@
   [
      "web-interface",
      "adding-a-new-application.md",
+     "application-settings.md",
      "repository-access.md",
      "notifications.md",
      "roles-and-permissions.md",

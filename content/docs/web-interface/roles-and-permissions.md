@@ -1,6 +1,6 @@
 ## Roles & permissions
 
-There are three roles defined at this moment, with increasing amount of permissions these are:
+There are three roles defined at this moment:
 
 1. build + view deploys
 2. build + deployment
@@ -17,9 +17,13 @@ A user with **build + deployment** permissions can do all things a user with **b
 
 ### Admin
 
-Like the owner of a project, users with admin permissions can do the same as with **build + deployment** permissions and also:
+Like the owner of a application, users with admin permissions can do the same as with **build + deployment** permissions and also:
 
-* change settings on the project (set the application to public/private)
 * change permissions for collaborators
-* change the ownership of a project
+* manage the SSH Keys
+* change public / private setting
+* change the repository access
+* change the infrastructure stack
+* change the API user
+* change the ownership of a application
 * delete the application
