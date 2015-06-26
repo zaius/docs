@@ -21,21 +21,33 @@
   margin-top: 20px;
 }
 
-.sidebar-list ul {
+.sidebar-list > ul {
   margin-top: 3px;
 }
 
-.sidebar-list ul.closed {
-  height: 30px;
-  overflow: hidden;
+.sidebar-list > ul + ul {
+  margin-top: 3px;
 }
 
-.sidebar-list ul.open {
+.sidebar-list > ul > li {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-list ul.closed ul li {
+  /*  height: 30px;
+    overflow: hidden;
+  */
+  display: none;
+}
+
+.sidebar-list ul.open ul li {
+  /*display: block;
+  height: auto;*/
   display: block;
-  height: auto;
 }
 
-.sidebar-list ul.open:empty {
+.sidebar-list ul.open ul:empty {
   display: none;
 }
 
@@ -45,7 +57,7 @@
 }
 
 .sidebar-li,
-.sidebar-li > a {
+.sidebar-li ul li a {
   font-size: var(--fontSize_small);
   font-weight: var(--fontWeight_base);
   line-height: var(--lineHeight_loose);
@@ -74,11 +86,11 @@
 
 .sidebar-li_sub {
   position: relative;
-  margin: 10px 0;
+  margin: 10px 0 10px 0;
   margin-left: 20px;
 }
 
-.sidebar-li + .sidebar-li_sub {
+.sidebar-li + ul .sidebar-li_sub:first-child {
   margin-top: 2px;
 }
 
