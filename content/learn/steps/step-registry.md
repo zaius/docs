@@ -14,7 +14,7 @@ All steps that are currently deployed in the wercker registry are
 however avaible to use as well as new ones created on the non-Ewok
 version of wercker.
 
-> Keep an eye on our blog and documentaiton for when we do support step
+> Keep an eye on our blog and documentation for when we do support step
 creation and deployment on Ewok.
 
 [&lsaquo; After steps &rsaquo;](/learn/steps/after-steps.html "nav previous steps")
