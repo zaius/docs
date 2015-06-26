@@ -9,6 +9,7 @@ This section goes into detail on the features and possibilities of the
 wercker web interface:
 
 * [Read more on adding a new application &rsaquo;](/docs/web-interface/adding-a-new-application.html)
+* [Read more on application settings &rsaquo;](/docs/web-interface/application-settings.html)
 * [Read more on notifications &rsaquo;](/docs/web-interface/notifications.html)
 * [Read more on repository access &rsaquo;](/docs/web-interface/repository-access.html)
 * [Read more on roles and permissions &rsaquo;](/docs/web-interface/roles-and-permissions.html)
