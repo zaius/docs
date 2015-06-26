@@ -9,11 +9,11 @@ Per application you can manage the permission settings of wercker users, wercker
 offers three types of [roles and permissions](/docs/web-interface/roles-and-permissions).
 
 But what if you want to add someone that is not a wercker user yet, you can
-use the same input field to send an invite email, when signed up the user can directly
+use the same input field to send an invite email, when signed up, the user can directly
 access your application.
 
 When the owner of an application is an organization you can only manage the
-permissions of teams. The owner team of an organization always has `admin` access.
+permissions of teams. The owners team of an organization always has `admin` access.
 
 [Read more on roles and permissions &rsaquo;](/docs/web-interface/roles-and-permissions)
 
@@ -24,13 +24,13 @@ When you are in need of support, you can hit the support switch and send us a me
 the UserVoice popup.
 
 By activating wercker support you give the wercker team `builds + deploys` permissions.
-This allows us to see the details and debug the issue.
+This allows us to see the details and debug the issue at hand.
 
 
 ### Deploy targets
 
 Here you can setup deploy pipeline targets. Want read more on deploying
-with wercker, continue reading the following link.
+with wercker, continue reading using the following link.
 
 [Read more on deploying &rsaquo;](/docs/deploy/index.html)
 
@@ -43,7 +43,7 @@ these are available during every build and deploy.
 This can be used for information that you don't want to store in your repository
 (i.e. login information or keys).
 
-Want to read more on `environment variables`, continue reading the following link.
+Want to read more on `environment variables`, continue reading using the following link.
 
 [Read more on environment variables &rsaquo;](/docs/environment-variables/index.html)
 
@@ -58,7 +58,8 @@ Want to read more on `SSH Keys`, continue reading the following link.
 
 ### Admin
 
-This is a grouped section of settings. Here you can do the following:
+This is a grouped section of settings. Here you can adjust the following
+settings:
 
 #### Public / private
 
@@ -80,7 +81,7 @@ wercker cache directory, continue reading the following link.
 #### Repository access
 
 Here you can update the settings how we checkout your code.
-For instance, if your builds fail during the get code step, you may need to reset
+For instance, if your builds fail during the `get code` step, you may need to reset
 the key used to check out the code or in the case of a public application, you may want to
 configure your application to be checked without an SSH key.
 
@@ -89,16 +90,16 @@ configure your application to be checked without an SSH key.
 #### Webhook
 
 When wercker is not picking up your commits or wercker shows a `broken webhook` warning,
-you can hit the 'Fix webhook' button. Note that before you can fix it you need `admin`
-access to the repository.
+you can hit the 'Fix webhook' button. Note that you need to be an
+`admin` on your repository in order to fix the webhook.
 
 [Read more on webhooks &rsaquo;](/docs/faq/how-do-webhooks-work.html)
 
 #### Infrastructure stack
 
 Here you can switch the wercker stack for your application.
-New builds and deploys will use this stack. Want to read more on our infrastructure
-stacks, continue reading the following link.
+New builds and deploys will use this stack upon switching. Want to read more on our infrastructure
+stacks, continue reading using the following link.
 
 [Read more on stacks &rsaquo;](/docs/pipelines/stacks.html)
 
@@ -118,9 +119,8 @@ Here you can transfer the ownership of an application to another wercker user or
 an organization.
 
 We give an extra warning when you’re about to transfer ownership, because at this
-moment it is not possible to transfer an application back to a user or to an
-other organization.
+moment it is not possible to transfer an application back to a user or to another organization.
 
 #### Delete application
 
-Here you can choose to delete your application and all its settings.
+*“Danger, Will Robinson!”* Here you can choose to delete your application and all its settings.

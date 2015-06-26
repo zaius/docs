@@ -1,6 +1,6 @@
 ## Roles & permissions
 
-There are three roles defined at this moment:
+Currently there are three roles defined within wercker:
 
 1. build + view deploys
 2. build + deployment
