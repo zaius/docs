@@ -62,8 +62,9 @@ The `name` field is the name of your step. Toghether with your username this is
 the unique identifier of your step (`username/name`).
 
 The `version` field is the specific version of the step when deploying. This
-step needs to be unique for your step and must adhere to the
-[semantic version scheme](http://semver.org).
+step needs to be unique for your step and must adhere to the [semantic version
+scheme](http://semver.org). Your first version would be `0.1.0` and each minor
+change would bump up the last digit by one. 
 
 Only `name` and `version` are required. All the following properties are
 optional, though we encourage people to use them.
@@ -92,6 +93,13 @@ The `run.sh` file contains the entrypoint your step logic. This should be
 application in a different language, than call this from within the `run.sh`
 file.
 
+For each property you specified in your `wercker-step.yml`, wercker sets a 
+corresponding environment variable. For example, the value of the `url` property
+would be made available in the `$WERCKER_SLACK_NOTIFIER_URL` environment variable.
+
+Notice that any hypens you use in your paramater names will be transformed to
+underscores.
+
 ### The Readme
 
 If a `README.md` is present in your step folder, the registry will display
@@ -100,13 +108,13 @@ this such that people can easily deduct what your step does and how to use it.
 ### Publishing your step
 
 > Note: currently it is only possible to publish steps using the old
-infrastructure. Published steps will work on both
-[stacks](/docs/pipelines/stacks.html) though.
+infrastructure. However, published steps will continue to work on both
+[stacks](/docs/pipelines/stacks.html).
 
 Publishing steps is done by `deploying` your step to the registry. To do so
 create a project on wercker for your step as you would with any other project.
 
-Next, add a deploy target but pick the *wercker directory". You can now deploy
+Next, add a deploy target but pick the *wercker directory*. You can now deploy
 succesful builds to the registry. Make sure to bump the version number when you
 want to deploy a new iteration of your step.
 
