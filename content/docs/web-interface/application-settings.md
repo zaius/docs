@@ -6,7 +6,7 @@ In this article we will shortly walk through its content.
 ### Collaborators
 
 Per application you can manage the permission settings of wercker users, wercker
-offers three types of roles and permissions.
+offers three types of [roles and permissions](/docs/web-interface/roles-and-permissions).
 
 But what if you want to add someone that is not a wercker user yet, you can
 use the same input field to send an invite email, when signed up the user can directly
