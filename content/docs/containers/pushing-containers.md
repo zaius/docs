@@ -8,6 +8,9 @@ Though you are unable to run `docker` commands in your pipelines as this
 would require being able to be [outside](/docs/faq/can-i-run-docker-commands.html) the container, we have created
 several *internal* steps in order to interact with docker.
 
+> Note the `internal/docker-push` step only works with registries that
+comply with the Docker Registry API.
+
 Internal [steps](/docs/steps/index.html) are steps that are baked into the
 wercker [cli](/docs/using-the-cli/available-commands.html) as these interact with
 the Docker API that is external from the container. From a security perspective
@@ -137,6 +140,3 @@ deploy:
 
 Thanks to wercker user [vially](https://github.com/vially) for providing these steps!
 
-
-> Note the `internal/docker-push` step only works with registries that
-comply with the Docker Registry API.
