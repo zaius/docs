@@ -32,10 +32,10 @@ failed or passed.
 ```
 
 And because you can create your own custom `pipeline steps` with wercker, a wide
-variety can already be found on our
+variety can already be found in our
 [step registry](https://app.wercker.com/#explore/steps/search/notify).
 
-For example these two `pipeline steps` are created by wercker and ready to be used:
+For example these two `after-steps` are created by wercker and ready to be used:
 
 * [HipChat after step](/docs/notifications/hipchat.html)
 * [Slack after step](/docs/notifications/slack.html)
