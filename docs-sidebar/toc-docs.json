@@ -1,6 +1,9 @@
 
 [
   [
+     "about"
+  ],
+  [
      "using-the-cli",
      "installing.md",
      "requirements.md",
