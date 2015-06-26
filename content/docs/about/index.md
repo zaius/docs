@@ -14,19 +14,19 @@ Wercker lets you do just that. By setting up automated development pipelines,
 very much in the spirit of "_release early, release often_", you can build and
 deploy your services with just a `git push`. You can then let wercker compile
 and run any other _steps_ that are necessary to build your project before it
-gets deployed to a [target](http://devcenter.wercker.com/docs/deploy/deploy-steps.html) 
+gets deployed to a [target](/docs/deploy/deploy/steps.html) 
 of your choosing. 
 
 Under the hood wercker leverages Docker containers to not only allow automated
 pipelines, but also isolated environments to run code in. Wercker runs your
 code in a container and takes it through what we call
-[_steps_](http://devcenter.wercker.com/docs/steps/about-steps.html) and saves
+[_steps_](/docs/steps/about-steps.html) and saves
 the output as a container.
 
 Wercker also works for developers working on websites, blogs or apps that are
 not neccesarily as complex. Because wercker is also a **workflow** and not only
 a platform, we encourage you to start using wercker from the get-go with
-[`wercker dev`](http://blog.wercker.com/2015/05/15/Introducing-local-development.html).
+[wercker dev](http://blog.wercker.com/2015/05/15/Introducing-local-development.html).
 This sets you up with a container locally and allows you to start developing in
 that container, without changing your existing workflow. 
 
@@ -49,8 +49,8 @@ will find throughout the documentation.
 | Parameters | The arguments and options you pass along to a Step. |
 | Pipeline | A sequential execution of Steps of which the end result can either pass or fail. |
 | Registry | The marketplace that contains all the steps developed by the community. |
-| Service | A container that is spun up separate from you main pipeline and runs something like a database, message queue that you need for your Pipelines to run. Note that a service could also be another application that you've created on wercker. |
-| Stack | The underlying infrastructure that runs your Pipelines. There are currently two versions. Ewok (Docker-based) and the newest. Classic (Andorian) which runs LXC containers and will be deprecated. |
+| Service | A container that is spun up separate from you main pipeline and runs something like a database, message queue that you need for your Pipelines to run. |
+| Stack | The underlying infrastructure that runs your Pipelines. There are currently two versions. Ewok (Docker-based) and the newest. Andorian (Classic) which runs LXC containers and will be deprecated. |
 | Step | Steps are individual units of work, they can pass or fail, and a failing step will prevent the execution of a step after it.  There are three flavors of steps: <ul><li> 1. An external step from the Registry, created by wercker itself or the community. It comes in the form of $username/$step_name </li><li> 2. Script step, an inline piece of code that gets turned into a run.sh on the fly </li><li> 3. Internal Step implemented by the wercker CLI that runs with enhanced privileges that aren't available in the container </li></ul>|
 | wercker.yml |  Your Pipelines codified into a single file that wercker needs to execute the Pipelines. |
 
