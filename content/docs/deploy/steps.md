@@ -10,9 +10,8 @@ Deploy steps enable you to release your application or code to various
 You define deploy steps in the `deploy` clause of your
 [wercker.yml](/docs/wercker-yml/creating-a-yml.html). Deploy steps need
 a `deploy target` that you deploy to. You define these deploy targets
-through the wercker [web interface](/docs/web-interface/application-
-settings.html) and reference the data associated with this target  in
-your deploy step and `wercker.yml`.
+through the wercker web interface and reference the data associated with this
+target in your deploy step and `wercker.yml`.
 
 Various deploy steps exist in the [step registry](/docs/web-interface
 /step-registry.html) that you can use for your applications. These steps

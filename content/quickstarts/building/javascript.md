@@ -7,13 +7,13 @@ apply to every other programming language.
 
 ### Requirements
 To be able to follow along with this guide, you will need the following things:
-* [A wercker account](https:/https://app.wercker.com/users/new/)
-* [A working Docker environment](/docs/cli/requirements.html)
+* [A wercker account](https://app.wercker.com/users/new/)
+* [A working Docker environment](/docs/using-the-cli/requirements.html)
 * [The wercker CLI](/docs/using-the-cli/installing.html)
 
 ### Setting up the app
 Before we can start developing, we have to fork and clone the [sample
-app](https://github.com/wercker/getting-started-nodejs) into our local development 
+app](https://github.com/wercker/getting-started-nodejs) into our local development
 environment. After you've done that, `cd` into the project directory.
 
 ```
@@ -24,8 +24,8 @@ Next, run `npm install` and run the app with `node app.js` to verify everything
 is working.
 
 ```
-$ npm install 
-$ node app.js 
+$ npm install
+$ node app.js
 ```
 
 Now in your browser navigate to `127.0.0.1:5000` and you should be
@@ -62,14 +62,14 @@ let's take a closer look at this `dev` _pipeline_ right now.
 
 ```yaml
 # The container definition we want to use for developing our app
-box: nodesource/trusty 
+box: nodesource/trusty
 # Defining the dev pipeline
 dev:
   steps:
     - npm-install
     - internal/watch:
         code: node app.js
-        reload: true 
+        reload: true
 ```
 
 The first line specifies which container image you want to use for your
@@ -81,7 +81,7 @@ specified. You can read more about containers
 
 In the `dev` clause we define what we want to happen in our development
 pipeline, which in this case consists of two steps: `npm-install` and
-`internal/watch`. 
+`internal/watch`.
 
 These `steps` are pre-written bash scripts written by either wercker or the
 community. You can read more about steps [here](/docs/steps/index.html)
@@ -129,10 +129,10 @@ Finished npm install
 Wercker first checks out your code and then sets up the container environment.
 This means that the container will be pulled from Docker Hub and subsequently
 started with access to your checked out code. It will then start executing all the
-steps that are defined in the **wercker.yml**. 
+steps that are defined in the **wercker.yml**.
 
 Please note that the IP displayed here could be different for you, as this
-tutorial was written using boot2docker. 
+tutorial was written using boot2docker.
 
 If you navigate to DOCKER_HOST_IP:5000/cities.json you should see the same
 output as before.  That's not very exciting, so let's see our live reloading in
@@ -155,7 +155,7 @@ looking for, you can always [make your
 own](/docs/steps/creating-steps.html).
 
 Now that we're done developing, we want to push our changes and let wercker
-build and deploy our app for us. 
+build and deploy our app for us.
 
 ### Building your app
 First, let's revisit our **wercker.yml** again.
@@ -194,7 +194,7 @@ We're now interested in what's happening the _build_ pipeline, where we've
 added a new kind of step: a _script step_. This script step is a piece of
 inline bash code which we're using to run our tests. You can create and share
 these kind of steps with the community by [submitting a step to our
-repository](/docs/steps/creating-steps.html). 
+repository](/docs/steps/creating-steps.html).
 
 #### wercker build
 Now that we have a better understanding of our **wercker.yml** let's go ahead
@@ -265,7 +265,7 @@ npm version 1.4.28 running
 --> Pipeline finished
 ```
 
-Success! 
+Success!
 
 Building locally is very useful when you're not sure your code  will run
 because of some changes you made. As such you don't want to push these
@@ -275,7 +275,7 @@ But since we've verified that our app is compiling and running correctly, it's
 time to let wercker build & deploy your app in the cloud, which is what we'll
 be doing in the next section.
 
-### Adding your app to wercker 
+### Adding your app to wercker
 The next step is to create a new application on wercker. Head over to
 [https://app.wercker.com/](https://app.wercker.com/) and in the menu bar select
 _create_ -> _application_.
@@ -283,7 +283,7 @@ _create_ -> _application_.
 #### Select your Git Provider
 First select your Git provider, after which a list of your existing
 repositories on either GitHub or BitBucket is presented. Select the ruby
-example you forked earlier from the list and click on **Use selected repo**. 
+example you forked earlier from the list and click on **Use selected repo**.
 
 ![image](/images/getting_started_select_repo_javascript.png)
 
@@ -309,7 +309,7 @@ wercker.yml**. Be sure to leave the **Docker enabled** as it is.
 #### Finishing up
 Finally, once you've verified all the settings you can click **Finish** to
 complete setting up our app!  When done, you will be redirected to your very
-own app page, which looks empty now, so let's go ahead and change that. 
+own app page, which looks empty now, so let's go ahead and change that.
 
 ### Triggering your first build
 
@@ -323,7 +323,7 @@ $ git push origin master
 
 Next, navigate to your app page and you should see a new build has been
 triggered! This build will do the exact same as the one you triggered locally
-but now everyone in your team can see and comment on the build. 
+but now everyone in your team can see and comment on the build.
 
 ![image](/images/getting_started_wercker_build_javascript.png)
 
