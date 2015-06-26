@@ -22,6 +22,14 @@ the `docker` API.
 > When pushing to both public and private registries make sure you've
 created the repository first
 
+You can push to the following registries:
+
+* [Docker Hub](#hub)
+* [Quay.io](#quay)
+* [Google Container Registry](#gcr)
+
+
+<a name="hub"></a>
 ### Pushing to the public Docker Hub
 
 ```yaml
@@ -74,9 +82,10 @@ deploy:
 
 > If you're pushing to the Docker Hub, the registry field is optional and can be omitted.
 
-### Pushing to private registries
+<a name="quay"></a>
+### Pushing to quay.io
 
-If you want to push to a private registry such as [quay.io](http://quay.io) you
+If you want to push to a different (private) registry such as [quay.io](http://quay.io) you
 would create the following [wercker.yml](/docs/wercker-yml/creating-a-yml.html) file:
 
 ```yaml
@@ -95,5 +104,39 @@ For the repository field, you prefix it with the domain name of your registry
 when not using the Docker Hub. Here we push to the repo with username
 `knuth` and the image `foo`.
 
-Note the `internal/docker-push` step only works with registries that
+<a name="gcr"></a>
+### Pushing to the Google Container Registry (gcr.io)
+
+When pushing to the Google Container Registry (also known as
+[gcr.io](http://gcr.io)) you need authenticate by using a token. As such
+an extra step is involved in retrieving the token and subsequently using
+it in the `internal/docker-push` step:
+
+```yaml
+deploy:
+  box: google/cloud-sdk
+  steps:
+    - script:
+        name: install jq
+        code: wget -O /usr/local/bin/jq https://github.com/stedolan/jq/releases/download/jq-1.5rc1/jq-linux-x86_64-static && chmod a+x /usr/local/bin/jq
+    - script:
+        name: gcr.io authentication
+        code: |
+          export CLOUDSDK_CORE_DISABLE_PROMPTS=true
+          gcloud auth activate-refresh-token $GCLOUD_ACCOUNT $GCLOUD_REFRESH_TOKEN
+          gcloud config set project $GCLOUD_PROJECT
+          gcloud config set compute/zone $GCLOUD_ZONE
+          gcloud preview docker --authorize_only
+          export GCR_AUTH_TOKEN=$(cat $HOME/.dockercfg | jq --raw-output '.["https://gcr.io"].auth' | base64 --decode | cut -d ':' -f2)
+    - internal/docker-push:
+        username: _token
+        password: $GCR_AUTH_TOKEN
+        repository: gcr.io/<MY-PROJECT>/<MY-IMAGE>
+        registry: https://gcr.io
+```
+
+Thanks to wercker user [vially](https://github.com/vially) for providing these steps!
+
+
+> Note the `internal/docker-push` step only works with registries that
 comply with the Docker Registry API.
