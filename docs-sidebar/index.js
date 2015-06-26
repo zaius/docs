@@ -72,14 +72,26 @@ function createList (data, search, propdata, currentSection, currentArticle) {
   return data.map((arr, i) => {
     const section = propdata[i][0];
 
-    const nw = arr.map((article, j) => {
-      if (j === 0 && article === section) {
-        const uri = createHeadUri(base, section);
-        return renderHeadElement(stripFileExt(article), uri, section, currentSection);
-      }
-      const uri = createUri(base, section, article);
-      return renderLiElement(stripFileExt(article), uri, stripFileExt(currentArticle));
-    });
+    var header = null;
+    var lis = [];
+    var uri = null;
+    var article = null;
+    var j = 0;
+
+    // first element could be the header
+    if (arr.length && arr[0] === section) {
+      uri = createHeadUri(base, section);
+      header = renderHeadElement(stripFileExt(arr[0]), uri, section, currentSection);
+      // Don't start for loop later at 0
+      j++;
+    }
+
+    while (j < arr.length) {
+      article = arr[j];
+      uri = createUri(base, section, article);
+      lis.push(renderLiElement(stripFileExt(article), uri, stripFileExt(currentArticle)));
+      j++;
+    }
 
     var className = 'closed';
 
@@ -91,7 +103,16 @@ function createList (data, search, propdata, currentSection, currentArticle) {
       className = 'open';
     }
 
-    return renderSubListContainer('arr' + i, className, nw);
+    var nw = [];
+
+    if (header) {
+      nw.push(header);
+    }
+    if (lis.length) {
+      nw.push(dom.ul({key: 'subarr' + i}, lis));
+    }
+
+    return renderSubListContainer('arr' + i, className, dom.li({key: 'arr_li'}, nw));
   });
 }
 
