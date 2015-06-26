@@ -1,6 +1,6 @@
 ## Using wercker cache
 
-#### WERCKER CACHE IS ONLY AVAILABLE FOR WERCKER CLASSIC
+#### CACHE IS ONLY AVAILABLE FOR WERCKER CLASSIC
 
 A cache directory is shared between builds. The path to this directory is stored
 in the environment variable `$WERCKER_CACHE_DIR`. A step can leverage this cache
