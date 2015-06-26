@@ -41,7 +41,7 @@ A working Docker environment is required for this option.
 
 The result of a wercker pull command looks something like:
 
-```
+```no-highlight
 Fetching build information for application wercker/docs
 Downloading Docker repository for build 558d2ecdff40819f0620ea15
 Downloading: 100%
@@ -51,7 +51,8 @@ Finished importing into Docker
 ```
 
 The image should be visible when you run `docker images`:
-```
+
+```no-highlight
 REPOSITORY                       TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
 build-558d2ecdff40819f0620ea15   master              4eba85fb37af        37 minutes ago      611.2 MB
 ```
@@ -60,13 +61,14 @@ The repository for the container is named `build-<id>` and is tagged
 with the branch name (the build-id is shown during the wercker pull).
 
 You can now inspect the contents of the container by running:
-```
+
+```no-highlight
 docker run -i -t build-558d2ecdff40819f0620ea15:master /bin/bash
 ```
 
 ### How pull works
 Running this command will download the container as a `tarball`. After
-download, the wercker CLI can load the container into your Docker environment.
+the download finished, the wercker CLI can load the container into your Docker environment.
 
 If you've already downloaded a `tarball`, you will get an error message that the `repository.tar` already exists. You must
 either delete the file, or use the `-f` flag (`force`) and rerun the `wercker pull` command.
