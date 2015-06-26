@@ -104,7 +104,7 @@ stacks, continue reading the following link.
 
 #### API user
 
-This section if only visible when the owner of an application is an organization.
+This section is only visible when the owner of an application is an organization.
 Normally the owner’s GitHub or Bitbucket credentials are used for setting the
 status of builds and to make various API calls.
 
