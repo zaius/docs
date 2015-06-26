@@ -52,7 +52,8 @@
 
 .api-articles td code,
 .api-articles > p > code,
-.api-articles > ul > li > code {
+.api-articles > ul > li > code,
+.api-articles > blockquote > p > code {
   margin: 0 3px;
   padding: 4px 6px;
   border-radius: 4px;

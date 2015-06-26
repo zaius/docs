@@ -52,7 +52,8 @@
  */
 
 .docs-articles > p > code,
-.docs-articles > ul > li > code {
+.docs-articles > ul > li > code,
+.docs-articles > blockquote > p > code {
   margin: 0 3px;
   padding: 4px 6px;
   border-radius: 4px;
