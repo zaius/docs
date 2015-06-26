@@ -29,7 +29,7 @@ You can push to the following registries:
 * [Google Container Registry](#gcr)
 
 
-<a name="hub"></a>
+<a name="hub" class="anchor"></a>
 ### Pushing to the public Docker Hub
 
 ```yaml
@@ -82,7 +82,7 @@ deploy:
 
 > If you're pushing to the Docker Hub, the registry field is optional and can be omitted.
 
-<a name="quay"></a>
+<a name="quay" class="anchor"></a>
 ### Pushing to quay.io
 
 If you want to push to a different (private) registry such as [quay.io](http://quay.io) you
@@ -104,7 +104,7 @@ For the repository field, you prefix it with the domain name of your registry
 when not using the Docker Hub. Here we push to the repo with username
 `knuth` and the image `foo`.
 
-<a name="gcr"></a>
+<a name="gcr" class="anchor"></a>
 ### Pushing to the Google Container Registry (gcr.io)
 
 When pushing to the Google Container Registry (also known as
