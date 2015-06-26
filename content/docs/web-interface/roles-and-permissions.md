@@ -17,7 +17,7 @@ A user with **build + deployment** permissions can do all things a user with **b
 
 ### Admin
 
-Like the owner of a application, users with admin permissions can do the same as with **build + deployment** permissions and also:
+Like the owner of an application, users with admin permissions can do the same as with **build + deployment** permissions and also:
 
 * change permissions for collaborators
 * manage the SSH Keys
