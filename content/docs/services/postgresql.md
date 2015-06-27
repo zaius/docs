@@ -8,7 +8,7 @@ The default [postgres docker image](https://registry.hub.docker.com/_/postgres/)
 
 ### Setup
 
-However, because you cannot run docker commands direclty in wercker, you have to use the [`env`] tag in your **wercker.yml** file (as described [here](http://devcenter.wercker.io/docs/services/advanced-services.html)) :
+However, because you cannot run docker commands directly in wercker, you have to use the [`env`] tag in your **wercker.yml** file (as described [here](http://devcenter.wercker.io/docs/services/advanced-services.html)) :
 
 ```
 # wercker.yml
