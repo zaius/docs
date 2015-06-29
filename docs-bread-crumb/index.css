@@ -1,43 +1,45 @@
 /**
  * Breadcrumb.
  */
+
 .bread-crumb-floating {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 199;
 }
 
 .bread-crumb {
+  display: none;
+  height: 43px;
   transform: translateY(-200px);
+  background-color: var(--color-grey_light);
 }
 
 .bread-crumb.bread-crumb_active {
-  top: 0;
-  height: 45px;
+  display: block;
   animation: move-in-bread-crumb;
   animation-duration: var(--duration_slowest);
   animation-fill-mode: forwards;
   animation-timing-function: var(--easing_smooth);
 }
 
-.bread-crumb {
-  position: relative;
-  height: 0;
-  background-color: var(--color-grey_lighter);
-}
-
 .bread-crumb ul {
-  position: relative;
+  margin-left: 20px;
 }
 
 .bread-crumb .bread-crumb-item {
   display: inline;
-  margin-right: 10px;
+  margin-right: 5px;
   font-size: var(--fontSize_smaller);
+  line-height: var(--lineHeight_looser);
 }
 
 .bread-crumb .bread-crumb-item:after {
   content: "/";
-  margin-left: 10px;
-  color: var(--color-grey_light);
+  margin-left: 5px;
+  color: var(--color-grey_base);
 }
 
 .bread-crumb .bread-crumb-item:last-child a {
@@ -52,8 +54,8 @@
 
 .bread-crumb-scroll-up {
   position: absolute;
-  right: 0px;
-  top: -13px;
+  right: 20px;
+  top: -2px;
   text-decoration: underline;
 }
 
@@ -78,11 +80,13 @@
 
 @media screen and (min-width: 768px) {
   .bread-crumb.bread-crumb_active {
+    position: relative;
     top: 58px;
   }
 
   .bread-crumb-scroll-up a:after {
     content: "Back to top";
+    right: 20px;
   }
 
   .bread-crumb-scroll-up a:before {

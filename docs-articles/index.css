@@ -11,8 +11,16 @@
 }
 
 .docs-articles {
-  padding: 0;
+  min-height: 0;
+  padding: 0 20px;
   padding-top: 70px;
+  transform: translate(0, 0);
+  transition: transform var(--duration_base) var(--easing_smooth);
+}
+
+body.sidebar-open .docs-articles {
+  min-height: 100vh;
+  transform: translate(-40%, 0);
 }
 
 @media screen and (min-width: 768px) {
@@ -51,11 +59,20 @@
  * Anchor targets
  */
 
-.docs-articles .anchor:target:before {
+.api-articles .anchor:target:before {
   content: "";
   display: block;
-  height: 110px;
-  margin: -110px 0 0;
+  height: 25px;
+  margin: -25px 0 0;
+}
+
+@media screen and (min-width: 768px) {
+  .api-articles .anchor:target:before {
+    content: "";
+    display: block;
+    height: 110px;
+    margin: -110px 0 0;
+  }
 }
 
 /**

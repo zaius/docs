@@ -4,7 +4,7 @@
 
 .header_homepage {
   position: relative;
-  height: 120px;
+  height: 180px;
   text-align: center;
   background-color: var(--color-grey_lightest);
 }
@@ -16,6 +16,10 @@
   color: #60718C;
   line-height: 60px;
 }
+
+/**
+ * Responsive rules for screens starting at 768px width
+ */
 
 @media screen and (min-width: 768px) {
   .header_homepage {

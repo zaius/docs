@@ -57,17 +57,20 @@ function render () {
     dom.a({
       className: 'toc-menu-button',
       onClick: onClickTocMenu,
-      children: this.props.data + ' menu'
+      'data-btn-copy': this.props.data + ' menu'
     })
   );
 }
 
-function onClickTocMenu () {;
+function onClickTocMenu () {
   const base = getWindowUrl();
   var body = document.querySelector('#' + base);
-  if (body) body.classList.add('sidebar-open');
   var sideBar = document.querySelector('.sidebar');
-  if (sideBar) sideBar.classList.add('open');
+
+  if (body && sideBar) {
+    body.classList.toggle('sidebar-open');
+    sideBar.classList.toggle('open');
+  }
 }
 
 // get the baseUrl from the window

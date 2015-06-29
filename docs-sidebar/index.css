@@ -4,31 +4,41 @@
  * Sidebar.
  */
 
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  width: 100%;
+  z-index: 3;
+  overflow-y: hidden;
+  background-color: var(--color-white);
+  transform: translate(100%, 60px);
+  transition: transform var(--duration_fast) var(--easing_smooth);
+}
+
+.section-sidebar {
+  padding: 20px;
+  line-height: var(--lineHeight_loose);
+}
+
+/**
+ * Rules for open sidebar on mobile
+ */
+
 body.sidebar-open {
   overflow: hidden;
 }
 
-.sidebar {
-  position: absolute;
-  background-color: var(--color-white);
-  z-index: 3;
-  width: 100%;
-  height: 100%;
-  overflow-y: hidden;
-  transform: translate(120vw, 60px);
-  transition: transform var(--duration_fast) var(--easing-bounce_smooth);
-}
-
 .sidebar.open {
-  transform: translate(0vw, 60px);
+  transform: translate(0, 60px);
+  height: 100%;
 }
 
-.section-sidebar {
-  padding-right: 35px;
-  padding-top: 20px;
-  border-right: 1px solid var(--color-grey_light);
-  line-height: var(--lineHeight_loose);
-}
+/**
+ * Responsive rules for screens starting at 768px width
+ */
 
 @media screen and (min-width: 768px) {
   .sidebar {
@@ -43,9 +53,15 @@ body.sidebar-open {
   }
 
   .section-sidebar {
+    padding-left: 0;
     padding-right: 20px;
+    border-right: 1px solid var(--color-grey_light);
   }
 }
+
+/**
+ * Sidebar list.
+ */
 
 .sidebar-list {
   height: calc(100vh - 150px);
@@ -62,25 +78,11 @@ body.sidebar-open {
 }
 
 .sidebar-list > ul > li {
-  margin: 0;
-  padding: 0;
-}
-
-.sidebar-list ul.closed ul li {
-  /*  height: 30px;
-    overflow: hidden;
-  */
-  display: none;
-}
-
-.sidebar.open .sidebar-list ul.closed {
-  height: auto;
-  overflow: inherit;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .sidebar-list ul.open ul li {
-  /*display: block;
-  height: auto;*/
   display: block;
 }
 
@@ -88,13 +90,38 @@ body.sidebar-open {
   display: none;
 }
 
+.sidebar-list ul.closed {
+  height: auto;
+  overflow: inherit;
+}
+
+.sidebar-list ul.closed ul li {
+  display: none;
+}
+
+/**
+ * Sidebar list open styles for on mobile.
+ */
+
+.sidebar.open .sidebar-list ul.closed {
+  height: auto;
+  overflow: inherit;
+}
+
+.sidebar.open .sidebar-list ul.closed ul li {
+  display: block;
+}
+
+/**
+ * Sidebar list items.
+ */
+
 .sidebar-li {
   position: relative;
   margin-left: 12px;
 }
 
-.sidebar-li,
-.sidebar-li ul li a {
+.sidebar-li {
   font-size: var(--fontSize_small);
   font-weight: var(--fontWeight_base);
   line-height: var(--lineHeight_loose);
@@ -121,7 +148,11 @@ body.sidebar-open {
   color: var(--color-fuchsia_base);
 }
 
-.sidebar-li_sub {
+/**
+ * Sidebar list sub items.
+ */
+
+.sidebar-list .sidebar-li_sub {
   position: relative;
   margin: 10px 0 10px 0;
   margin-left: 20px;
@@ -131,25 +162,26 @@ body.sidebar-open {
   margin-top: 2px;
 }
 
-.sidebar-li_sub_active > a {
+.sidebar-li_sub_active a {
   text-decoration: none;
   pointer-events: none;
   color: var(--color-skyblue_dark);
   font-weight: var(--fontWeight_base);
 }
 
-.sidebar-li_sub_active > a:before {
+.sidebar-li_sub_active a:before {
   content: "\203A \a0\20";
   position: absolute;
   left: -10px;
 }
 
-.section-sidebar.section-learn {
-  padding-top: 0;
-}
+/**
+ * Sidebar section learn.
+ */
 
 .section-sidebar.section-learn .sidebar-list {
-  margin-top: 0;
+  height: calc(100vh - 115px);
+  margin-top: 10px;
 }
 
 .section-sidebar.section-learn .sidebar-list_chapters {
@@ -158,55 +190,21 @@ body.sidebar-open {
   border-top: 1px solid var(--color-grey_lighter);
 }
 
-.sidebar-list_chapters .sidebar-li,
-.sidebar-list_chapters .sidebar-li a {
+.sidebar-list_chapters li {
   margin-top: 0;
   margin-bottom: 0;
-  line-height: var(--lineHeight_base);
 }
 
+/**
+ * Responsive rules for screens starting at 768px width
+ */
 @media screen and (min-width: 768px) {
   .section-learn {
     margin-top: 35px;
     padding: 2px 0 2px 0;
-    border-left: 2px solid var(--color-grey_light);
-    border-right: none;
-  }
-
-  .section-learn .sidebar-list {
-    margin-left: 20px;
-    margin-top: 0;
   }
 
   .sidebar-list_chapters {
     display: none;
   }
-}
-
-.section-sidebar_basics {
-  border-color: var(--color-fuchsia_base);
-}
-
-.section-sidebar_wercker-yml {
-  border-color: var(--color-skyblue_base);
-}
-
-.section-sidebar_containers {
-  border-color: var(--color-green_base);
-}
-
-.section-sidebar_pipelines {
-  border-color: var(--color-pink_base);
-}
-
-.section-sidebar_steps {
-  border-color: var(--color-purple_base);
-}
-
-.section-sidebar_build {
-  border-color: var(--color-yellow_base);
-}
-
-.section-sidebar_deploy {
-  border-color: var(--color-orange_base);
 }

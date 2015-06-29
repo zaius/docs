@@ -10,11 +10,19 @@
   overflow: hidden;
 }
 
+/**
+ * Responsive rules for screens starting at 768px width
+ */
+
 @media screen and (min-width: 768px) {
   .learn {
     display: flex;
   }
 }
+
+/**
+ * Learn headers
+ */
 
 .learn h2 {
   margin-top: 30px;
@@ -27,6 +35,10 @@
   text-align: center;
 }
 
+/**
+ * Learnblocks
+ */
+
 .learnblocks {
   display: flex;
   flex-wrap: wrap;
@@ -35,6 +47,10 @@
   margin-top: 30px;
   min-height: 190px;
 }
+
+/**
+ * Learnblocks items
+ */
 
 .learnblocks-item {
   flex: 1 100%;
@@ -60,31 +76,6 @@
   margin-left: 0;
 }
 
-.learnblocks-item:last-child {
-  /*margin-right: 0;*/
-}
-
-@media screen and (min-width: 961px) {
-  .learnblocks-item {
-    flex: 1 10%;
-    margin: 10px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 960px) {
-  .learnblocks-item {
-    flex: 1 20%;
-    margin: 0 10px 20px 0;
-  }
-}
-
-@media screen and (min-width: 481px) and (max-width: 767px) {
-  .learnblocks-item {
-    flex: 1 30%;
-    margin: 0 10px 20px 0;
-  }
-}
-
 .learnblocks-item_active {
   display: none;
   margin: 10px auto 0 auto;
@@ -95,6 +86,32 @@
   border-width: 3px 0 0 3px;
   transform: rotate(45deg);
 }
+
+/**
+ * Responsive rules for screens starting at 961px width
+ */
+
+@media screen and (min-width: 961px) {
+  .learnblocks-item {
+    flex: 1 10%;
+    margin: 10px;
+  }
+}
+
+/**
+ * Responsive rules for screens starting at 768px and max 960 width
+ */
+
+@media screen and (min-width: 768px) and (max-width: 960px) {
+  .learnblocks-item {
+    flex: 1 20%;
+    margin: 0 10px 20px 0;
+  }
+}
+
+/**
+ * Learnblocks item icon
+ */
 
 .learnblocks-item-icon {
   position: relative;
@@ -107,7 +124,11 @@
   text-decoration: none;
 }
 
-@media screen and (min-width: 481px) {
+/**
+ * Responsive rules for screens starting at 768px width
+ */
+
+@media screen and (min-width: 768px) {
   .learnblocks-item-icon {
     height: 150px;
     padding-top: 20px;
@@ -129,6 +150,7 @@
 /**
  * Only show animation on class intro.
  */
+
 .intro .learnblocks-item-icon {
   opacity: 0;
   animation: move-in;
@@ -156,6 +178,10 @@
     width: 86px;
   }
 }
+
+/**
+ * Setting colors and animation delay on learnblocks
+ */
 
 .learnblocks-item_basics .learnblocks-item-icon {
   background-color: var(--color-fuchsia_base);
@@ -190,6 +216,10 @@
   background-color: var(--color-orange_base);
   animation-delay: .27s;
 }
+
+/**
+ * Learnblocks animations
+ */
 
 @keyframes fade-in {
   from {

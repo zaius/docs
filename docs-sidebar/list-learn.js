@@ -14,7 +14,7 @@ function learnList () {
   const chapters = getChapters();
   const lessonData = getLessonData(toc, lesson);
   const sectionClass = 'section-sidebar section-learn section-sidebar_' + lesson;
-  const listChapters = crearChaptersList(chapters, lesson);
+  const listChapters = createChaptersList(chapters, lesson);
   const currentChapter = createChapter(lesson);
   const list = createList(lessonData, lesson);
 
@@ -48,10 +48,10 @@ function getLessonData (lessons, key) {
 function createList (data, lesson) {
   return data.map(function (val) {
     const innerUri = createHref(stripUrl(), lesson, val);
-    const outerClass = 'sidebar-li_sub' + activeClass(val);
+    const className = 'sidebar-li_sub ' + activeClass(val);
     const innerText = stripFileName(val);
 
-    return dom.li({className: outerClass, key: val},
+    return dom.li({className: className, key: val},
       dom.a({href: innerUri}, innerText)
     );
   });
@@ -61,13 +61,12 @@ function createList (data, lesson) {
 // [[str]] -> obj
 function createChapter (lesson) {
   const innerUri = createHref(stripUrl(), lesson, 'introduction');
-  const outerClass = 'sidebar-li sidebar-li_active';
+  const className = 'sidebar-li sidebar-li_active';
   const innerText = stripFileName(lesson);
 
   return dom.li({
-    className: outerClass,
     key: lesson},
-    dom.a({href: innerUri}, innerText)
+    dom.a({className: className, href: innerUri}, innerText)
   );
 }
 
@@ -81,16 +80,16 @@ function getChapters () {
 }
 
 // get all chapters
-function crearChaptersList (data, lesson) {
+function createChaptersList (data, lesson) {
   return data.map(function (val) {
     if (val === lesson) return;
 
     const innerUri = createHref(stripUrl(), val, 'introduction');
-    const outerClass = 'sidebar-li';
+    const className = 'sidebar-li';
     const innerText = stripFileName(val);
 
-    return dom.li({className: outerClass, key: val},
-      dom.a({href: innerUri}, innerText)
+    return dom.li({key: val},
+      dom.a({className: className, href: innerUri}, innerText)
     );
   });
 }

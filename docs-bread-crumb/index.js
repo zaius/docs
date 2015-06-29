@@ -21,6 +21,7 @@ module.exports = react.createClass({
 function render () {
   return sticky({
       stickyClass: 'bread-crumb-floating',
+      stickyStyle: {},
       topOffset: 200,
       onStickyStateChange: handleStickyStateChange
     },
@@ -56,7 +57,7 @@ function onScrollUp () {
       scrollHeight -= scrollHeight * 0.2;
       window.scrollTo(0, scrollHeight + scrollOffset);
       window.requestAnimationFrame(step);
-    } if (window.scrollY < 10) {
+    } if (window.scrollY < 5) {
       window.scrollTo(0, 0);
     }
   }
