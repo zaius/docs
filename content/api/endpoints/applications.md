@@ -20,7 +20,7 @@ without a token, only public applications will be returned.
 | Name    | Description |
 |:--------|:------------|
 | `stack` | Stack used by application. Currently supported: `1` (classic), `5` (Docker enabled) |
-| `limit` | Limit the results that will get returned. Default: `10`. Min: `1`. Max: `20`. |
+| `limit` | Limit the results that will get returned. Default: `20`. Min: `1`. Max: `100`. |
 | `skip` | Skip a certain ammount of builds. |
 | `sort` | Sort builds using this key. Default: `nameAsc`. Possible values: `nameAsc`, `nameDesc`, `createdAtAsc`, `createdAtDesc`, `updatedAtAsc`, `updatedAtDesc`. |
 
