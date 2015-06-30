@@ -12,13 +12,18 @@
 
 .bread-crumb {
   display: none;
+  position: relative;
   height: 43px;
   transform: translateY(-200px);
   background-color: var(--color-grey_light);
 }
 
+/**
+ * Triggers showing the breadcrumb
+ */
+
 .bread-crumb.bread-crumb_active {
-  display: block;
+  display: flex;
   animation: move-in-bread-crumb;
   animation-duration: var(--duration_slowest);
   animation-fill-mode: forwards;
@@ -26,8 +31,13 @@
 }
 
 .bread-crumb ul {
+  position: relative;
   margin-left: 20px;
 }
+
+/**
+ * Bread crumb item
+ */
 
 .bread-crumb .bread-crumb-item {
   display: inline;
@@ -51,6 +61,10 @@
 .bread-crumb .bread-crumb-item:last-child:after {
   content: "";
 }
+
+/**
+ * Breadcrumb scroll up button
+ */
 
 .bread-crumb-scroll-up {
   position: absolute;
@@ -78,15 +92,25 @@
   font-size: var(--fontSize_larger);
 }
 
+/**
+ * Responsive rules for screens starting at 768px width
+ */
+
 @media screen and (min-width: 768px) {
-  .bread-crumb.bread-crumb_active {
-    position: relative;
+  .bread-crumb-floating {
     top: 58px;
+  }
+
+  .bread-crumb ul {
+    margin-left: 0;
+  }
+
+  .bread-crumb-scroll-up {
+    right: 0;
   }
 
   .bread-crumb-scroll-up a:after {
     content: "Back to top";
-    right: 20px;
   }
 
   .bread-crumb-scroll-up a:before {
@@ -94,6 +118,10 @@
     margin-right: 10px;
   }
 }
+
+/**
+ * Breadcrumb animation
+ */
 
 @keyframes move-in-bread-crumb {
   0% {

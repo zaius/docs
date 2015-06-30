@@ -4,10 +4,6 @@
 
 .learn {
   display: none;
-  padding: 30px 0;
-  min-height: 380px;
-  background-color: var(--color-grey_lighter);
-  overflow: hidden;
 }
 
 /**
@@ -17,6 +13,10 @@
 @media screen and (min-width: 768px) {
   .learn {
     display: flex;
+    padding: 30px 0;
+    min-height: 380px;
+    background-color: var(--color-grey_lighter);
+    overflow: hidden;
   }
 }
 
