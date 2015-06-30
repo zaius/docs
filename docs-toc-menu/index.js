@@ -4,7 +4,6 @@
 
 var logo = require('@wercker/logo');
 var react = require('react');
-var sticky = require('react-sticky');
 
 var dom = react.DOM;
 var logoBase = logo.base;

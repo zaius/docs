@@ -18,7 +18,6 @@ function learnList () {
   const currentChapter = createChapter(lesson);
   const list = createList(lessonData, lesson);
 
-
   return dom.section({className: sectionClass},
     dom.section({className: 'sidebar-list'},
       dom.ul(null,
@@ -41,7 +40,6 @@ function getLessonData (lessons, key) {
   arr.shift();
   return arr;
 }
-
 
 // create the element list
 // [[str]] -> obj
@@ -75,7 +73,7 @@ function getChapters () {
   var chapters = [];
   toc.map((arr, i) => {
     chapters.push(arr[0]);
-  })
+  });
   return chapters;
 }
 
