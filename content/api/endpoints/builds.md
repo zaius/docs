@@ -4,8 +4,8 @@
 * [Trigger a build](#trigger-a-build)
 
 
-<a name="get-a-build" class="anchor"></a>
-### Get a build
+
+### <a name="get-a-build" class="anchor"></a> Get a build
 
 Get the details of a single build.
 
@@ -54,8 +54,8 @@ Status: 200 OK
 }
 ```
 
-<a name="trigger-a-build" class="anchor"></a>
-### Trigger a new build
+
+### <a name="trigger-a-build" class="anchor"></a> Trigger a new build
 
 Trigger a new build for an application.
 

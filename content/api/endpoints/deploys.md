@@ -2,8 +2,7 @@
 
 * [Get a deploy](#get-a-deploy)
 
-<a name="get-a-deploy" class="anchor"></a>
-### Get a deploy
+### <a name="get-a-deploy" class="anchor"></a> Get a deploy
 
 Get the details of a single deploy.
 

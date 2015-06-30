@@ -59,15 +59,15 @@ body.sidebar-open .docs-articles {
  * Anchor targets
  */
 
-.api-articles .anchor:target:before {
+.docs-articles .anchor:target:before {
   content: "";
   display: block;
-  height: 25px;
-  margin: -25px 0 0;
+  height: 50px;
+  margin: -50px 0 0;
 }
 
 @media screen and (min-width: 768px) {
-  .api-articles .anchor:target:before {
+  .docs-articles .anchor:target:before {
     content: "";
     display: block;
     height: 110px;

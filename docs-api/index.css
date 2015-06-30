@@ -63,8 +63,8 @@ body.sidebar-open .api-articles {
 .api-articles .anchor:target:before {
   content: "";
   display: block;
-  height: 25px;
-  margin: -25px 0 0;
+  height: 50px;
+  margin: -50px 0 0;
 }
 
 /* Responsive rules for screens starting at 768px width */
