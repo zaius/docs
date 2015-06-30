@@ -15,12 +15,16 @@
   padding: 0 20px;
   padding-top: 70px;
   transform: translate(0, 0);
-  transition: transform var(--duration_base) var(--easing_smooth);
+  transition: transform var(--duration_fast) ease-out;
 }
+
+/**
+ * Set position of docs when sidebar is open
+ */
 
 body.sidebar-open .docs-articles {
   min-height: 100vh;
-  transform: translate(-40%, 0);
+  transform: translate(-30%, 0);
 }
 
 @media screen and (min-width: 768px) {

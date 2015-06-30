@@ -15,7 +15,7 @@
   overflow-y: hidden;
   background-color: var(--color-white);
   transform: translate(100%, 60px);
-  transition: transform var(--duration_fast) var(--easing_smooth);
+  transition: transform var(--duration_fast) var(--easing-bounce_smooth);
 }
 
 .section-sidebar {

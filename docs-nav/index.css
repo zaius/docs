@@ -40,6 +40,10 @@
   text-align: center;
 }
 
+/**
+ * Navbar items
+ */
+
 .navbar-item {
   margin-right: 15px;
   color: var(--color-grey_light);
@@ -72,6 +76,10 @@
   font-weight: var(--fontWeight_base);
   color: var(--color-white);
 }
+
+/**
+ * Navbar logo
+ */
 
 .navbar-logo {
   display: none;
