@@ -48,7 +48,7 @@ however, let's first take a closer look at the **wercker.yml** file included in
 your project folder.
 
 
-### Werkcer.yml
+### Wercker.yml
 The [wercker.yml](/docs/wercker-yml/index.html) is the only config file you
 need for using wercker.  In it, you will define all your steps needed to
 successfully **develop**, **build** and **deploy** your application.
