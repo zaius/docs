@@ -4,19 +4,42 @@
 
 .header_homepage {
   position: relative;
-  height: 32vh;
-  max-height: 250px;
+  height: 180px;
+  text-align: center;
   background-color: var(--color-grey_lightest);
 }
 
 .header_homepage h1 {
   position: relative;
-  left: -10px;
   font-weight: bold;
-  font-size: 140px;
+  font-size: 50px;
   color: #60718C;
-  letter-spacing: -5px;
-  line-height: 110px;
+  line-height: 60px;
+}
+
+/**
+ * Responsive rules for screens starting at 768px width
+ */
+
+@media screen and (min-width: 768px) {
+  .header_homepage {
+    position: relative;
+    height: 32vh;
+    max-height: 250px;
+    text-align: left;
+    background-color: var(--color-grey_lightest);
+  }
+
+  .header_homepage h1 {
+    left: -10px;
+    font-size: 140px;
+    letter-spacing: -5px;
+    line-height: 110px;
+  }
+
+  .header_homepage .mobile-logo {
+    display: none;
+  }
 }
 
 /**
@@ -24,10 +47,17 @@
  */
 
 .header {
+  display: none;
   height: 130px;
   background-color: var(--color-grey_lightest);
 }
 
 .header_small {
   height: inherit;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    display: block;
+  }
 }

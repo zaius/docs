@@ -1,0 +1,98 @@
+/**
+ * Table of content menu.
+ */
+
+.toc-menu {
+  position: absolute;
+  z-index: 198;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.toc-menu-logo {
+  float: left;
+  margin-left: 20px;
+}
+
+/**
+ * TOC menu button
+ */
+
+.toc-menu-button {
+  float: right;
+  margin-right: 20px;
+  text-align: center;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 2px;
+  color: var(--color-skyblue_base);
+  background-color: transparent;
+  font-weight: var(--fontWeight_light);
+  font-size: var(--fontSize_small);
+  text-decoration: none;
+  box-shadow: inset 0 0 0 1px var(--color-skyblue_base);
+  transition: all var(--duration_fast) var(--easing_smooth);
+  animation: pulsate-brightness var(--duration_slow) var(--easing_smooth);
+}
+
+.toc-menu-button:before {
+  content: attr(data-btn-copy);
+  animation: fade-in var(--duration_base) var(--easing_smooth);
+}
+
+.toc-menu-button:hover {
+  cursor: pointer;
+  cursor: hand;
+  background-color: var(--color-skyblue_base);
+  color: var(--color-white);
+}
+
+/**
+ * Rules for open sidebar on mobile
+ */
+
+body.sidebar-open .toc-menu-button {
+  animation: pulsate-brightness var(--duration_slow) var(--easing_smooth);
+}
+
+body.sidebar-open .toc-menu-button:before {
+  content: "Close \203A \a0\20";
+  animation: fade-in var(--duration_base) var(--easing_smooth);
+}
+
+/**
+ * Responsive rules for screens starting at 768px width
+ */
+
+@media screen and (min-width: 768px) {
+  .toc-menu {
+    display: none;
+  }
+}
+
+/**
+ * TOC menu animations
+ */
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes pulsate-brightness {
+  0% {
+    filter: brightness(75%);
+  }
+
+  100% {
+    filter: brightness(100%);
+  }
+}

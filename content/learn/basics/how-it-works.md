@@ -35,5 +35,5 @@ delivering value to your own customers at a rapid pace.
 In the next sections we discuss the wercker *toolchain* which
 encompasses a command line interface, a web interface and a desktop app.
 
-[&lsaquo; Introduction](/learn/basics/introduction.html "nav previous basics")
-[The wercker CLI &rsaquo;](/learn/basics/the-wercker-cli.html "nav next basics")
+[&lsaquo; Introduction](/learn/basics/introduction.html#article "nav previous basics")
+[The wercker CLI &rsaquo;](/learn/basics/the-wercker-cli.html#article "nav next basics")

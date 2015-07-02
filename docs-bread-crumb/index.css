@@ -1,43 +1,55 @@
 /**
  * Breadcrumb.
  */
+
 .bread-crumb-floating {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 199;
 }
 
 .bread-crumb {
+  display: none;
+  position: relative;
+  height: 43px;
   transform: translateY(-200px);
+  background-color: var(--color-grey_light);
 }
 
+/**
+ * Triggers showing the breadcrumb
+ */
+
 .bread-crumb.bread-crumb_active {
-  top: 58px;
-  height: 45px;
+  display: flex;
   animation: move-in-bread-crumb;
   animation-duration: var(--duration_slowest);
   animation-fill-mode: forwards;
   animation-timing-function: var(--easing_smooth);
 }
 
-.bread-crumb {
-  position: relative;
-  height: 0;
-  background-color: var(--color-grey_lighter);
-}
-
 .bread-crumb ul {
   position: relative;
+  margin-left: 20px;
 }
+
+/**
+ * Bread crumb item
+ */
 
 .bread-crumb .bread-crumb-item {
   display: inline;
-  margin-right: 10px;
+  margin-right: 5px;
   font-size: var(--fontSize_smaller);
+  line-height: var(--lineHeight_looser);
 }
 
 .bread-crumb .bread-crumb-item:after {
   content: "/";
-  margin-left: 10px;
-  color: var(--color-grey_light);
+  margin-left: 5px;
+  color: var(--color-grey_base);
 }
 
 .bread-crumb .bread-crumb-item:last-child a {
@@ -50,10 +62,14 @@
   content: "";
 }
 
+/**
+ * Breadcrumb scroll up button
+ */
+
 .bread-crumb-scroll-up {
   position: absolute;
-  right: 0px;
-  top: -13px;
+  right: 20px;
+  top: -2px;
   text-decoration: underline;
 }
 
@@ -63,14 +79,49 @@
   text-decoration: underline;
 }
 
+.bread-crumb-scroll-up a:after {
+  content: "";
+}
+
 .bread-crumb-scroll-up a:before {
   content: "\203A";
-  margin-right: 10px;
   display: inline-block;
   vertical-align: top;
+  margin-right: 13px;
   transform: rotate(-90deg);
-  font-size: var(--fontSize_large);
+  font-size: var(--fontSize_larger);
 }
+
+/**
+ * Responsive rules for screens starting at 768px width
+ */
+
+@media screen and (min-width: 768px) {
+  .bread-crumb-floating {
+    top: 58px;
+  }
+
+  .bread-crumb ul {
+    margin-left: 0;
+  }
+
+  .bread-crumb-scroll-up {
+    right: 0;
+  }
+
+  .bread-crumb-scroll-up a:after {
+    content: "Back to top";
+  }
+
+  .bread-crumb-scroll-up a:before {
+    font-size: var(--fontSize_large);
+    margin-right: 10px;
+  }
+}
+
+/**
+ * Breadcrumb animation
+ */
 
 @keyframes move-in-bread-crumb {
   0% {

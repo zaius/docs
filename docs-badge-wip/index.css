@@ -3,6 +3,7 @@
  */
 
 .badge-wip {
+  display: none;
   position: absolute;
   right: -45px;
   top: -25px;
@@ -24,4 +25,10 @@
   text-align: center;
   line-height: 40px;
   transform: rotate(45deg);
+}
+
+@media screen and (min-width: 768px) {
+  .badge-wip {
+    display: block;
+  }
 }

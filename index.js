@@ -4,6 +4,7 @@ var sidebar = require('@docs/sidebar');
 var nav = require('@docs/nav');
 var header = require('@docs/header');
 var quicklinks = require('@docs/quicklinks');
+var tocMenu = require('@docs/toc-menu');
 var react = require('react');
 
 require('webcomponents.js');
@@ -28,6 +29,9 @@ if (sidebarSelector) react.renderComponent(sidebar()(), sidebarSelector);
 
 var breadCrumbSelector = document.querySelector('.bread-crumb-sticky');
 if (breadCrumbSelector) react.renderComponent(breadCrumb(), breadCrumbSelector);
+
+var tocMenuSelector = document.querySelector('.toc-menu');
+if (tocMenuSelector) react.renderComponent(tocMenu(), tocMenuSelector);
 
 // init metrics
 require('@docs/metrics');

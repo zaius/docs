@@ -5,19 +5,66 @@
  */
 
 .sidebar {
-  flex: 1;
-  order: 1;
-  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  overflow-y: hidden;
+  background-color: var(--color-white);
+  transform: translate(100%, 60px);
+  transition: transform var(--duration_fast) var(--easing-bounce_smooth);
 }
 
 .section-sidebar {
-  padding-right: 20px;
-  padding-top: 20px;
-  border-right: 1px solid var(--color-grey_light);
+  padding: 20px;
   line-height: var(--lineHeight_loose);
 }
 
+/**
+ * Rules for open sidebar on mobile
+ */
+
+body.sidebar-open {
+  overflow: hidden;
+}
+
+.sidebar.open {
+  transform: translate(0, 60px);
+}
+
+/**
+ * Responsive rules for screens starting at 768px width
+ */
+
+@media screen and (min-width: 768px) {
+  .sidebar {
+    flex: 1;
+    order: 1;
+    z-index: 2;
+    position: relative;
+    width: auto;
+    height: auto;
+    overflow-y: initial;
+    transform: translateX(0);
+  }
+
+  .section-sidebar {
+    padding-left: 0;
+    padding-right: 20px;
+    border-right: 1px solid var(--color-grey_light);
+  }
+}
+
+/**
+ * Sidebar list.
+ */
+
 .sidebar-list {
+  height: calc(100vh - 200px);
+  overflow-y: scroll;
   margin-top: 20px;
 }
 
@@ -30,20 +77,11 @@
 }
 
 .sidebar-list > ul > li {
-  margin: 0;
-  padding: 0;
-}
-
-.sidebar-list ul.closed ul li {
-  /*  height: 30px;
-    overflow: hidden;
-  */
-  display: none;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .sidebar-list ul.open ul li {
-  /*display: block;
-  height: auto;*/
   display: block;
 }
 
@@ -51,13 +89,44 @@
   display: none;
 }
 
-.sidebar-li {
-  position: relative;
-  margin-left: 10px;
+.sidebar-list ul.closed {
+  height: auto;
+  overflow: inherit;
 }
 
-.sidebar-li,
-.sidebar-li ul li a {
+.sidebar-list ul.closed ul li {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .sidebar-list {
+    height: 100%;
+  }
+}
+
+/**
+ * Sidebar list open styles for on mobile.
+ */
+
+.sidebar.open .sidebar-list ul.closed {
+  height: auto;
+  overflow: inherit;
+}
+
+.sidebar.open .sidebar-list ul.closed ul li {
+  display: block;
+}
+
+/**
+ * Sidebar list items.
+ */
+
+.sidebar-li {
+  position: relative;
+  margin-left: 12px;
+}
+
+.sidebar-li {
   font-size: var(--fontSize_small);
   font-weight: var(--fontWeight_base);
   line-height: var(--lineHeight_loose);
@@ -84,7 +153,11 @@
   color: var(--color-fuchsia_base);
 }
 
-.sidebar-li_sub {
+/**
+ * Sidebar list sub items.
+ */
+
+.sidebar-list .sidebar-li_sub {
   position: relative;
   margin: 10px 0 10px 0;
   margin-left: 20px;
@@ -94,50 +167,49 @@
   margin-top: 2px;
 }
 
-.sidebar-li_sub_active > a {
+.sidebar-li_sub_active a {
   text-decoration: none;
   pointer-events: none;
   color: var(--color-skyblue_dark);
   font-weight: var(--fontWeight_base);
 }
 
-.sidebar-li_sub_active > a:before {
+.sidebar-li_sub_active a:before {
   content: "\203A \a0\20";
   position: absolute;
   left: -10px;
 }
 
-.section-learn {
-  margin-top: 35px;
-  padding: 2px 0 2px 20px;
-  border-left: 2px solid var(--color-grey_light);
-  border-right: none;
+/**
+ * Sidebar section learn.
+ */
+
+.section-sidebar.section-learn .sidebar-list {
+  height: calc(100vh - 115px);
+  margin-top: 10px;
 }
 
-.section-sidebar_basics {
-  border-color: var(--color-fuchsia_base);
+.section-sidebar.section-learn .sidebar-list_chapters {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-grey_lighter);
 }
 
-.section-sidebar_wercker-yml {
-  border-color: var(--color-skyblue_base);
+.sidebar-list_chapters li {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.section-sidebar_containers {
-  border-color: var(--color-green_base);
-}
+/**
+ * Responsive rules for screens starting at 768px width
+ */
+@media screen and (min-width: 768px) {
+  .section-learn {
+    margin-top: 35px;
+    padding: 2px 0 2px 0;
+  }
 
-.section-sidebar_pipelines {
-  border-color: var(--color-pink_base);
-}
-
-.section-sidebar_steps {
-  border-color: var(--color-purple_base);
-}
-
-.section-sidebar_build {
-  border-color: var(--color-yellow_base);
-}
-
-.section-sidebar_deploy {
-  border-color: var(--color-orange_base);
+  .sidebar-list_chapters {
+    display: none;
+  }
 }
