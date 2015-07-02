@@ -21,6 +21,7 @@ module.exports = react.createClass({
 function render () {
   return sticky({
       stickyClass: 'bread-crumb-floating',
+      // needed to note let sticky use inline styles
       stickyStyle: {},
       topOffset: 200,
       onStickyStateChange: handleStickyStateChange

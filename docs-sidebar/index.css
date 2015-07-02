@@ -9,7 +9,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: auto;
+  height: 100%;
   width: 100%;
   z-index: 3;
   overflow-y: hidden;
@@ -33,7 +33,6 @@ body.sidebar-open {
 
 .sidebar.open {
   transform: translate(0, 60px);
-  height: 100%;
 }
 
 /**
@@ -64,7 +63,7 @@ body.sidebar-open {
  */
 
 .sidebar-list {
-  height: calc(100vh - 150px);
+  height: calc(100vh - 200px);
   overflow-y: scroll;
   margin-top: 20px;
 }
@@ -97,6 +96,12 @@ body.sidebar-open {
 
 .sidebar-list ul.closed ul li {
   display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .sidebar-list {
+    height: 100%;
+  }
 }
 
 /**
