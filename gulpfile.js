@@ -11,6 +11,7 @@ var gulpsmith = require('gulpsmith');
 var highlight = require('metalsmith-metallic');
 var livereload = require('gulp-livereload');
 var markdown = require('metalsmith-markdown');
+var title = require('metalsmith-title');
 var myth = require('gulp-myth');
 var path = require('path');
 var source = require('vinyl-source-stream');
@@ -225,6 +226,7 @@ function buildTemplate (tn) {
       smartypants: true,
       gfm: true
     }))
+    .use(title())
     .use(templates({
       engine: 'mustache',
       directory: 'content/' + tn
