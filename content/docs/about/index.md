@@ -19,10 +19,10 @@ of multiple processes, multiple configurations, multiple environments,
 and more than one codebase.
 
 To fully leverage the advantages of
-microxservices, they should be managed carefully.
+microservices, they should be managed carefully.
 
 Wercker lets you do just that. By setting up automated development pipelines,
-very much in the spirit of "_release early, release often_", you can build and
+very much in the spirit of _"release early, release often"_, you can build and
 deploy your services with just a `git push`. You can then let wercker compile
 and run any other _steps_ that are necessary to build your project before it
 gets deployed to a [target](/docs/deploy/deploy/steps.html) 

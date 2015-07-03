@@ -9,5 +9,9 @@
   [
     "deployment",
     "heroku.md"
+  ],
+  [
+    "advanced",
+    "building-minimal-containers-with-go.md"
   ]
 ]
