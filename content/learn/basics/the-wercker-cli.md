@@ -122,20 +122,25 @@ AUTHOR:
 
 COMMANDS:
    build, b     build a project
+   dev          build a local project
+   check-config check the project's yaml
    deploy, d    deploy a project
    detect, de   detect the type of project
    login, l     log into wercker
-   pull, p      pull <build id>
-   version, v   print versions
+   logout, l    logout from wercker
+   pull, p      pull a build result
+   version, v   display version information
    help, h      Shows a list of commands or help for one command
 
 GLOBAL OPTIONS:
-   --environment "ENVIRONMENT"  specify additional environment variables in a file
-   --debug                      print additional debug information
-   --journal                    Send logs to systemd-journald. Suppresses stdout logging.
-   --auth-token                 authentication token to use
-   --help, -h                   show help
-   --version, -v                print the version
+   --environment "ENVIRONMENT"   specify additional environment variables in a file
+   --verbose                     print more information
+   --no-colors                   wercker output will not use colors (does not apply to step output)
+   --debug                       print additional debug information
+   --journal                     Send logs to systemd-journald. Suppresses stdout logging.
+   --auth-token                  authentication token to use
+   --help, -h                    show help
+   --version, -v                 print the version
 ```
 
 The *detect* command introspects your projects and generates
@@ -151,7 +156,7 @@ platform and use *inspect* to debug this container locally.
 
 - - -
 > Want to learn more? Read more about this on the
-> [docs](/docs/using-the-cli/requirements.html)
+> [docs](/docs/using-the-cli/index.html)
 
 [&lsaquo; How it works](/learn/basics/how-it-works.html "nav previous basics")
 [Using the web interface &rsaquo;](/learn/basics/using-the-web-interface.html "nav next basics")

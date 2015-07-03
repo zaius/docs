@@ -9,12 +9,25 @@ The wercker command line interface comes with the following commands:
 ```bash
 COMMANDS:
    build, b     build a project
+   dev          build a local project
+   check-config check the project's yaml
    deploy, d    deploy a project
    detect, de   detect the type of project
    login, l     log into wercker
+   logout, l    logout from wercker
    pull, p      pull a build result
    version, v   display version information
    help, h      Shows a list of commands or help for one command
+
+GLOBAL OPTIONS:
+   --environment "ENVIRONMENT"   specify additional environment variables in a file
+   --verbose                     print more information
+   --no-colors                   wercker output will not use colors (does not apply to step output)
+   --debug                       print additional debug information
+   --journal                     Send logs to systemd-journald. Suppresses stdout logging.
+   --auth-token                  authentication token to use
+   --help, -h                    show help
+   --version, -v                 print the version
 ```
 
 ### Detect
