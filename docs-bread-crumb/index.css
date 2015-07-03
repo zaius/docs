@@ -70,20 +70,19 @@
   position: absolute;
   right: 20px;
   top: -2px;
-  text-decoration: underline;
 }
 
-.bread-crumb-scroll-up a:hover {
+.bread-crumb-scroll-up span {
   cursor: pointer;
-  cursor: hand;
   text-decoration: underline;
+  color: var(--color-skyblue_base);
 }
 
-.bread-crumb-scroll-up a:after {
+.bread-crumb-scroll-up span:after {
   content: "";
 }
 
-.bread-crumb-scroll-up a:before {
+.bread-crumb-scroll-up span:before {
   content: "\203A";
   display: inline-block;
   vertical-align: top;
@@ -109,11 +108,16 @@
     right: 0;
   }
 
-  .bread-crumb-scroll-up a:after {
+  .bread-crumb-scroll-up span:hover {
+    cursor: hand;
+    text-decoration: underline;
+  }
+
+  .bread-crumb-scroll-up span:after {
     content: "Back to top";
   }
 
-  .bread-crumb-scroll-up a:before {
+  .bread-crumb-scroll-up span:before {
     font-size: var(--fontSize_large);
     margin-right: 10px;
   }

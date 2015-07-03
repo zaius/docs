@@ -30,7 +30,7 @@ function render () {
       dom.div({className: 'flex-inner'},
         dom.ul(null,
           dom.li({className: 'bread-crumb-scroll-up'},
-            dom.a({
+            dom.span({
               onClick: onScrollUp
             })
           ),
@@ -44,9 +44,9 @@ function render () {
 /**
  * On scroll up event
  */
-function onScrollUp () {
+function onScrollUp (e) {
   var scrollDuration = 500;
-  var scrollOffset = 1;
+  var scrollOffset = 5;
   var scrollHeight = window.scrollY - scrollOffset;
   var startTime = Date.now();
 
