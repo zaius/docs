@@ -4,7 +4,7 @@ tags: custom
 
 ## Script step
 
-This type of [step](/docs/steps/index.html) allows you to execute a single or
+The `script` [step](/docs/steps/index.html) allows you to execute a single or
 more shell commands.  It has one required property: `code` and (as always) you
 can use the `name` property to give the step a clear name.
 
