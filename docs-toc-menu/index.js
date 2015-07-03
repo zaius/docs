@@ -53,7 +53,7 @@ function render () {
         }
       })
     ),
-    dom.a({
+    dom.span({
       className: 'toc-menu-button',
       onClick: onClickTocMenu,
       'data-btn-copy': this.props.data + ' menu'
@@ -61,7 +61,7 @@ function render () {
   );
 }
 
-function onClickTocMenu () {
+function onClickTocMenu (e) {
   const base = getWindowUrl();
   var body = document.querySelector('#' + base);
   var sideBar = document.querySelector('.sidebar');

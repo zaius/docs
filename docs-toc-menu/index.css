@@ -27,6 +27,7 @@
   text-decoration: none;
   padding: 8px 10px;
   border-radius: 2px;
+  cursor: pointer;
   color: var(--color-skyblue_base);
   background-color: transparent;
   font-weight: var(--fontWeight_light);
@@ -40,13 +41,6 @@
 .toc-menu-button:before {
   content: attr(data-btn-copy);
   animation: fade-in var(--duration_base) var(--easing_smooth);
-}
-
-.toc-menu-button:hover {
-  cursor: pointer;
-  cursor: hand;
-  background-color: var(--color-skyblue_base);
-  color: var(--color-white);
 }
 
 /**
