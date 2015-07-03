@@ -24,7 +24,7 @@ A sample application is already available on
 [GitHub](https://github.com/wercker/wercker-nodejs-heroku) which you can
 clone or fork.
 
-```sh
+```no-highlight
 git clone https://github.com/wercker/wercker-nodejs-heroku.git
 ```
 
@@ -52,8 +52,8 @@ detect most common programming languages and generate sensible defaults.
 In the root of the folder containing the source files run the following
 command:
 
-```sh
-❯ wercker detect
+```no-highlight
+$ wercker detect
 ########### Detecting your project! #############
 Detected: nodejs
 Generating wercker.yml
@@ -105,14 +105,14 @@ steps in [this section](/docs/steps/index.html).
 
 Add and commit your `wercker.yml` file to your git repository:
 
-```sh
+```no-highlight
 git add wercker.yml
 git commit -m 'added wercker.yml'
 ```
 
 Now push it to GitHub:
 
-```sh
+```no-highlight
 git push origin master
 ```
 
@@ -129,7 +129,7 @@ We are now ready to start deploying to Heroku. First, let's add a
 to start for your application. Create this file with the following
 contents and add it to your repository.
 
-```sh
+```no-highlight
 web: node app.js
 ```
 
@@ -198,8 +198,8 @@ Now, we're all set to deploy!
 
 Let's commit and check in our final changes to the `wercker.yml` file.
 
-```sh
-git commit -am 'added deploy section to wercker.yml
+```no-highlight
+git commit -am 'added deploy section to wercker.yml'
 ```
 
 Now when we do a `git push origin master` this will trigger a build on

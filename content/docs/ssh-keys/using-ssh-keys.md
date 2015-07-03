@@ -25,7 +25,7 @@ deploy:
 Depending on the container you are using, you may want to use this step so
 builds/deploys don't halt when you setup a connection with them:
 
-```sh
+```no-highlight
 The authenticity of host 'some-server.wercker.com (1.2.3.4)' can't be established.
 RSA key fingerprint is ff:ee:dd:cc:bb:aa:99:88:77:66:55:44:33:22:11:00.
 Are you sure you want to continue connecting (yes/no)?

@@ -18,10 +18,10 @@ test and build pipeline setup at wercker.
 
 Start by creating a new git repository on your local machine. This will be the place where we store all the application source files.
 
-``` bash
-$ mkdir php-cities
-$ cd php-cities
-$ git init
+```no-highlight
+mkdir php-cities
+cd php-cities
+git init
 ```
 
 ## Adding index.php
@@ -42,17 +42,17 @@ echo json_encode($cities, JSON_PRETTY_PRINT);
 
 Add the `index.php` file to the git repository.
 
-``` bash
-$ git add index.php
-$ git commit -m 'Adds index.php'
+```no-highlight
+git add index.php
+git commit -m 'Adds index.php'
 ```
 
 ## Running the service
 
 See the service in action by serving it with the built-in webserver that PHP offers since version 5.4.
 
-``` bash
-$ php -S localhost:8000
+```no-highlight
+php -S localhost:8000
 ```
 
 Open your favorite browser and browse to [localhost:8000](http://localhost:8000) to see your service in action.
@@ -84,9 +84,9 @@ build:
 
 Add the file to your git repository:
 
-``` bash
-$ git add wercker.yml
-$ git commit -m 'Adds wercker.yml that defines the build'
+```no-highlight
+git add wercker.yml
+git commit -m 'Adds wercker.yml that defines the build'
 ```
 
 ## Add project to wercker
@@ -103,9 +103,9 @@ This is very useful for future development and allows you to notice breaking cha
 
 If you do not have PHPUnit installed, do so now via pear:
 
-``` bash
-$ pear config-set auto_discover 1
-$ pear install pear.phpunit.de/PHPUnit
+```no-highlight
+pear config-set auto_discover 1
+pear install pear.phpunit.de/PHPUnit
 ```
 
 See the [installing PHPUnit](http://phpunit.de/manual/3.7/en/installation.html) for more ways to install PHPUnit.
@@ -134,9 +134,9 @@ class CitiesResponseTest extends PHPUnit_Framework_TestCase
 
  Add this test to the git repository.
 
-``` bash
-$ git add tests/ResponseTest.php
-$ git commit -m 'Adds integration test'
+```no-highlight
+git add tests/ResponseTest.php
+git commit -m 'Adds integration test'
 ```
 
 ## Setup PHPUnit
@@ -170,10 +170,10 @@ as follows:
 
 Add this test to the git repository:
 
-``` bash
-$ git add bootstrap.php
-$ git add phpunit.xml
-$ git commit -m 'Adds phpunit setup files'
+```no-highlight
+git add bootstrap.php
+git add phpunit.xml
+git commit -m 'Adds phpunit setup files'
 ```
 
 ## Add httpful dependency
@@ -192,29 +192,29 @@ following contents:
 
 Now install the dependencies by executing the following command.
 
-``` bash
-$ composer install
+```no-highlight
+composer install
 ```
 
 Add the `composer.json` and the `composer.lock` file that was just created by composer to the repository.
 
-``` bash
-$ git add composer.json
-$ git add composer.lock
-$ git commit -m 'Adds composer depedency files'
+```no-highlight
+git add composer.json
+git add composer.lock
+git commit -m 'Adds composer depedency files'
 ```
 
 ## Run PHPUnit
 
 Start a new terminal window that hosts the service.
 
-``` bash
-$ php -S localhost:8000
+```no-highlight
+php -S localhost:8000
 ```
 
 In the other window, run php unit and see the test pass.
 
-``` bash
+```no-highlight
 $ phpunit
 PHPUnit 3.7.21 by Sebastian Bergmann.
 
@@ -255,9 +255,9 @@ commits should trigger a build on wercker. The build consists of a step
 that installs the dependencies defined in `composer.json`, serves the
 application with PHP's built-in webserver and then executes the integration test.
 
-``` bash
-$ git add wercker.yml
-$ git push origin master
+```no-highlight
+git add wercker.yml
+git push origin master
 ```
 
 Now go to your application at [wercker](http://app.wercker.com) and see your build succeed.

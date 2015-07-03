@@ -74,7 +74,7 @@ Make sure to add your repository to wercker. If you need some guidance with this
 
 Add your **wercker-step.yml** and **run.sh** to your git repository and push it to either GitHub or Bitbucket.
 
-```bash
+```no-highlight
 git add wercker-step.yml run.sh
 git commit -am 'added wercker-step.yml and run.sh'
 git push origin master

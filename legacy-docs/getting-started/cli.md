@@ -23,7 +23,7 @@ The first step is to fork one of the above mentioned repositories and clone it t
 
 Go to the repository on your machine and run `wercker create`. This should result in an output similar to this:
 
-``` bash
+```no-highlight
 $ wercker create
 -----------------------
 welcome to wercker-cli
@@ -49,7 +49,7 @@ Make your choice (1=default):
 
 The wercker create wizard will pause here, to allow you to catch up with what it is about to do. Since my repository has only one remote location (GitHub), pressing enter or input 1 will suffice. After which the wizard will continue:
 
-```bash
+```no-highlight
 github repository detected...
 Selected repository url is git@github.com:wercker/USERNAME/REPOSITORY.git
 
@@ -103,7 +103,7 @@ Note: wercker will check if you have configured repository access correctly. For
 
 This all that's needed to add a application to wercker. But there are some handy commands we can do while we are waiting for the build to complete (or go to the website). The first one is `wercker queue`, which lists all jobs that still need to be done for this application. This can be both builds as well as deploys.
 
-``` bash
+```no-highlight
 $ wercker queue
 -----------------------
 welcome to wercker-cli
@@ -126,7 +126,7 @@ No deploy targets found.
 
 The second command is `wercker builds` which lists the 5 latest builds (including both finished and unfinished ones).
 
-``` bash
+```no-highlight
 $ wercker builds
 -----------------------
 welcome to wercker-cli
@@ -154,7 +154,7 @@ You are now ready to deploy this application to the Cloud. For this guide we wil
 
 We first create a new app on heroku, by running `heroku create`
 
-``` bash
+```no-highlight
 $ heroku create
 Creating secret-bastion-2817... done, region is us
 http://secret-bastion-2817.herokuapp.com/ | git@heroku.com:secret-bastion-2817.git
@@ -163,8 +163,9 @@ Git remote heroku added
 
 Add the wercker addon to your new heroku application and run `wercker targets add`
 
-```bash
+```no-highlight
 $ heroku addons:add wercker
+
 Adding wercker on secret-bastion-2817... done, v2 (free)
 Use `heroku addons:open wercker` to get started.
 Use `heroku addons:docs wercker` to view documentation.

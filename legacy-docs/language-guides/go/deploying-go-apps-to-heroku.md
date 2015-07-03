@@ -86,13 +86,13 @@ Now you can actually open the wercker add-on page, `heroku addons:open wercker` 
 
 First open the wercker add-on page on Heroku:
 
-``` bash
+```no-highlight
 heroku addons:open wercker
 ```
 
 and then create your app on wercker:
 
-``` bash
+```no-highlight
 wercker create
 ```
 

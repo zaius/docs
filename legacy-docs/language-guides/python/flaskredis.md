@@ -19,23 +19,23 @@ You can see the final result of this application on my [wercker page](https://ap
 
 We *highly* recommend using [virtualenv](http://www.virtualenv.org/) and [pip](http://www.pip-installer.org/) to islolate your python environment, so lets do that. In your project folder run the following commands:
 
-``` bash
-$ virtualenv venv --distribute
-$ source venv/bin/activate
+```no-highlight
+virtualenv venv --distribute
+source venv/bin/activate
 ```
 
 This creates a virtual environment folder called 'venv' and activates the Python executable therein.
 
 Next lets install our dependencies. In this case we need Flask and the [Python Redis interface](https://github.com/andymccurdy/redis-py):
 
-``` bash
-$ pip install flask
-$ pip install redis
+```no-highlight
+pip install flask
+pip install redis
 ```
 We want to save our requirements.txt file for our environment for reuse. Wercker also needs this file of course to run our test that we'll create later.
 
-``` bash
-$ pip freeze > requirements.txt
+```no-highlight
+pip freeze > requirements.txt
 ```
 
 Our environment is set up, so lets get started building our API.
@@ -142,10 +142,10 @@ Finally, you can see the `build` section, which contains two steps. First, the `
 
 Now that we have created all the files we need, lets push this our to our version control system:
 
-``` bash
-$ git add .
-$ git commit -am 'initial commit'
-$ git push origin master
+```no-highlight
+git add .
+git commit -am 'initial commit'
+git push origin master
 ```
 Now lets get started with wercker!
 
@@ -157,8 +157,8 @@ After you have signed up, make sure you connect either your GitHub or Bitbucket 
 
 The command line interface can be installed by running:
 
-``` bash
-$ pip install wercker
+```no-highlight
+pip install wercker
 ```
 
 If you want to frequently use the CLI it is a good idea to install it outside of your 'virtual environment', otherwise it would only be available there.
@@ -166,14 +166,14 @@ If you want to frequently use the CLI it is a good idea to install it outside of
 
 Next we run:
 
-``` bash
-$ wercker login
+```no-highlight
+wercker login
 ```
 
 This is only needed once and will ask you for your wercker username and password. Next we are ready to add our repository by running:
 
-``` bash
-$ wercker create
+```no-highlight
+wercker create
 ```
 
 This command will do some introspection and see if it can find a git repository. It will also check to see if the user, `werckerbot` has access to the repository on GitHub or Bitbucket in order to run your builds. Make sure this is the case, and then go to your application page on wercker. A build has been triggered and you should see it running.

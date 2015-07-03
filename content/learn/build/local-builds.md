@@ -8,7 +8,7 @@ setting up your local wercker environment.
 
 From within your project folder run the following command.
 
-```sh
+```no-highlight
 wercker build
 ```
 

@@ -195,9 +195,8 @@ A step should not depend on content of the cache and should be able to handle sc
 
 Here is a simple example of a step that leverages the cache:
 
-``` bash
-if [ -f "$WERCKER_CACHE_DIR/mystep/a-dependency.bin" ];
-then
+```bash
+if [ -f "$WERCKER_CACHE_DIR/mystep/a-dependency.bin" ]; then
     debug "a-dependency.bin found in cache"
 else
     debug "tool.rar not found in cache, will download"

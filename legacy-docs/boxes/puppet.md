@@ -137,7 +137,7 @@ Make sure to add your repository to wercker. If you need some guidance with this
 
 Add your wercker-box.yml to your git repository and push it to either GitHub or Bitbucket.
 
-```bash
+```no-highlight
 git add .
 git commit -am 'added wercker-box.yml and others'
 git push origin master

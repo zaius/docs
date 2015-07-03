@@ -30,7 +30,7 @@ Now the [`POSTGRES_PASSWORD`] environment variable is set to _ourlittlesecret_ i
 Below you can find the environment variables that are created and made available.
 You can use these for connection strings and such in your applications.
 
-```sh
+```no-highlight
 POSTGRES_PASSWORD: ourlittlesecret
 POSTGRES_PORT=tcp://172.XX.X.XX:5432
 POSTGRES_ENV_POSTGRES_PASSWORD=ourlittlesecret

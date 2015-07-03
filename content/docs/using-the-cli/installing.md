@@ -12,28 +12,26 @@ following locations:
 * [Mac 64bit](https://s3.amazonaws.com/downloads.wercker.com/cli/stable/darwin_amd64/wercker)
 
 For example downloading the Mac OSX version and
-installing it in `/usr/local/bin` (make sure this directory is available
-in your PATH):
+installing it in `/usr/local/bin`:
 
-```sh
+```no-highlight
 # downloads the Mac OSX CLI to /usr/local/bin (YMMV)
 curl https://s3.amazonaws.com/downloads.wercker.com/cli/stable/darwin_amd64/wercker -o /usr/local/bin/wercker
 ```
 
-And for Linux 64 bit (make sure this directory is available in your
-PATH):
+And for Linux 64 bit:
 
-```sh
+```no-highlight
 # downloads the Linux CLI to /usr/local/bin (YMMV)
 curl https://s3.amazonaws.com/downloads.wercker.com/cli/stable/linux_amd64/wercker -o /usr/local/bin/wercker
 ```
 Next you want to make the CLI executable:
 
-```sh
+```no-highlight
 chmod +x /usr/local/bin/wercker
 ```
 
 You can use the `wercker version` command to see if a new version of the
 CLI is available. See the [commands section](/docs/using-the-cli/available-commands.html) for more information.
-Some commands require docker to be installed/available, see 
+Some commands require docker to be installed/available, see
 [requirements](/docs/using-the-cli/requirements.html) for more information.

@@ -25,7 +25,7 @@ flow as seen below:
 When adding a project through the [command line
 interface](/articles/cli/) you are also made aware of this:
 
-```bash
+```no-highlight
 github repository detected...
 Selected repository url is
 git@github.com:flenter/getting-started-python.git

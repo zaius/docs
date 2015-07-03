@@ -2,7 +2,7 @@
 
 Using the wercker CLI you can build projects locally on your machine.
 
-```sh
+```no-highlight
 wercker build
 ```
 
@@ -11,7 +11,7 @@ wercker build
 You can mount your local project folder directly to the container's
 pipeline path by running:
 
-```sh
+```no-highlight
 wercker build --direct-mount
 ```
 
@@ -20,7 +20,7 @@ wercker build --direct-mount
 By default running `wercker build` will not save the container. In order
 to save the container you must commit it first:
 
-```sh
+```no-highlight
 wercker build --commit
 ```
 

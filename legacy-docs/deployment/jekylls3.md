@@ -51,10 +51,10 @@ The second line describes the `build` section that consists of steps, in this ca
 
 After you created the `wercker.yml` add it to your repository by executing the following commands.
 
-```bash
-    git add wercker.yml
-    git commit -m 'Add wercker.yml'
-    git push origin master
+```no-highlight
+git add wercker.yml
+git commit -m 'Add wercker.yml'
+git push origin master
 ```
 </br>
 
@@ -97,10 +97,10 @@ We could also _hard code_ the key and key secret in here, but that is not someth
 
 Commit the changes of the `wercker.yml` file and push them to your repository.
 
-```bash
-    git add wercker.yml
-    git commit -m 'Add deployment section'
-    git push origin master
+```no-highlight
+git add wercker.yml
+git commit -m 'Add deployment section'
+git push origin master
 ```
 </br>
 

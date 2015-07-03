@@ -62,7 +62,7 @@ build:
 Many of the docker containers are based on Ubuntu/Debian, you can use the install-package step
 to install additional software. Usage:
 
-```sh
+```yaml
 build:
     steps:
         - install-packages:

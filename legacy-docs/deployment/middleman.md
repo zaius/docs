@@ -13,7 +13,7 @@
 
 As said we'll be using the Middleman blogging extension, so make sure you *gem install* it.
 
-```bash
+```no-highlight
 middleman init --template blog
 
 git init
@@ -70,7 +70,7 @@ The `s3sync` step synchronises a source directory with an Amazon S3 bucket. The 
 
 After you've created the `wercker.yml` add it to your repository by executing the following commands in your terminal.
 
-```bash
+```no-highlight
 git add wercker.yml
 git commit -m 'Add wercker.yml'
 git push origin master

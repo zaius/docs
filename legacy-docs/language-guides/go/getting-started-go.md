@@ -97,7 +97,7 @@ This unittest uses the [httptest librariy](http://golang.org/pkg/net/http/httpte
 
 Now push this code to GitHub or Bitbucket:
 
-``` bash
+```no-highlight
 git init
 git add .
 git commit -am 'init'
@@ -125,7 +125,7 @@ These items are sufficient to test and build our application, so we do not need 
 
 Add the **wercker.yml** file to your git repository and push it.
 
-``` bash
+```no-highlight
 git add wercker.yml
 git commit -am 'added wercker.yml'
 git push origin master

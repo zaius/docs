@@ -30,7 +30,7 @@ If you're eager to get up to speed on OSX, below is a quickstart that
 installs boot2docker via the [homebrew package
 manager](http://brew.sh/).
 
-```sh
+```no-highlight
 brew install boot2docker
 
 boot2docker init
@@ -52,7 +52,7 @@ For example downloading the Mac OSX version and
 installing it in `/usr/local/bin` (make sure this directory is available
 in your PATH):
 
-```sh
+```no-highlight
 # downloads the Mac OSX CLI to /usr/local/bin (YMMV)
 curl https://s3.amazonaws.com/downloads.wercker.com/cli/stable/darwin_amd64/wercker -o /usr/local/bin/wercker
 ```
@@ -60,7 +60,7 @@ curl https://s3.amazonaws.com/downloads.wercker.com/cli/stable/darwin_amd64/werc
 And for Linux 64 bit (make sure this directory is available in your
 PATH):
 
-```sh
+```no-highlight
 # downloads the Linux CLI to /usr/local/bin (YMMV)
 curl https://s3.amazonaws.com/downloads.wercker.com/cli/stable/linux_amd64/wercker -o /usr/local/bin/wercker
 ```
@@ -70,7 +70,7 @@ in your PATH
 
 Next you want to make the CLI executable:
 
-```sh
+```no-highlight
 chmod +x /usr/local/bin/wercker
 ```
 
@@ -78,7 +78,7 @@ chmod +x /usr/local/bin/wercker
 
 You can log into wercker with your username and password as follows:
 
-```sh
+```no-highlight
 wercker login
 ```
 

@@ -45,7 +45,7 @@ build:
 Below you can find the environment variables that are created and made available.
 You can use these for connection strings and such in your applications.
 
-```sh
+```no-highlight
 MARIADB_ENV_MARIADB_VERSION=10.0.17+maria-1~wheezy
 MARIADB_PORT=tcp://172.XX.X.XX:3306
 MARIADB_PORT_3306_TCP=tcp://172.X.X.X:3306

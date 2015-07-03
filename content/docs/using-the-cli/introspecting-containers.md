@@ -28,7 +28,7 @@ locally](/docs/using-the-cli/local-builds.html) or have
 build artifact as container you can run the following command to inspect
 your container:
 
-```sh
+```no-highlight
 docker run -it --rm build-<BUILD-ID> /bin/bash
 ```
 
@@ -39,7 +39,7 @@ pipeline.
 After you've run the container you can retrieve it's container-id by
 running `docker ps -a`. You can then stop the container:
 
-```sh
+```no-highlight
 docker stop <CONTAINER-ID>
 ```
 
