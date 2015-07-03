@@ -6,9 +6,9 @@ with using YAML.
 
 #### Indentation
 
-First of, spaces are used instead of tabs, as tabs are not universally supported.
-Indenting is a small mistake that can lead to a failing build and are hard to spot,
-that is why we advise to use 4 spaces.
+First off, spaces are used instead of tabs, as tabs are not universally supported.
+Wrongly indenting a line is a small mistake that is hard to spot and can lead to
+a failing build. For that reason, we recommend you to use 4 spaces while indenting lines.
 
 > YAML does not allow the use of tabs.
 
@@ -22,15 +22,30 @@ Example of a script step with a indentation of 4 spaces
         echo "pip version $(pip --version) running"
 ```
 
+Besides the pipeline character, it can also be handy for complex commands to use the greater than sign.  This allows you to split commands over multiple lines (enters become spaces).
+
+We use it for the deploy script which has many parameters. Something like:
+
+```yaml
+- script:
+    name: deploy
+    code: >
+        ./scripts/deploy --target $ENVIRONMENT
+            --run-migrations
+            --api-key $API_KEY
+            --api-secret $API_SECRET
+```
+
+
 #### Mappings
 
-Mappings use a colon followed by a space `: z to mark each key/value pair.
+Mappings use a colon followed by a space `: ` to mark each key/value pair.
 
 ```yaml
 box: google/golang
 ```
 
-Example of a nested mapping to setup the use of a private container.
+Example of a nested mapping: to setup the use of a private container.
 
 ```yaml
 box:
@@ -66,6 +81,6 @@ box: nodesource/trusty
 
 Some helpfull links on YAML
 
-* [YAML Lin](http://www.yamllint.com/)
+* [YAML Lint](http://www.yamllint.com/)
 * [Official Yaml 1.2 documentation](http://www.yaml.org/spec/1.2/spec.html)
 * [Yaml reference card](http://www.yaml.org/refcard.html)
