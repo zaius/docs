@@ -6,7 +6,7 @@ tags: cli
 
 The wercker command line interface comes with the following commands:
 
-```bash
+```no-highlight
 COMMANDS:
    build, b     build a project
    dev          build a local project
@@ -45,26 +45,11 @@ The *build* and *deploy* commands execute these pipelines locally. Using
 the *pull* command you can download a container from the wercker
 platform after which you can use Docker commands to debug this container locally.
 
-For using local environment variables you can use the global
-`--environment` flag that points to a file that holds environment
-variables in the form of `key-value` pairs:
-
-```sh
-# specify this in a file called wercker.env
-TOKEN=thisismytoken
-```
-
-Now for instance use this in the `build` command:
-
-```sh
-wercker build --environment wercker.env
-```
-
 ### Logging in
 
 You can log into wercker with your username and password as follows:
 
-```sh
+```no-highlight
 wercker login
 ```
 
@@ -79,7 +64,7 @@ which you can create on your profile page on wercker.
 You can check if you're running the latest version of the CLI by
 running:
 
-```sh
+```no-highlight
 > wercker version
 
 Version: 1.0.54
