@@ -45,8 +45,9 @@
      "steps",
      "internal-steps.md",
      "after-steps.md",
-     "creating-steps.md",
-     "install-packages.md"
+     "script-step.md",
+     "install-packages.md",
+     "creating-steps.md"
   ],
   [
      "deploy",
