@@ -67,7 +67,8 @@
      "after-step-variables.md",
      "available-env-vars.md",
      "creating-env-vars.md",
-     "protected-variables.md"
+     "protected-variables.md",
+     "local-env-vars.md"
   ],
   [
      "ssh-keys",
