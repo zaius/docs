@@ -69,6 +69,11 @@ box:
         PASSWORD: bar
 ```
 
+- - -
+> Want to learn more? Read more about this on the
+> [docs](/docs/services/index.html)
+
+
 ### Dev
 
 The `dev` section sets up your local development pipeline. It ensures that
@@ -81,7 +86,17 @@ In order to use the the development pipeline, incorporate the following in your
 `wercker.yml` file.
 
 ```yaml
+dev:
+  steps:
+    - npm-install
+    - internal/watch:
+        code: node app.js
+        reload: true
 ```
+
+- - -
+> Want to learn more? Read more about this on the
+> [docs](/docs/using-the-cli/local-development.html)
 
 ### Build
 

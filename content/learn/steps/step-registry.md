@@ -17,5 +17,9 @@ version of wercker.
 > Keep an eye on our blog and documentation for when we do support step
 creation and deployment on Ewok.
 
+- - -
+> Want to create your own steps? Read more about this on the
+> [docs](/docs/steps/creating-steps.html)
+
 [&lsaquo; After steps &rsaquo;](/learn/steps/after-steps.html "nav previous steps")
 [Build &rsaquo;](/learn/build/introduction.html "nav next build")

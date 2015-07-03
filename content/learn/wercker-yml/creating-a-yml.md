@@ -45,5 +45,9 @@ deploy:
             username: werckerbot
 ```
 
+- - -
+> Want to learn more? Read more about this on the
+> [docs](/docs/wercker-yml/index.html)
+
 [&lsaquo; Environtment variables](/learn/wercker-yml/environment-variables.html "nav previous yml")
 [Containers &rsaquo;](/learn/containers/introduction.html "nav next containers")

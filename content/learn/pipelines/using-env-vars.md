@@ -39,5 +39,9 @@ the key pair is exposed via two environment variables ending with:
 In the next section we will look at how artifacts are packaged when a
 pipeline ends.
 
+- - -
+> Want to learn more? Read more about this on the
+> [docs](/docs/environment-variables/index.html)
+
 [How it works &rsaquo;](/learn/pipelines/how-it-works.html "nav previous pipelines")
 [Packaging &rsaquo;](/learn/pipelines/packaging.html "nav next pipelines")
