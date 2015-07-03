@@ -43,6 +43,7 @@
   ],
   [
      "steps",
+     "internal-steps.md",
      "after-steps.md",
      "creating-steps.md",
      "install-packages.md"
