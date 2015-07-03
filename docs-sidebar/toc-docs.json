@@ -44,9 +44,9 @@
   [
      "steps",
      "after-steps.md",
-     "creating-steps.md",
+     "script-step.md",
      "install-packages.md",
-     "script-step.md"
+     "creating-steps.md"
   ],
   [
      "deploy",
