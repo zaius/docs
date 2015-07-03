@@ -22,6 +22,7 @@
   [
      "wercker-yml",
      "creating-a-yml.md",
+     "yaml-syntax",
      "wercker-classic.md"
   ],
   [
