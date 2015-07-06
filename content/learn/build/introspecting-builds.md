@@ -1,18 +1,18 @@
 ## Introspecting builds
 
 Before you can introspect your build you need to load it into Docker. You can
-either do this by adding the `--load` flag to the `wercker pull` command. 
+either do this by adding the `--load` flag to the `wercker pull` command.
 
 Otherwise you need to use the docker command to load the container into Docker:
 
-```sh
+```no-highlight
 docker load -i <path>
 ```
 
 Now that the container is loaded into Docker, you can use the standard Docker
 tool to execute commands on it.
 
-```sh
+```no-highlight
 docker run -it --rm build-<build-id> /bin/bash
 ```
 

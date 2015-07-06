@@ -6,9 +6,10 @@
 Wercker docs built with [gulp][gulp] and [metalsmith][metalsmith].
 
 ## Install
-```sh
-$ hub clone wercker/docs
+```no-highlight
+hub clone wercker/docs
 ```
+
 Make sure to have [`npm>=2.0.0`][npm] installed to build local modules.
 
 ## Usage

@@ -44,7 +44,7 @@ A lint step for go source code that uses
 
 Usage:
 
-```sh
+```yaml
 build:
     steps:
         - golint

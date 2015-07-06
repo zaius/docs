@@ -22,7 +22,7 @@ You can find the code for this tutorial on [Github](https://github.com/mies/mong
 
 We will start out with a fresh rails project but will will not utilize Active Record as we're using MongoDB for our database. If you would like to use MySQL or Postgres alongside MongoDB you should not add the `--skip-active-record` option.
 
-``` bash
+```no-highlight
 rails new mongodb-demo --skip-active-record
 ```
 
@@ -37,7 +37,7 @@ gem 'mongoid'
 ```
 Now we are ready to bundle our gems.
 
-``` bash
+```no-highlight
 bundle install
 ```
 
@@ -47,13 +47,13 @@ We have to let our Rails app know it should use MongoDB, so lets create a config
 
 Generate a `mongoid.yml` file
 
-``` bash
+```no-highlight
 rails g mongoid:config
 ```
 
 and update the `test` section with the wercker [environment variable](/articles/available-services):
 
-``` bash
+```yaml
 test:
   sessions:
     default:
@@ -86,7 +86,7 @@ The `services` section specifies any database you want to leverage, in this case
 
 ## Push to GitHub
 
-``` bash
+```no-highlight
 git add .
 git commit -am 'init'
 git push origin master

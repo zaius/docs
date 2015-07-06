@@ -27,39 +27,41 @@ You can find the code for this tutorial on [Github](https://github.com/mies/werc
 
 First we set up a virtual environment for our application:
 
-``` bash
-  $ virtualenv venv --distribute
-  New python executable in venv/bin/python
-  Installing distribute...............done.
-  Installing pip...............done.
+```no-highlight
+$ virtualenv venv --distribute
+New python executable in venv/bin/python
+Installing distribute...............done.
+Installing pip...............done.
 ```
 
 And now activate your newly created environment:
 
-``` bash
-  $ source venv/bin/activate
+```no-highlight
+source venv/bin/activate
 ```
 
 ## Declare dependencies
 
 For this application we install django, the python postgres driver and Kenneth Reitz's excellent [dj-database-url](https://github.com/kennethreitz/dj-database-url) module
 
-``` bash
-$ pip install django psycopg2 dj-database-url
+```no-highlight
+pip install django psycopg2 dj-database-url
 ```
 
 Now go to the empty repository and define our dependencies in a requirements.txt file
 
-    django
-    psycopg2
-    dj-database-url
+```no-highlight
+django
+psycopg2
+dj-database-url
+```
 
 
 ## Create base structure
 We can now create our django project, by running django-admin.py.
 
-``` bash
-$ django-admin.py startproject wercks .
+```no-highlight
+django-admin.py startproject wercks .
 ```
 
 ## Update your settings.py
@@ -82,8 +84,8 @@ DATABASES = {
 
 Let's add a simple demo app:
 
-``` bash
-$ python manage.py startapp wercksdemo
+```no-highlight
+python manage.py startapp wercksdemo
 ```
 
 And append it to the INSTALLED_APPS list in the wercks/settings.py, resulting in:
@@ -185,10 +187,10 @@ class HomeTest(TestCase):
 
 ## Push your changes
 
-``` bash
-$ git add .
-$ git commit -am 'init'
-$ git push origin master
+```no-highlight
+git add .
+git commit -am 'init'
+git push origin master
 ```
 
 ## Add repository to wercker

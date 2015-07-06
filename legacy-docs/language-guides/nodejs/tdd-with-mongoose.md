@@ -213,7 +213,7 @@ We have previously defined a `dev`, `test` and `production` setting in our appli
 
 After you've finished adding your application, we are ready to push our repository.
 
-``` bash
+```no-highlight
 git add .
 git commit -am 'init'
 git push origin master
@@ -227,8 +227,8 @@ This will trigger a build on wercker which looks like this:
 
 We will deploy our application to Heroku, so make sure you have a (verified) [Heroku](http://heroku.com) account and have installed the [Heroku Toolbelt](http://toolbelt.heroku.com). Let's first create an app:
 
-``` bash
-heroku create
+```no-highlight
+$ heroku create
 
 Creating guarded-atoll-9149... done, stack is cedar
 http://guarded-atoll-9149.herokuapp.com/ | git@heroku.com:guarded-atoll-9149.git
@@ -236,8 +236,8 @@ Git remote heroku added
 ```
 Now we need a MongoDB instance in the cloud! Fortunately, Heroku has a Marketplace (wercker is [on it](http://addons.heroku.com/wercker) by the way) filled with addons. One of which are our friends at [Mongolab](http://mongolab.com), so let's use their [add-on](https://addons.heroku.com/mongolab) to [provision](https://devcenter.heroku.com/articles/mongolab) a MongoDB database:
 
-``` bash
-heroku addons:add mongolab
+```no-highlight
+$ heroku addons:add mongolab
 
 Adding mongolab on guarded-atoll-9149... done, v3 (free)
 Welcome to MongoLab.  Your new subscription is ready for use.  Please consult the MongoLab Add-on Admin UI for more information and useful management tools.
@@ -246,7 +246,7 @@ Use `heroku addons:docs mongolab` to view documentation.
 
 For our `test` environment we used the `WERCKER_MONGODB_HOST` environment variable that was provided by wercker and was defined through the `wercker.yml`. We now need a similar environment variable for our production setting which is powered by Heroku and Mongolab. We can retrieve this environment variable, again via the Heroku command line interface:
 
-``` bash
+```no-highlight
 heroku config | grep MONGOLAB_URI
 
 MONGOLAB_URI: mongodb://heroku_app3489u7438034:ofs0gfjfsdgsdfdsgfobfsd345ffsd3ej738@dfsdf45fsd628.mongolab.com:31628/heroku_app16434933244
@@ -271,7 +271,7 @@ app.configure('production', function() {
 
 Similarly to adding the `NODE_ENV=test` environment variable to wercker in the previous post, we need to do the same for Heroku, but now of course `NODE_ENV=production` as Heroku is our production environment.
 
-``` bash
+```no-highlight
 heroku config:set NODE_ENV=production
 
 Setting config vars and restarting guarded-atoll-9149... done, v6
@@ -291,7 +291,7 @@ web: node app.js
 
 Let's add this file to our repository and push it to our version control system:
 
-``` bash
+```no-highlight
 git add Procfile
 git commit -am 'added Procfile'
 git push origin master

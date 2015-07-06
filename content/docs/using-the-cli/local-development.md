@@ -1,7 +1,7 @@
 ## Local Development with the CLI
 
 You can use the wercker CLI during local development of your
-applications and microservices. 
+applications and microservices.
 
 Similar to the wercker web platform, the
 wercker cli will spin up services in containers alongside the code you
@@ -13,9 +13,9 @@ changes _before_ you commit them.
 
 The `wercker dev` command executes the `dev` pipeline designed for live
 development. Whereas the wercker [build command](/docs/using-the-cli/local-builds.html) a copy of your code
-is built inside a container in order to mitigate side effects, 
+is built inside a container in order to mitigate side effects,
 the `dev` command directly mounts your local directory inside the
-container. 
+container.
 
 ### internal/watch
 
@@ -38,7 +38,7 @@ dev:
 
 In this example we set up a `dev` pipeline in which one initial step,
 `npm-install` is run to prepare the container's environment and install
-the necessary dependencies. 
+the necessary dependencies.
 
 Next, we use the `internal/watch` step to
 launch the application and through `reload: true` we reload the
@@ -46,7 +46,7 @@ environment on file changes.
 
 We run the development pipeline as follows:
 
-```sh
+```no-highlight
 wercker dev --publish 5000
 ```
 
@@ -60,7 +60,7 @@ but we tell you the IP address of the host once the step is run.
 Often times you want to inspect the state of a container between steps
 or tweak services running inside a container. The `internal/shell` step
 drops you into a shell of the running container and enables to you to
-look around and tweak things. 
+look around and tweak things.
 
 As with the `internal/watch` step,
 `internal/shell` goes hand in hand with the `dev pipeline`.
@@ -89,7 +89,7 @@ container. This flag is great for debugging and inspect the environment.
 
 You can use it as follows:
 
-```sh
+```no-highlight
 wercker dev --publish 5000 --attach-on-error
 ```
 
@@ -101,4 +101,4 @@ these sample applications.
  * [python](https://github.com/wercker/getting-started-python)
  * [ruby](https://github.com/wercker/getting-started-ruby)
 
-     
+

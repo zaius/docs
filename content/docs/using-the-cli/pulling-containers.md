@@ -20,19 +20,19 @@ page for an application you can filter based on branch.
 
 Here are some examples of pulling a build by application:
 
-```bash
+```no-highlight
 wercker pull <NAME>/<APPLICATION> --branch <BRANCH> --load
 ```
 
 Or the last passed build:
 
-```bash
+```no-highlight
 wercker pull <NAME>/<APPLICATION> --branch <BRANCH> --result passed --load
 ```
 
 Pulling using a build-id is the shortest:
 
-```bash
+```no-highlight
 wercker pull <BUILD-ID> --load
 ```
 
@@ -75,7 +75,7 @@ either delete the file, or use the `-f` flag (`force`) and rerun the `wercker pu
 
 Check out the all available flags in the help page:
 
-```sh
+```no-highlight
 wercker pull --help
 ```
 

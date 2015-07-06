@@ -28,13 +28,13 @@ We will use the wercker command line interface
 
 First, make sure you have Rails4 installed on your machine. Check out the announcement for more info, but the gist of it is:
 
-``` bash
+```no-highlight
 gem install rails --version 4.0.0 --no-ri --no-rdoc
 ```
 
 Next let's create a new application:
 
-``` bash
+```no-highlight
 rails new getting-started-rails4
 ```
 
@@ -62,9 +62,10 @@ gem 'pg'
 
 We want to deploy to [Heroku](http://heroku.com), so first create a `Procfile`:
 
-``` bash
+```no-highlight
 web: bundle exec unicorn -p $PORT -c ./config/unicorn.rb
 ```
+
 We're using the [unicorn](http://unicorn.bogomips.org/) application server so let's create a configuration file for it in the `config` folder:
 
 ``` ruby
@@ -95,7 +96,7 @@ end
 
 Next we create a Heroku application:
 
-``` bash
+```no-highlight
 heroku create
 
 Creating powerful-badlands-2653... done, stack is cedar
@@ -129,20 +130,20 @@ Commit and push your changes to [GitHub](http://github.com) or [Bitbucket](http:
 
 You can now either add your application to wercker via the [command line interface](http://devcenter.wercker.com/articles/gettingstarted/cli.html) or via the [web ui](http://devcenter.wercker.com/articles/gettingstarted/web.html). We will be using the [CLI](http://devcenter.wercker.com/articles/cli/) which is a Python application that you can install via:
 
-``` bash
+```no-highlight
 pip install wercker
 ```
 
 No we add our app to wercker by running:
 
-``` bash
+```no-highlight
 wercker create
 ```
 
 That will not only add our application to wercker but also automatically set up our Heroku deploy target and trigger a build!
 Let's view our application on wercker by running (or just visit the web interface)
 
-``` bash
+```no-highlight
 wercker open
 ```
 You should now see your green build!
@@ -153,13 +154,13 @@ You should now see your green build!
 
 Finally, running the following command will deploy your application to Heroku:
 
-``` bash
+```no-highlight
 wercker deploy
 ```
 
 This command will ask you which build you want to deploy to which target (we just have one on Heroku) and presents the following output:
 
-```bash
+```no-highlight
 -----------------------
 welcome to wercker-cli
 -----------------------

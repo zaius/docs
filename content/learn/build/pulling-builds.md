@@ -12,7 +12,7 @@ In order to pull a build you need a `build-id` and of course the right
 permissions to a project. You can pull builds with the following
 command:
 
-```sh
+```no-highlight
 wercker pull build-id
 ```
 
@@ -20,13 +20,13 @@ You can also query for a certain build. In order to do this, you need the name
 of the owner and project-name on wercker. Then you can optionally give some
 extra queries such as branch or result.
 
-```sh
+```no-highlight
 wercker pull owner/project-name [query flags]
 ```
 
 Checkout the all available flags in the help page:
 
-```sh
+```no-highlight
 wercker pull --help
 ```
 

@@ -14,7 +14,7 @@ container’s environment variables to the current environment.  For example,
 if you want to use [ElasticSearch](http://elasticsearch.com) as a service in
 your application, the following env variables would be injected:
 
-```sh
+```no-highlight
 ELASTICSEARCH_PORT_9200_TCP_PORT=9200
 ELASTICSEARCH_ENV_JAVA_DEBIAN_VERSION=8u40~b22-2
 ELASTICSEARCH_NAME=/wercker-pipeline-xxxxxxxxxxx/elasticsearch
@@ -58,7 +58,7 @@ fmt.Println(“PORT:", os.Getenv("ELASTICSEARCH_PORT_9300_TCP”))
 
 Which would output:
 
-```sh
+```no-highlight
 172.17.1.89
 9300
 ```
