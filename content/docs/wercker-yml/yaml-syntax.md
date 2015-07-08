@@ -12,7 +12,7 @@ a failing build. For that reason, we recommend you to use 4 spaces while indenti
 
 > YAML does not allow the use of tabs.
 
-Example of a script step with a indentation of 4 spaces
+Example of two script steps with correct indentation.
 
 ```yaml
 - script:
@@ -22,18 +22,14 @@ Example of a script step with a indentation of 4 spaces
         echo "pip version $(pip --version) running"
 ```
 
-Besides the pipeline character, it can also be handy for complex commands to use the greater than sign.  This allows you to split commands over multiple lines (enters become spaces).
-
-We use it for the deploy script which has many parameters. Something like:
-
 ```yaml
 - script:
-    name: deploy
-    code: >
-        ./scripts/deploy --target $ENVIRONMENT
-            --run-migrations
-            --api-key $API_KEY
-            --api-secret $API_SECRET
+  name: deploy
+  code: |
+     ./scripts/deploy --target $ENVIRONMENT \
+        --run-migrations \
+        --api-key $API_KEY \
+        --api-secret $API_SECRET
 ```
 
 
@@ -69,6 +65,9 @@ build:
 ```
 
 #### Strings
+
+Strings can be `unquoted`, `single` and `double-quoted`.
+If you wrap text or numbers with quotes it will be forced as a string.
 
 #### Comments
 
