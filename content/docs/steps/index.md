@@ -27,12 +27,12 @@ An example of a step with parameters:
 
 ```yaml
 
-    build:
-      steps:
-        - npm-install@1.0.5:
-            package: jshint
-            strict-ssl: false
-        - npm-test
+build:
+    steps:
+      - npm-install@1.0.5:
+          package: jshint
+          strict-ssl: false
+      - npm-test
 
 ```
 
