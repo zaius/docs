@@ -4,8 +4,9 @@ tags: builds
 
 ## Pulling builds
 
-You can use the [wercker command line interface](/docs/using-the-cli/commands.html) to pull build
-artifacts, which are containers themselves, to your local machine.
+You can use the
+[wercker command line interface](/docs/using-the-cli/available-commands.html)
+to pull build artifacts, which are containers themselves, to your local machine.
 
 There are two ways for pulling builds:
 
