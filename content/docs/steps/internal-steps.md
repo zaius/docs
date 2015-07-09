@@ -49,7 +49,7 @@ It injects the files present in the `$WERCKER_ROOT` environment variable into
 the root of the container.
 
 To help you build your first scratch-enabled application, you can follow our
-[tutorial](/quickstarts/advanced/building-minimal-container-with-go.html).
+[tutorial](/quickstarts/advanced/building-minimal-containers-with-go.html)
 
 ### <a name="internal-watch" clacc="anchor"></a>internal/watch
 The `internal/watch` step gives you a long-running step that can be configured
