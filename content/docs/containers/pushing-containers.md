@@ -6,18 +6,22 @@ tags: containers
 
 Though you are unable to run `docker` commands in your pipelines as this
 would require being able to be [outside](/docs/faq/can-i-run-docker-commands.html) the container, we have created
-several *internal* steps in order to interact with docker.
+several [internal](/docs/steps/internal-steps.html) [steps](/docs/steps/index.html) in order to interact with docker.
 
 > Note the `internal/docker-push` step only works with registries that
 comply with the Docker Registry API.
 
-Internal [steps](/docs/steps/index.html) are steps that are baked into the
+[Internal steps]](/docs/steps/internal-steps.html) are steps that are baked into the
 wercker [cli](/docs/using-the-cli/available-commands.html) as these interact with
 the Docker API that is external from the container. From a security perspective
 we don't want to make this funcionality
 available from inside the Docker container, and as such have created these *internal* steps.
 
-In order to push to Docker registries you use the `internal/docker-push` step.
+In order to push to Docker registries you can use the either the `internal/docker-push` or the
+`internal/docker-scratch-push` step. The difference between the steps is that docker-push step
+pushes the current container and the docker-scratch-push uses a [baseimage](https://docs.docker.com/articles/baseimages/). For more details on
+the `internal/docker-scratch-push` step see [Internal steps]](/docs/steps/internal-steps.html).
+
 The following examples show how to push to Docker registries such as the
 [Docker Hub](https://registry.hub.docker.com/) and [Quay.io](http://quay.io) that adhere to
 the `docker` API.
