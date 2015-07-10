@@ -35,9 +35,9 @@
   ],
   [
      "services",
+     "linking-services.md",
      "private-services.md",
      "advanced-services.md",
-     "available-env-vars.md",
      "mariadb.md",
      "mongodb.md",
      "postgresql.md"
