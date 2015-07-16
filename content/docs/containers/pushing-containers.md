@@ -11,7 +11,7 @@ several [internal](/docs/steps/internal-steps.html) [steps](/docs/steps/index.ht
 > Note the `internal/docker-push` step only works with registries that
 comply with the Docker Registry API.
 
-[Internal steps]](/docs/steps/internal-steps.html) are steps that are baked into the
+[Internal steps](/docs/steps/internal-steps.html) are steps that are baked into the
 wercker [cli](/docs/using-the-cli/available-commands.html) as these interact with
 the Docker API that is external from the container. From a security perspective
 we don't want to make this funcionality
