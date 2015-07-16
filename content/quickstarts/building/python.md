@@ -18,7 +18,7 @@ development environment. After you've done that, `cd` into the project
 directory.
 
 ```
-$ cd python-getting-started/
+$ cd getting-started-python/
 ```
 
 Next, install the dependencies using pip and finally run the app to verify
