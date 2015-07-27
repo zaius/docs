@@ -1,30 +1,36 @@
 ## Using wercker cache
 
-#### CACHE IS ONLY AVAILABLE FOR WERCKER CLASSIC
+A cache directory is shared between builds and deploys. The path to this
+directory is stored in the environment variable `$WERCKER_CACHE_DIR`. A step
+can leverage this cache to share assets between builds.
 
-A cache directory is shared between builds and deploys. The path to this directory is stored
-in the environment variable `$WERCKER_CACHE_DIR`. A step can leverage this cache
-to share assets between builds.
+### Dependency installers
+Out of the box we've enabled caching by default for three dependency
+installers:
 
-A good example of this is the
-[bundler-install](https://app.wercker.com/#applications/51c829d13179be44780020be/tab/details)
-step which leverages the cache to shorten the installation time of dependencies.
-It does so by storing the end-result of downloading and compiling dependend packages.
+* [npm-install](https://app.wercker.com/#applications/51c829f23179be44780021ac/tab/details)
+* [bundle-install](https://app.wercker.com/#applications/51c829d13179be44780020be/tab/details)
+* [pip-install](https://app.wercker.com/#applications/51c829fb3179be44780021f0/tab/details) combined with [virtualenv](https://app.wercker.com/#applications/527bb985138f8aef26000c8f/tab/details)
+
+These steps leverage the cache to shorten the installation time of
+dependencies.  This works by storing the end-result of the downloading and
+compiling of dependend packages.
 
 Future builds can use this as a starting point and only new dependencies which
 were not cached are downloaded. At the start of every build the cache directory
-is filled with the cached content from the last successful build, if not older than 14 days (and is < 1GB).
+is filled with the cached content from the last successful build, if not older
+than 14 days (and is < 1GB).
 
-A step should not depend on content of the cache and should be able to handle
+> Note: A step should not depend on content of the cache and should be able to handle
 scenarios where the cache is not populated.
 
-Here is a simple example of a step that leverages the cache:
+Here is a simple example of a custom step that leverages the cache:
 
 ```bash
 if [ -f "$WERCKER_CACHE_DIR/mystep/a-dependency.bin" ]; then
     debug "a-dependency.bin found in cache"
 else
-    debug "tool.rar not found in cache, will download"
+    debug "a-dependency.bin not found in cache, will download"
     curl -o "$WERCKER_CACHE_DIR/mystep/a-dependency.bin" "http://example.com/a-dependency.bin"
 fi
 ```
