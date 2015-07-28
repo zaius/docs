@@ -126,11 +126,8 @@ deploy:
     - script:
         name: gcr.io authentication
         code: |
-          export CLOUDSDK_CORE_DISABLE_PROMPTS=true
           gcloud auth activate-refresh-token $GCLOUD_ACCOUNT $GCLOUD_REFRESH_TOKEN
-          gcloud config set project $GCLOUD_PROJECT
-          gcloud config set compute/zone $GCLOUD_ZONE
-          gcloud preview docker --authorize_only
+          gcloud docker --authorize-only
           export GCR_AUTH_TOKEN=$(cat $HOME/.dockercfg | jq --raw-output '.["https://gcr.io"].auth' | base64 --decode | cut -d ':' -f2)
     - internal/docker-push:
         username: _token
