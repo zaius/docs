@@ -54,12 +54,17 @@ Status: 200 OK
 }
 ```
 
-
 ### <a name="trigger-a-build" class="anchor"></a> Trigger a new build
 
 Trigger a new build for an application.
 
 Returns a build object.
+
+It is possible to add environment variables which will be added to the build.
+The order of the array will be maintained which makes it possible to use
+environment variables which were defined earlier. Any environment variables
+defined as part of the application or deploytarget will be overwritten, if
+using the same key.
 
 ***
 `POST /api/v3/builds/`
@@ -73,6 +78,7 @@ Returns a build object.
 | `branch` | String | **Optional** The Git branch that the build should use. If not specified, the default branch will be used. |
 | `commitHash` | String | **Optional** The Git commit hash that the build should used. **Requires** `branch` to be set. If not specified, the latest commit is fetched |
 | `message` | String | **Optional** The message to use for the build. If not specified, the Git commit message is used. |
+| `envVars` | Array of objects | **Optional** Environment variables which should be added to build. Contains objects with `key` and `value` properties. |
 
 #### Response
 
