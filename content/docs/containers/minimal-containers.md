@@ -61,7 +61,7 @@ it has the golang language and build tools installed in it. The next
 step is the compilation of the code which results in the executable of
 the application.
 
-As the final scratch iamge doesn't contain any dependencies or headers
+As the final scratch image doesn't contain any dependencies or headers
 the application might need, it is statically compiled.
 
 The ability to create Go packages that call C code is disabled with the
