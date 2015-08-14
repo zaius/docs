@@ -25,5 +25,5 @@ want to use the most recent tags of specific boxes.
 Each pipeline consists of [steps](/docs/steps/index.html), which can
 either fail or pass.
 
-See this [link](http://localhost:1337/docs/wercker-yml/creating-a-yml.html) for an example of a `wercker.yml` file.
+See this [link](/docs/wercker-yml/creating-a-yml.html) for an example of a `wercker.yml` file.
 
