@@ -20,6 +20,11 @@ var streamify = require('gulp-streamify');
 var templates = require('metalsmith-templates');
 var through = require('through2');
 var uglify = require('gulp-uglify');
+var walk = require('walk')
+var fs = require('fs')
+var url = require('url');
+var checkPages = require("check-pages");
+
 
 module.exports = gulp;
 
@@ -163,6 +168,7 @@ gulp.task('lint', function () {
   spawn(process.argv[0], args, {stdio: [0, 1, 2], env: childProcess.env});
 });
 
+
 /**
  * Watch for file changes
  */
@@ -180,6 +186,71 @@ gulp.task('watch', function () {
   gulp.watch([watchDocs], ['docs']);
   gulp.watch(styleFiles, ['styles']);
   livereload.listen();
+});
+
+/**
+ * Check links
+ */
+gulp.task('checkLinks', function(cb) {
+  var connect = require('connect');
+  var serveStatic = require('serve-static');
+  connect().use(serveStatic(path.join(__dirname, "build"))).listen(1337);
+    var options = {
+      pageUrls: ['http://localhost:1337'],
+      checkLinks: true,
+      onlySameDomain: true,
+      queryHashes: true,
+      noRedirects: true,
+      noLocalLinks: false,
+      noEmptyFragments: true,
+      linksToIgnore: [
+      ],
+      checkXhtml: false,
+      checkCaching: true,
+      checkCompression: true,
+      maxResponseTime: 200,
+      userAgent: 'custom-user-agent/1.2.3',
+      summary: true
+    };
+    checkPages(console, options, cb);
+});
+
+gulp.task('checkDev', function() {
+  var links = []
+  var contentPathLength = path.join(__dirname, "content").length;
+  var walkOptions = {
+    followLinks: false,
+    filters: ['node_modules', '.git', 'legacy-docs'],
+  }
+  walker = walk.walk(path.resolve("."), walkOptions);
+    
+  console.log(path.resolve('.'));
+  walker.on("file", function (root, fileStats, next) {
+    if (fileStats.name.length - fileStats.name.indexOf(".md") - 3 !== 0) {
+      next();
+        return
+    }
+    fs.readFile(path.resolve(root, fileStats.name), 'utf8', function (err, data) {
+       //var re = /\[.+\]\((:?[^)]+)\)/g;
+       var re = /\[([^\]]+)\]\(([^)"]+)(?: \"([^\"]+)\")?\)/g
+       //var found = data.match(re);
+       while (found = re.exec(data)) {
+         var urlString = found[2];
+         if (urlString.indexOf('http://') !== 0 && urlString.indexOf('https://') !== 0) {
+           if (urlString.indexOf('/') != 0) {
+             urlString = root.substring(contentPathLength) + '/' + urlString
+           }
+         }
+         var l = url.parse(urlString);
+         links.push(url.format(l));
+       }
+      next();
+    });
+  });
+
+  walker.on("end", function() {
+    console.log(links);
+  });
 });
 
 /**
