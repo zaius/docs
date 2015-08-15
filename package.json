@@ -12,6 +12,7 @@
     "start": "npm run build && npm run open",
     "open": "open http://localhost:1337 && httpster -d build -p 1337",
     "test": "semistandard",
+    "checkLinks": "gulp checkLinks",
     "watch": "watchify index.js -t brfs -o build/bundle.js",
     "format": "semistandard-format -w"
   },

@@ -4,7 +4,7 @@ tags: app.wercker.com, build
 
 ## Cloud builds
 
-For more information on steps run during a build see [about builds](/docs/build/about-builds.html).
+For more information on steps run during a build see [about builds](/docs/build/).
 There are two steps unique to cloud builds which are further described below:
 
 * get code

@@ -23,6 +23,10 @@ build:
             name: test
             code: npm t
 
+        - script:
+            name: test links
+            code: npm run checkLinks
+
     after-steps:
         - slack-notifier:
             url: $SLACK_URL

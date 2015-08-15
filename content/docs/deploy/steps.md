@@ -13,13 +13,11 @@ a `deploy target` that you deploy to. You define these deploy targets
 through the wercker web interface and reference the data associated with this
 target in your deploy step and `wercker.yml`.
 
-Various deploy steps exist in the [step registry](/docs/web-interface
-/step-registry.html) that you can use for your applications. These steps
-range from syncing your assets and binaries to [S3](https://app.wercker.
-com/#applications/51c82a063179be4478002245/tab/details), deploying to
-[Cloud Foundry](https://app.wercker.com/#applications/53dd63d9df12aee638
-0c5b46/tab/details) or [AWS Code-Deploy](https://app.wercker.com/#applic
-ations/547fe5be6b3ba8733d2aabba/tab/details).
+Various deploy steps exist in the [step registry](/docs/web-interface/step-registry.html)
+that you can use for your applications. These steps range from syncing your assets and binaries to
+[S3](https://app.wercker.com/#applications/51c82a063179be4478002245/tab/details), deploying to
+[Cloud Foundry](https://app.wercker.com/#applications/53dd63d9df12aee6380c5b46/tab/details) or
+[AWS Code-Deploy](https://app.wercker.com/#applications/547fe5be6b3ba8733d2aabba/tab/details).
 
 Within deploy steps you can leverage
 [environment variables](/docs/environment-variables/index.html) for storing

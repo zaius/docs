@@ -22,8 +22,9 @@ The *application page* shows a live view of your
 [builds](/learn/build/introduction.html) and
 [deploys](/learn/deploy/introduction.html). Within the *settings tab* you can
 control various aspects of your application; invite team members, set up deploy
-targets and create [environment variables](/learn/wercker-yml/environment-
-variables.html) for your [pipelines](/learn/pipelines/introduction.html).
+targets and create
+[environment variables](/learn/wercker-yml/environment-variables.html)
+for your [pipelines](/learn/pipelines/introduction.html).
 
 ![image](/images/app-stats.png)
 
