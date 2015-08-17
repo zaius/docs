@@ -11,14 +11,14 @@ Service containers are *spun up separate* from the main container.
 Examples of services are databases and queues. You specify service
 containers in your [wercker.yml](/docs/wercker-yml/creating-a-yml.html) file through the `services` clause:
 
-```yaml
+```no-highlight
 services:
     - mongodb
 ```
 
 Having multiple services is also possible:
 
-```yaml
+```no-highlight
 services:
     - mongodb
     - redis
@@ -26,7 +26,7 @@ services:
 
 Tags specify a version of your service container:
 
-```yaml
+```no-highlight
 services:
     - mongodb:2.2.7
 ```

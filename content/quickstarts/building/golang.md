@@ -27,7 +27,7 @@ $ go build
 $ ./getting-started-golang
 ```
 
-Now in your browser navigate to `127.0.0.1:8080/cities.json` and you should be
+Now in your browser navigate to `127.0.0.1:5000/cities.json` and you should be
 presented with the following json:
 
 ```
