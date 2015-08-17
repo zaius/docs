@@ -4,7 +4,12 @@ tags: steps, after-steps, notifications, after
 
 ## After steps
 
-Both build and deploy pipelines can contain `after-steps`. Steps that are executed after a build or deploy has either failed or passed. A good use-case for `after-steps` are [notifications](/articles/werckeryml/notifications.html) to an [IRC channel](https://app.wercker.com/#applications/51f2a14ddf5a46247c000cf7/tab/details) or [HipChat Room](https://app.wercker.com/#applications/51f26c380771b3526e000c1c/tab/details), closing an issue on a project management system or sending out a newsletter after a succesful deploy.
+Both build and deploy pipelines can contain `after-steps`. Steps that are
+executed after a build or deploy has either failed or passed. A good use-case
+for `after-steps` are [notifications](http://old-devcenter.wercker.com/articles/werckeryml/notifications.html)
+to an [IRC channel](https://app.wercker.com/#applications/51f2a14ddf5a46247c000cf7/tab/details)
+or [HipChat Room](https://app.wercker.com/#applications/51f26c380771b3526e000c1c/tab/details),
+closing an issue on a project management system or sending out a newsletter after a succesful deploy.
 
 Here's an example that leverages the [hipchat-notify](https://app.wercker.com/#applications/51f26c380771b3526e000c1c/tab/details) step to send a notification. Note the use of the `after-steps` element to signify that the message has to be sent after the steps of the deploy.
 

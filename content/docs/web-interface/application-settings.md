@@ -6,7 +6,7 @@ In this article we will shortly walk through its content.
 ### Collaborators
 
 Per application you can manage the permission settings of wercker users, wercker
-offers three types of [roles and permissions](/docs/web-interface/roles-and-permissions).
+offers three types of [roles and permissions](/docs/web-interface/roles-and-permissions.html).
 
 But what if you want to add someone that is not a wercker user yet, you can
 use the same input field to send an invite email, when signed up, the user can directly
@@ -15,7 +15,7 @@ access your application.
 When the owner of an application is an organization you can only manage the
 permissions of teams. The owners team of an organization always has `admin` access.
 
-[Read more on roles and permissions &rsaquo;](/docs/web-interface/roles-and-permissions)
+[Read more on roles and permissions &rsaquo;](/docs/web-interface/roles-and-permissions.html)
 
 
 ### Support

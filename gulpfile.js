@@ -20,6 +20,8 @@ var streamify = require('gulp-streamify');
 var templates = require('metalsmith-templates');
 var through = require('through2');
 var uglify = require('gulp-uglify');
+var walk = require('walk');
+var checkPages = require('check-pages');
 
 module.exports = gulp;
 
@@ -182,6 +184,53 @@ gulp.task('watch', function () {
   livereload.listen();
 });
 
+/**
+ * Check links
+ */
+gulp.task('checkLinks', function (cb) {
+  var links = [];
+  var walkOptions = {
+    followLinks: false,
+    filters: []
+  };
+  var walker = walk.walk(path.resolve('./build'), walkOptions);
+  var buildPath = path.join(__dirname, 'build');
+
+  walker.on('file', function (root, fileStats, next) {
+    if (fileStats.name.length - fileStats.name.indexOf('.html') - 5 === 0) {
+      var docPath = path.join(path.relative(buildPath, root), fileStats.name);
+      links.push('http://localhost:1337/' + docPath);
+    }
+    next();
+  });
+
+  walker.on('end', function () {
+    var connect = require('connect');
+    var serveStatic = require('serve-static');
+    var options = {
+      pageUrls: links,
+      checkLinks: true,
+      onlySameDomain: true,
+      queryHashes: true,
+      noRedirects: true,
+      noLocalLinks: false,
+      noEmptyFragments: false,
+      linksToIgnore: [],
+      checkXhtml: false,
+      checkCaching: false,
+      checkCompression: false,
+      maxResponseTime: 200,
+      userAgent: 'custom-user-agent/1.2.3',
+      summary: true
+    };
+    var server = connect().use(serveStatic(path.join(__dirname, 'build'))).listen(1337, function () {
+      checkPages(console, options, function (err) {
+        server.close();
+        return cb(err);
+      });
+    });
+  });
+});
 /**
  * build
  */

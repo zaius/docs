@@ -116,9 +116,9 @@ build:
 
 Two types of [steps](/learn/steps/introduction.html) are defined in this
 build section. First a `bundle-install` step that installs the Rubygem
-dependencies. This step is availble from the [step registry](/learn/steps
-/step-registry.html). The second step in an inline script that in this case
-compiles our static site.
+dependencies. This step is availble from the
+[step registry](/learn/steps/step-registry.html). The second step in an inline
+script that in this case compiles our static site.
 
 ### Deploy
 

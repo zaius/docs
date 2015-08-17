@@ -27,10 +27,9 @@ service containers is done through [environment variables](/learn/containers/usi
 The starting point for a *deploy pipeline* is the artifact that was
 created during the build pipeline.
 
-Within pipelines [environment variables](/learn/pipelines/using-env-
-vars.html) can be used to for tokens, passwords and other configuration
-information that might be needed during the lifetime and execution of a
-pipeline.
+Within pipelines [environment variables](/learn/pipelines/using-env-vars.html)
+can be used to for tokens, passwords and other configuration information that
+might be needed during the lifetime and execution of a pipeline.
 
 - - -
 > You can also specify containers on a per-pipeline-basis. Read more on the docs

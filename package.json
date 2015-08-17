@@ -12,6 +12,7 @@
     "start": "npm run build && npm run open",
     "open": "open http://localhost:1337 && httpster -d build -p 1337",
     "test": "semistandard",
+    "checkLinks": "gulp checkLinks",
     "watch": "watchify index.js -t brfs -o build/bundle.js",
     "format": "semistandard-format -w"
   },
@@ -60,7 +61,7 @@
     "bulk": "^2.0.0-alpha-0",
     "envify": "^3.0.0",
     "es6ify": "^1.4.0",
-    "eslint": "^0.8.2",
+    "eslint": "^1.1",
     "gulp": "^3.8.8",
     "gulp-concat": "^2.4.1",
     "gulp-flatten": "0.0.4",
@@ -84,6 +85,10 @@
     "semistandard": "^6.0.0",
     "semistandard-format": "^1.3.6",
     "vinyl-source-stream": "^1.0.0",
-    "watchify": "^3.1.1"
+    "watchify": "^3.1.1",
+    "walk": "^2",
+    "check-pages": "^0.9",
+    "connect": "^3.4",
+    "serve-static": "^1.10"
   }
 }

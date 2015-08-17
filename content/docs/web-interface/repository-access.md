@@ -61,7 +61,8 @@ that never added werckerbot.
 You need to go to the settings page of your application; here you can find the
 repository access section. This wizard will migrate you from using werckerbot to using
 an SSH key pair. Read the above sections to see which method you can select.
-The wizard is similar to the add application flow presented in [this section](/articles/gettingstarted/web.html).
+The wizard is similar to the add application flow presented in
+[this section](http://old-devcenter.wercker.com/articles/gettingstarted/web.html).
 
 Once you've changed the key, you should remove werckerbot from your organisation teams
 or the access management sections.

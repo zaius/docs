@@ -2,8 +2,8 @@
 
 After you've run your builds on the wercker platform you're able to pull these
 pipeline artifacts to your local machine in order to run and introspect them. To
-do this, you again need a working [local docker environment](/learn/basics
-/the-wercker-cli.html).
+do this, you again need a working
+[local docker environment](/learn/basics/the-wercker-cli.html).
 
 There are two ways to retrieve the Docker container. You can either reference a
 build-id directly, or you can query wercker.
