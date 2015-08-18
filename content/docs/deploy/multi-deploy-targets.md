@@ -10,7 +10,7 @@ use different steps for different deploy targets.
 
 You need to use the same name of the deploy target instead of the `steps`
 property. In the following example, deploys to deploy target `stable` and `beta`
-will use different steps than deploys to other deploy targerts:
+will use different steps than deploys to other deploy targets:
 
 ```yaml
 box: nodesource/trusty
