@@ -244,14 +244,15 @@ deploy:
   steps:
     - heroku-deploy:
         key: $HEROKU_KEY
-        key-name: $HEROKU_KEY_PAIR
+        key-name: HEROKU_KEY_PAIR
         user: $HEROKU_USER
         app-name: $HEROKU_APP_NAME
 ```
 
+Note: You should not prefix the `key-name` environment variable with a dollar 
+sign (`$`) or postfix it with `_PRIVATE` or `_PUBLIC`.
 
 ![image](/images/heroku_08.jpg)
 
 And your all done! Now when deploying via wercker, you no longer receive
 an email that a new SSH key was added!
-
