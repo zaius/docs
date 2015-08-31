@@ -108,13 +108,20 @@ body.sidebar-open .api-articles {
 }
 
 .api-articles pre {
-  width: 80vw;
+  width: 85vw;
   background-color: var(--color-grey_lightest);
   border: 1px solid var(--color-grey_lighter);
   margin-top: 30px;
   margin-bottom: 0;
   padding: 20px;
   overflow-x: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .api-articles pre {
+    width: auto;
+    max-width: 100%;
+  }
 }
 
 .api-articles > pre + pre {
@@ -191,6 +198,13 @@ body.sidebar-open .api-articles {
   max-width: 100%;
   margin-top: 20px;
   border: 1px solid var(--color-grey_lighter);
+}
+
+@media screen and (min-width: 768px) {
+  .docs-articles p > img {
+    width: auto;
+    max-width: 100%;
+  }
 }
 
 

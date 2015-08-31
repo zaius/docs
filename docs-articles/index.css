@@ -100,7 +100,7 @@ body.sidebar-open .docs-articles {
 }
 
 .docs-articles > pre {
-  width: 80vw;
+  width: 85vw;
   background-color: var(--color-blue_base);
   border: 1px solid var(--color-grey_light);
   margin-top: 30px;
@@ -112,6 +112,7 @@ body.sidebar-open .docs-articles {
 @media screen and (min-width: 768px) {
   .docs-articles > pre {
     width: auto;
+    max-width: 100%
   }
 }
 
@@ -182,6 +183,12 @@ body.sidebar-open .docs-articles {
   border: 1px solid var(--color-grey_lighter);
 }
 
+@media screen and (min-width: 768px) {
+  .docs-articles p > img {
+    width: auto;
+    max-width: 100%;
+  }
+}
 
 /**
  * Line breaks.
