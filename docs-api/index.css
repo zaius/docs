@@ -108,6 +108,7 @@ body.sidebar-open .api-articles {
 }
 
 .api-articles pre {
+  width: 80vw;
   background-color: var(--color-grey_lightest);
   border: 1px solid var(--color-grey_lighter);
   margin-top: 30px;
