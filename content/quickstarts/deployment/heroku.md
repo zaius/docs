@@ -249,7 +249,7 @@ deploy:
         app-name: $HEROKU_APP_NAME
 ```
 
-Note: You should not prefix the `key-name` environment variable with a dollar 
+Note: You should not prefix the `key-name` property with a dollar 
 sign (`$`) or postfix it with `_PRIVATE` or `_PUBLIC`.
 
 ![image](/images/heroku_08.jpg)
