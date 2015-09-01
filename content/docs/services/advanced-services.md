@@ -73,3 +73,43 @@ build:
 ```
 
 Here we define the `mariadb` service to be only available in the [build pipeline](http://devcenter.wercker.com/learn/pipelines/introduction.html).
+
+### Nested services
+
+You can develop your services locally using nested services. The service syntax
+is largely the same, except we add a url field, which points to the service you
+want to use on disk.
+
+```yaml
+services:
+    - redis
+    - id: bestservice
+      url: file://../api#dev
+      cmd: python /pipeline/source/app.py
+box: python:2.7
+dev:
+  steps:
+    - pip-install
+    - internal/watch:
+        name: start web server
+        code: python app.py
+        reload: false
+```
+
+The service id `bestservice` has special meaning here. We'll use the ID to set up
+the docker link, so inside your client container, you can query DNS for the
+service host.
+
+Running wercker on the above example YAML will first run the `bestservice`, as
+if it were a normal build, and then commit the image. Next, it'll start the
+redis service and the `bestservice` image we committed earlier. Finally, it'll
+start the python image, and link it with the services.
+
+Because the way we commit the image, you'll need to give it a command to run
+when it starts. Currently, environmental variables are not exposed in the
+service box, so you'll need to give it the absolute path to the source
+directory.
+
+You'll also need to add any services your services depend on to your client
+YAML, as we don't currently inspect the service YAML to find out which services
+it depends on.
