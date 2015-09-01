@@ -74,9 +74,9 @@ build:
 
 Here we define the `mariadb` service to be only available in the [build pipeline](http://devcenter.wercker.com/learn/pipelines/introduction.html).
 
-### Nested services
+### Local services
 
-You can develop your services locally using nested services. The service syntax
+You can develop your services locally using local services. The service syntax
 is largely the same, except we add a url field, which points to the service you
 want to use on disk.
 
