@@ -80,7 +80,7 @@ You can develop your services locally using nested services. The service syntax
 is largely the same, except we add a url field, which points to the service you
 want to use on disk.
 
-Below is an example of a project that uses a local service.
+Below is an example of a project that uses a local service:
 
 ```yaml
 services:
