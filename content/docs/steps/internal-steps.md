@@ -56,7 +56,7 @@ The `internal/watch` step gives you a long-running step that can be configured
 to reload on file changes. A very common use case for this step is frontend
 development, here's an example from our getting-started-nodejs project:
 
-``` yaml
+```yaml
 box: nodesource/trusty
 dev:
   steps:
@@ -99,7 +99,7 @@ drop into a shell, and look around.
 
 Here's a use case where you're checking some log entries:
 
-``` yaml
+```yaml
 box: nodesource/trusty
 dev:
   - npm-install
