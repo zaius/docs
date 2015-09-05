@@ -131,13 +131,13 @@ function render () {
           dom.li(null,
             dom.a({
               href: '/docs/containers/private-containers.html',
-              children: 'Private containters'
+              children: 'Private containers'
             })
           ),
           dom.li(null,
             dom.a({
               href: '/docs/containers/pushing-containers.html',
-              children: 'Pushing containters'
+              children: 'Pushing containers'
             })
           )
         )
