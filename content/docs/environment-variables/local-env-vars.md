@@ -23,7 +23,7 @@ variables. You can specify the file to be used by adding the `--environment`
 flag while running `wercker build` command:
 
 ```no-highlight
-wercker build --environment wercker.env
+wercker --environment wercker.env build
 ```
 
 The keys in the environment file also need to start with `X_`.
