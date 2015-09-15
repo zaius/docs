@@ -185,8 +185,7 @@ body.sidebar-open .docs-articles {
 
 @media screen and (min-width: 768px) {
   .docs-articles p > img {
-    width: auto;
-    max-width: 100%;
+    width: 100%;
   }
 }
 
