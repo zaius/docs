@@ -201,9 +201,8 @@ body.sidebar-open .api-articles {
 }
 
 @media screen and (min-width: 768px) {
-  .docs-articles p > img {
-    width: auto;
-    max-width: 100%;
+  .api-articles p > img {
+    width: 100%;
   }
 }
 
