@@ -20,7 +20,7 @@ available from inside the Docker container, and as such have created these *inte
 In order to push to Docker registries you can use the either the `internal/docker-push` or the
 `internal/docker-scratch-push` step. The difference between the steps is that docker-push step
 pushes the current container and the docker-scratch-push uses a [baseimage](https://docs.docker.com/articles/baseimages/). For more details on
-the `internal/docker-scratch-push` step see [Internal steps]](/docs/steps/internal-steps.html).
+the `internal/docker-scratch-push` step see [Internal steps](/docs/steps/internal-steps.html).
 
 The following examples show how to push to Docker registries such as the
 [Docker Hub](https://registry.hub.docker.com/) and [Quay.io](http://quay.io) that adhere to
