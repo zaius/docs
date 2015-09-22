@@ -6,7 +6,7 @@ tags: docker
 
 The `entrypoint` is a feature in Docker which enables it to specify the
 executable to be run. This article briefly explains what the entrypoint is, and
-what you need to know when using containers that override the entrpyoint when
+what you need to know when using containers that override the entrypoint when
 using them with wercker.
 
 By default, the entrypoint for every image is empty. This will make Docker use
