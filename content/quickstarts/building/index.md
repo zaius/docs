@@ -3,7 +3,7 @@
 This section contains guides on how to develop and build your applications with
 the wercker toolchain.
 
-Get started using your favourite language:
+Get started using your favorite language:
 
 * [Golang](/quickstarts/building/golang.html)
 * [Javascript](/quickstarts/building/javascript.html)

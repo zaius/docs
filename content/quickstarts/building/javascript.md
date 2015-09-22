@@ -38,7 +38,7 @@ cities: [
 "Amsterdam",
 "Berlin",
 "New York",
-"Palo ALto",
+"Palo Alto",
 "San Mateo"
 ]
 }
@@ -141,13 +141,13 @@ action. In **app.js** add a new city to the array:
 ```
 app.get('/', function(req, res){
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.write(JSON.stringify({cities : ["San Francisco","Amsterdam", "Berlin", "New York", "Palo ALto", "San Mateo", "Paris"]}));
+    res.write(JSON.stringify({cities : ["San Francisco","Amsterdam", "Berlin", "New York", "Palo Alto", "San Mateo", "Paris"]}));
     res.end();
 });
 ```
 
 Once you save your changes, the app should automatically reload. If you
-refresh your page, our new city should be there! Hurray!
+refresh your page, our new city should be there! Hurrah!
 
 There are [many more steps](https://app.wercker.com/#explore) to use for
 developing your app.  Take a look around, and if you can't find the step you're
@@ -289,7 +289,7 @@ example you forked earlier from the list and click on **Use selected repo**.
 
 #### Select the owner
 Now we have to choose who owns the app. For this tutorial, go ahead and select
-yourself. If you like, you can also select an organisation you created on
+yourself. If you like, you can also select an organization you created on
 wercker. Click on **Use selected owner** once you're ready.
 
 #### Configure Access

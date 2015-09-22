@@ -22,7 +22,7 @@ virtual machine using [this vagrant box](https://github.com/mitchellh/boot2docke
 ### OSX boot2docker quick start
 
 If you're eager to get up to speed on OSX, below is a quickstart that
-installs boot2docker via the [homebrew package
+installs boot2docker via the [Homebrew package
 manager](http://brew.sh/).
 
 ```no-highlight
@@ -47,7 +47,7 @@ export DOCKER_TLS_VERIFY=1
 
 You can add these `exports` to your `.profile`, `.bashrc` or other shell configuration file.
 
-Opening up a new terminal or reboorting your machine might
+Opening up a new terminal or rebooting your machine might
 cause your Docker endpoint or boot2docker environment to be no longer
-avalable, so you might want to at least export the environment variables
+available, so you might want to at least export the environment variables
 in your `.profile`, `.zshrc` or `.bashrc` file.

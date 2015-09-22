@@ -16,7 +16,7 @@ Before describing in details what is visible to who, let's take a look first at 
 
 ### The source code
 
-Wercker provides no access to the source code of an application. Your source code is handled by specific testing servers who clone your code and run your tests in separate containers who are setup and destroyed for each build. The resulting build artefacts are stored, accessible only for wercker servers, up to 3 months for use during deployment.
+Wercker provides no access to the source code of an application. Your source code is handled by specific testing servers who clone your code and run your tests in separate containers who are setup and destroyed for each build. The resulting build artifacts are stored, accessible only for wercker servers, up to 3 months for use during deployment.
 
 ### Test logs
 

@@ -14,7 +14,7 @@ The `SSH Key pair` gets generated.
 ![image](/images/generating-ssh-keys_2.jpg)
 
 In `edit` mode you can update the name and in case you need it,
-regenertate the `SSH Key pair`.
+regenerate the `SSH Key pair`.
 
 ![image](/images/generating-ssh-keys_3.jpg)
 

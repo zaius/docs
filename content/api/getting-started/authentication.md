@@ -24,9 +24,9 @@ the header format that is used:
 Authorization: Bearer <TOKEN>
 ```
 
-It is also possible to add the token as a querystring parameter. This however is
+It is also possible to add the token as a query string parameter. This however is
 not recommended, and should only be used if it is impossible to use the header
-method. You should use the `token` querystring key, and the value should be the
+method. You should use the `token` query string key, and the value should be the
 token.
 
 ### Curl example

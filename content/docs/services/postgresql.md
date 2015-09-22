@@ -45,4 +45,4 @@ POSTGRES_PORT_5432_TCP_PROTO=tcp
 POSTGRES_ENV_PG_VERSION=9.4.1-1.pgdg70+1
 ```
 
-To learn about how to find out the IP adress of a service container you should use the environment variables exposed by Docker. You can read more about that in our article [_availble env vars_](http://devcenter.wercker.io/docs/services/linking-services.html).
+To learn about how to find out the IP address of a service container you should use the environment variables exposed by Docker. You can read more about that in our article [_available env vars_](http://devcenter.wercker.io/docs/services/linking-services.html).

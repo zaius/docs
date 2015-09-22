@@ -37,6 +37,22 @@ available via `npm run-script`:
     semistandard-format -w
 ```
 
+
+## Style Guide
+   * wercker must always be lowercase, unless it's at the beginning of
+       a sentence.
+   * Prefer American English
+   * All nouns which are normally two words in English should be written as two
+       words. e.g.
+       * Run time and not runtime
+           * http://www.oed.com/view/Entry/168872?redirectedFrom=run-time#eid24818252
+       * Query string
+       * Start up
+   * Except terms of art, e.g.
+       * Username
+           * http://english.stackexchange.com/a/43440
+   * Capitalize proper nouns like Elasticsearch
+
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)
 

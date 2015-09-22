@@ -35,7 +35,7 @@ code in a container and takes it through what we call
 the output as a container.
 
 Wercker also works for developers working on websites, blogs or apps that are
-not neccesarily as complex. Because wercker is also a **workflow** and not only
+not necessarily as complex. Because wercker is also a **workflow** and not only
 a platform, we encourage you to start using wercker from the get-go with
 [wercker dev](http://blog.wercker.com/2015/05/15/Introducing-local-development.html).
 This sets you up with a container locally and allows you to start developing in
@@ -46,7 +46,7 @@ that container, without changing your existing workflow.
 Below you will find a table explaining all the concepts and terminology you
 will find throughout the documentation. 
 
-| Concept | Explenation |
+| Concept | Explanation |
 |:--------|:------------|
 | After-Step | A step that gets executed after Pipeline has failed or passed. Ideal for notifications or other subsequent triggers. |
 | Application | Your project, with all its settings, git information and Pipelines. |

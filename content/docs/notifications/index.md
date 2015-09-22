@@ -4,7 +4,7 @@ Wercker offers three different type of notifications.
 
 * Built-in system notifications
 * Built-in email notifications
-* Custom notififier after-steps
+* Custom notifier after-steps
 
 ### Built-in notifications
 
@@ -14,7 +14,7 @@ changes, and comments.
 [Read more on our built-in notifications &rsaquo;](/docs/web-interface/notifications.html)
 
 > Get those same system notifications on your desktop with our
-> [nofitier app](http://www.wercker.com/downloads) for OSX.
+> [notifier app](http://www.wercker.com/downloads) for OSX.
 
 ### Notification steps
 

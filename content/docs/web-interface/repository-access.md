@@ -64,7 +64,7 @@ an SSH key pair. Read the above sections to see which method you can select.
 The wizard is similar to the add application flow presented in
 [this section](http://old-devcenter.wercker.com/articles/gettingstarted/web.html).
 
-Once you've changed the key, you should remove werckerbot from your organisation teams
+Once you've changed the key, you should remove werckerbot from your organization teams
 or the access management sections.
 
 We're keeping wercker-bot around till 01-01-2015, than we will remove

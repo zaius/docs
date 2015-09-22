@@ -62,4 +62,4 @@ The domain name for the private registry (in this case `quay.io`)
 is defined before the `username/repo` combination when using a custom registry.
 
 Note that as opposed to the [services](/docs/services/index.html) section, which is a list of items,
-the box section contains a singular item and as such is not preceeded by a `-`.
+the box section contains a singular item and as such is not preceded by a `-`.

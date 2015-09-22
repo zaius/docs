@@ -38,15 +38,15 @@ the resource.
 - `GET` Used to retrieve resources.
 - `POST` Used to create a resource, or to execute a action on a resource.
 - `PUT` Used to _completely_ replace a resource.
-- `PATCH` Used to update one or more properties of a resouce.
+- `PATCH` Used to update one or more properties of a resource.
 - `DELETE` Used to delete a resource.
 
 #### Errors
 
-We map errors on the following HTTP statuscodes:
+We map errors on the following HTTP status codes:
 
 - `400` Generic error that the client used an invalid request.
-- `401` The requested resouce requires authentication.
+- `401` The requested resource requires authentication.
 - `403` You do not have access to the requested resource.
 - `404` The requested resource does not exists.
 - `422` The payload was in a correct format, but we were not able to process it.

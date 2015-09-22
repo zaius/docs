@@ -150,7 +150,7 @@ parameters are environment variables that we have entered on the wercker web
 interface. For the tag, we use the git commit hash, so each container is
 versioned. This hash is available as an environment variable from within the
 wercker pipeline.  The `cmd` parameter is the command that we want to run on
-start-up of the container, which in our case is our application that we've
+start up of the container, which in our case is our application that we've
 built. We also need to define the port on which our application will be
 available. Finally, we fill in the details of our Quay.io repository and the
 URL of the registry.  If you take a look at your Quay.io dashboard you will see

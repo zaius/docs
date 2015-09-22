@@ -85,7 +85,7 @@ Yaml is pretty strict with formatting and we advise everyone to use 4 spaces for
 <a id="box"></a>
 ## box
 
-The box section allows you to choose a box which will be used to run the builds and deploys. This item will contain a single reference to the box. The box will be prefixed by the owner and it can be postfixed with a "@" followed by a version. If no version is given, then the latest version will be used. The default blank box:
+The box section allows you to choose a box which will be used to run the builds and deploys. This item will contain a single reference to the box. The box will be prefixed by the owner and it can be post-fixed with a "@" followed by a version. If no version is given, then the latest version will be used. The default blank box:
 
     box: wercker/default
 
@@ -145,7 +145,7 @@ The `build` section will contain all the configuration for the build pipeline.
 
 ### steps
 
-The steps section will contain all of the steps which will used during a build. A step in it's simplest form is the name of a buildstep. It can optionally be postfixed with the version of the step.
+The steps section will contain all of the steps which will used during a build. A step in it's simplest form is the name of a buildstep. It can optionally be post-fixed with the version of the step.
 
 Example:
 

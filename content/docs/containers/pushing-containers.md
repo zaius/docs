@@ -55,7 +55,7 @@ field contains the repository that you want to push to (in this case the
 username `turing` with the `bar` image), and `registry` is
 the URL of your Docker registry.
 
-If your container needs a `cmd` to be run on startup of the container along
+If your container needs a `cmd` to be run on start up of the container along
 with a `port` that your application listens on, you can "bake" that into
 the container as well:
 

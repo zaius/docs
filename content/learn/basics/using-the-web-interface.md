@@ -29,7 +29,7 @@ for your [pipelines](/learn/pipelines/introduction.html).
 ![image](/images/app-stats.png)
 
 Each application also contains a statistics section that shows a
-graphical overview of the distribution of sucessful versus failed builds
+graphical overview of the distribution of successful versus failed builds
 and deploys, and who are the top builders within your team.
 
 A specific build page for an application shows the steps that were

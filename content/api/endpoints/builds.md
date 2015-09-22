@@ -63,7 +63,7 @@ Returns a build object.
 It is possible to add environment variables which will be added to the build.
 The order of the array will be maintained which makes it possible to use
 environment variables which were defined earlier. Any environment variables
-defined as part of the application or deploytarget will be overwritten, if
+defined as part of the application or deploy target will be overwritten, if
 using the same key.
 
 ***

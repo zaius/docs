@@ -14,7 +14,7 @@ wercker build
 
 If your build is dependent on any environment variables, for instance
 when running [after-steps](/learn/steps/after-steps.html), your
-local build will fail unless you explicitely set these.
+local build will fail unless you explicitly set these.
 
 In the next section we'll look at how to pull builds into your local
 environment.

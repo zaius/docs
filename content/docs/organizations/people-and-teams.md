@@ -7,7 +7,7 @@ tags: organizations
 To start managing your organization you will first need to start adding people to it.
 
 When you're part of the **owners** team on an organization you're allowed to access
-the settings page. You can reach that page via the organziations profile page.
+the settings page. You can reach that page via the organizations profile page.
 The manage buttons on that page will only be visible for team members on the
 **owners** team.
 

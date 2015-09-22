@@ -1,6 +1,6 @@
 ## Introduction to deployment
 
-This section describes the different deployment possiblities within wercker.
+This section describes the different deployment possibilities within wercker.
 
 Wercker allows you to deploy your application to various Platform-as-a-Service
 (PaaS) providers such as Heroku but also Infrastructure-as-a-Service

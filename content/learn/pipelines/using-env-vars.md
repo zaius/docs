@@ -24,7 +24,7 @@ exceptions:
 * values are not shown in the settings tab and can only be set, not read
     afterwards
 
-This behaviour is optional for variables of type text, SSH key pairs however
+This behavior is optional for variables of type text, SSH key pairs however
 are automatically marked as protected.
 
 

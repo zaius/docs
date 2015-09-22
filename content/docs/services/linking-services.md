@@ -13,13 +13,13 @@ main box, where your application lives.
 Dockerlinks work by exposing the **service container’s** environment variables
 to the **current environment**. This happens for every service listed in the
 `services:` section. For each service, Docker will expose **three** distinct
-environment variables (where the containername is the name of the
-servicecontainer):
+environment variables (where the container name is the name of the
+service container):
 
 ```no-highlight
-<containername>_PORT_<port>_<protocol>_ADDR
-<containername>_PORT_<port>_<protocol>_PORT
-<containername>_PORT_<port>_<protocol>_PROTO
+<container name>_PORT_<port>_<protocol>_ADDR
+<container name>_PORT_<port>_<protocol>_PORT
+<container name>_PORT_<port>_<protocol>_PROTO
 
 // any other env vars exposed from within the container 
 // will be exposed in this format
@@ -68,7 +68,7 @@ build:
 ### Using the environment variables
 To use these env vars in your application you
 would simply query the environment for the variables you are looking for. In
-this example, you would want the IP and the port elasticsearch is running on. In
+this example, you would want the IP and the port Elasticsearch is running on. In
 Go this would look something like this:
 
 ```golang
