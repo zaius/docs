@@ -11,7 +11,7 @@ build:
 
         - script:
             name: install npm@2
-            code: npm i -g npm
+            code: npm i -g npm@2
 
         - npm-install
 
