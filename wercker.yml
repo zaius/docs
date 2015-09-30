@@ -20,10 +20,6 @@ build:
             code: NODE_ENV=production npm run build
 
         - script:
-            name: test
-            code: npm t
-
-        - script:
             name: test links
             code: npm run checkLinks
 
