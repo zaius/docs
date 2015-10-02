@@ -1,16 +1,16 @@
-var breadCrumb = require('@docs/bread-crumb');
-var learnblocks = require('@docs/learnblocks');
-var sidebar = require('@docs/sidebar');
-var nav = require('@docs/nav');
-var header = require('@docs/header');
-var quicklinks = require('@docs/quicklinks');
-var tocMenu = require('@docs/toc-menu');
+var breadCrumb = require('./docs-bread-crumb');
+var learnblocks = require('./docs-learnblocks');
+var sidebar = require('./docs-sidebar');
+var nav = require('./docs-nav');
+var header = require('./docs-header');
+var quicklinks = require('./docs-quicklinks');
+var tocMenu = require('./docs-toc-menu');
 var react = require('react');
 
 require('webcomponents.js');
 
 // register custom elements
-document.registerElement('gh-button', require('@docs/gh-button'));
+document.registerElement('gh-button', require('./docs-gh-button'));
 
 var learnblocksSelector = document.querySelector('.learn-blocks');
 if (learnblocksSelector) react.renderComponent(learnblocks(), learnblocksSelector);
@@ -34,4 +34,4 @@ var tocMenuSelector = document.querySelector('.toc-menu');
 if (tocMenuSelector) react.renderComponent(tocMenu(), tocMenuSelector);
 
 // init metrics
-require('@docs/metrics');
+require('./docs-metrics');

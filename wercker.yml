@@ -1,4 +1,4 @@
-box: nodesource/node:trusty
+box: nodesource/trusty:0.10.38
 # Build definition
 build:
   # The steps that will be executed on build
@@ -8,9 +8,10 @@ build:
             code: |
                 chmod 777 -R .
                 chmod 777 -R $WERCKER_CACHE_DIR
+                export NODE_ENV=development
 
         - script:
-            name: install npm@2
+            name: install new version of npm
             code: npm i -g npm
 
         - npm-install
