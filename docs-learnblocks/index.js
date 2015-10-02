@@ -53,9 +53,9 @@ function createClassName (block) {
   const active = (head === slugify(block));
 
   return 'learnblocks-item ' +
-    'learnblocks-item_' +
-    block.replace(/(\.)/gm, '_') +
-    (active ? ' active' : '');
+  'learnblocks-item_' +
+  block.replace(/(\.)/gm, '_') +
+  (active ? ' active' : '');
 }
 
 /**
