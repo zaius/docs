@@ -25,6 +25,7 @@ deploy:
         password: $PASSWORD
         tag: my-amazing-tag
         repository: turing/bar
+        ports: "5000, 8080"
         registry: https://registry.hub.docker.com
 ```
 
@@ -32,7 +33,10 @@ The `$USERNAME` and `$PASSWORD` fields are environment variables that you
 should specify through the [wercker web
 interface](/docs/environment-variables/index.html). The `repo` field contains
 the repository that you want to push to (in this case the username `turing`
-with the `bar` image), and `registry` is the URL of your Docker registry.
+with the `bar` image), and `registry` is the URL of your Docker registry. The
+ports property contain the ports that you want to expose in the final
+container. It is a comma separated list, and can contain `/tcp` or `/udp`
+(uses `/tcp` by default).
 
 More information about the internal/docker-push step can be found
 [here](/docs/containers/pushing-containers.html).
