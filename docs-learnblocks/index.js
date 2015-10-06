@@ -1,6 +1,7 @@
 const window = require('global/window');
 const slugify = require('slugificate');
 const react = require('react');
+const util = require('util');
 
 const dom = react.DOM;
 
@@ -53,9 +54,7 @@ function createClassName (block) {
   const active = (head === slugify(block));
   const blockName = block.replace(/(\.)/gm, '_');
 
-  return 'learnblocks-item ' +
-  'learnblocks-item_' + blockName +
-  (active ? ' active' : '');
+  return util.format('learnblocks-item learnblocks-item_%s%s', blockName, (active ? ' active' : ''));
 }
 
 /**
