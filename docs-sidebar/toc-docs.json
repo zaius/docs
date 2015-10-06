@@ -57,6 +57,7 @@
      "auto-deploy.md",
      "steps.md",
      "heroku.md",
+     "amazon-ecs.md",
      "s3.md"
   ],
   [
