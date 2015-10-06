@@ -2,7 +2,7 @@
  * Module dependencies.
  */
 
-var logo = require('@wercker/logo');
+var logo = require('../wercker-logo');
 var react = require('react');
 
 var dom = react.DOM;

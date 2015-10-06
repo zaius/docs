@@ -2,7 +2,7 @@
 
 const summary = require('server-summary');
 const cliclopts = require('cliclopts');
-const router = require('@docs/build');
+const router = require('./docs-build');
 const minimist = require('minimist');
 const assert = require('assert');
 const http = require('http');
