@@ -19,7 +19,7 @@ as new projects to wercker](https://app.wercker.com/#applications/create):
 * [wercker/ws_api](https://github.com/wercker/ws_api)
 
 You will also need a working Docker environment and the [wercker
-CLI]("http://wercker.com/downloads").
+CLI](http://wercker.com/downloads).
 
 Finally, you will need an ECS cluster to deploy the applications to. You can
 read more about setting up ECS
