@@ -51,10 +51,10 @@ function render () {
 function createClassName (block) {
   const head = window.location.pathname.split('/')[2];
   const active = (head === slugify(block));
+  const blockName = block.replace(/(\.)/gm, '_');
 
   return 'learnblocks-item ' +
-  'learnblocks-item_' +
-  block.replace(/(\.)/gm, '_') +
+  'learnblocks-item_' + blockName +
   (active ? ' active' : '');
 }
 
