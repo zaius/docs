@@ -78,7 +78,7 @@ box: nodesource/trusty
 # Build definition
 ```
 
-Some helpfull links on YAML
+Some helpful links on YAML
 
 * [YAML Lint](http://www.yamllint.com/)
 * [Official Yaml 1.2 documentation](http://www.yaml.org/spec/1.2/spec.html)

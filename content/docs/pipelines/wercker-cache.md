@@ -14,7 +14,7 @@ installers:
 
 These steps leverage the cache to shorten the installation time of
 dependencies.  This works by storing the end-result of the downloading and
-compiling of dependend packages.
+compiling of dependent packages.
 
 Future builds can use this as a starting point and only new dependencies which
 were not cached are downloaded. At the start of every build the cache directory

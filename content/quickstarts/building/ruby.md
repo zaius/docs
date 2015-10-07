@@ -186,7 +186,7 @@ get '/' do
 ```
 
 Once you save your changes, the app should automatically reload. If you
-refresh your page, our new city should be there! Hurray!
+refresh your page, our new city should be there! Hurrah!
 
 There are [many more steps](https://app.wercker.com/#explore) to use for
 developing your app.  Take a look around, and if you can't find the step you're
@@ -290,10 +290,10 @@ Deprecation Warnings:
 Using `should` from rspec-expectations' old `:should` syntax without explicitly enabling the syntax is deprecated. Use the new `:expect` syntax or explicitly enable `:should` with `config.expect_with(:rspec) { |c| c.syntax = :should }` instead. Called from /pipeline/source/spec/main_spec.rb:6:in `block (2 levels) in <top (required)>'.
 
 
-If you need more of the backtrace for any of these deprecations to
+If you need more of the back-trace for any of these deprecations to
 identify where to make the necessary changes, you can configure
 `config.raise_errors_for_deprecations!`, and it will turn the
-deprecation warnings into errors, giving you the full backtrace.
+deprecation warnings into errors, giving you the full back-trace.
 --> Steps passed
 --> Pipeline finished
 ```
@@ -322,7 +322,7 @@ example you forked earlier from the list and click on **Use selected repo**.
 
 #### Select the owner
 Now we have to choose who owns the app. For this tutorial, go ahead and select
-yourself. If you like, you can also select an organisation you created on
+yourself. If you like, you can also select an organization you created on
 wercker. Click on **Use selected owner** once you're ready.
 
 #### Configure Access

@@ -125,7 +125,7 @@ or less an expanded version of the information available during a build.
 <tr>
     <td>WERCKER_DEPLOYTARGET_NAME</td>
     <td>staging</td>
-    <td>Name of the deploy target the deploy is targetting</td>
+    <td>Name of the deploy target the deploy is targeting</td>
 </tr>
 <tr>
     <td>WERCKER_DEPLOY_URL</td>

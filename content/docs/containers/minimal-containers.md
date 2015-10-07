@@ -15,7 +15,7 @@ either collected or created during a build pipeline.
 ### The internal/docker-scratch-push step
 
 The `internal/docker-scratch/push` step 'bakes' a container with a
-minimal filesytem, a port that you want to make available for your
+minimal file system, a port that you want to make available for your
 application and the command that runs your app. It also pushes this
 container to a Docker registry of choice.
 
@@ -73,11 +73,11 @@ available to the deploy pipeline.
 
 The deploy pipeline also uses the same `google/golang` box, but it is of
 little interest for this deploy. Using the `internal-docker-scratch`
-step a minimal filesystem is turned into a container. Using the `cmd`
-and `ports` directive, the command to run on startup of the container
-and the port on which the application is avaiable are both baked into
+step a minimal file system is turned into a container. Using the `cmd`
+and `ports` directive, the command to run on start up of the container
+and the port on which the application is available are both baked into
 the container respectively.
 
 The final container is tagged with the `$WERCKER_GIT_COMMIT` for easy
-trackback and is *1.2MB* in size!
+reference and is *1.2MB* in size!
 

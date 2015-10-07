@@ -7,12 +7,12 @@ tags: organizations
 Through organizations you can create and organize teams to make access management
 on applications way easier and more efficient.
 
-You can start to create a new 'Organization' from the create dropdown or
+You can start to create a new 'Organization' from the create drop-down or
 from your profile settings page.
 
 As you can see you can choose between two options on how to create a new organization.
 
-![image](/images/creat-an-org.jpg)
+![image](/images/create-an-org.jpg)
 
 ### Create
 
@@ -35,10 +35,10 @@ avatar with [Gravatar](https://gravatar.com/).
 #### Pick a new username
 
 Because your current username will be used as the organization's name, you will
-need to enter a new username for the current user with which you can login.
+need to enter a new username for the current user with which you can log in.
 
 Once you have completed converting your user, you will be logged out and in,
-in order to finalise the process.
+in order to finalize the process.
 
 ### Finished
 

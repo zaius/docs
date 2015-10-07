@@ -11,7 +11,7 @@ The creation of steps is currently not support in the Ewok version of
 wercker.
 
 All steps that are currently deployed in the wercker registry are
-however avaible to use as well as new ones created on the non-Ewok
+however available to use as well as new ones created on the non-Ewok
 version of wercker.
 
 > Keep an eye on our blog and documentation for when we do support step

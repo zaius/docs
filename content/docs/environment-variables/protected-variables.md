@@ -6,7 +6,7 @@ information via the interface. The behavior of the variables during pipeline run
 
 Protected variables are not displayed/logged during the setup environment step
 values are not shown in the settings tab and can only be set, not read back.
-This behaviour is optional for variables of type `text`, `SSH key pairs` however
+This behavior is optional for variables of type `text`, `SSH key pairs` however
 are automatically marked as protected.
 
 > Please not that the value of a protected environment variable is not available to copy or edit.

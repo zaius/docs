@@ -5,7 +5,7 @@ The wizard will take you through a couple of guided steps to get the best setup
 from the get go.
 
 When you are logged in, you can choose to create a new 'Application' from the
-create dropdown.
+create drop-down.
 
 ![image](/images/adding-a-new-application_1.jpg)
 

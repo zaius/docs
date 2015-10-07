@@ -15,7 +15,7 @@ your pipelines
 
 ### Specifying versions
 
-Docker repositories can hold various versions of an image. Tags can be leveraged to specify a specfic version of a container.
+Docker repositories can hold various versions of an image. Tags can be leveraged to specify a specific version of a container.
 
 > When using containers make sure you specify the correct tag for the
 container you want to use.

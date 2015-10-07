@@ -21,7 +21,7 @@ permissions of teams. The owners team of an organization always has `admin` acce
 ### Support
 
 When you are in need of support, you can hit the support switch and send us a message via
-the UserVoice popup.
+the UserVoice pop-up.
 
 By activating wercker support you give the wercker team `builds + deploys` permissions.
 This allows us to see the details and debug the issue at hand.
@@ -50,7 +50,7 @@ Want to read more on `environment variables`, continue reading using the followi
 
 ### SSH Keys
 
-Here you manage `SSH keys` that you can leverage durings builds and deploys.
+Here you manage `SSH keys` that you can leverage during builds and deploys.
 Want to read more on `SSH Keys`, continue reading the following link.
 
 [Read more on SSH keys &rsaquo;](/docs/ssh-keys/index.html)
@@ -67,7 +67,7 @@ Set your application to be publicly viewable, anonymous users can now view all b
 This ideal for when you are managing an `Open source` application. Users can track
 the results of there commits before creating a `Pull Request`.
 
-If you are creating a wercker `pipeline step` your application needs to be plublic.
+If you are creating a wercker `pipeline step` your application needs to be public.
 Your published `pipeline step` will gain an extra page with details.
 
 

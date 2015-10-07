@@ -15,7 +15,7 @@ differences between a build and a deploy are:
 ### Targets
 
 Targets can represent servers (for instance staging/production) as well as
-platforms (docker hub, npm registry). A target has 3 destinctive configuration
+platforms (docker hub, npm registry). A target has 3 distinctive configuration
 options:
 
 1. name

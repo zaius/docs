@@ -9,7 +9,7 @@ individual section in this part.
 The box section allows you to choose a
 [container](/learn/containers/introduction.html) which will be used to run
 the builds and deploys. This item will contain a single reference to the box.
-The box will be prefixed by the owner and it can be postfixed with a `":"`
+The box will be prefixed by the owner and it can be post-fixed with a `":"`
 followed by a tag. If no tag is given, then the tag "latest" will be used.
 If no user is specified, default containers from the [Docker
 Hub](/learn/containers/docker-hub.html) will be used.
@@ -116,7 +116,7 @@ build:
 
 Two types of [steps](/learn/steps/introduction.html) are defined in this
 build section. First a `bundle-install` step that installs the Rubygem
-dependencies. This step is availble from the
+dependencies. This step is available from the
 [step registry](/learn/steps/step-registry.html). The second step in an inline
 script that in this case compiles our static site.
 
@@ -134,7 +134,7 @@ deploy:
             key_secret: $AWS_SECRET_ACCESS_KEY
             bucket_url: $AWS_BUCKET_URL
             source_dir: build/
-    # notify slack on succesful or failed deploys
+    # notify slack on successful or failed deploys
     after-steps:
         - kobim/slack-post:
             url: $SLACK_URL

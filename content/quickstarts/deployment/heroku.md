@@ -159,7 +159,7 @@ is your username on Heroku and finally `app-name` which is the name of
 your application that you got when running `heroku create`. The
 application name is the classic Heroku _haiku_ type application name.
 
-All of the paramaters for the Heroku deploy step are filled with
+All of the parameters for the Heroku deploy step are filled with
 environment variables as you shouldn't hard code any of this
 information. We will now add these environment variables to the wercker
 web interface.
@@ -250,7 +250,7 @@ deploy:
 ```
 
 Note: You should not prefix the `key-name` property with a dollar 
-sign (`$`) or postfix it with `_PRIVATE` or `_PUBLIC`.
+sign (`$`) or post-fix it with `_PRIVATE` or `_PUBLIC`.
 
 ![image](/images/heroku_08.jpg)
 

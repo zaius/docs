@@ -17,7 +17,7 @@ or deploy, look at the `Setup Environment` step of your [pipeline](/learn/pipeli
 Environment variables can be *global* and as such are available
 during both build and deploy pipelines. Typically, these are used to store API tokens for
 [after-steps](/learn/steps/after-steps.html) that post build and
-deploy notifications in chatrooms such as Slack.
+deploy notifications in chat-rooms such as Slack.
 
 >Global variables are called pipeline variables and can be set in the settings
 tab of your application.

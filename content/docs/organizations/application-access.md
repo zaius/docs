@@ -11,7 +11,7 @@ and always has the **owners** team setup as **admin** collaborators.
 
 A **team** uses the same permissions as a single collaborator, those permissions
 are: `build + view deploys`, `build + deployment` and `admin`.
-[Read more about permissons &rsaquo;](/docs/web-interface/roles-and-permissions.html)
+[Read more about permissions &rsaquo;](/docs/web-interface/roles-and-permissions.html)
 
 Giving a team `admin` access means they are allowed to do the same type of
 management on an application as the **owners** team. Meaning they can also

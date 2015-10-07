@@ -17,7 +17,7 @@ migrating your application to [wercker v2](http://blog.wercker.com/2015/04/02/In
 
 ### What is this Docker-based stack (Ewok)?
 
-Ewok is the codename of our new Docker stack. Instead of Linux containers
+Ewok is the code name of our new Docker stack. Instead of Linux containers
 you can now use Docker containers for your build and deploy pipelines.
 You can [pull](/docs/containers/private-containers.html) and [push](/docs/containers/pushing-containers.html)
 containers from the [Docker Hub](/docs/containers/dockerhub.html) or from privates registries.
@@ -25,7 +25,7 @@ containers from the [Docker Hub](/docs/containers/dockerhub.html) or from privat
 ### How do I migrate to the new Docker-based stack?
 
 On the settings page for your project there is an *infrastructure* section
-with a dropdown menu. You can select **version 5** here for the Docker-base stack.
+with a drop-down menu. You can select **version 5** here for the Docker-base stack.
 **Note** that a [wercker.yml](/docs/wercker-yml/creating-a-yml.html) for
 [classic](/docs/wercker-yml/wercker-classic.html) boxes does not work for
 with the Docker-based stack! (see the next point)
@@ -36,7 +36,7 @@ The classic `boxes` system no longer works in wercker v2. Instead, you
 can now use Docker containers in your
 [wercker.yml](/learn/wercker-yml/sections.html).
 
-In the example below the officual [Ruby
+In the example below the official [Ruby
 container](https://registry.hub.docker.com/u/library/ruby/) from the
 Docker Hub is used.
 
@@ -96,5 +96,5 @@ does nothing when used.
 As all build artifacts are effectively containers deploy targets other
 than custom are no longer supported. Please note that if you update a
 project to make use of Docker (Ewok version) and this project has
-autodeployment, this deploy will most likely fail. We will update our documentation in
+auto-deployment, this deploy will most likely fail. We will update our documentation in
 the future on how to deploy these containers.

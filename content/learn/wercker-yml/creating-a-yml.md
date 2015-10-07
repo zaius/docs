@@ -36,9 +36,9 @@ deploy:
             bucket_url: $AWS_BUCKET_URL
             source_dir: build/
 
-    # notify slack on succesful or failed deploys
+    # notify slack on successful or failed deploys
     after-steps:
-        # use a slack notifcation step from the marketplace
+        # use a slack notification step from the marketplace
         - kobim/slack-post:
             url: $SLACK_URL
             channel: notifications
@@ -49,5 +49,5 @@ deploy:
 > Want to learn more? Read more about this on the
 > [docs](/docs/wercker-yml/index.html)
 
-[&lsaquo; Environtment variables](/learn/wercker-yml/environment-variables.html "nav previous yml")
+[&lsaquo; Environment variables](/learn/wercker-yml/environment-variables.html "nav previous yml")
 [Containers &rsaquo;](/learn/containers/introduction.html "nav next containers")

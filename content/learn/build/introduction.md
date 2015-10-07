@@ -1,6 +1,6 @@
 ## Introduction to builds
 
-Builds can encompass your unit tests but also any other steps such as minifying javascript, compass compiliation, installing dependencies and packaging your code, thus readying it for deployment.
+Builds can encompass your unit tests but also any other steps such as minifying javascript, compass compilation, installing dependencies and packaging your code, thus readying it for deployment.
 Builds are triggered through a `git push` to your version control
 platform, such as GitHub or Bitbucket.
 
@@ -8,7 +8,7 @@ platform, such as GitHub or Bitbucket.
 
 ### Buildsteps
 
-Builds are the result of a run-through of the steps in the wercker pipeline. If all steps in the pipeline are succesful, a build has passed.
+Builds are the result of a run-through of the steps in the wercker pipeline. If all steps in the pipeline are successful, a build has passed.
 The outcome of a successful build is packaged and stored, readying it for deployment. Though the number of build steps varies per programming environment and type of project, all projects have several buildsteps in common:
 
 Of course you can add your own steps as well. See the

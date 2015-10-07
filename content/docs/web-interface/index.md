@@ -2,7 +2,7 @@
 
 The wercker web interface is where you add your applications, add
 [environment variables](/docs/environment-variables/index.html) for your [pipelines](/docs/pipelines/index.html) to use and of course
-have an overview of whats going accross your applications and your
+have an overview of whats going across your applications and your
 teams.
 
 This section goes into detail on the features and possibilities of the

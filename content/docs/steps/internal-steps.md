@@ -57,7 +57,7 @@ To help you build your first scratch-enabled application, you can follow our
 
 ### <a name="internal-watch" clacc="anchor"></a>internal/watch
 The `internal/watch` step gives you a long-running step that can be configured
-to reload on file changes. A very common use case for this step is frontend
+to reload on file changes. A very common use case for this step is front-end
 development, here's an example from our getting-started-nodejs project:
 
 ```yaml

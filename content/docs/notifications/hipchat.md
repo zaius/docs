@@ -40,5 +40,5 @@ This username will be used when posting notifications.
 | `failed-notify` | (optional, default: `true`) | If this is `true` the passed build/deploy message will make HipChat notify the user. |
 | `from-name` | (optional, default: `wercker`) | Use this option to override the name that will appear in the room as sender. |
 | `on` | (optional, default: `always`) | When should this step send a message. Possible values: `always` and `failed`. |
-| `message-format` | (optional, default: `html`) | Send the noticiation in `html` or `text` message format. `html` message format support links, but does not support emoticons. `text`message format supports emoticons, but does not support links. |
+| `message-format` | (optional, default: `html`) | Send the notification in `html` or `text` message format. `html` message format support links, but does not support emoticons. `text`message format supports emoticons, but does not support links. |
 

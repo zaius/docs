@@ -24,7 +24,7 @@ single binary. Both programming languages do not require any
 dependencies or libraries to be present that might not be installed in
 various Docker containers people use, making them quite portable. If you
 do create a step in a different programming language, and require certain
-runtime component, make sure to document this in the step README.
+run time components, make sure to document this in the step README.
 
 ### The Step Manifest file
 
@@ -58,7 +58,7 @@ properties:
     required: false
 ```
 
-The `name` field is the name of your step. Toghether with your username this is
+The `name` field is the name of your step. Together with your username this is
 the unique identifier of your step (`username/name`).
 
 The `version` field is the specific version of the step when deploying. This
@@ -97,7 +97,7 @@ For each property you specified in your `wercker-step.yml`, wercker sets a
 corresponding environment variable. For example, the value of the `url` property
 would be made available in the `$WERCKER_SLACK_NOTIFIER_URL` environment variable.
 
-Notice that any hypens you use in your paramater names will be transformed to
+Notice that any hyphens you use in your parameter names will be transformed to
 underscores.
 
 ### The Readme
@@ -115,7 +115,7 @@ Publishing steps is done by `deploying` your step to the registry. To do so
 create a project on wercker for your step as you would with any other project.
 
 Next, add a deploy target but pick the *wercker directory*. You can now deploy
-succesful builds to the registry. Make sure to bump the version number when you
+successful builds to the registry. Make sure to bump the version number when you
 want to deploy a new iteration of your step.
 
 You can check out the complete repository of the wercker slack

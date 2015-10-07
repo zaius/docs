@@ -27,7 +27,7 @@ deploy:
         app-name: $HEROKU_APP_NAME
 ```
 
-For a quickstart on deploying to Heroku, see [this
+For a quick-start on deploying to Heroku, see [this
 article](/quickstarts/deployment/heroku.html). You can also check
 out a sample application that uses this step on
 [GitHub](https://github.com/wercker/wercker-nodejs-heroku)

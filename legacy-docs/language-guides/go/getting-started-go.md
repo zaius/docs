@@ -113,7 +113,7 @@ Now create a file called `wercker.yml`. The [wercker.yml](http://devcenter.werck
 box: pjvds/golang
 ```
 
-You can read more about the `werkcer.yml` file on our [dev center](http://devcenter.wercker.com/articles/werckeryml/).
+You can read more about the `wercker.yml` file on our [dev center](http://devcenter.wercker.com/articles/werckeryml/).
 
 By default the golang box does the following:
 

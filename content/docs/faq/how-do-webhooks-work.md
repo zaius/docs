@@ -51,7 +51,7 @@ Ask someone with the `admin` permission to create the application on wercker or 
 * I've removed the Webhook, what do I do now?
 
 You can use the fix Webhook button to recreate the Webhook.
-Make sure that your source control provider credentials have suffient permissions.
+Make sure that your source control provider credentials have sufficient permissions.
 
 * I'm a collaborator on a GitHub repository, how do I get admin permissions
 

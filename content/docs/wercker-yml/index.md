@@ -10,7 +10,7 @@ you want to have executed.
 
 The three top-level sections (or pipelines) that are supported by default are `dev` for
 local development, `build` for building your applications locally and
-on the wercker website, and `deploy` for lauching your application on a
+on the wercker website, and `deploy` for launching your application on a
 cloud platform.
 
 A pipeline can have its own base box, or
