@@ -9,7 +9,8 @@
   [
     "deployment",
     "heroku.md",
-    "mesosphere.md"
+    "mesosphere.md",
+    "ECS.md"
   ],
   [
     "advanced",
