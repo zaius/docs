@@ -14,7 +14,7 @@ comply with the Docker Registry API.
 [Internal steps](/docs/steps/internal-steps.html) are steps that are baked into the
 wercker [cli](/docs/using-the-cli/available-commands.html) as these interact with
 the Docker API that is external from the container. From a security perspective
-we don't want to make this funcionality
+we don't want to make this functionality
 available from inside the Docker container, and as such have created these *internal* steps.
 
 In order to push to Docker registries you can use the either the `internal/docker-push` or the
