@@ -142,9 +142,9 @@ dev:
   steps:
     - pip-install
     - internal/watch:
-        name: start web server
-        code: python app.py
-        reload: true
+      name: start web server
+      code: python app.py
+      reload: true
 build:
   services:
     - redis
@@ -152,24 +152,23 @@ build:
   steps:
     - pip-install
     - script:
-        name: copy artifacts
-        code: |
-          cp wercker-app.json app.py requirements.txt $WERCKER_OUTPUT_DIR
+      name: copy artifacts
+      code: cp wercker-app.json app.py requirements.txt $WERCKER_OUTPUT_DIR
 deploy:
   box: python:2.7-slim
   dockerhub:
-  - pip-install
-  - internal/docker-push:
+    - pip-install
+    - internal/docker-push:
       username: $DOCKER_USER
       password: $DOCKER_PASS
       repository: wercker/frontend
       cmd: "python /pipeline/source/app.py"
       ports: 5001
   aws-ecs:
-  - script:
+    - script:
       name: copy
       code: mkdir /app && cp wercker-app.json /app/
-   - tonnu/aws-ecs:
+    - tonnu/aws-ecs:
       key: $AWS_ACCESS_KEY
       secret: $AWS_SECRET_KEY
       region: us-east-1
@@ -192,13 +191,12 @@ dev:
     - id: api
       url: file://../ws_api#dev
       cmd: python /pipeline/source/app.py
-
   steps:
     - pip-install
     - internal/watch:
-        name: start web server
-        code: python app.py
-        reload: true
+      name: start web server
+      code: python app.py
+      reload: true
 ```
 
 You can see that the frontend requires two services to run: `redis` and
@@ -229,9 +227,8 @@ build:
   steps:
     - pip-install
     - script:
-        name: copy artifacts
-        code: |
-          cp wercker-app.json app.py requirements.txt $WERCKER_OUTPUT_DIR
+      name: copy artifacts
+      code: cp wercker-app.json app.py requirements.txt $WERCKER_OUTPUT_DIR
 ```
 
 For the sake of this tutorial, we've kept the build pipeline for the frontend
@@ -265,28 +262,26 @@ these deployments are set up.
 deploy:
   box: python:2.7-slim
   dockerhub:
-    steps:
     - pip-install
     - internal/docker-push:
-          username: $DOCKER_USER
-          password: $DOCKER_PASS
-          repository: wercker/frontend
-          cmd: "python /pipeline/source/app.py"
-          ports: 5001
+      username: $DOCKER_USER
+      password: $DOCKER_PASS
+      repository: wercker/frontend
+      cmd: "python /pipeline/source/app.py"
+      ports: 5001
   aws-ecs:
-    steps:
-     - script:
-         name: copy
-         code: mkdir /app && cp wercker-app.json /app/
-     - tonnu/aws-ecs:
-        key: $AWS_ACCESS_KEY
-        secret: $AWS_SECRET_KEY
-        region: us-east-1
-        cluster-name: default
-        service-name: hello
-        task-definition-name: wercker-counter
-        task-definition-file: /app/wercker-app.json
-        minimum-running-tasks: 1
+    - script:
+      name: copy
+      code: mkdir /app && cp wercker-app.json /app/
+    - tonnu/aws-ecs:
+      key: $AWS_ACCESS_KEY
+      secret: $AWS_SECRET_KEY
+      region: us-east-1
+      cluster-name: default
+      service-name: hello
+      task-definition-name: wercker-counter
+      task-definition-file: /app/wercker-app.json
+      minimum-running-tasks: 1
 ```
 
 The first thing to notice is that we're using a different container image to
