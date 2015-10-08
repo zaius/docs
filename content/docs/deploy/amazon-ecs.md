@@ -2,7 +2,7 @@
 tags: ecs, amazon
 ---
 
-## Amazon Elastic Container Service
+## Amazon EC2 Container Service
 
 For this tutorial, we'll be deploying a 3-tiered microservice application
 consisting of a simple frontend, an API and a redis backend. This application
