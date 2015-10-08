@@ -104,7 +104,7 @@ function render () {
           dom.li(null,
             dom.a({
               className: 'navbar-item navbar-item_right',
-              href: 'https://app.wercker.com/sessions/new',
+              href: 'https://app.wercker.com',
               children: 'Log in'
             })
           )
