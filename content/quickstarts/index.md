@@ -13,4 +13,4 @@ Or, follow one of these tutorials to learn how to deploy your app:
 
 * [Heroku](/quickstarts/deployment/heroku.html)
 * [Mesosphere](/quickstarts/deployment/mesosphere.html)
-* [ECS](/quickstarts/deployment/ecs.html)
+* [ECS](/quickstarts/deployment/ECS.html)
