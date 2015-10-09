@@ -11,11 +11,8 @@ This article will explain all the different internal steps that are available:
 * [internal/watch](#internal-watch)
 * [internal/shell](#internal-shell)
 
-
-    
 ### <a name="docker-push"></a>internal/docker-push
-This step uses the container image you specified in either the `build` or
-`deploy` pipeline and mounts the `$WERCKER_OUTPUT_DIR` as a volume.
+This step will take your **current** pipeline image (specified either globally or per pipeline) in it's current state and push that as an image to a Docker registry. That includes the result of all the wercker steps that have been run up until that point.
 
 ```yaml
 deploy:
