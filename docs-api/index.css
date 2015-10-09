@@ -34,7 +34,7 @@ body.sidebar-open .api-articles {
   }
 
   .api-articles {
-    flex: 3;
+    flex: 3 3 75%;
     order: 2;
     padding: 30px;
     padding-top: 20px;

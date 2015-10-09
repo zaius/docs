@@ -15,6 +15,7 @@
   padding: 0 20px;
   padding-top: 70px;
   transform: translate(0, 0);
+  overflow-x: hidden;
   transition: transform var(--duration_fast) ease-out;
 }
 
@@ -34,7 +35,7 @@ body.sidebar-open .docs-articles {
   }
 
   .docs-articles {
-    flex: 3;
+    flex: 3 3 75%;
     order: 2;
     padding: 30px;
     padding-top: 20px;
@@ -100,20 +101,13 @@ body.sidebar-open .docs-articles {
 }
 
 .docs-articles > pre {
-  width: 85vw;
+  width: 100%;
   background-color: var(--color-blue_base);
   border: 1px solid var(--color-grey_light);
   margin-top: 30px;
   margin-bottom: 30px;
   padding: 20px;
   overflow-x: auto;
-}
-
-@media screen and (min-width: 768px) {
-  .docs-articles > pre {
-    width: auto;
-    max-width: 100%
-  }
 }
 
 .docs-articles > pre > code {
