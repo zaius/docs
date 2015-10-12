@@ -6,6 +6,12 @@ instances_. In this blogpost, we'll showcase how you can deploy your
 microservices to ECS by using containers and do so in an automated fashion with
 wercker.
 
+### Screencast
+
+This tutorial is also available as a screencast:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4jpcVQqANhY" frameborder="0" allowfullscreen></iframe>
+
 ### The setup
 
 For this tutorial, we'll be deploying a 3-tiered microservice application
