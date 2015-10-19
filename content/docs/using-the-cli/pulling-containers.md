@@ -17,6 +17,9 @@ The wercker [web interface](/docs/web-interface/index.html) will show
 how to pull a build for an application or a specific build. On the main
 page for an application you can filter based on branch.
 
+> Note that you need to add the [internal/store-container](/docs/steps/internal-steps.html#store-container) to your
+**wercker.yml** for this to work.
+
 ![image](/images/pull_build_01.jpg)
 
 Here are some examples of pulling a build by application:
