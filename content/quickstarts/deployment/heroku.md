@@ -152,8 +152,8 @@ deploy:
 
 Let's go over this section. First, we create our deploy pipeline and its
 `steps` section. We add just one step to the section called `heroku-deploy` which
-is available from the wercker [registry](https://app.wercker.com/#explore). This steps has three
-required parameters; `key` which is your Heroku API key that can
+is available from the wercker [registry](https://app.wercker.com/#explore). This step has three
+required parameters. `key` is your Heroku API key that can
 retrieve from your account settings on Heroku. The next is `user` which
 is your username on Heroku and finally `app-name` which is the name of
 your application that you got when running `heroku create`. The
@@ -254,5 +254,5 @@ sign (`$`) or post-fix it with `_PRIVATE` or `_PUBLIC`.
 
 ![image](/images/heroku_08.jpg)
 
-And your all done! Now when deploying via wercker, you no longer receive
+And you're all done! Now when deploying via wercker, you no longer receive
 an email that a new SSH key was added!
