@@ -59,7 +59,7 @@ information`.
 
 #### after-steps
 
-Wercker also has the notion of [after-steps](/docs/steps/after-steps.html) ideally suited for notifications. See the subsection for [wercker.yml](/docs/wercker-yml/creating-a-yml.html) for more information.
+Wercker also has the notion of [after-steps](/docs/steps/after-steps.html) ideally suited for notifications.
 
 #### Changing the working directory
 
@@ -76,13 +76,11 @@ build:
 
 ## Creating your own steps
 
-You are also able to create your own steps.
-
+If you can not find a certain step, you can always create your own.
 Similar to applications, steps are defined through a single file called
 `wercker-step.yml` and need to be `deployed` to the wercker directory.
 Deploying your steps to the wercker directory allows not only **you** to
 leverage these steps, but **others** as well.
-
 
 * [Creating your own wercker steps](/docs/steps/creating-steps.html)
 

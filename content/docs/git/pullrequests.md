@@ -8,7 +8,7 @@ This article explains how pull requests work on wercker.
 
 ### How does wercker handle GitHub pull requests?
 
-Wercker builds against the HEAD of the pull request branch and
+Wercker builds against the `HEAD` of the pull request branch and
 integrates with the build status API of GitHub. 
 
 Changes in the target branch are therefore not applicable to the builds. 
