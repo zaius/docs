@@ -1,4 +1,3 @@
-
 [
   [
      "about"
@@ -99,7 +98,8 @@
      "what-ip-to-whitelist.md",
      "what-is-my-concurrency.md",
      "how-do-webhooks-work.md",
-     "troubleshooting.md"
+     "troubleshooting.md",
+     "alpine-faq.md"
   ],
   [
      "git",
@@ -111,7 +111,7 @@
      "create-a-notification-step.md",
      "email.md",
      "hipchat.md",
-     "slack.md",
+     "slack.md"
   ],
   [
      "desktop-app"
