@@ -8,11 +8,15 @@ This article will explain all the different internal steps that are available:
 
 * [internal/docker-push](#docker-push)
 * [internal/docker-scratch-push](#scratch-push)
+* [internal/store-container](#store-container)
 * [internal/watch](#internal-watch)
 * [internal/shell](#internal-shell)
 
 ### <a name="docker-push"></a>internal/docker-push
-This step will take your **current** pipeline image (specified either globally or per pipeline) in it's current state and push that as an image to a Docker registry. That includes the result of all the wercker steps that have been run up until that point.
+This step will take your **current** pipeline image (specified either globally
+or per pipeline) in it's current state and push that as an image to a Docker
+registry. That includes the result of all the wercker steps that have been run
+up until that point.
 
 ```yaml
 deploy:
@@ -52,7 +56,14 @@ the root of the container.
 To help you build your first scratch-enabled application, you can follow our
 [tutorial](/quickstarts/advanced/building-minimal-containers-with-go.html)
 
-### <a name="internal-watch" clacc="anchor"></a>internal/watch
+### <a name="store-container" class="anchor"></a>internal/store-container
+The `internal/store-container` step will store the result of a build as a
+container artifact. You will then be able to download that container and
+execute it locally.  This is useful if you want to [pull your
+container](/docs/using-the-cli/pulling-containers.html) to introspect your
+build.
+
+### <a name="internal-watch" class="anchor"></a>internal/watch
 The `internal/watch` step gives you a long-running step that can be configured
 to reload on file changes. A very common use case for this step is front-end
 development, here's an example from our getting-started-nodejs project:
