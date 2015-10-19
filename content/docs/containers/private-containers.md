@@ -5,7 +5,7 @@ tags: docker
 ## Private containers
 
 Private containers can either be pulled in from a private repository
-on the [Docker Hub](/docs/containers/dockerhub.html) or from a
+on the [Docker Hub](/docs/containers/index.html) or from a
 private registry such as [quay.io](http://quay.io).
 
 Below you can find two examples of using a private Docker container as your

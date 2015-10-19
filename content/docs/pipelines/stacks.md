@@ -26,7 +26,7 @@ containers obtained from the Docker Hub, which you can leverage in your pipeline
 As such, there is no longer a need to use the classic wercker marketplace of boxes.
 Steps obtained from the marketplace work in *both* classic and new wercker.
 
-You can read more about how wercker uses the Docker Hub in [this section](/docs/containers/dockerhub.html)
+You can read more about how wercker uses the Docker Hub in [this section](/docs/containers/index.html)
 
 ### Classic stack
 

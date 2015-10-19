@@ -9,7 +9,7 @@ Similar to private containers for your
 allows for private service containers.
 
 Private services can either be pulled in from a private repository
-on the [Docker Hub](/docs/containers/dockerhub.html) or from a
+on the [Docker Hub](/docs/containers/index.html) or from a
 private registry such as [quay.io](http://quay.io).
 
 By default wercker fetches private container from the Docker Hub.
