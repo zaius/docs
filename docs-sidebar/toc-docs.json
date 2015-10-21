@@ -7,6 +7,7 @@
      "installing.md",
      "requirements.md",
      "local-development.md",
+     "local-env-vars.md",
      "local-builds.md",
      "pulling-containers",
      "introspecting-containers",
@@ -70,8 +71,7 @@
      "after-step-variables.md",
      "available-env-vars.md",
      "creating-env-vars.md",
-     "protected-variables.md",
-     "local-env-vars.md"
+     "protected-variables.md"
   ],
   [
      "ssh-keys",
