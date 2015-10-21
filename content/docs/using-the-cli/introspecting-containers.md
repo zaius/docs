@@ -14,19 +14,19 @@ interface](/docs/using-the-cli/available-commands.html) can be introspected.
 This is useful for debugging purposes and having a closer look at what
 happened during your build.
 
-As wercker currently supports [Docker containers](/docs/containers/dockerhub.html), introspection is
-done via the Docker command.
+As wercker currently supports [Docker containers](/docs/containers/index.html),
+introspection is done via the Docker command.
 
 > NOTE: To use this feature on local builds, you'll need to use the --commit flag to save a copy of your build.
 
 ### Using the Docker command
 
-We expect you to have a [working Docker environment](/learn/basics/the-wercker-cli.html) available on your
-machine. Assuming you have [built a container
+We expect you to have a [working Docker
+environment](/learn/basics/the-wercker-cli.html) available on your machine.
+Assuming you have [built a container
 locally](/docs/using-the-cli/local-builds.html) or have
-[pulled](/docs/using-the-cli/pulling-containers.html) a
-build artifact as container you can run the following command to inspect
-your container:
+[pulled](/docs/using-the-cli/pulling-containers.html) a build artifact as
+container you can run the following command to inspect your container:
 
 ```no-highlight
 docker run -it --rm build-<BUILD-ID> /bin/bash

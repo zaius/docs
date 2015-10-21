@@ -1,6 +1,6 @@
 ## SSH Keys
 
-Wercker allows you to generate SSH keys and expose them as via environment variables
+Wercker allows you to generate SSH keys and expose them as environment variables
 to your build or deployment pipeline.
 
 * [Read more on generating SSH Key pairs &rsaquo;](/docs/ssh-keys/generating-ssh-keys.html)

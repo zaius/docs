@@ -38,5 +38,4 @@ not.
 Note that as opposed to the [main containers](/learn/containers/using-containers.html) section, which is a singular item,
 the services section contains a list of items and as such is preceded by a `-`.
 
-For more advanced usage of services including custom commands and defining
-services on a per-pipeline basis, see our [advanced services section](/docs/services/advanced-services.html)
+To understand how to connect to these services, please see [linking services](/docs/services/linking-services.html)

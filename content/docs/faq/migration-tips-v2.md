@@ -20,7 +20,7 @@ migrating your application to [wercker v2](http://blog.wercker.com/2015/04/02/In
 Ewok is the code name of our new Docker stack. Instead of Linux containers
 you can now use Docker containers for your build and deploy pipelines.
 You can [pull](/docs/containers/private-containers.html) and [push](/docs/containers/pushing-containers.html)
-containers from the [Docker Hub](/docs/containers/dockerhub.html) or from privates registries.
+containers from the [Docker Hub](/docs/containers/index.html) or from privates registries.
 
 ### How do I migrate to the new Docker-based stack?
 

@@ -26,7 +26,6 @@
   ],
   [
      "containers",
-     "dockerhub.md",
      "private-containers.md",
      "pushing-containers.md",
      "minimal-containers.md",
@@ -108,7 +107,6 @@
   ],
   [
      "notifications",
-     "create-a-notification-step.md",
      "email.md",
      "hipchat.md",
      "slack.md"
