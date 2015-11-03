@@ -20,30 +20,6 @@ environment. After you've done that, `cd` into the project directory.
 $ cd getting-started-nodejs/
 ```
 
-Next, run `npm install` and run the app with `node app.js` to verify everything
-is working.
-
-```
-$ npm install
-$ node app.js
-```
-
-Now in your browser navigate to `127.0.0.1:5000` and you should be
-presented with the following json:
-
-```
-{
-cities: [
-"San Francisco",
-"Amsterdam",
-"Berlin",
-"New York",
-"Palo Alto",
-"San Mateo"
-]
-}
-```
-
 ### Developing the app
 Now that we've setup our app we can start developing. Our list of cities is a
 bit short, so why not add another one in there?  Before we do that however,
