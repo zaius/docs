@@ -8,6 +8,9 @@ do this, you again need a working
 There are two ways to retrieve the Docker container. You can either reference a
 build-id directly, or you can query wercker.
 
+> Note that you need to add the [internal/store-container](/docs/steps/internal-steps.html#store-container) to your
+**wercker.yml** for this to work.
+
 In order to pull a build you need a `build-id` and of course the right
 permissions to a project. You can pull builds with the following
 command:
