@@ -26,7 +26,7 @@ without a token, only public applications will be returned.
 
 #### Response
 
-```
+```no-highlight
 Status: 200 OK
 ```
 
@@ -65,7 +65,7 @@ Get the details of a single application.
 
 #### Response
 
-```
+```no-highlight
 Status: 200 OK
 ```
 
@@ -122,7 +122,7 @@ Retrieve all builds of an application.
 
 #### Response
 
-```
+```no-highlight
 Status: 200 OK
 ```
 
@@ -166,7 +166,7 @@ Retrieve all deploys of an application.
 
 #### Response
 
-```
+```no-highlight
 Status: 200 OK
 ```
 

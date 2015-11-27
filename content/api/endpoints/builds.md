@@ -3,8 +3,6 @@
 * [Get a build](#get-a-build)
 * [Trigger a build](#trigger-a-build)
 
-
-
 ### <a name="get-a-build" class="anchor"></a> Get a build
 
 Get the details of a single build.
@@ -15,7 +13,7 @@ Get the details of a single build.
 
 #### Response
 
-```
+```no-highlight
 Status: 200 OK
 ```
 
