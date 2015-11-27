@@ -2,6 +2,7 @@
 
 * [List user applications](#list-user-applications)
 * [Get an application](#get-an-application)
+* [Update an application](#update-an-application)
 * [List builds](#list-builds)
 * [List deploys](#list-deploys)
 
@@ -95,7 +96,60 @@ Status: 200 OK
     "owner": "wercker",
     "type": "git"
   },
-  "createdAt": "2015-01-28T17:04:09.851Z"
+  "createdAt": "2015-01-28T17:04:09.851Z",
+  "ignoredBranches": []
+}
+```
+
+### <a name="update-an-application" class="anchor"></a> Update an application
+
+Update a single application. Currently it is only possible to change the
+ignored branches for the application. The updated application will be returned.
+
+***
+`PATCH /api/v3/applications/:username/:application`
+***
+
+#### Payload values
+
+| Name    | Description |
+|:--------|:------------|
+| `ignoredBranches` | Array containing the new branches. Max 10 branches. |
+
+#### Response
+
+```no-highlight
+Status: 200 OK
+```
+
+```json
+{
+  "stack": 5,
+  "privacy": "public",
+  "id": "54c9168980c7075225004157",
+  "url": "https://app.wercker.com/api/v3/applications/wercker/docs",
+  "name": "docs",
+  "owner": {
+    "meta": {
+      "werckerEmployee": false,
+      "username": "wercker"
+    },
+    "userId": "55310d295732ce8a41000054",
+    "avatar": {
+      "gravatar": "33a5bfbcf8a2b90f40e849b6f1fa5eeb"
+    },
+    "name": "wercker",
+    "type": "wercker"
+  },
+  "builds": "https://app.wercker.com/api/v3/applications/wercker/docs/builds",
+  "deploys": "https://app.wercker.com/api/v3/applications/wercker/docs/deploys",
+  "scm": {
+    "repository": "docs",
+    "owner": "wercker",
+    "type": "git"
+  },
+  "createdAt": "2015-01-28T17:04:09.851Z",
+  "ignoredBranches": []
 }
 ```
 
