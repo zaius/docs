@@ -8,7 +8,7 @@ In order to make use of all of the features within the CLI you will need
 a working Docker environment. On linux it is easy to install Docker
 depending on your distribution and package manager. See Docker's
 [installation
-instructions](https://docs.docker.com/installation/#installation) fore more information.
+instructions](https://docs.docker.com/installation/#installation) for more information.
 
 ### Docker on Mac OSX
 
