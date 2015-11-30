@@ -12,7 +12,7 @@ Get the details of a single deploy.
 
 #### Response
 
-```
+```no-highlight
 Status: 200 OK
 ```
 

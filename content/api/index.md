@@ -14,7 +14,7 @@ guarantee at this moment.
 All endpoints in the documentation use relative paths. The host and the prefix
 path needs to be the following:
 
-```
+```no-highlight
 https://app.wercker.com/api/v3/
 ```
 
@@ -94,6 +94,6 @@ If an incorrect parameter or incorrect payload was used, we also include a
 Currently all time related fields will use the UTC timezone, and will use the
 following format:
 
-```
+```no-highlight
 2015-12-31T15:30:59.500Z
 ```

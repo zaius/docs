@@ -20,7 +20,7 @@ you're not able to retrieve it again.
 The recommended way to use a token is to use the `Authorization` header. This is
 the header format that is used:
 
-```
+```no-highlight
 Authorization: Bearer <TOKEN>
 ```
 
@@ -33,7 +33,7 @@ token.
 
 Below an example by using the `curl` command:
 
-```
+```no-highlight
 curl -H 'Authorization: Bearer <TOKEN>' https://app.wercker.com/api/v3/applications/wercker/docs
 ```
 
