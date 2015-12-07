@@ -99,11 +99,27 @@ If you are creating a wercker `pipeline step` your application needs to be publi
 Your published `pipeline step` will gain an extra page with details.
 
 
-#### Ignored branches
+#### <a name="ignored-branches" class="anchor"></a> Ignored branches
 
 Here you can set which for which branchname wercker should **not** trigger a build.
-It supports a maximum of 10 branchnames, and each branchname should be separated
+It supports a maximum of 10 items, and each input should be separated
 with a **space**.
+
+##### Wildcard
+
+Currently we support a simple **wildcard** to match against branches. The following formats are supported:
+
+- Exact match. This will match the value only if they are exactly the same.
+- A single asterisk `*`. This will match every value.
+- A asterisk at the beginning `*/foobar`. This will match values that end with a specific value, but it doesn't matter what the begin is.
+- A asterisk at the end `foobar/*`. This will match values that begin with a specific value, but it doesn't matter what the end is.
+
+The following situations are not supported:
+
+- A asterisk in the middle of the value `foo*bar`. This asterisk will be a literal asterisk.
+- A asterisk at the beginning and end `​*foobar*​`. This will just match the first asterisk.
+
+##### gh-pages
 
 By default all applications with a GitHub repository have already one branchname
 prefilled, the branchname `gh-pages` is ignored for users who deploy to Github pages.

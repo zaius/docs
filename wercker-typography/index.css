@@ -146,25 +146,25 @@ h3 {
   line-height: var(--lineHeight_loose);
   font-weight: var(--fontWeight_base);
   font-size: var(--fontSize_large);
-  color: var(--color-blue_light);
+  color: var(--color-blue_base);
   margin-top: 40px;
   margin-bottom: 20px;
 }
 
 h4 {
   line-height: var(--lineHeight_base);
-  font-weight: var(--fontWeight_light);
+  font-weight: var(--fontWeight_semibold);
   font-size: var(--fontSize_medium);
   color: var(--color-blue_light);
   margin-top: 30px;
 }
 
 h5 {
-  line-height: var(--lineHeight_base);
+  line-height: var(--lineHeight_tight);
   font-weight: var(--fontWeight_base);
   font-size: var(--fontSize_base);
   color: var(--color-blue_light);
-  margin-top: 20px;
+  margin-top: 18px;
 }
 
 pre,
