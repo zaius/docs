@@ -159,6 +159,11 @@ body.sidebar-open .docs-articles {
   list-style: none;
 }
 
+.docs-articles > ul li,
+.docs-articles > ol li {
+  line-height: var(--lineHeight_loose);
+}
+
 .docs-articles > ul li:before,
 .docs-articles > ol li:before {
   content: "• ";
