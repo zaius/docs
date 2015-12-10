@@ -64,7 +64,7 @@ Let's take a look at a selection of them available during a build:
 </tr>
 <tr>
     <td>WERCKER_ROOT</td>
-    <td>/pipeline/build"</td>
+    <td>/pipeline/build</td>
     <td>The location of the cloned code</td>
 </tr>
 <tr>
@@ -156,7 +156,7 @@ or less an expanded version of the information available during a build.
 </tr>
 <tr>
     <td>WERCKER_ROOT</td>
-    <td>/pipeline/source"</td>
+    <td>/pipeline/source</td>
     <td>The location of the build result</td>
 </tr>
 <tr>
