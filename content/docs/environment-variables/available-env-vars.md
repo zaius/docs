@@ -64,7 +64,7 @@ Let's take a look at a selection of them available during a build:
 </tr>
 <tr>
     <td>WERCKER_ROOT</td>
-    <td>/pipeline/build"</td>
+    <td>/pipeline/build</td>
     <td>The location of the cloned code</td>
 </tr>
 <tr>
@@ -156,12 +156,12 @@ or less an expanded version of the information available during a build.
 </tr>
 <tr>
     <td>WERCKER_ROOT</td>
-    <td>/pipeline/build"</td>
+    <td>/pipeline/source</td>
     <td>The location of the build result</td>
 </tr>
 <tr>
     <td>WERCKER_SOURCE_DIR</td>
-    <td>$WERCKER_ROOT/src</td>
+    <td>/pipeline/source</td>
     <td >The path to the directory of the source code. By default WERCKER_ROOT and WERCKER_SOURCE_DIR are the same. However you can change this location via the wercker.yml (to a subfolder in your repository)</td>
 </tr>
 <tr>
