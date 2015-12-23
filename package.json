@@ -6,14 +6,15 @@
   "private": true,
   "scripts": {
     "build": "gulp build",
+    "checkLinks": "gulp checkLinks",
     "clean": "rm -rf {cache,release,coverage}",
     "content": "gulp content",
-    "start": "npm run build && npm run open",
+    "format": "semistandard-format -w",
     "open": "open http://localhost:1337 && httpster -d build -p 1337",
+    "server": "httpster -d build -p 1337",
+    "start": "npm run build && npm run server",
     "test": "semistandard",
-    "checkLinks": "gulp checkLinks",
-    "watch": "watchify index.js -t brfs -o build/bundle.js",
-    "format": "semistandard-format -w"
+    "watch": "watchify index.js -t brfs -o build/bundle.js"
   },
   "repository": "wercker/dev",
   "license": "MIT",

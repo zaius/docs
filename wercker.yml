@@ -1,5 +1,24 @@
-box: nodesource/trusty:0.10.38
-# Build definition
+box:
+    id: nodesource/trusty:0.10.38
+    env:
+        NODE_ENV: development
+
+dev:
+    steps:
+        - script:
+            name: update npm
+            code: npm install -g npm@2
+
+        - npm-install
+
+        - script:
+            name: npm run build
+            code: npm run build
+
+        - internal/shell:
+            name: server
+            code: npm run content && npm run server
+
 build:
   # The steps that will be executed on build
     steps:
