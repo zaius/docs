@@ -12,6 +12,12 @@ hub clone wercker/docs
 
 Make sure to have [`npm>=2.0.0`][npm] installed to build local modules.
 
+## Running with wercker dev
+
+```
+wercker dev --publish 1337
+```
+
 ## Usage
 ```txt
 Lifecycle scripts included in dev:
