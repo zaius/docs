@@ -1,0 +1,16 @@
+[
+  [
+    "installation"
+  ], 
+  [
+    "commands",
+    "dev.md",
+    "build.md",
+    "pull.md"
+  ],
+	[
+		"configuration",
+		"global-flags.md",
+		"environment-variables.md"
+	]
+]

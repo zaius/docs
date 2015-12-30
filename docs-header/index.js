@@ -27,7 +27,7 @@ module.exports = react.createClass({
         data = 'Quickstarts';
         break;
 			case 'cli':
-				data = 'CLI';
+				data = 'Command Line Interface';
 				break;
     }
 

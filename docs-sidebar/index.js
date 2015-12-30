@@ -3,6 +3,7 @@ const react = require('react');
 const renderSimpleSidebar = require('./list-learn');
 const docsToc = require('./toc-docs.json');
 const apiToc = require('./toc-api.json');
+const cliToc = require('./toc-cli.json');
 const quickstartsToc = require('./toc-quickstarts.json');
 const renderSearch = require('./search');
 
@@ -26,6 +27,9 @@ function createClass () {
         case 'quickstarts':
           data = quickstartsToc;
           break;
+				case 'cli':
+					data = cliToc;
+					break;
         default:
           data = docsToc;
       }
