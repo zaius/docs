@@ -1,0 +1,18 @@
+[
+  [
+    "installation",
+		"local development.md",
+		"running builds.md",
+		"environment variables.md"
+  ], 
+  [
+    "commands",
+    "dev.md",
+    "build.md",
+    "pull.md",
+    "detect.md",
+		"check-config.md",
+		"version.md",
+    "login.md"
+  ]
+]
