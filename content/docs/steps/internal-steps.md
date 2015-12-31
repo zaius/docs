@@ -1,8 +1,8 @@
 ## Internal steps
 Internal steps are developed by wercker and are baked into the wercker cli as
 these interact with the Docker API that is external from the container. From a 
-technical perspective, it is not possible to interact with the Docker daemon from 
-within a container. As such we have created these internal steps.
+technical perspective, it is not possible to interact with the Docker daemon
+from within a container. As such we have created these internal steps.
 
 This article will explain all the different internal steps that are available:
 
@@ -13,6 +13,7 @@ This article will explain all the different internal steps that are available:
 * [internal/shell](#internal-shell)
 
 ### <a name="docker-push"></a>internal/docker-push
+
 This step will take your **current** pipeline image (specified either globally
 or per pipeline) in it's current state and push that as an image to a Docker
 registry. That includes the result of all the wercker steps that have been run
@@ -24,25 +25,55 @@ deploy:
     - internal/docker-push:
         username: $USERNAME
         password: $PASSWORD
-        tag: my-amazing-tag
         repository: turing/bar
+        tag: my-amazing-tag
         ports: "5000, 8080"
-        registry: https://registry.hub.docker.com
 ```
 
-The `$USERNAME` and `$PASSWORD` fields are environment variables that you
-should specify through the [wercker web
-interface](/docs/environment-variables/index.html). The `repo` field contains
-the repository that you want to push to (in this case the username `turing`
-with the `bar` image), and `registry` is the URL of your Docker registry. The
-ports property contain the ports that you want to expose in the final
-container. It is a comma separated list, and can contain `/tcp` or `/udp`
-(uses `/tcp` by default).
+The `internal/docker-push` step supports the following properties:
+
+- `username`: The username which will be used to authenticate to the registry.
+- `password`: The password which will be used to authenticate to the registry.
+- `email`: The e-mail address which will be used during authentication to the
+  registry.
+- `repository`: The name of the repository. When using a non Docker Hub
+  repository, prefix the value with the host of the private repository.
+- `tag`: The Docker tag which will be used. If left empty this defaults to
+  Docker's default, which is `latest`.
+- `ports`: Comma separated list of ports which can be exposed. The number can
+  end with `/tcp` or `/udp`. If omitted,`/tcp` will be used. This is the
+  equivelant of `EXPOSE` in a Dockerfile.
+- `volumes`: Comma separated list of volumes which will be exposed. This is the
+  equivelant of `VOLUME` in a Dockerfile.
+- `working-dir`: Override the working directory of the container. This is the
+  equivelant of `WORKDIR` in a Dockerfile.
+- `author`: Set the author of the container. This is the equivelant of
+  `MAINTAINER` in a Dockerfile.
+- `cmd`: Set the cmd for the new container. This is the equivelant of `CMD` in
+  a Dockerfile. We only support a single string value, which will be converted
+  to exec form using [go-shlex](https://github.com/flynn-archive/go-shlex).
+- `entrypoint`: Set the entrypoint for the new container. This is the
+  equivelant of `ENTRYPOINT` in a Dockerfile. We only support a single string
+  value, which will be converted to exec form using [go-shlex](https://github.com/flynn-archive/go-shlex).
+- `disable-sync`: Disable syncing of the environment variables before running
+  this step. Some containers do not support syncing of environment variables,
+  set this property to `true` for these containers. This does mean that any
+  exported environment variables will not be available for use in these
+  properties.
+- `message`: Set a comment on the layer.
+- `registry`: The endpoint of the registry. Leave empty for pushes to the
+  Docker hub. For pushes to other registries, it should start with `https://`
+  and should be the same as the prefix of the `repository`.
+
+It is possible to use environment variables inside all properties, these will
+be expanded. Environment variables that are exported during a build are also
+available, unless `disable-sync` is set to `true`.
 
 More information about the internal/docker-push step can be found
 [here](/docs/containers/pushing-containers.html).
 
 ### <a name="scratch-push" class="anchor"></a>internal/docker-scratch-push
+
 The `docker-scratch-push` step works the same as the normal `docker-push` step.
 The main difference is that this step uses a
 [scratch](https://docs.docker.com/articles/baseimages/) base image provided by
