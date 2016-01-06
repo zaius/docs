@@ -41,9 +41,16 @@ projects.
 
 ### Build and Deploy
 
-The *build* and *deploy* commands execute these pipelines locally. Using
-the *pull* command you can download a container from the wercker
-platform after which you can use Docker commands to debug this container locally.
+The *build* and *deploy* commands execute these pipelines locally. They are
+explained in detail here: [build](/cli/commands/build.html) and
+[dev](/cli/commands/dev.html). 
+
+### Pulling builds
+Using the *pull* command you can download a container from the wercker platform
+after which you can use Docker commands to debug this container locally.  Note
+that you have to add the
+[internal/store](/docs/steps/internal-steps.html#store-container) to your
+**wercker.yml**.
 
 ### Logging in
 

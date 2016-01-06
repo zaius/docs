@@ -1,18 +1,16 @@
 [
   [
-    "installation",
-		"local development.md",
-		"running builds.md",
-		"environment variables.md"
+    "installation"
   ], 
   [
     "commands",
     "dev.md",
     "build.md",
-    "pull.md",
-    "detect.md",
-		"check-config.md",
-		"version.md",
-    "login.md"
-  ]
+    "pull.md"
+  ],
+	[
+		"configuration",
+		"global-flags.md",
+		"environment-variables.md"
+	]
 ]
