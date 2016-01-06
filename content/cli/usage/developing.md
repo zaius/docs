@@ -80,33 +80,7 @@ dev:
         cd /var/log
 ```
 
-### --attach-on-error
+### Flags
+To see which flags can be used to configure your development environment, please
+see [options and flags](/cli/usage/configuration/index.html).
 
-The `--attach-on-error` flag can be added to both the `wercker build` as
-well as the `wercker dev` command. If a step fails in your pipeline it
-will re-initiate the container and drop you into a shell inside of the
-container. This flag is great for debugging and inspect the environment.
-
-You can use it as follows:
-
-```no-highlight
-wercker dev --publish 5000 --attach-on-error
-```
-
-You can see some `dev` pipelines in action in the `wercker.yml` files of
-these sample applications.
-
- * [golang](https://github.com/wercker/getting-started-golang)
- * [node.js](https://github.com/wercker/getting-started-nodejs)
- * [python](https://github.com/wercker/getting-started-python)
- * [ruby](https://github.com/wercker/getting-started-ruby)
-
-#### --publish
-
-This flag allows you to expose ports from the container to your host.  E.g.:
-`wercker dev --publish 1337` will expose port 1337 on your host and forward any
-traffic to the container on port 1337. 
-
-#### --docker-local
-
-See [Global flags](/cli/configuration/global-flags.html).

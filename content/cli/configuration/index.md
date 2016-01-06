@@ -1,44 +1,14 @@
-### Global flags
+### Configuration
 
-#### --docker-local
+This section explains which flags can be used together with the various commands.
 
-This flag can be used with either [wercker dev](/cli/commands/dev.html) or
-[wercker build](/cli/commands/build.html). It will not attempt to connect to a
-remote repository when pulling or pushing images, but will instead look for
-container images locally, or when using the
-[internal/docker-push](/docs/steps/internal-steps.html#docker-push), it will
-push images to the local repository.
+#### Options for building and developing
 
-#### --publish
+To learn about which flags and options are available, please check out this
+article. Also note that most of these flags can be used with either 
+[wercker build](/cli/usage/building.html) and [wercker dev](/cli/usage/developing.html).
 
-Used together with [wercker dev](/cli/commands/dev.html).
+#### Configuring your local builds
 
-#### --no-remove
-
-When developing locally, you can opt not to remove the development containers
-locally.  Alternatively, you can use the
-[internal/docker-push](/docs/steps/internal-steps.html#docker-push) together
-with the [--docker-local](/cli/configuration/global-flags.html#docker-local) flag.
-
-#### --store-s3
-
-You can store your container images and artefacts on Amazon S3 while building
-or developing. You'll also need to specify `--aws-secret-key`, `--aws-secret-access-key`
-, `--s3-region` and `--s3-bucket`.
-
-#### --aws-secret-key
-
-When storing artefacts on S3, this key needs to be set.
-
-#### --aws-secret-access-key
-
-When storing artefacts on S3, this key needs to be set.
-
-#### --s3-bucket
-
-When storing artefacts on S3, specify which bucket it needs to be saved to.
-
-#### --aws-region
-
-When storing artefacts on S3, specify which region wercker should use.
-
+For configuring your builds with environment variables, please refer to
+[this article](/cli/configuration/environment-variables.html).

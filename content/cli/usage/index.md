@@ -87,4 +87,4 @@ of the CLI.
 
 > Note: when upgrading to a new version, the binary will download into the
 current working directory. Be sure to replace the current binary. You can find
-out where the old binary lives by executing `$ which wercker`.
+out where the old binary lives by executing `which wercker`.
