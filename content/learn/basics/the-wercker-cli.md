@@ -17,27 +17,32 @@ depending on your distribution and package manager. See Docker's
 [installation
 instructions](https://docs.docker.com/installation/#installation) fore more information.
 
-If you are running Mac OSX you can install Docker using an installer
-called [boot2docker](https://docs.docker.com/installation/mac/) that
-will install [VirtualBox](https://www.virtualbox.org/) and a minimal
-Docker environment. As an alternative, you can use
+If you are running Mac OSX you can install Docker using the Docker Toolbox, which will install the Docker Client, Docker Machine, Docker Compose, Docker Kitematic and VirtualBox. As an alternative, you can use
 [Vagrant](http://vagrantup.com) to install a separate boot2docker
 virtual machine using [this vagrant box](https://github.com/mitchellh/boot2docker-vagrant-box).
 
-### OSX boot2docker quick start
+### OSX Docker Toolbox quick start
 
-If you're eager to get up to speed on OSX, below is a quickstart that
-installs boot2docker via the [Homebrew package
-manager](http://brew.sh/).
+If you're eager to get up to speed on OSX, install the [Docker Toolbox](https://www.docker.com/docker-toolbox) which installs the Docker Client, Docker Machine, Docker Compose, Docker Kitematic and VirtualBox. Next thing you're going to want to do is create a virtual machine for docker to run on using the docker-machine command.
+
 
 ```no-highlight
-brew install boot2docker
-
-boot2docker init
-boot2docker up
-
-$(boot2docker shellinit)
+docker-machine create --driver virtualbox dev
 ```
+
+Then load in all the proper docker enviornment variables into your current shell.
+
+```no-highlight
+$ docker-machine env dev
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://192.168.99.101:2376"
+export DOCKER_CERT_PATH="$HOME/.docker/machine/machines/dev"
+export DOCKER_MACHINE_NAME="dev"
+# Run this command to configure your shell:
+# eval "$(docker-machine env dev)"
+```
+
+Note this will only activate Docker in your current shell session. It is reccomended that you put the above `exports` in your `.profile`.
 
 ### Getting the CLI
 
