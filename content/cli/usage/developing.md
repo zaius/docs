@@ -12,19 +12,19 @@ changes _before_ you commit them.
 ### wercker dev
 
 The `wercker dev` command executes the `dev` pipeline designed for live
-development. Whereas the wercker [build command](/docs/using-the-cli/local-builds.html) a copy of your code
-is built inside a container in order to mitigate side effects,
-the `dev` command directly mounts your local directory inside the
+development. Whereas the wercker [build command](/cli/usage/building.html) a
+copy of your code is built inside a container in order to mitigate side
+effects, the `dev` command directly mounts your local directory inside the
 container.
 
 ### internal/watch
 
-During local development you often times want to reload your environment
-on code changes. The `internal/watch` step is a long-running step that
-does exactly that and goes hand in hand with the `wercker dev` command.
+During local development you often times want to reload your environment on
+code changes. The `internal/watch` step is a long-running step that does
+exactly that and goes hand in hand with the `wercker dev` command.
 
-In order to use `wercker dev` and `internal/watch` you create a `dev` section in your
-[wercker.yml](/docs/wercker-yml/index.html) file:
+In order to use `wercker dev` and `internal/watch` you create a `dev` section
+in your [wercker.yml](/docs/wercker-yml/index.html) file:
 
 ```yaml
 box: nodesource/trusty
