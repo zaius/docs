@@ -1,4 +1,4 @@
-### The Wercker Command Line Interface
+## The Wercker Command Line Interface
 
 The wercker command line interface (CLI) is a separate
 [download](http://wercker.com/cli) and
