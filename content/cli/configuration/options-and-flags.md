@@ -67,7 +67,7 @@ but will instead look for container images locally, or when using the
 [internal/docker-push](/docs/steps/internal-steps.html#docker-push), it will
 push images to the local repository.
 
-### <a name="attach-on-error" class="anchor"></a>--attach-on-error
+#### <a name="attach-on-error" class="anchor"></a>--attach-on-error
 
 The `--attach-on-error` flag can be added to both the `wercker build` as
 well as the `wercker dev` command. If a step fails in your pipeline it

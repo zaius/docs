@@ -32,4 +32,7 @@ it. Alternatively, if using the
 with the [docker-local](/cli/configuration/options-and-flags.html#docker-local) flag, the build container
 will also be committed to the local host.
 
+### flags
 
+To see how to customize your builds with flags and environment variables,
+please check out the [configuration section](/cli/configuration/index.html).

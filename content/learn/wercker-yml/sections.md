@@ -96,7 +96,7 @@ dev:
 
 - - -
 > Want to learn more? Read more about this on the
-> [docs](/docs/using-the-cli/local-development.html)
+> [docs](/cli/usage/developing.html)
 
 ### Build
 

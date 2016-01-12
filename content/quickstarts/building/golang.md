@@ -8,8 +8,7 @@ apply to every other programming language.
 ### Requirements
 To be able to follow along with this guide, you will need the following things:
 * [A wercker account](https://app.wercker.com/users/new/)
-* [A working Docker environment](/docs/using-the-cli/requirements.html)
-* [The wercker CLI](/docs/using-the-cli/installing.html)
+* [The wercker CLI](http://wercker.com/cli/installl)
 
 ### Setting up the app
 Before we can start developing, we have to fork and clone the [sample

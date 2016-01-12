@@ -12,7 +12,7 @@ several [internal](/docs/steps/internal-steps.html) [steps](/docs/steps/index.ht
 comply with the Docker Registry API.
 
 [Internal steps](/docs/steps/internal-steps.html) are steps that are baked into the
-wercker [cli](/docs/using-the-cli/available-commands.html) as these interact with
+wercker [cli](/cli/usage/index.html) as these interact with
 the Docker API that is external from the container. From a security perspective
 we don't want to make this functionality
 available from inside the Docker container, and as such have created these *internal* steps.
