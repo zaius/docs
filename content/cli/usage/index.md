@@ -43,7 +43,7 @@ projects.
 
 The *build* and *dev* commands execute these pipelines locally. They are
 explained in detail here: [build](/cli/usage/building.html) and
-[dev](/cli/usage/developing.html). 
+[dev](/cli/usage/developing.html).
 
 > Note: the `deploy` command is currently not supported.
 

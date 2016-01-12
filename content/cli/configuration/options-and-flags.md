@@ -1,4 +1,4 @@
-### Global Options
+## Global Options
 
 This section provides an overview of all available global options. Options or
 flags that need additional explanation will also be outlined here.
@@ -15,10 +15,18 @@ GLOBAL OPTIONS:
    --version, -v                 print the version
 ```
 
-#### <a name="environment" class="anchor"></a>--environment
+***
+***
 
-Specify additional environment variables in a file. Read more about using 
+#### <a name="environment" class="anchor"></a>Environment
+
+`--environment`
+
+Specify additional environment variables in a file. Read more about using
 environment variables [here](/cli/configuration/environment-variables.html).
+
+***
+***
 
 ### <a name="flags" class="anchor"></a> Build & Dev flags
 
@@ -58,7 +66,12 @@ OPTIONS:
    --wercker-yml 					Specify a specific yaml file.
 ```
 
-#### <a name="docker-local" class="anchor"></a>--docker-local
+***
+***
+
+#### <a name="docker-local" class="anchor"></a>Docker local
+
+`--docker-local`
 
 This flag can be used with either [wercker dev](/cli/usage/developing.html) or
 [wercker build](/cli/usage/building.html). When using this flag, wercker will
@@ -67,7 +80,11 @@ but will instead look for container images locally, or when using the
 [internal/docker-push](/docs/steps/internal-steps.html#docker-push), it will
 push images to the local repository.
 
-#### <a name="attach-on-error" class="anchor"></a>--attach-on-error
+
+***
+***
+
+#### <a name="attach-on-error" class="anchor"></a>Attach on error
 
 The `--attach-on-error` flag can be added to both the `wercker build` as
 well as the `wercker dev` command. If a step fails in your pipeline it
@@ -80,37 +97,61 @@ You can use it as follows:
 wercker dev --publish 5000 --attach-on-error
 ```
 
-#### <a name="publish" class="anchor"></a>--publish
+***
+***
+
+#### <a name="publish" class="anchor"></a>Publish
 
 Used together with [wercker dev](/cli/usage/developing.html). Exposes a port from
 the container to the host.
 
-`wercker dev --publish 1337`
+```no-highlight
+wercker dev --publish 1337
+```
 
-#### <a name="no-remove" class="anchor"></a>--no-remove
+***
+***
+
+#### <a name="no-remove" class="anchor"></a>No remove
+
+`--no-remove`
 
 When developing locally, you can opt not to remove the development containers
 locally.
 
-#### <a name="store-s3" class="anchor"></a>--store-s3
+***
+***
+
+#### <a name="store-s3" class="anchor"></a>Store S3
+
+`--store-s3`
 
 You can store your container images and artefacts on Amazon S3 while building
-or developing. You'll also need to specify `--aws-secret-key`,
-`--aws-secret-access-key` , `--s3-region` and `--s3-bucket`.
+or developing. You'll also need to specify:
 
-#### <a name="aws-secret-key" class="anchor"></a>--aws-secret-key
+##### <a name="aws-secret-key" class="anchor"></a>
 
-When storing artefacts on S3, this key needs to be set.
-
-#### <a name="aws-secret-access-key" class="anchor"></a>--aws-secret-access-key
+`--aws-secret-key`
 
 When storing artefacts on S3, this key needs to be set.
 
-#### <a name="s3-bucket" class="anchor"></a>--s3-bucket
+##### <a name="aws-secret-access-key" class="anchor"></a>
+
+`--aws-secret-access-key`
+
+When storing artefacts on S3, this key needs to be set.
+
+##### <a name="s3-bucket" class="anchor"></a>
+
+`--s3-bucket`
 
 When storing artefacts on S3, specify which bucket it needs to be saved to.
 
-#### <a name="aws-region" class="anchor"></a>--aws-region
+##### <a name="aws-region" class="anchor"></a>
+
+`--aws-region`
 
 When storing artefacts on S3, specify which region wercker should use.
 
+***
+***

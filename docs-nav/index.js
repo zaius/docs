@@ -33,7 +33,7 @@ module.exports = react.createClass({
         data = 'quickstarts';
         break;
 			case 'cli':
-				data = 'cli';
+        data = 'cli';
 				break;
     }
 
@@ -92,7 +92,7 @@ function render () {
           ),
           dom.li(null,
             dom.a({
-              className: 'navbar-item navbar-item_docs',
+              className: 'navbar-item navbar-item_cli',
               href: '/cli/index.html',
               children: 'CLI'
             })
