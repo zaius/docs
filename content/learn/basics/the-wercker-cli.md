@@ -18,7 +18,7 @@ depending on your distribution and package manager. See Docker's
 instructions](https://docs.docker.com/installation/#installation) fore more information.
 
 If you are running Mac OSX, you can install a Docker environment using the [Docker Toolbox](https://www.docker.com/docker-toolbox) which
-will install Docker Client, Machine, Compose, Kitematic and VirtualBox.
+will install Docker Client, Machine, Compose, Kitematic, and VirtualBox.
 
 ### OSX Docker Machine quick start
 
