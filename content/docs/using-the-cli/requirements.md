@@ -4,9 +4,9 @@ tags: cli
 
 ## Requirements
 
-In order to make use of all of the features within the CLI you will need a working Docker environment. If you are running Mac OSX or Windows you can install Docker and Docker-Machine using [Docker Toolbox](https://www.docker.com/docker-toolbox). Docker Toolbox is an installer to quickly and easily install and setup a Docker environment on your computer. Toolbox installs the Docker Client, Docker Machine, Docker Compose, Docker Kitematic and VirtualBox.
-
 On linux it is easy to install Docker depending on your distribution and package manager. See Docker's [installation instructions](https://docs.docker.com/installation/#installation) for more information and for Docker Machine see [here](https://docs.docker.com/machine/install-machine/).
+
+In order to make use of all of the features within the CLI you will need a working Docker environment. If you are running Mac OSX you can install Docker and Docker-Machine using [Docker Toolbox](https://www.docker.com/docker-toolbox). Docker Toolbox is an installer to quickly and easily install and setup a Docker environment on your computer. Toolbox installs the Docker Client, Docker Machine, Docker Compose, Docker Kitematic and VirtualBox.
 
 If you haven't already, download [Docker Toolbox](https://www.docker.com/docker-toolbox).
 
