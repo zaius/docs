@@ -1,17 +1,17 @@
 [
   [
     "installation"
-  ], 
+  ],
   [
     "usage",
     "developing.md",
     "building.md",
-		"pulling-builds.md",
-		"inspecting-containers.md"
+    "pulling-builds.md",
+    "inspecting-containers.md"
   ],
 	[
-		"configuration",
-		"options-and-flags.md",
-		"environment-variables.md"
+    "configuration",
+    "options-and-flags.md",
+    "environment-variables.md"
 	]
 ]
