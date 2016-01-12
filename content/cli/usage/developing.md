@@ -82,5 +82,5 @@ dev:
 
 ### Flags
 To see which flags can be used to configure your development environment, please
-see [options and flags](/cli/usage/configuration/index.html).
+see [options and flags](/cli/configuration/options-and-flags.html).
 

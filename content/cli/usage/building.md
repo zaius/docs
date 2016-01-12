@@ -26,7 +26,7 @@ wercker build --commit
 
 ### internal/docker-push
 
-The container will be committed to the the Docker host after which you can run
+The container will *only* be committed to the the Docker host after which you can run
 it. Alternatively, if using the
 [internal/docker-push](/docs/steps/internal-steps.html#docker-push) together
 with the [docker-local](/cli/configuration/options-and-flags.html#docker-local) flag, the build container
