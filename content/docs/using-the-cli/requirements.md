@@ -4,7 +4,7 @@ tags: cli
 
 ## Requirements
 
-On linux it is easy to install Docker depending on your distribution and package manager. See Docker's [installation instructions](https://docs.docker.com/installation/#installation) for more information and for Docker Machine see [here](https://docs.docker.com/machine/install-machine/).
+On linux it is easy to install Docker depending on your distribution and package manager. See Docker's [installation instructions](https://docs.docker.com/installation/#installation) for more information and for Docker Machine see https://docs.docker.com/machine/install-machine/.
 
 In order to make use of all of the features within the CLI you will need a working Docker environment. If you are running Mac OSX you can install Docker and Docker-Machine using [Docker Toolbox](https://www.docker.com/docker-toolbox). Docker Toolbox is an installer to quickly and easily install and setup a Docker environment on your computer. Toolbox installs the Docker Client, Docker Machine, Docker Compose, Docker Kitematic and VirtualBox.
 
@@ -51,7 +51,7 @@ NAME   ACTIVE   DRIVER       STATE     URL                         SWARM
 dev    -        virtualbox   Running   tcp://192.168.99.100:2376
 ```
 
-That's all there is to it to create a machine and get it running! For more info on `docker-machine` and its features see [here](https://docs.docker.com/machine/get-started/).
+That's all there is to it to create a machine and get it running! See https://docs.docker.com/machine/get-started/ for more info on `docker-machine` and its features.
 
 Now we need to tell `Docker` to be able to talk to your previously created `dev` machine. We do that with the `docker-machine env` command.
 
