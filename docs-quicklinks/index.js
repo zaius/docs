@@ -68,7 +68,7 @@ function render () {
         dom.ul(null,
           dom.li(null,
             dom.a({
-              href: '/docs/using-the-cli/index.html',
+              href: '/cli/usage/index.html',
               children: 'Using the CLI'
             })
           ),
@@ -124,7 +124,7 @@ function render () {
         dom.ul(null,
           dom.li(null,
             dom.a({
-              href: '/docs/using-the-cli/pulling-containers.html',
+              href: '/cli/usage//pulling-builds.html',
               children: 'Pull and introspect containers'
             })
           ),
