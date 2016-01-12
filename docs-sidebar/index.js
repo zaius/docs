@@ -27,9 +27,9 @@ function createClass () {
         case 'quickstarts':
           data = quickstartsToc;
           break;
-				case 'cli':
-					data = cliToc;
-					break;
+        case 'cli':
+          data = cliToc;
+          break;
         default:
           data = docsToc;
       }

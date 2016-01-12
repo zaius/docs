@@ -31,9 +31,9 @@ module.exports = react.createClass({
       case 'quickstarts':
         data = 'Quickstarts';
         break;
-			case 'cli':
-				data = 'CLI';
-				break;
+      case 'cli':
+        data = 'CLI';
+        break;
     }
 
     return {data: data};
