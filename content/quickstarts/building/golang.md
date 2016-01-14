@@ -285,5 +285,5 @@ but now everyone in your team can see and comment on the build.
 
 ### Wrapping up
 Congratulations! You've built your first app using wercker. The next tutorial
-in this series will be about how to deploy your python app to a Digital Ocean
+in this series will be about how to deploy your Go app to a Digital Ocean
 server (Coming soon!).
