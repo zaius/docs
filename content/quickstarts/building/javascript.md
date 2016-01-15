@@ -51,7 +51,7 @@ dev:
 The first line specifies which container image you want to use for your
 project.  Since we're developing with nodejs, we've already specified an
 image for you.  These container images are retrieved from [Docker
-Hub](https://registry.hub.docker.com/u/library/python/) if no other registry is
+Hub](https://hub.docker.com/r/nodesource/trusty/) if no other registry is
 specified. You can read more about containers
 [here](/docs/containers/index.html).
 
@@ -108,7 +108,7 @@ started with access to your checked out code. It will then start executing all t
 steps that are defined in the **wercker.yml**.
 
 Please note that the IP displayed here could be different for you, as this
-tutorial was written using boot2docker.
+tutorial was written using `boot2docker`.
 
 If you navigate to DOCKER_HOST_IP:5000 you should see the same
 output as before.  That's not very exciting, so let's see our live reloading in
@@ -174,8 +174,7 @@ repository](/docs/steps/creating-steps.html).
 
 #### wercker build
 Now that we have a better understanding of our **wercker.yml** let's go ahead
-and let wercker **build** our project. In your project folder, first run `rm
-node_modules`, and then `wercker build`:
+and let wercker **build** our project. In your project folder, first run `rm -r node_modules`, and then `wercker build`:
 
 ```
 $ wercker build
