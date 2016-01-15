@@ -120,7 +120,7 @@ started with access to your checked out code. It will then start executing all t
 steps that are defined in the **wercker.yml**.
 
 Please note that the IP displayed here could be different for you, as this
-tutorial was written using `docker-machine`r.
+tutorial was written using `docker-machine`.
 
 If you navigate to DOCKER_HOST_IP:5000/cities.json you should see the same
 output as before.  That's not very exciting, so let's see our live reloading in
