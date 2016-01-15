@@ -66,7 +66,7 @@ dev:
 The first line specifies which container image you want to use for your
 project.  Since we're developing with Go, we've already specified a Go
 image for you.  These container images are retrieved from [Docker
-Hub](https://registry.hub.docker.com/u/library/python/) if no other registry is
+Hub](https://hub.docker.com/r/library/golang/) if no other registry is
 specified. You can read more about containers
 [here](/docs/containers/index.html).
 
@@ -120,7 +120,7 @@ started with access to your checked out code. It will then start executing all t
 steps that are defined in the **wercker.yml**.
 
 Please note that the IP displayed here could be different for you, as this
-tutorial was written using boot2docker.
+tutorial was written using `boot2docker`.
 
 If you navigate to DOCKER_HOST_IP:5000/cities.json you should see the same
 output as before.  That's not very exciting, so let's see our live reloading in
