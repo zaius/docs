@@ -64,6 +64,10 @@ The `internal/docker-push` step supports the following properties:
 - `registry`: The endpoint of the registry. Leave empty for pushes to the
   Docker hub. For pushes to other registries, it should start with `https://`
   and should be the same as the prefix of the `repository`.
+- `user`: String value specifying the user inside the container.
+- `env` - A list of environment variables in the form of `["VAR=value"[,"VAR2=value2"]]`
+- `labels` - Adds a map of labels to a container. To specify a map, pass your labels into the `wercker.yml` file in this format `["LABEL=label"[,"LABEL2=label2"]]`
+- `stopsignal` - Signal to stop a container as a string or unsigned integer. `SIGTERM` by default.
 
 It is possible to use environment variables inside all properties, these will
 be expanded. Environment variables that are exported during a build are also
