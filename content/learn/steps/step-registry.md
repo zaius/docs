@@ -22,4 +22,3 @@ creation and deployment on Ewok.
 > [docs](/docs/steps/creating-steps.html)
 
 [&lsaquo; After steps &rsaquo;](/learn/steps/after-steps.html "nav previous steps")
-[Build &rsaquo;](/learn/build/introduction.html "nav next build")

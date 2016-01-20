@@ -36,4 +36,4 @@ might be needed during the lifetime and execution of a pipeline.
 > [docs](/docs/pipelines/per-pipeline-containers.html)
 
 [&lsaquo; Introduction to pipelines ](/learn/pipelines/introduction.html "nav previous pipelines")
-[Using env vars &rsaquo;](/learn/pipelines/using-env-vars.html "nav next pipelines")
+[Available Pipelines &rsaquo;](/learn/pipelines/available-pipelines.html "nav next pipelines")
