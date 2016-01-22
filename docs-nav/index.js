@@ -32,6 +32,9 @@ module.exports = react.createClass({
       case 'quickstarts':
         data = 'quickstarts';
         break;
+      case 'cli':
+        data = 'cli';
+        break;
     }
 
     return {data: data};
@@ -85,6 +88,13 @@ function render () {
               className: 'navbar-item navbar-item_docs',
               href: '/docs/index.html',
               children: 'Docs'
+            })
+          ),
+          dom.li(null,
+            dom.a({
+              className: 'navbar-item navbar-item_cli',
+              href: '/cli/index.html',
+              children: 'CLI'
             })
           ),
           dom.li(null,

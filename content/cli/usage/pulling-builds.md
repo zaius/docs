@@ -5,7 +5,7 @@ tags: builds
 ## Pulling builds
 
 You can use the
-[wercker command line interface](/docs/using-the-cli/available-commands.html)
+[wercker command line interface](/cli/usage/index.html)
 to pull build artifacts, which are containers themselves, to your local machine.
 
 There are two ways for pulling builds:
@@ -19,8 +19,6 @@ page for an application you can filter based on branch.
 
 > Note that you need to add the [internal/store-container](/docs/steps/internal-steps.html#store-container) to your
 **wercker.yml** for this to work.
-
-![image](/images/pull_build_01.jpg)
 
 Here are some examples of pulling a build by application:
 
@@ -83,9 +81,3 @@ Check out the all available flags in the help page:
 wercker pull --help
 ```
 
-> Make sure you have a working
-[Docker environment](/docs/using-the-cli/requirements.html)
-when pulling your builds.
-
-You can download the the CLI from the
-[downloads](http://wercker.com/downloads) page.

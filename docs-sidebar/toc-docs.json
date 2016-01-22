@@ -3,17 +3,6 @@
      "about"
   ],
   [
-     "using-the-cli",
-     "installing.md",
-     "requirements.md",
-     "local-development.md",
-     "local-env-vars.md",
-     "local-builds.md",
-     "pulling-containers",
-     "introspecting-containers",
-     "available-commands.md"
-  ],
-  [
      "pipelines",
      "per-pipeline-containers.md",
      "stacks.md",

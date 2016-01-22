@@ -12,19 +12,19 @@ changes _before_ you commit them.
 ### wercker dev
 
 The `wercker dev` command executes the `dev` pipeline designed for live
-development. Whereas the wercker [build command](/docs/using-the-cli/local-builds.html) a copy of your code
-is built inside a container in order to mitigate side effects,
-the `dev` command directly mounts your local directory inside the
+development. Whereas the wercker [build command](/cli/usage/building.html) a
+copy of your code is built inside a container in order to mitigate side
+effects, the `dev` command directly mounts your local directory inside the
 container.
 
 ### internal/watch
 
-During local development you often times want to reload your environment
-on code changes. The `internal/watch` step is a long-running step that
-does exactly that and goes hand in hand with the `wercker dev` command.
+During local development you often times want to reload your environment on
+code changes. The `internal/watch` step is a long-running step that does
+exactly that and goes hand in hand with the `wercker dev` command.
 
-In order to use `wercker dev` and `internal/watch` you create a `dev` section in your
-[wercker.yml](/docs/wercker-yml/index.html) file:
+In order to use `wercker dev` and `internal/watch` you create a `dev` section
+in your [wercker.yml](/docs/wercker-yml/index.html) file:
 
 ```yaml
 box: nodesource/trusty
@@ -80,25 +80,7 @@ dev:
         cd /var/log
 ```
 
-### --attach-on-error
-
-The `--attach-on-error` flag can be added to both the `wercker build` as
-well as the `wercker dev` command. If a step fails in your pipeline it
-will re-initiate the container and drop you into a shell inside of the
-container. This flag is great for debugging and inspect the environment.
-
-You can use it as follows:
-
-```no-highlight
-wercker dev --publish 5000 --attach-on-error
-```
-
-You can see some `dev` pipelines in action in the `wercker.yml` files of
-these sample applications.
-
- * [golang](https://github.com/wercker/getting-started-golang)
- * [node.js](https://github.com/wercker/getting-started-nodejs)
- * [python](https://github.com/wercker/getting-started-python)
- * [ruby](https://github.com/wercker/getting-started-ruby)
-
+### Flags
+To see which flags can be used to configure your development environment, please
+see [options and flags](/cli/configuration/options-and-flags.html).
 

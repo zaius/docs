@@ -1,15 +1,14 @@
 ---
-tags: builds, introspecting
+tags: builds
 ---
 
-## Introspecting builds
+## Inspecting builds
 
 Often you want to have a closer look at what happened within your
 pipelines.
 
-Builds that you have [pulled](/docs/using-the-cli/pulling-containers.html), or
-[built locally](/docs/using-the-cli/local-builds.html) using the [wercker command line
-interface](/docs/using-the-cli/available-commands.html) can be introspected.
+Builds that you have [pulled](/cli/usage/pulling-builds.html), or
+[built locally](/cli/usage/building.html) using the CLI can be inspected.
 
 This is useful for debugging purposes and having a closer look at what
 happened during your build.
@@ -21,11 +20,9 @@ introspection is done via the Docker command.
 
 ### Using the Docker command
 
-We expect you to have a [working Docker
-environment](/learn/basics/the-wercker-cli.html) available on your machine.
 Assuming you have [built a container
-locally](/docs/using-the-cli/local-builds.html) or have
-[pulled](/docs/using-the-cli/pulling-containers.html) a build artifact as
+locally](/cli/usage/building.html) or have
+[pulled](/cli/usage/pulling-builds.html) a build artifact as
 container you can run the following command to inspect your container:
 
 ```no-highlight

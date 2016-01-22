@@ -95,7 +95,7 @@ To help you build your first scratch-enabled application, you can follow our
 The `internal/store-container` step will store the result of a build as a
 container artifact. You will then be able to download that container and
 execute it locally.  This is useful if you want to [pull your
-container](/docs/using-the-cli/pulling-containers.html) to introspect your
+container](/cli/usage/pulling-builds.html) to introspect your
 build.
 
 ### <a name="internal-watch" class="anchor"></a>internal/watch
