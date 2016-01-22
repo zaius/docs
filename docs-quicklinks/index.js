@@ -124,7 +124,7 @@ function render () {
         dom.ul(null,
           dom.li(null,
             dom.a({
-              href: '/cli/usage//pulling-builds.html',
+              href: '/cli/usage/pulling-builds.html',
               children: 'Pull and introspect containers'
             })
           ),
@@ -153,7 +153,7 @@ function render () {
           ),
           dom.li(null,
             dom.a({
-              href: 'http://wercker.com/downloads/',
+              href: '/cli/index.html',
               children: 'Command Line Interface'
             })
           )
